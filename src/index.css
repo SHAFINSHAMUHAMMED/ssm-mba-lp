@@ -34,7 +34,7 @@ p {
   font-size: 53px;
  }
  h2 {
-  font-family: 'SK Modernist Regular';
+  font-family: 'SK Modernist Bold';
   font-size: 40px;
  }
  h3 {
@@ -54,6 +54,9 @@ p {
 .highlight {
     color: #259D4A;
     white-space: nowrap;
+}
+.highlight-orange {
+  color:#EE9B4E ;
 }
 /* //header styles */
 .header-section {
@@ -156,19 +159,54 @@ p {
 }
 .carousel {
   max-width: 1180px;
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
+/* position: relative;
+  bottom: 90px; */
   margin:auto ;
-  position: relative;
-  bottom: 90px;
   background: white;
   border-radius: 55px ;
   font-weight: bold;
-
-  
 }
 .carousel-svg {
   width: 73px;
   height: 73px;
+}
+
+/* Swiss school section */
+
+.why-swiss-school {
+  max-width: 800px;
+  margin: auto;
+}
+.swiss-school-h1 {
+  padding: 30px;
+  padding-top: 50px;
+  line-height: 60px;
+  text-align: center;
+  font-weight: 700;
+}
+.wavy-underline-green {
+  position: relative;
+  display: inline;
+}
+.wavy-underline-green::after {
+  content: '';
+  position: absolute;
+  bottom: -10px; 
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-image: url('../public/images/svg/wawyUnderlineGreen.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.why-swiss-school div  {
+ max-width: 630px;
+ margin: auto;
+}
+.why-swiss-school div .p-margine {
+  font-size: 18px;
+  margin-bottom:33px ;
 }

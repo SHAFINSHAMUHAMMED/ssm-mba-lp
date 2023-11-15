@@ -67,25 +67,25 @@ function ResponsiveCarousel() {
           </h4>
         </div>
       </div>
-      <div className="sm:hidden">
+      <div className=" sm:hidden">
   <Slider {...settings}>
     {/* Slide 1 */}
-    <div className="flex flex-col items-center text-center px-4 mt-10">
+    <div className="flex flex-col justify-center items-center w-24 text-center px-4 ">
       <img src="images/svg/balanced-icon.svg" alt="Work-Life" className="mb-2" />
       <h4 className="text-sm sm:text-base">Balanced Work-Life Structure</h4>
     </div>
     {/* Slide 2 */}
-    <div className="flex flex-col items-center text-center px-4 mt-10">
+    <div className="flex flex-col items-center text-center px-4 ">
       <img src="images/svg/timer-icon.svg" alt="12 Months" className="mb-2" />
       <h4 className="text-sm sm:text-base">Complete in 12 Months</h4>
     </div>
     {/* Slide 3 */}
-    <div className="flex flex-col items-center text-center px-4 mt-10">
+    <div className="flex flex-col items-center text-center px-4 ">
       <img src="images/svg/timer-icon.svg" alt="12 Months" className="mb-2" />
       <h4 className="text-sm sm:text-base">Complete in 12 Months</h4>
     </div>
     {/* Slide 4 */}
-    <div className="flex flex-col items-center text-center px-4 mt-10">
+    <div className="flex flex-col items-center text-center px-4 ">
       <img src="images/svg/timer-icon.svg" alt="12 Months" className="mb-2" />
       <h4 className="text-sm sm:text-base">Complete in 12 Months</h4>
     </div>
