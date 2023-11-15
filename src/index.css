@@ -1,0 +1,56 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@font-face {
+  font-family: 'SK Modernist Bold';
+  src: url('../fonts/Sk-Modernist-Bold.otf') format('opentype'); /* OTF format */
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SK Modernist Mono';
+  src: url('../fonts/Sk-Modernist-Mono.otf') format('opentype'); /* OTF format */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SK Modernist Regular';
+  src: url('../fonts/Sk-Modernist-Regular.otf') format('opentype'); /* OTF format */
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  margin: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'SK Modernist Regular';
+  color: #0B434B;
+}
+p, span, div {
+  font-family: 'SK Modernist Regular';
+}
+
+/* //heade styles */
+.header-section {
+  border-top-left-radius: 64px;
+  border-top-right-radius: 64px;
+  padding: 34px 54px 0px 72px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+
+}
+
+.hero-section {
+  /* Set the background image and position it */
+  background-image: url('../public//images/Global\ Map.png');
+  height:968px;
+  background-position: center right; /* Adjust the position as needed */
+  background-repeat: no-repeat;
+  background-size: contain; /* You can use 'cover' or 'contain' depending on your design */
+
+  text-align: right;
+  padding: 20px;
+}
+.hero-sub {
+  max-width: 1180px ;
+}
