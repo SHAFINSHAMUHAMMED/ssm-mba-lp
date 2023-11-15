@@ -19,38 +19,156 @@
   font-weight: normal;
   font-style: normal;
 }
-body {
-  margin: 10px;
-}
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'SK Modernist Regular';
+ 
   color: #0B434B;
 }
-p, span, div {
+p {
   font-family: 'SK Modernist Regular';
+  font-size: 20px;
+  line-height:30px ;
 }
-
-/* //heade styles */
+ h1 {
+  font-family: 'SK Modernist Bold';
+  font-size: 53px;
+ }
+ h2 {
+  font-family: 'SK Modernist Regular';
+  font-size: 40px;
+ }
+ h3 {
+  font-family: 'SK Modernist Regular';
+  font-size: 26px;
+ }
+ h4 {
+  font-family: 'SK Modernist Regular';
+  font-size: 23px;
+ }
+ h5 {
+  font-size: 20px;
+ }
+ h6 {
+  font-size: 18px;
+ }
+.highlight {
+    color: #259D4A;
+    white-space: nowrap;
+}
+/* //header styles */
 .header-section {
   border-top-left-radius: 64px;
   border-top-right-radius: 64px;
   padding: 34px 54px 0px 72px;
+  margin: 10px;
+  margin-bottom:0px ;
   border-bottom: 1px solid rgba(0, 0, 0, 0.24);
 
 }
 
 .hero-section {
   /* Set the background image and position it */
-  background-image: url('../public//images/Global\ Map.png');
-  height:968px;
-  background-position: center right; /* Adjust the position as needed */
+  background-image: url('../public/images/Global\ Map.png');
+  background-position: center right; 
   background-repeat: no-repeat;
-  background-size: contain; /* You can use 'cover' or 'contain' depending on your design */
+  background-size: contain;
+  margin: 0px 10px 0px 10px;
 
-  text-align: right;
-  padding: 20px;
 }
+/* .hero-section::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: url('../public/images/GraphicPatter.png') no-repeat bottom center;
+  background-size: cover;
+  z-index: 2;
+} */
 .hero-sub {
   max-width: 1180px ;
+  display: flex;
+  gap: 60px
+  
+}
+.hero-left {
+  width:540px ;
+}
+.Hero-Headline {
+  font-size: 90px;
+  font-weight: 700; 
+  line-height: 95px;
+}
+.wavy-underline {
+  position: relative;
+  display: inline;
+}
+
+.wavy-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -10px; 
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-image: url('../public/images/svg/wawyUnderline.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.hero-right {
+ position: relative;
+}
+.hero-img {
+  width: 645px;
+  height: 758px;
+  z-index: 5;
+}
+.bag-icon {
+  width: 210px;
+  height: 189px;
+  position: absolute;
+  top:200px;
+  left: -50px;
+  z-index: 1;
+}
+.graph-icon2 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top:200px;
+  left: 420px;
+  z-index: 1;
+}
+.rank-icon {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top:420px;
+  left: 400px;
+  z-index: 1;
+}
+.graphic-devider {
+  width: 100%;
+  max-height: 214px;
+  overflow: hidden;
+ 
+}
+.carousel {
+  max-width: 1180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:auto ;
+  position: relative;
+  bottom: 90px;
+  background: white;
+  border-radius: 55px ;
+  font-weight: bold;
+
+  
+}
+.carousel-svg {
+  width: 73px;
+  height: 73px;
 }
