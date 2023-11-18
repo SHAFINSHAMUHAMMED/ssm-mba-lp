@@ -13,7 +13,7 @@ function hero() {
             </h4>
           </div>
           <h1 className="Hero-Headline">
-            Globally <span className="highlight ">Connected</span>{" "}
+            Globally <span className="highlight-green ">Connected</span>{" "}
             <span className="wavy-underline">Alumni</span>.
           </h1>
           <p className="text-[#1A555D] w-[433px] pt-10">

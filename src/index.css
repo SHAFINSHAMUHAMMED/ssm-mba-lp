@@ -49,15 +49,37 @@ p {
   font-size: 20px;
  }
  h6 {
+  font-family: 'SK Modernist Regular';
   font-size: 18px;
  }
-.highlight {
+ button {
+  font-family: 'SK Modernist Bold';
+  color: #FFF;
+  font-size: 22.564px;
+  font-style: normal;
+  /* font-weight: 700; */
+  line-height: 92%; /* 20.759px */
+  text-transform: uppercase;
+ }
+.highlight-green {
     color: #259D4A;
     white-space: nowrap;
 }
 .highlight-orange {
   color:#EE9B4E ;
 }
+.claim-description {
+  margin: auto;
+  max-width: 483px;
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  line-height: 136%; /* 20.4px */
+  font-weight: 400;
+  padding-top: 16px;
+}
+
+
 /* //header styles */
 .header-section {
   border-top-left-radius: 64px;
@@ -124,8 +146,9 @@ p {
 }
 .hero-img {
   width: 645px;
-  height: 758px;
+  /* height: 758px; */
   z-index: 5;
+  background-size: contain;
 }
 .bag-icon {
   width: 210px;
@@ -162,8 +185,8 @@ p {
   /* display: flex;
   justify-content: space-between;
   align-items: center; */
-/* position: relative;
-  bottom: 90px; */
+position: relative;
+  bottom: 90px;
   margin:auto ;
   background: white;
   border-radius: 55px ;
@@ -173,6 +196,7 @@ p {
   width: 73px;
   height: 73px;
 }
+
 
 /* Swiss school section */
 
@@ -209,4 +233,371 @@ p {
 .why-swiss-school div .p-margine {
   font-size: 18px;
   margin-bottom:33px ;
+}
+
+/* Program-Highlights section */
+
+.highlight-main {
+  margin: 0px 10px 0px 10px;
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-top: 80px;
+  border-radius: 64px;
+}
+.highlight-h2  {
+  text-align: center;
+  color: white;
+  width: 600px;
+  background-color: #0b4149;
+  position:absolute;
+  left: 29%;
+  bottom: 92% 
+}
+.highlight-h2 .wavy-underline-green::after {
+  bottom: -20px;
+}
+.program-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1000px;
+  border: 2px solid #EE9B4E;
+  margin: auto;
+  margin-bottom: 70px;
+  padding-top: 105px;
+  border-radius: 70px;
+}
+
+.Highlight-columns {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #D9D9D9;
+  border-right: 1px solid #D9D9D9;
+  padding: 20px;
+  padding-left: 40px;
+  
+}
+.Highlight-columns2 {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #D9D9D9;
+  padding: 20px;
+  padding-left: 40px;
+  position: relative;
+}
+.Highlight-star-icon {
+  position: absolute;
+  left: 40%;
+  top: 20%;
+}
+.highlight-svg {
+  width: 120px;
+  height: 118px;
+}
+.highlight-svg path {
+  transition: fill 0.3s;
+  fill: #0B434B;
+}
+.columns:hover .highlight-svg circle {
+  fill:#259D4A 
+}
+.columns:hover .highlight-svg path {
+  fill: #fafafa; /* New color on hover */
+}
+.highlight-description {
+  margin: auto;
+  margin-top: 15px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  max-width: 400px;
+}
+
+/* Acreditions part */
+
+.accredit-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 600px;
+  margin-top: 40px;
+  background-image: url('/images/earth.png');
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.accredit-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgb(255, 255, 255));
+  filter: blur(10px);
+  pointer-events: none;
+  z-index: 1;
+}
+.accredit-main h1 {
+  max-width: 552px ;
+  margin: auto;
+}
+.accredit-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 23px;
+  padding-bottom: 31px;
+  /* width: 1440px; */
+}
+.accredit-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 211px;
+  min-height: 106px;
+  border-radius: 26.853px;
+  background: #FFF;
+  margin-left: 25px;
+  margin-right: 25px;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+/* Unbeatable section */
+
+.unbeatable-main {
+  margin: 0px 10px 0px 10px;
+  position: relative;
+  padding-top: 80px;
+  margin-bottom: 80px;
+  margin-top: 80px;
+  border-radius: 64px;
+}
+.unbeatable-main h1 {
+  max-width: 730px;
+  margin: auto;
+  padding: 0px 40px 0px 40px;
+  line-height: 60px;
+}
+.unbeatable-video-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 734px;
+  margin-top: 40px;
+  background-image: url('/images/arch-bg.png');
+  background-position: center left; 
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.unbeatable-video-player {
+  width: 1180px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.player-wrapper {
+  position: relative;
+  overflow: hidden; /* Add this to ensure the player respects border-radius */
+}
+
+.react-player {
+  border-radius: 20px; /* Your desired border-radius */
+}
+
+.custom-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.play-icon {
+  animation: breathingEffect 3s ease-out infinite;
+  background: white;
+  border-radius: 150px;
+}
+
+/* Keyframes for the breathing effect */
+@keyframes breathingEffect {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px 15px rgba(255, 255, 255, 0.4);
+  }
+}
+
+
+.unbeatable-outer-container {
+  /* width: 65%; */
+  margin: auto;
+  padding: 50px 0px 0px 0px;
+  max-width: 65% ;
+  position: relative;
+}
+.unbeatable-outer-container::before,
+.unbeatable-outer-container::after {
+  content: '';
+  position: absolute;
+  width: 1.5px; 
+  height: 70%; 
+  background: rgba(11, 67, 75, 0.53)
+}
+.unbeatable-outer-container::before {
+  left: 0;
+  bottom: 0;
+  top: 0;
+
+}
+
+.unbeatable-outer-container::after {
+  right: 0;
+  bottom: 0;
+}
+.unbeatable-inner-container {
+  padding: 0px 0px 80px 0px;
+}
+.unbeatable-inner-flex {
+  display: flex;
+  align-items: center;
+  padding: 30px 120px 50px 100px;
+}
+.unbeatable-inner-flex-content {
+  padding-left: 30px;
+}
+.unbeatable-inner-flex-content h4 {
+  font-family: 'SK Modernist Bold';
+}
+.unbeatable-inner-flex-content h6 {
+  line-height: 1.6;
+  padding: 10px 50px 10px 0px;
+}
+
+
+/* 6-power-skills section */
+
+.power-skill-main {
+ padding-bottom: 80px;
+}
+.power-skill-main h1 {
+  margin: auto;
+  max-width: 727px;
+  text-align: center;
+  line-height: 104%; /* 55.12px */
+}
+
+.power-skill-description {
+  max-width: 491px;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  line-height: 136%; /* 27.2px */
+}
+
+.power-skill-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 50px 20px 30px 20px;
+  margin: 0 auto;
+  max-width: 1120px;
+  position: relative;
+}
+.power-skill-star {
+  width: 300px;
+  position: absolute;
+  bottom: 150px;
+  right: -100px;
+  z-index: -1;
+}
+
+.power-skill-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 392px;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px 50px 0px;
+}
+.power-skill-card h3 {
+  font-family: 'SK Modernist Bold';
+  line-height: 112%; /* 29.166px */
+}
+.power-skill-card div {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+.power-skill-card p {
+  padding: 10px 20px 10px 50px;
+}
+.power-skill-card-icon {
+  position: absolute;
+  left: 5px;
+  top: 30px;
+}
+.power-skill-card-img {
+  max-width:329px ;
+  height: auto; 
+}
+
+
+/* Uae professional section */
+
+.uae-professional-main {
+  position: relative;
+  margin: 0px 10px;
+  border-radius: 64px;
+  overflow: hidden;
+}
+
+.uae-professional-main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('/images/building-burj.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(7px);
+  z-index: -1;
+}
+
+.uae-professional-inner {
+  max-width: 1180px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  gap: 100px;
+  padding: 120px 10px 100px 10px ;
+}
+.uae-professional-inner h1 {
+  line-height: 104%;
+  padding-bottom: 40px;
+}
+.uae-professional-p {
+  margin-bottom: 35px;
+  padding: 0px 45px 0px 0px;
+  font-size:18px ;
+  color: #0B434B;
+
+font-family: Sk-Modernist;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 24.48px */
+}
+.uae-professional-graphic-devider {
+  position: absolute;
+  right: 0;
+  z-index: 0;
+  bottom: 0;
+  max-width:217px;
 }

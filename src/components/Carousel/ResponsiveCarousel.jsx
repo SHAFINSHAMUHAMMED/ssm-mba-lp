@@ -70,7 +70,7 @@ function ResponsiveCarousel() {
       <div className=" sm:hidden">
   <Slider {...settings}>
     {/* Slide 1 */}
-    <div className="flex flex-col justify-center items-center w-24 text-center px-4 ">
+    <div className="  ">
       <img src="images/svg/balanced-icon.svg" alt="Work-Life" className="mb-2" />
       <h4 className="text-sm sm:text-base">Balanced Work-Life Structure</h4>
     </div>
@@ -97,3 +97,62 @@ function ResponsiveCarousel() {
 
 export default ResponsiveCarousel;
 
+const Carousel = () => {
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 2, // Show 2 slides in mobile
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 768, // Adjust the breakpoint based on your design
+          settings: {
+            slidesToShow: 4, // Show 4 slides on larger devices
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    };
+  
+    return (
+      <Slider {...settings}>
+          <div  className="slide-container">
+          <div className="flex flex-col items-center text-center px-4 mt-10 w-[165px]">
+          <img
+            src="images/svg/balanced-icon.svg"
+            alt="Work-Life"
+            className="mb-2 carousel-svg"
+          />
+          <h4 className="text-sm sm:text-base">Balanced Work-Life Structure</h4>
+        </div>
+        <div className="flex flex-col items-center text-center px-4 mt-10 w-[140px]">
+          <img
+            src="\images\svg\timer-icon.svg"
+            alt="12 Months"
+            className="mb-2 carousel-svg"
+          />
+          <h4 className="text-sm sm:text-base">Complete in 12 Months</h4>
+        </div>
+        <div className="flex flex-col items-center text-center px-4 mt-10 w-[179px]">
+          <img
+            src="images/svg/faculty-icon.svg"
+            alt="Industry-Leading"
+            className="mb-2 carousel-svg"
+          />
+          <h4 className="text-sm sm:text-base">Industry-Leading Faculties</h4>
+        </div>
+        <div className="flex flex-col items-center text-center px-4 mt-10 w-[160px]">
+          <img
+            src="images\svg\money-icon.svg"
+            alt="Scholarships"
+            className="mb-2 carousel-svg"
+          />
+          <h4 className="text-sm sm:text-base">
+            Scholarships Available: Save Up to 30%
+          </h4>
+        </div>
+          </div>
+      </Slider>
+    );
+  };
