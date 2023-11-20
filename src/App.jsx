@@ -11,6 +11,8 @@ import Uae_professionals from './components/Uae_professionals/uae_professionals'
 import Alumini_carousel from './components/alumini_carousel/alumini_carousel'
 import World_of_possibilities from './components/World_of_possibilities/world_of_possibilities'
 import Review_section from './components/Reviews/review_section'
+import Successful_graduates from './components/Successful_graduates/successful_graduates'
+import Steps_to_unlock_career from './components/Steps_to_unlock_career/steps_to_unlock_career'
 function App() {
   return (
     <div className='body'>
@@ -26,6 +28,8 @@ function App() {
       <Alumini_carousel/>
       <World_of_possibilities/>
       <Review_section/>
+      <Successful_graduates/>
+      <Steps_to_unlock_career/>
     </div>
   )
 }

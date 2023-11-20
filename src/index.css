@@ -137,7 +137,23 @@ p {
   left: 0;
   width: 100%;
   height: 20px;
-  background-image: url('../public/images/svg/wawyUnderline.svg');
+  background-image: url('/images/svg/wawyUnderline.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.wavy-underline-orange2 {
+  position: relative;
+  display: inline;
+}
+
+.wavy-underline-orange2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px; 
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-image: url('/images/svg/wawyUnderline-large.svg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -222,7 +238,7 @@ position: relative;
   left: 0;
   width: 100%;
   height: 20px;
-  background-image: url('../public/images/svg/wawyUnderlineGreen.svg');
+  background-image: url('/images/svg/wawyUnderlineGreen.svg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -237,7 +253,7 @@ position: relative;
   left: 0;
   width: 100%;
   height: 20px;
-  background-image: url('../public/images/svg/wawyUnderlineGreen2.svg');
+  background-image: url('/images/svg/wawyUnderlineGreen2.svg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -845,6 +861,16 @@ margin-bottom: 15px;
 
 /* Review section */
 
+.review-section-main {
+
+}
+.review-section-main h1 {
+  max-width: 791px;
+  margin: auto;
+  text-align: center;
+  padding: 0px 10px 0px 10px;
+  line-height: 104%; /* 55.12px */
+}
 .review-video-main {
   max-width: 1180px;
   margin: auto;
@@ -864,10 +890,146 @@ margin-bottom: 15px;
 }
 
 .custom-right-arrow {
-  right: 0; /* Adjust as needed */
+  right: 5px; /* Adjust as needed */
 }
 
 .custom-left-arrow {
-  left: 0; /* Adjust as needed */
+  left: 5px; /* Adjust as needed */
+}
+.player-container {
+  border-radius: 50px;
+  overflow: hidden;
+  /* Other styles if needed, such as width and height */
+}
+.review-video-sub {
+  height: 253px;
+  width: 100%;
+  background-image: url('../public/images/GraphicPatter3.png');
+  background-position: bottom center ; 
+  background-repeat: no-repeat;
+  margin: 80px 0px 50px 0px;
+  position: relative;
+}
+.review-video-sub-cards {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  position: absolute;
+  bottom: 100px;
+}
+.review-video-sub-card {
+
 }
 
+.user-reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 10px 0px 45px 0px;
+
+}
+.user-review-card {
+  max-width: 514px;
+  min-width: 514px;
+  border: 2px solid rgba(18, 104, 44, 0.49);
+  border-radius: 47px;
+  padding: 50px 56px 40px 40px;
+}
+.user-review-card p {
+  color: #24626A;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 144%; /* 25.92px */
+margin-bottom: 60px;
+}
+.user-review-card h5{
+  font-family: 'SK Modernist Bold';
+}
+
+
+/* Successful graduates section */
+
+.successful-graduates-main {
+    margin-bottom: 45px;
+}
+.successful-graduates-sub-1 {
+  min-height: 600px;
+  background:  url('/images/graduates.png');
+  /* background: linear-gradient(180deg, #1C7337 0%, #248E45 100%); */
+  background-color: #1C7337;
+    margin: 50px 10px 0px 10px;
+    border-radius: 64px 64px 0px 0px;
+  background-position:  bottom  ; 
+  object-fit: contain;
+  background-repeat: no-repeat;
+  padding: 60px 0px 60px 0px ;
+}
+.successful-graduates-sub-1 h1 {
+  max-width: 936px;
+  margin: auto;
+  color: #fff;
+  text-align: center;
+  line-height: 100% ;
+  padding: 0px 126px 0px 120px ;
+}
+.successful-graduates-carousel {
+  margin-bottom: 45px;
+}
+.successful-graduates-carousel-1 , .successful-graduates-carousel-2  {
+  display: flex;
+  max-height: 388px;
+  overflow: hidden;
+}
+.gradute-image {
+  max-width: 300px;
+  margin-left: 2px;
+}
+
+
+/* Steps to unlock career section */
+
+.steps-to-unlock-career-main {
+  background: #EDE6D8;
+  border-radius: 64px;
+  margin: 0px 10px 0px 10px;
+}
+
+.steps-to-unlock-card {
+  max-width: 602px;
+  display: flex;
+  border-radius: 34px;
+  border: 1px solid rgba(11, 67, 75, 0.39);
+  padding: 33px 45px 30px 80px ;
+}
+.steps-to-unlock-card h3 {
+  color: #0B434B;
+  font-size: 33.636px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114.5%; /* 38.513px */
+  text-transform: uppercase;
+}
+.steps-to-unlock-card h1 {
+  color: #259D4A;
+  font-size: 96.088px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 114.5%; /* 110.021px */
+}
+.steps-to-unlock-card h4{
+  color: #0C434B;
+  font-family: 'SK Modernist Bold' ;
+  font-size: 30.199px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 122%; /* 36.842px */
+}
+.steps-to-unlock-card p {
+  color: #0B434B;
+  font-size: 18.773px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 136%; /* 25.532px */
+}
