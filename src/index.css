@@ -226,6 +226,21 @@ position: relative;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+.wavy-underline-green2 {
+  position: relative;
+  display: inline;
+}
+.wavy-underline-green2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px; 
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-image: url('../public/images/svg/wawyUnderlineGreen2.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
 .why-swiss-school div  {
  max-width: 630px;
  margin: auto;
@@ -601,3 +616,258 @@ line-height: 24px; /* 24.48px */
   bottom: 0;
   max-width:217px;
 }
+
+/* Alumini carousel section */
+
+.alumini-carousel-main {
+  margin: 50px 0px 50px 0px;
+}
+.alumini-carousel-main h1 {
+  max-width: 923px;
+  margin: auto;
+  text-align: center;
+  line-height: 104%; /* 55.12px */
+  padding: 0px 20px 0px 20px;
+  margin-bottom: 50px;
+}
+
+
+/* World of possibilities section */
+
+.world-of-possibilities-main {
+  background: #DCFBFF;
+  margin: 0px 10px 0px 10px;
+  position: relative;
+  padding-top: 80px;
+  /* margin-bottom: 80px; */
+  margin-top: 80px;
+  border-radius: 64px;
+}
+.world-of-possibilities-main h1 {
+  max-width: 791px;
+  margin: auto;
+  text-align: center;
+  padding: 0px 10px 0px 10px;
+  line-height: 104%; /* 55.12px */
+}
+.world-of-possibilities-sub-1 {
+  display: flex;
+  flex-direction: column;
+  /* gap: 100px; */
+  justify-content:flex-end;
+  align-items: center;
+  max-width: 1183px;
+  background-image: url('/images/map-bg.png');
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: auto;
+  margin-top: 40px;
+  border-bottom: 2.5px solid rgba(11, 67, 75, 0.10);
+  padding-top: 30px;
+}
+.breathing-image {
+  width: 316px;
+  height: 316px;
+  background: white;
+  border-radius: 150px;
+  animation: breathingEffect 3s ease-out infinite;
+}
+@keyframes breathingEffect {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 25px 15px rgba(255, 255, 255, 0.8);
+  }
+}
+
+.world-of-possibilities-cards {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 80px;
+}
+.world-of-possibilities-card:not(:last-child) {
+  display: flex;
+  justify-content: center;
+  width: 356px;
+  border-right: 2.5px solid rgba(11, 67, 75, 0.10);
+  padding: 10px 0px 40px 0px;
+}
+
+.world-of-possibilities-card:last-child {
+  display: flex;
+  justify-content: center;
+  width: 356px;
+  padding: 10px 0px 40px 0px;
+}
+
+.world-of-possibilities-card h1 {
+  
+  color: #1F6671;
+  font-size: 76.494px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 104%; /* 79.553px */
+  text-align: start;
+}
+.world-of-possibilities-card span {
+  font-family: 'SK Modernist Regular';
+  color: #0B434B;
+  font-size: 36.817px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 104%; /* 38.29px */
+  padding: 0px 10px 0px 10px;
+}
+.world-of-possibilities-sub-2 {
+  max-width: 1183px;
+  margin: auto;
+}
+.world-of-possibilities-cards-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
+  padding: 50px 20px 50px 20px;
+  margin: 0 auto;
+  max-width: 1120px;
+  position: relative;
+}
+.world-of-possibilities-2-card {
+  display: flex;
+  max-width: 537px;
+  border-radius: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  justify-content: center;
+  gap: 10px;
+  padding: 30px 20px 40px 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.world-of-possibilities-2-card h3 {
+font-family: 'SK Modernist Bold';
+margin-bottom: 15px;
+}
+.world-of-possibilities-2-card p {
+  line-height: 136%; /* 25.899px */
+  }
+.world-of-possibilities-2-card:hover {
+  background-color: #259D4A; 
+  color: #fff; 
+}
+.world-of-possibilities-2-card:hover h3 {
+  color: #fff;
+}
+
+.world-of-possibilities-2-card:hover svg path {
+  fill: white;
+}
+
+.world-of-possibilities-2-card:hover svg circle {
+  stroke: white;
+}
+/* .world-of-possibilities-bg {
+  max-height: 817px;
+  overflow: hidden;
+  border-bottom-left-radius: 64px;
+} */
+.world-of-possibilities-bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url('../public//images/professional2.png');
+  background-position: top; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 817px;
+  mix-blend-mode:darken;
+}
+.world-of-possibilities-icons{
+  position: relative;
+  height: 50%;
+  width: 466px;
+}
+.world-of-possibilities-icon-1 {
+  position: absolute;
+  left: -120px;
+  bottom: 50px;
+}
+.world-of-possibilities-icon-2 {
+  position: absolute;
+  left: -120px;
+  bottom: 350px;
+}
+.world-of-possibilities-icon-3 {
+  position: absolute;
+  left: -240px;
+  bottom: 200px;
+}
+.world-of-possibilities-icon-4 {
+  position: absolute;
+  left: -220px;
+  bottom: 300px;
+}
+.world-of-possibilities-brochure {
+  max-width: 1180px;
+  background: #0C434B;
+  border-radius: 64px;
+  padding: 0px 55px 0px 80px;
+  margin: auto;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  bottom: 100px;
+}
+.world-of-possibilities-brochure h1 {
+  color: white;
+  max-width: 600px;
+  line-height: 100%; /* 0px */
+  margin-bottom: 30px;
+}
+.world-of-possibilities-brochure h3 {
+  color: white;
+}
+.world-of-possibilities-brochure p {
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 136%; /* 24.48px */
+  margin-bottom: 30px;
+  padding-right: 60px;
+}
+.world-of-possibilities-brochure img {
+  max-height: 449px;
+}
+.world-of-possibilities-brochure-left {
+  padding: 67px 0px 92px 0px
+}
+
+/* Review section */
+
+.review-video-main {
+  max-width: 1180px;
+  margin: auto;
+}
+.carousel-container {
+  position: relative;
+}
+
+.custom-right-arrow, .custom-left-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.custom-right-arrow {
+  right: 0; /* Adjust as needed */
+}
+
+.custom-left-arrow {
+  left: 0; /* Adjust as needed */
+}
+

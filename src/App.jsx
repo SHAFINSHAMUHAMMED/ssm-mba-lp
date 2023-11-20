@@ -8,6 +8,9 @@ import Acreditions from './components/Acreditions/acreditions'
 import Unbeatable_reason from './components/Reason_section/unbeatable_reason'
 import Power_skills from './components/Power_skills/power_skills'
 import Uae_professionals from './components/Uae_professionals/uae_professionals'
+import Alumini_carousel from './components/alumini_carousel/alumini_carousel'
+import World_of_possibilities from './components/World_of_possibilities/world_of_possibilities'
+import Review_section from './components/Reviews/review_section'
 function App() {
   return (
     <div className='body'>
@@ -20,6 +23,9 @@ function App() {
       <Unbeatable_reason/>
       <Power_skills/>
       <Uae_professionals/>
+      <Alumini_carousel/>
+      <World_of_possibilities/>
+      <Review_section/>
     </div>
   )
 }
