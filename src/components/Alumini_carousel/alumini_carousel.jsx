@@ -1,7 +1,7 @@
 import React from 'react'
 import Marquee from 'react-fast-marquee';
 
-function alumini_carousel() {
+function Alumini_carousel() {
   return (
     <div className='alumini-carousel-main'>
       <h1 className=''>After the Cap and Gown: Discover Where <span className='highlight-green'>Our Alumni Thrive</span></h1>
@@ -40,4 +40,4 @@ function alumini_carousel() {
   )
 }
 
-export default alumini_carousel
+export default Alumini_carousel
