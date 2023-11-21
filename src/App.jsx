@@ -13,7 +13,11 @@ import World_of_possibilities from './components/World_of_possibilities/world_of
 import Review_section from './components/Reviews/review_section'
 import Successful_graduates from './components/Successful_graduates/successful_graduates'
 import Steps_to_unlock_career from './components/Steps_to_unlock_career/steps_to_unlock_career'
+import Student_support from './components/Student_support_guarantee/student_support'
+import Icf_certification from './components/Icf_certification/icf_certification'
 function App() {
+  console.log(12465)
+
   return (
     <div className='body'>
       <Header/>
@@ -30,6 +34,8 @@ function App() {
       <Review_section/>
       <Successful_graduates/>
       <Steps_to_unlock_career/>
+      <Student_support/>
+      <Icf_certification/>
     </div>
   )
 }

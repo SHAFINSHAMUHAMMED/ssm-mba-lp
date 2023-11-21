@@ -64,6 +64,7 @@ p {
 .highlight-green {
     color: #259D4A;
     white-space: nowrap;
+    box-sizing: border-box;
 }
 .highlight-orange {
   color:#EE9B4E ;
@@ -93,7 +94,7 @@ p {
 
 .hero-section {
   /* Set the background image and position it */
-  background-image: url('../public/images/Global\ Map.png');
+  background-image: url('/images/Global\ Map.png');
   background-position: center right; 
   background-repeat: no-repeat;
   background-size: contain;
@@ -107,7 +108,7 @@ p {
   left: 0;
   width: 100%;
   height: 150px;
-  background: url('../public/images/GraphicPatter.png') no-repeat bottom center;
+  background: url('/images/GraphicPatter.png') no-repeat bottom center;
   background-size: cover;
   z-index: 2;
 } */
@@ -512,6 +513,7 @@ position: relative;
 
 .power-skill-main {
  padding-bottom: 80px;
+ overflow: hidden;
 }
 .power-skill-main h1 {
   margin: auto;
@@ -791,7 +793,7 @@ margin-bottom: 15px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-image: url('../public//images/professional2.png');
+  background-image: url('/images/professional2.png');
   background-position: top; 
   background-repeat: no-repeat;
   background-size: cover;
@@ -904,7 +906,7 @@ margin-bottom: 15px;
 .review-video-sub {
   height: 253px;
   width: 100%;
-  background-image: url('../public/images/GraphicPatter3.png');
+  background-image: url('/images/GraphicPatter3.png');
   background-position: bottom center ; 
   background-repeat: no-repeat;
   margin: 80px 0px 50px 0px;
@@ -994,14 +996,40 @@ margin-bottom: 60px;
   background: #EDE6D8;
   border-radius: 64px;
   margin: 0px 10px 0px 10px;
+  padding: 77px 0px 50px 0px ;
+  position: relative;
 }
-
+.steps-to-unlock-career-main .svg-icon2 {
+  position: absolute;
+  bottom: 50px;
+  right: 0px;
+}
+.steps-to-unlock-cards {
+  margin-top: 60px;
+  padding: 0px 0px 40px 0px;
+  position: relative;
+}
+.steps-to-unlock-cards .star-svg {
+  position: absolute;
+  left: 30px;
+}
+.steps-to-unlock-card-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 44px;
+  margin-bottom: 45px;
+}
 .steps-to-unlock-card {
   max-width: 602px;
   display: flex;
   border-radius: 34px;
   border: 1px solid rgba(11, 67, 75, 0.39);
-  padding: 33px 45px 30px 80px ;
+  padding: 33px 35px 30px 70px ;
+}
+.steps-to-unlock-card:hover {
+  background-color: #ffff;
+  border: none;
 }
 .steps-to-unlock-card h3 {
   color: #0B434B;
@@ -1027,9 +1055,93 @@ margin-bottom: 60px;
   line-height: 122%; /* 36.842px */
 }
 .steps-to-unlock-card p {
+  max-width: 315px ;
   color: #0B434B;
   font-size: 18.773px;
   font-style: normal;
   font-weight: 400;
   line-height: 136%; /* 25.532px */
+}
+.steps-to-unlock-career-h1 {
+  line-height: 114.5%; /* 110.021px */
+  max-width: 803px;
+  margin: auto;
+  text-align: center;
+  padding: 0px 20px 0px 20px;
+}
+
+
+/* 100% student support guarantee section */
+
+.student-support-main {
+  background-image: url('/images/background-img.png');
+  object-fit: contain;
+  object-fit: contain;
+  background-repeat: no-repeat;
+  padding: 70px 0px 30px 0px;
+}
+.student-support-sub {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.student-support-sub img {
+  max-width: 421px;
+  margin-bottom: 33px;
+}
+.student-support-sub h1 {
+  max-width: 620px;
+  text-align: center;
+  line-height: 114.5%;
+  margin-bottom: 24px;
+
+}
+.student-support-sub p {
+  color: #0B434B;
+  max-width: 516px;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 136%; /* 24.48px */
+}
+
+/* ICF certification section */
+
+.icf-certification-main {
+  background: url('images/GraphicPatter3.png') no-repeat top / contain, #EDE6D8;
+}
+.icf-certification-sub {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1025px;
+  margin: auto;
+  padding-top: 200px;
+}
+.icf-certification-sub h2 {
+  max-width: 426px;
+text-align: center;
+font-size: 28.321px;
+font-style: normal;
+font-weight: 700;
+line-height: 107.5%; /* 30.445px */
+margin-bottom:15px;
+}
+.icf-certification-sub h1 {
+  max-width: 831px;
+  font-size: 55.246px;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  line-height: 114.5%;
+  padding: 20px 20px 20px 20px ;
+}
+.icf-form-main {
+  max-width: 999px;
+  border-radius: 70px;
+  border: 2px solid rgba(11, 64, 72, 0.41);
 }

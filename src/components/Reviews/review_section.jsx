@@ -7,10 +7,10 @@ import ButtonDark from "../Buttons/buttonDark";
 import Claim_description from "../Description/claim_description";
 function ReviewSection() {
   const initialVideoUrls = [
-    "https://youtu.be/Xx6SKzOUqhQ?si=gF1bUUbdUfYzEXqy",
-    "https://youtu.be/l6EjYuUSn1Y?si=q1kUamJnggdV9juK",
-    "https://youtu.be/SPgixVcfiCE?si=Pe3aYq434Gq2SMRj",
-    "https://youtu.be/KB_7X3iIHQ4?si=bv2v6q9gkxkxJvco",
+    "",
+    "",
+    "",
+    "",
   ];
   const carouselRef = useRef();
   const [videoUrls, setVideoUrls] = useState(initialVideoUrls);
@@ -526,7 +526,7 @@ function ReviewSection() {
             className="review-video-sub-card"
             onClick={() =>
               handleCardClick(
-                "https://youtu.be/Xx6SKzOUqhQ?si=gF1bUUbdUfYzEXqy",
+                "",
                 0
               )
             }
@@ -537,7 +537,7 @@ function ReviewSection() {
             className="review-video-sub-card"
             onClick={() =>
               handleCardClick(
-                "https://youtu.be/l6EjYuUSn1Y?si=q1kUamJnggdV9juK",
+                "",
                 1
               )
             }
@@ -548,7 +548,7 @@ function ReviewSection() {
             className="review-video-sub-card"
             onClick={() =>
               handleCardClick(
-                "https://youtu.be/Xx6SKzOUqhQ?si=gF1bUUbdUfYzEXqy",
+                "",
                 2
               )
             }
@@ -559,7 +559,7 @@ function ReviewSection() {
             className="review-video-sub-card"
             onClick={() =>
               handleCardClick(
-                "https://youtu.be/l6EjYuUSn1Y?si=q1kUamJnggdV9juK",
+                "",
                 3
               )
             }
