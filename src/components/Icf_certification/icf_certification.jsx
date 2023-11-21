@@ -1,5 +1,5 @@
 import React from "react";
-import MultiStepForm from '../Form/MultiStepForm'
+import MultiStepForm from "../Form/MultiStepForm";
 function icf_certification() {
   return (
     <div className="icf-certification-main">
@@ -35,9 +35,10 @@ function icf_certification() {
           (Worth AED 9000)
         </h1>
         <img src="\images\icf-certification-banner.png" alt="" />
-        <div className="icf-form-main">
-            <MultiStepForm/>
-            </div>
+        <MultiStepForm />
+      </div>
+      <div className="bottom-man-image-div">
+      <img className="bottom-man-image" src="\images\bottom-man.png" alt="" />
       </div>
     </div>
   );

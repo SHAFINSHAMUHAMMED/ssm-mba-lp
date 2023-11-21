@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import Claim_description from "../Description/claim_description";
 
 const MultiStepForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
-    name: '',
-    specialization: '',
-    jobRole: '',
-    location: '',
-    email: '',
+    name: "",
+    specialization: "",
+    jobRole: "",
+    location: "",
+    email: "",
   });
-  console.log(formData);
 
   const [formErrors, setFormErrors] = useState({});
 
@@ -64,7 +64,7 @@ const MultiStepForm = () => {
   };
 
   const nextStep = () => {
-    console.log(1222);
+    console.log('ttttttttttteeeeeeeeeeeeeesssssssssssssssttttttttttttttt');
     if (validateCurrentStep()) {
       if (currentStep < 5) {
         setCurrentStep(currentStep + 1);
@@ -75,15 +75,36 @@ const MultiStepForm = () => {
     }
   };
 
-  const handleSubmit = () => {
-    e.preventDefault();
-    console.log(formData);
-    // Add your submission logic here
+  const handleSubmit = async () => {
+    // Webhook URL
+    const webhookUrl =
+      "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzMTA0MzA1MjY1NTUzZDUxMzAi_pc";
+
+    try {
+      const response = await fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log("Form data sent successfully");
+        // Handle success
+      } else {
+        console.error("Failed to send form data");
+        // Handle error
+      }
+    } catch (error) {
+      console.error("Error sending form data:", error);
+      // Handle network error
+    }
   };
 
   const renderError = (fieldName) => {
     if (formErrors[fieldName]) {
-      return <p className="error">{formErrors[fieldName]}</p>;
+      return <p className="form-error">{formErrors[fieldName]}</p>;
     }
     return null;
   };
@@ -93,7 +114,9 @@ const MultiStepForm = () => {
       case 1:
         return (
           <>
-            <h2>Let’s take your career higher. But first, what do we call you?</h2>
+            <h2 className="form-question">
+              Let’s take your career higher. But first, what do we call you?
+            </h2>
             <input
               type="text"
               name="name"
@@ -101,13 +124,16 @@ const MultiStepForm = () => {
               onChange={handleChange}
               placeholder="Type Here..."
             />
-            {renderError('name')}
+            {renderError("name")}
           </>
         );
       case 2:
         return (
           <>
-            <h2>Awesome, {formData.name}! Which specialization sparks your interest?</h2>
+            <h2>
+              Awesome, {formData.name}! Which specialization sparks your
+              interest?
+            </h2>
             <input
               type="text"
               name="specialization"
@@ -115,7 +141,7 @@ const MultiStepForm = () => {
               onChange={handleChange}
               placeholder="Type Here..."
             />
-            {renderError('specialization')}
+            {renderError("specialization")}
           </>
         );
       case 3:
@@ -129,13 +155,15 @@ const MultiStepForm = () => {
               onChange={handleChange}
               placeholder="Type Here..."
             />
-            {renderError('jobRole')}
+            {renderError("jobRole")}
           </>
         );
       case 4:
         return (
           <>
-            <h2>We'd love to know your location. Where are you currently based?</h2>
+            <h2>
+              We'd love to know your location. Where are you currently based?
+            </h2>
             <input
               type="text"
               name="location"
@@ -143,13 +171,16 @@ const MultiStepForm = () => {
               onChange={handleChange}
               placeholder="Type Here..."
             />
-            {renderError('location')}
+            {renderError("location")}
           </>
         );
       case 5:
         return (
           <>
-            <h2>For seamless communication, may we have your preferred email, {formData.name}?</h2>
+            <h2>
+              For seamless communication, may we have your preferred email,{" "}
+              {formData.name}?
+            </h2>
             <input
               type="email"
               name="email"
@@ -157,7 +188,7 @@ const MultiStepForm = () => {
               onChange={handleChange}
               placeholder="Type Here..."
             />
-            {renderError('email')}
+            {renderError("email")}
           </>
         );
       default:
@@ -166,15 +197,48 @@ const MultiStepForm = () => {
   };
 
   return (
-    <div>
-      <form>
+    <div className="icf-form-main">
+      <form className="icf-form">
         {renderForm()}
         <div className="buttons">
           <button type="button" onClick={nextStep}>
-            {currentStep < 5 ? 'CONTINUE' : 'SUBMIT'}
+            {currentStep < 5 ? "CONTINUE" : "SUBMIT"}
           </button>
         </div>
       </form>
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="76"
+          height="156"
+          viewBox="0 0 76 156"
+          fill="none"
+        >
+          <path
+            d="M39.2891 1L39.2891 128"
+            stroke="#0B434B"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M20.9297 110.985L39.2003 129.256L57.4709 110.985"
+            stroke="#0B434B"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <circle
+            cx="37.7907"
+            cy="118.209"
+            r="36.7907"
+            transform="rotate(-90 37.7907 118.209)"
+            stroke="#259D4A"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
+      <Claim_description color="rgba(11, 67, 75, 0.79)" />
     </div>
   );
 };

@@ -8,15 +8,16 @@ import Acreditions from './components/Acreditions/acreditions'
 import Unbeatable_reason from './components/Reason_section/unbeatable_reason'
 import Power_skills from './components/Power_skills/power_skills'
 import Uae_professionals from './components/Uae_professionals/uae_professionals'
-import Alumini_carousel from './components/alumini_carousel/alumini_carousel'
+import Alumini_carousel from './components/Alumini_carousel/alumini_carousel'
 import World_of_possibilities from './components/World_of_possibilities/world_of_possibilities'
 import Review_section from './components/Reviews/review_section'
 import Successful_graduates from './components/Successful_graduates/successful_graduates'
 import Steps_to_unlock_career from './components/Steps_to_unlock_career/steps_to_unlock_career'
 import Student_support from './components/Student_support_guarantee/student_support'
 import Icf_certification from './components/Icf_certification/icf_certification'
+import Footer from './components/Footer/footer'
+
 function App() {
-  console.log(12465)
 
   return (
     <div className='body'>
@@ -36,6 +37,7 @@ function App() {
       <Steps_to_unlock_career/>
       <Student_support/>
       <Icf_certification/>
+      <Footer/>
     </div>
   )
 }

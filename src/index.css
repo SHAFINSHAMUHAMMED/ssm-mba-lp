@@ -20,6 +20,12 @@
   font-style: normal;
 }
 
+::-webkit-scrollbar {
+  width: 0px; /* Set your desired width */
+}
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Set your desired background color */
+  }
 h1, h2, h3, h4, h5, h6 {
  
   color: #0B434B;
@@ -863,9 +869,9 @@ margin-bottom: 15px;
 
 /* Review section */
 
-.review-section-main {
+/* .review-section-main {
 
-}
+} */
 .review-section-main h1 {
   max-width: 791px;
   margin: auto;
@@ -920,9 +926,9 @@ margin-bottom: 15px;
   position: absolute;
   bottom: 100px;
 }
-.review-video-sub-card {
+/* .review-video-sub-card {
 
-}
+} */
 
 .user-reviews {
   display: flex;
@@ -1112,6 +1118,7 @@ margin-bottom: 60px;
 
 .icf-certification-main {
   background: url('images/GraphicPatter3.png') no-repeat top / contain, #EDE6D8;
+  position: relative;
 }
 .icf-certification-sub {
   display: flex;
@@ -1141,7 +1148,82 @@ margin-bottom:15px;
   padding: 20px 20px 20px 20px ;
 }
 .icf-form-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   max-width: 999px;
+  width: 100%;
   border-radius: 70px;
   border: 2px solid rgba(11, 64, 72, 0.41);
+  box-sizing: border-box; 
+  padding: 139px 20px 70px 20px; 
+  margin: auto; 
+  margin-top: 40px;
+
+}
+.icf-form-main svg {
+  width: 200px;
+  background-color: #EDE6D8;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%); 
+}
+.icf-form {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.icf-form h2 {
+  color: #0B434B;
+  text-align: center;
+  font-size: 40.989px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 45.088px */
+  max-width:616px ;
+  padding: 0px 20px 0px 20px;
+}
+.icf-form input {
+  width: 700px;
+  border-radius: 73px;
+  border: 1px solid rgba(0, 0, 0, 0.47);
+  background: #FCFCFC;
+  padding:25px 65px 25px 65px ;
+  margin-bottom:16px ;
+  margin-top: 16px;
+}
+.icf-form input::placeholder {
+  font-size: 27px;
+  color:#5B5454 ;
+}
+.icf-form button {
+  width: 700px;
+  background: #0B434B;
+  border-radius: 91.765px;
+  padding: 26px 0px 30px 0px;
+  margin-bottom: 18px;
+}
+.form-error {
+  color: red;
+  margin-bottom: 16px;
+}
+.bottom-man-image-div {
+  height: 690px;
+  position: relative;
+}
+.bottom-man-image {
+  width: 100%;
+  height: 937px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: cover;
+  object-position: center;
+  opacity:0.9 ;
 }
