@@ -22,7 +22,7 @@ function App() {
   return (
     <div className='body'>
       <Header/>
-      <Hero/>
+      {/* <Hero/>
       <Carousel/>
       <Swiss_school/>
       <Program_Highlights/>
@@ -37,7 +37,7 @@ function App() {
       <Steps_to_unlock_career/>
       <Student_support/>
       <Icf_certification/>
-      <Footer/>
+      <Footer/> */}
     </div>
   )
 }

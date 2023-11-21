@@ -2,9 +2,10 @@ import React from "react";
 function header() {
   return (
     <div className="header-section bg-backgrounds-wisdomWhite">
-      <div className="flex justify-between p-5">
-        <img className="w-[260px] h-[66px]" src="\images\svg\logo.svg" alt="" />
-        <div className="contact flex items-center gap-1">
+      <div className="flex justify-between ps-3 pe-5 pb-2 sm:ps-14 sm:pe-14 sm:pb-5 md:p-5">
+        <img className="w-[204px] h-[53px] sm:w-[260px] h-[66px]" src="\images\svg\logo.svg" alt="" />
+        <div className="header-section-contact">
+        <a href="tel:+971 50 418 1328">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="43"
@@ -26,9 +27,10 @@ function header() {
               fill="#EE9B4E"
             />
           </svg>
+            </a>
           <div>
             <p className="text-[#10351B] text-[15px] font-normal">Have Questions?</p>
-            <h3 className="text-[27px] font-bold">+971 50 418 1328</h3>
+            <h3 className="text-[27px] font-bold"> <a href="tel:+971 50 418 1328">+971 50 418 1328</a></h3>
           </div>
         </div>
       </div>

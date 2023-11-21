@@ -97,7 +97,11 @@ p {
   border-bottom: 1px solid rgba(0, 0, 0, 0.24);
 
 }
-
+.header-section-contact{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .hero-section {
   /* Set the background image and position it */
   background-image: url('/images/Global\ Map.png');
@@ -1196,9 +1200,10 @@ margin-bottom:15px;
   padding:25px 65px 25px 65px ;
   margin-bottom:16px ;
   margin-top: 16px;
+  font-size: 25px;
 }
 .icf-form input::placeholder {
-  font-size: 27px;
+  font-size: 25px;
   color:#5B5454 ;
 }
 .icf-form button {
@@ -1226,4 +1231,18 @@ margin-bottom:15px;
   object-fit: cover;
   object-position: center;
   opacity:0.9 ;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .header-section {
+    padding: 26px 0px 0px 23px;
+    border: none;
+    border-top-left-radius: 34px;
+    border-top-right-radius: 34px;
+  }
+  .header-section-contact div {
+    display: none;
+  }
 }
