@@ -7,10 +7,12 @@ function student_support() {
     <div className='student-support-main'>
       <div className='student-support-sub'>
         <img src="\images\svg\100%guarentee-icon.svg" alt="" />
-        <h1>100% Student Support Guarantee for a Smooth Learning Experience</h1>
+        {/* <h1 className='hidden md:block'>100% Student Support Guarantee for a Smooth Learning Experience</h1> */}
+        <h1>100% Student Support Guarantee <span className='wavy-underline-green'>for a</span> <span className='wavy-underline-green '> Smooth Learning</span> <span className='wavy-underline-green'> Experience</span></h1>
+
         <p>Receive complete support throughout your academic journey, from application to graduation, for a seamless experience.</p>
       </div>
-      <ButtonDark/>
+      <ButtonDark containerStyle={{ justifyContent: 'center' }}/>
         <Claim_description color='rgba(11, 67, 75, 0.79)' />
     </div>
   )

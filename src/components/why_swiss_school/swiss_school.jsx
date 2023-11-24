@@ -1,6 +1,9 @@
-import React from 'react'
-
+import React, { useEffect, useRef } from 'react';
+import Lottie from "lottie-react";
+import graph from '../../../public/images/TopRankedSMSLottie.json'
 function swiss_school() {
+
+
   return (
     <div className='why-swiss-school'>
       <h1 className=' swiss-school-h1' >
@@ -9,7 +12,7 @@ function swiss_school() {
        Management‘s <span className='highlight-orange'>Top</span>&nbsp;<span className='highlight-orange'>Ranked
         MBA</span> At An Affordable Fee
       </h1>
-      <div>
+      <div className='swiss-school-p-main'>
   <p className='p-margine'>
     Searching for a top-tier MBA program that aligns with your career aspirations? Then you are at the right place.
   </p>
@@ -20,7 +23,8 @@ function swiss_school() {
     Our commitment to academic excellence, paired with a focus on affordability, makes the Swiss School of Management a prudent choice for those aiming to ascend in their professional journey.
   </p>
 </div>
-    <img src="\images\swiss-school-gif.webp" alt="" />
+{/* <Lottie animationData={graph} loop={true}/> */}
+
     </div>
   )
 }

@@ -18,70 +18,27 @@ function Player() {
         className="react-player2"
       />
       <div className="custom-play-button" onClick={handlePlayPause}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="play-icon"
-          viewBox="0 0 216 217"
-          fill="none"
-        >
-          <g filter="url(#filter0_b_571_299)">
-            <ellipse
-              cx="107.747"
-              cy="108.389"
-              rx="107.747"
-              ry="108.389"
-              fill="#EDE6D8"
-              fill-opacity="0.72"
-            />
-            <path
-              d="M214.13 108.389C214.13 167.504 166.493 215.413 107.747 215.413C49.0013 215.413 1.36465 167.504 1.36465 108.389C1.36465 49.2733 49.0013 1.36465 107.747 1.36465C166.493 1.36465 214.13 49.2733 214.13 108.389Z"
-              stroke="url(#paint0_linear_571_299)"
-              stroke-width="2.72929"
-            />
-          </g>
-          <path
-            d="M147.923 99.3405C154.867 103.373 154.867 113.402 147.923 117.435L95.5877 147.831C88.6129 151.881 79.871 146.849 79.871 138.783L79.871 77.9917C79.871 69.9259 88.6129 64.8938 95.5877 68.9447L147.923 99.3405Z"
-            fill="#0B434B"
-            stroke="white"
-            stroke-width="0.909763"
-          />
-          <defs>
-            <filter
-              id="filter0_b_571_299"
-              x="-10.0074"
-              y="-10.0074"
-              width="235.509"
-              height="236.792"
-              filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
-            >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
-              <feGaussianBlur in="BackgroundImageFix" stdDeviation="5.0037" />
-              <feComposite
-                in2="SourceAlpha"
-                operator="in"
-                result="effect1_backgroundBlur_571_299"
-              />
-              <feBlend
-                mode="normal"
-                in="SourceGraphic"
-                in2="effect1_backgroundBlur_571_299"
-                result="shape"
-              />
-            </filter>
-            <linearGradient
-              id="paint0_linear_571_299"
-              x1="-1.30833e-06"
-              y1="57.4647"
-              x2="108.624"
-              y2="216.177"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stop-color="white" />
-              <stop offset="1" stop-color="white" stop-opacity="0" />
-            </linearGradient>
-          </defs>
-        </svg>
+      <svg 
+    className="play-icon"
+      xmlns="http://www.w3.org/2000/svg" width="99" height="99" viewBox="0 0 99 99" fill="none">
+  <g filter="url(#filter0_b_440_3930)">
+    <ellipse cx="49.1113" cy="49.4037" rx="49.1113" ry="49.4037" fill="#EDE6D8" fill-opacity="0.72"/>
+    <path d="M97.5931 49.4037C97.5931 76.3445 75.8835 98.178 49.1113 98.178C22.339 98.178 0.629477 76.3445 0.629477 49.4037C0.629477 22.4629 22.339 0.629477 49.1113 0.629477C75.8835 0.629477 97.5931 22.4629 97.5931 49.4037Z" stroke="url(#paint0_linear_440_3930)" stroke-width="1.25895"/>
+  </g>
+  <path d="M67.3343 45.2302C70.5373 47.0904 70.5373 51.7163 67.3343 53.5766L43.6584 67.3272C40.4411 69.1958 36.4087 66.8746 36.4087 63.154L36.4087 35.6527C36.4087 31.9321 40.4411 29.6109 43.6584 31.4795L67.3343 45.2302Z" fill="#0B434B" stroke="white" stroke-width="0.419651"/>
+  <defs>
+    <filter id="filter0_b_440_3930" x="-4.61616" y="-4.61616" width="107.455" height="108.04" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feGaussianBlur in="BackgroundImageFix" stdDeviation="2.30808"/>
+      <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_440_3930"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_440_3930" result="shape"/>
+    </filter>
+    <linearGradient id="paint0_linear_440_3930" x1="-5.9634e-07" y1="26.1925" x2="49.5108" y2="98.534" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white"/>
+      <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>
       </div>
     </div>
   );

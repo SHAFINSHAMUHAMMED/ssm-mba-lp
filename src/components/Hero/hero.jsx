@@ -1,28 +1,60 @@
-import React from "react";
+import React,{ useEffect, useRef }  from "react";
 import Button1 from "../Buttons/buttonDark";
+import { Cursor, Typewriter} from 'react-simple-typewriter'
+import Typed from 'typed.js';
+
 function hero() {
+
+  const el = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: [
+        '<span class="Hero-Headline highlight-green">Accredited</span> <span style="color: #0B434B; class="Hero-Headline">MBA</span>',
+        '<span class="Hero-Headline highlight-green">Connected</span> <span style="color: #0B434B; class="Hero-Headline">Alumni</span>',
+        '<span class="Hero-Headline highlight-green">Career</span> <span style="color: #0B434B; class="Hero-Headline">Opportunities</span>'
+      ],
+      typeSpeed: 150,
+      backSpeed: 100,
+      loop: true,
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <>
     <div className="hero-section flex justify-center items-center bg-backgrounds-wisdomWhite">
       <div className="hero-sub">
         <div className="hero-left">
-          <div className="sub-heading flex items-center ps-5 pe-5">
+          <div className="sub-heading flex items-center ps-8 pe-8">
             <img className="w-[36px] h-[36px] sm:w-[74px] sm:h-[74px]" src="\images\svg\target.svg" alt="" />
             <h4 className="sub-heading-h4 font-bold">
               Ready to launch the career & life you've always wanted?
             </h4>
           </div>
-          <h1 className="Hero-Headline">
-            Globally <span className="highlight-green ">Connected</span>{" "}
-            <span className="wavy-underline">Alumni</span>.
-          </h1>
+          <div className="hero-headline-main">
+          <h1 className="Hero-Headline">Globally</h1>
+          <span className="Hero-Headline" ref={el}></span>
+          </div>
+          {/* <h1 className="Hero-Headline">
+            Globally<br></br> <span> <Typewriter
+            words={['Accredited MBA.','Connected Alumni.','Career Opportunities.']}
+            loop={false}
+            typeSpeed={100}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          /> </span>
+          </h1> */}
           <p className="">
             Don't just dream of success; make it your reality! Claim your free
             career consultation today, setting the wheels in motion for the
             extraordinary career and life you’ve always aspired to!
           </p>
-          <Button1 />
-          <div className="flex gap-2 items-center justify-center text-[15px] sm:text-[25px]">
+          <Button1 containerStyle={{ justifyContent: 'center' }} />
+          <div className="flex gap-2 items-center justify-center text-[15px] sm:text-[25px] mt-[15px] md:mt-[20px]">
             <h3 className="">Download Free Brochure</h3>
             <svg className="w-[21px] h-[17px] sm:w-[35px] sm:h-[30px]"
               xmlns="http://www.w3.org/2000/svg"
@@ -43,15 +75,19 @@ function hero() {
           </div>
         </div>
         <div className="hero-right">
+          <div className="hero-icons-main">
             <img className="bag-icon" src="\images\svg\bag-icon.svg" alt="" />
             {/* <img src="\images\svg\graph-icon.svg" alt="" /> */}
-            <img className="hero-img" src="\images\hero.png" alt="" />
+            {/* <img className="hero-img" src="\images\hero.png" alt="" /> */}
             <img className="graph-icon2" src="\images\svg\graph-icon2.svg" alt="" />
             <img className="rank-icon" src="\images\svg\rank-icon.svg" alt="" />
+            </div>
         </div>
       </div>
     </div>
-      <img className="graphic-devider" src="\images\GraphicPatter.png" alt="" />
+      <img className="graphic-devider hidden md:block" src="\images\GraphicPatter.png" alt="" />
+      <img className="graphic-devider block md:hidden" src="\images\GraphicPatter-mob.png" alt="" />
+
     </>
   );
 }

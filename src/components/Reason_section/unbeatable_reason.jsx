@@ -5,7 +5,7 @@ import Claim_description from '../Description/claim_description'
 function unbeatable_reason() {
   return (
     <div className='unbeatable-main bg-backgrounds-lightGreenBlue'>
-      <h1 className='text-center'><span className='highlight-green'><span className='highlight-green'>5</span> <span className='highlight-green'></span> Unbeatable</span> <span className='highlight-green'>Reasons</span> To Get An MBA In 2023</h1>
+      <h1 className='text-center'><span className='highlight-green'> 5 Unbeatable</span> <span className='highlight-green'>Reasons</span> To Get An MBA In 2023</h1>
       <div className='unbeatable-video-main'>
         <div className='unbeatable-video-player'>
          <Player/>

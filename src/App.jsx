@@ -34,10 +34,10 @@ function App() {
       <World_of_possibilities/>
       <Review_section/>
       <Successful_graduates/>
-      {/* <Steps_to_unlock_career/> */}
-      {/* <Student_support/> */}
-      {/* <Icf_certification/> */}
-      {/* <Footer/> */}
+      <Steps_to_unlock_career/>
+      <Student_support/>
+      <Icf_certification/>
+      <Footer/>
     </div>
   )
 }

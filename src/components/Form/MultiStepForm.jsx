@@ -64,7 +64,6 @@ const MultiStepForm = () => {
   };
 
   const nextStep = () => {
-    console.log('ttttttttttteeeeeeeeeeeeeesssssssssssssssttttttttttttttt');
     if (validateCurrentStep()) {
       if (currentStep < 5) {
         setCurrentStep(currentStep + 1);
@@ -200,17 +199,15 @@ const MultiStepForm = () => {
     <div className="icf-form-main">
       <form className="icf-form">
         {renderForm()}
-        <div className="buttons">
           <button type="button" onClick={nextStep}>
             {currentStep < 5 ? "CONTINUE" : "SUBMIT"}
           </button>
-        </div>
       </form>
-      <div>
+      <div className="form-svg-bg" >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="76"
-          height="156"
+          width="156"
+          height="75"
           viewBox="0 0 76 156"
           fill="none"
         >
