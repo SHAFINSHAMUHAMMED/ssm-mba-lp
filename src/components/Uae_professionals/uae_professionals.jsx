@@ -5,18 +5,23 @@ function uae_professionals() {
   return (
     <div className="uae-professional-main">
       <div className="uae-professional-inner">
-        <img
+        {/* <img
           className="uae-professional-graphic-devider"
           src="\images\GraphicPatter2.png"
           alt=""
-        />
+        /> */}
         {/* <div className='uae-professional-container'> */}
-        <div className="w-[50%]">
+        <div className="md:w-[50%] flex flex-col justify-center items-center">
           <h1>
-            How <span className="highlight-green">UAE Professionals</span> are{" "}
+            How <span className="highlight-green">UAE</span><span className="highlight-green"> Professionals</span> are{" "}
             <span className="wavy-underline-green">Rising to the Top</span>—And
             the Pathway for You to Join Them!
           </h1>
+          <img
+          className=" block md:hidden uae-professionals-img"
+          src="\images\professionals-mobile.png"
+          alt=""
+        />
           <p className="uae-professional-p">
             Heads up! According to the eye-opening HAYS GCC Survey, half of UAE
             employees boosted their paychecks last year. The secret? Stellar
@@ -36,11 +41,11 @@ function uae_professionals() {
             future by pursuing an MBA.  Time's ticking—take charge of your
             destiny now.
           </p>
-          <ButtonDark />
-          <Claim_description color='rgba(11, 67, 75, 0.79)' />
+          <ButtonDark containerStyle={{ justifyContent: 'flex-start' }} />
+          <Claim_description color="rgba(11, 67, 75, 0.79)" />
         </div>
         <img
-          className="max-w-[454px] max-h-[727px] z-10"
+          className=" hidden md:block uae-professionals-img"
           src="\images\professionals.png"
           alt=""
         />

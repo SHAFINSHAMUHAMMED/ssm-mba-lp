@@ -6,8 +6,8 @@ function hero() {
     <div className="hero-section flex justify-center items-center bg-backgrounds-wisdomWhite">
       <div className="hero-sub">
         <div className="hero-left">
-          <div className="sub-heading flex">
-            <img className="w-[74px] h-[74px]" src="\images\svg\target.svg" alt="" />
+          <div className="sub-heading flex items-center ps-5 pe-5">
+            <img className="w-[36px] h-[36px] sm:w-[74px] sm:h-[74px]" src="\images\svg\target.svg" alt="" />
             <h4 className="sub-heading-h4 font-bold">
               Ready to launch the career & life you've always wanted?
             </h4>
@@ -16,15 +16,15 @@ function hero() {
             Globally <span className="highlight-green ">Connected</span>{" "}
             <span className="wavy-underline">Alumni</span>.
           </h1>
-          <p className="text-[#1A555D] w-[433px] pt-10">
+          <p className="">
             Don't just dream of success; make it your reality! Claim your free
             career consultation today, setting the wheels in motion for the
             extraordinary career and life you’ve always aspired to!
           </p>
           <Button1 />
-          <div className="flex gap-2 items-center justify-center">
-            <h3>Download Free Brochure</h3>
-            <svg
+          <div className="flex gap-2 items-center justify-center text-[15px] sm:text-[25px]">
+            <h3 className="">Download Free Brochure</h3>
+            <svg className="w-[21px] h-[17px] sm:w-[35px] sm:h-[30px]"
               xmlns="http://www.w3.org/2000/svg"
               width="35"
               height="30"

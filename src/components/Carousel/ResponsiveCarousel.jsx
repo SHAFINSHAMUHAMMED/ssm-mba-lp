@@ -67,10 +67,10 @@ function ResponsiveCarousel() {
           </h4>
         </div>
       </div>
-      <div className=" sm:hidden">
+      <div className=" sm:hidden" >
   <Slider {...settings}>
     {/* Slide 1 */}
-    <div className="  ">
+    <div className=" max-w-[128px] ">
       <img src="images/svg/balanced-icon.svg" alt="Work-Life" className="mb-2" />
       <h4 className="text-sm sm:text-base">Balanced Work-Life Structure</h4>
     </div>

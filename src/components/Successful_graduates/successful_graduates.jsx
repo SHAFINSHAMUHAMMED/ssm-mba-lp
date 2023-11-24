@@ -9,12 +9,17 @@ function successful_graduates() {
       <div className="successful-graduates-sub-1">
         <h1>
           Join{" "}
-          <span className="wavy-underline-orange2">Over 3000+ Successful</span>{" "}
+          <span className="wavy-underline">Over 3000+</span> <span className="wavy-underline"> Successful</span>{" "}
           <span className="wavy-underline">Graduates</span> & Take Charge Of
           Your Career
         </h1>
+        <img className="hidden sm:block" src="\images\graduates.png" alt="" />
+        <img className="block sm:hidden" src="\images\graduates-mobile.png" alt="" />
+
       </div>
-      <img src="images\GraphicPatter3.png" alt="" />
+      <img className="hidden sm:block" src="images\GraphicPatter5.png" alt="" />
+      <img className="block sm:hidden" src="images\GraphicPatter5-mobile.png" alt="" />
+
       <div className="successful-graduates-carousel">
         <Marquee speed={70} direction="right">
         <div className="successful-graduates-carousel-1 ">

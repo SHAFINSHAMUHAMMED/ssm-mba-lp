@@ -6,9 +6,8 @@ function world_of_possibilities() {
     <div>
       <div className="world-of-possibilities-main">
         <h1>
-          <span className="wavy-underline-green">
-            A World of Possibilities:{" "}
-          </span>
+          <span className="wavy-underline-green">A World of</span>{" "}
+          <span className="wavy-underline-green "> Possibilities: </span>
           Journey Beyond the Ordinary with Learners University College
         </h1>
         <div className="world-of-possibilities-sub-1">
@@ -20,14 +19,34 @@ function world_of_possibilities() {
           <div className="world-of-possibilities-cards ">
             <div className="world-of-possibilities-card">
               <svg
-                xmlns="http://www.w3.org/2000/svg"
+                className="world-of-possibilities-card-svg"
                 width="82"
                 height="82"
                 viewBox="0 0 82 82"
                 fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <circle cx="40.8113" cy="40.8113" r="40.8113" fill="#0C434B" />
+                <g clip-path="url(#clip0_605_498)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M26.7977 23.9022C27.5242 23.1757 28.5095 22.7676 29.5369 22.7676H46.3232C46.6657 22.7676 46.9941 22.9036 47.2363 23.1458L56.2752 32.1846C56.5172 32.4267 56.6533 32.7552 56.6533 33.0977V55.0491C56.6533 56.0764 56.2453 57.0619 55.5188 57.7883C54.7924 58.5148 53.8069 58.9228 52.7795 58.9228H29.5369C28.5095 58.9228 27.5242 58.5148 26.7977 57.7883C26.0712 57.0619 25.6631 56.0764 25.6631 55.0491V26.6414C25.6631 25.614 26.0712 24.6287 26.7977 23.9022ZM40.056 39.743C40.4628 40.1498 41.1582 39.8617 41.1582 39.2865V26.6414H30.8281V39.2865C30.8281 39.8617 31.5236 40.1498 31.9303 39.743L35.0801 36.5932C35.5844 36.089 36.402 36.089 36.9062 36.5932L40.056 39.743Z"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_605_498">
+                    <rect
+                      width="36.9245"
+                      height="36.9245"
+                      fill="white"
+                      transform="translate(22.6963 22.3828)"
+                    />
+                  </clipPath>
+                </defs>
               </svg>
+
               <div>
                 <h1>120+</h1>
                 <span>Courses</span>
@@ -35,6 +54,7 @@ function world_of_possibilities() {
             </div>
             <div className="world-of-possibilities-card">
               <svg
+                className="world-of-possibilities-card-svg"
                 xmlns="http://www.w3.org/2000/svg"
                 width="83"
                 height="82"
@@ -65,6 +85,7 @@ function world_of_possibilities() {
             </div>
             <div className="world-of-possibilities-card">
               <svg
+                className="world-of-possibilities-card-svg"
                 xmlns="http://www.w3.org/2000/svg"
                 width="83"
                 height="82"
@@ -89,231 +110,231 @@ function world_of_possibilities() {
         <div className="world-of-possibilities-sub-2">
           <div className="world-of-possibilities-cards-2">
             <div className=" world-of-possibilities-2-card">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="100"
-                height="40"
-                viewBox="0 0 42 40"
-                fill="none"
-              >
-                <path
-                  d="M18.1758 23.6015L9.88727 15.313L7.0625 18.1006L18.1758 29.2139L42.0005 5.38917L39.2129 2.60156L18.1758 23.6015Z"
-                  fill="#259D4A"
-                />
-                <circle
-                  cx="19.6991"
-                  cy="19.6991"
-                  r="18.5104"
-                  stroke="#0C424A"
-                  stroke-width="2.37735"
-                />
-              </svg>
-              <div className="">
+              <div className="world-of-possibilities-2-card-head ">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="100"
+                  height="40"
+                  viewBox="0 0 42 40"
+                  fill="none"
+                >
+                  <path
+                    d="M18.1758 23.6015L9.88727 15.313L7.0625 18.1006L18.1758 29.2139L42.0005 5.38917L39.2129 2.60156L18.1758 23.6015Z"
+                    fill="#259D4A"
+                  />
+                  <circle
+                    cx="19.6991"
+                    cy="19.6991"
+                    r="18.5104"
+                    stroke="#0C424A"
+                    stroke-width="2.37735"
+                  />
+                </svg>
                 <h3>Globally recognised & accredited</h3>
-                <p>
-                  Our programs hold both national and international
-                  accreditation, ensuring your degree has global relevance.
-                </p>
               </div>
+              <p>
+                Our programs hold both national and international accreditation,
+                ensuring your degree has global relevance.
+              </p>
             </div>
             <div className=" world-of-possibilities-2-card">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="100"
-                height="40"
-                viewBox="0 0 42 40"
-                fill="none"
-              >
-                <path
-                  d="M18.1758 23.6015L9.88727 15.313L7.0625 18.1006L18.1758 29.2139L42.0005 5.38917L39.2129 2.60156L18.1758 23.6015Z"
-                  fill="#259D4A"
-                />
-                <circle
-                  cx="19.6991"
-                  cy="19.6991"
-                  r="18.5104"
-                  stroke="#0C424A"
-                  stroke-width="2.37735"
-                />
-              </svg>
-              <div className="">
+              <div className="world-of-possibilities-2-card-head">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="100"
+                  height="40"
+                  viewBox="0 0 42 40"
+                  fill="none"
+                >
+                  <path
+                    d="M18.1758 23.6015L9.88727 15.313L7.0625 18.1006L18.1758 29.2139L42.0005 5.38917L39.2129 2.60156L18.1758 23.6015Z"
+                    fill="#259D4A"
+                  />
+                  <circle
+                    cx="19.6991"
+                    cy="19.6991"
+                    r="18.5104"
+                    stroke="#0C424A"
+                    stroke-width="2.37735"
+                  />
+                </svg>
                 <h3>Unbeatable Affordability</h3>
-                <p>
-                  Experience top-tier education without breaking the bank,
-                  thanks to our tailored, cost-efficient easy monthly payments.
-                </p>
               </div>
+              <p>
+                Experience top-tier education without breaking the bank, thanks
+                to our tailored, cost-efficient easy monthly payments.
+              </p>
             </div>
             <div className=" world-of-possibilities-2-card">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="100"
-                height="40"
-                viewBox="0 0 42 40"
-                fill="none"
-              >
-                <path
-                  d="M18.1758 23.6015L9.88727 15.313L7.0625 18.1006L18.1758 29.2139L42.0005 5.38917L39.2129 2.60156L18.1758 23.6015Z"
-                  fill="#259D4A"
-                />
-                <circle
-                  cx="19.6991"
-                  cy="19.6991"
-                  r="18.5104"
-                  stroke="#0C424A"
-                  stroke-width="2.37735"
-                />
-              </svg>
-              <div className="">
+              <div className="world-of-possibilities-2-card-head">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="100"
+                  height="40"
+                  viewBox="0 0 42 40"
+                  fill="none"
+                >
+                  <path
+                    d="M18.1758 23.6015L9.88727 15.313L7.0625 18.1006L18.1758 29.2139L42.0005 5.38917L39.2129 2.60156L18.1758 23.6015Z"
+                    fill="#259D4A"
+                  />
+                  <circle
+                    cx="19.6991"
+                    cy="19.6991"
+                    r="18.5104"
+                    stroke="#0C424A"
+                    stroke-width="2.37735"
+                  />
+                </svg>
                 <h3>Flexible Learning Modes</h3>
-                <p>
-                  Learn from anywhere through our digital libraries and live
-                  online classrooms.
-                </p>
               </div>
+              <p>
+                Learn from anywhere through our digital libraries and live
+                online classrooms.
+              </p>
             </div>
             <div className=" world-of-possibilities-2-card">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="100"
-                height="40"
-                viewBox="0 0 42 40"
-                fill="none"
-              >
-                <path
-                  d="M18.1758 23.6015L9.88727 15.313L7.0625 18.1006L18.1758 29.2139L42.0005 5.38917L39.2129 2.60156L18.1758 23.6015Z"
-                  fill="#259D4A"
-                />
-                <circle
-                  cx="19.6991"
-                  cy="19.6991"
-                  r="18.5104"
-                  stroke="#0C424A"
-                  stroke-width="2.37735"
-                />
-              </svg>
-              <div className="">
+              <div className="world-of-possibilities-2-card-head">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="100"
+                  height="40"
+                  viewBox="0 0 42 40"
+                  fill="none"
+                >
+                  <path
+                    d="M18.1758 23.6015L9.88727 15.313L7.0625 18.1006L18.1758 29.2139L42.0005 5.38917L39.2129 2.60156L18.1758 23.6015Z"
+                    fill="#259D4A"
+                  />
+                  <circle
+                    cx="19.6991"
+                    cy="19.6991"
+                    r="18.5104"
+                    stroke="#0C424A"
+                    stroke-width="2.37735"
+                  />
+                </svg>
                 <h3>Fast-Track Your Degree</h3>
-                <p>
-                  Choose accelerated options to complete your MBA or other
-                  degrees at your own pace.
-                </p>
               </div>
+              <p>
+                Choose accelerated options to complete your MBA or other degrees
+                at your own pace.
+              </p>
             </div>
             <div className=" world-of-possibilities-2-card">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="100"
-                height="40"
-                viewBox="0 0 42 40"
-                fill="none"
-              >
-                <path
-                  d="M18.1758 23.6015L9.88727 15.313L7.0625 18.1006L18.1758 29.2139L42.0005 5.38917L39.2129 2.60156L18.1758 23.6015Z"
-                  fill="#259D4A"
-                />
-                <circle
-                  cx="19.6991"
-                  cy="19.6991"
-                  r="18.5104"
-                  stroke="#0C424A"
-                  stroke-width="2.37735"
-                />
-              </svg>
-              <div className="">
+              <div className="world-of-possibilities-2-card-head">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="100"
+                  height="40"
+                  viewBox="0 0 42 40"
+                  fill="none"
+                >
+                  <path
+                    d="M18.1758 23.6015L9.88727 15.313L7.0625 18.1006L18.1758 29.2139L42.0005 5.38917L39.2129 2.60156L18.1758 23.6015Z"
+                    fill="#259D4A"
+                  />
+                  <circle
+                    cx="19.6991"
+                    cy="19.6991"
+                    r="18.5104"
+                    stroke="#0C424A"
+                    stroke-width="2.37735"
+                  />
+                </svg>
                 <h3>Expert Faculty</h3>
-                <p>
-                  Learn from seasoned professionals with deep industry insights.
-                </p>
               </div>
+              <p>
+                Learn from seasoned professionals with deep industry insights.
+              </p>
             </div>
             <div className=" world-of-possibilities-2-card">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="100"
-                height="40"
-                viewBox="0 0 42 40"
-                fill="none"
-              >
-                <path
-                  d="M18.1758 23.6015L9.88727 15.313L7.0625 18.1006L18.1758 29.2139L42.0005 5.38917L39.2129 2.60156L18.1758 23.6015Z"
-                  fill="#259D4A"
-                />
-                <circle
-                  cx="19.6991"
-                  cy="19.6991"
-                  r="18.5104"
-                  stroke="#0C424A"
-                  stroke-width="2.37735"
-                />
-              </svg>
-              <div className="">
+              <div className="world-of-possibilities-2-card-head">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="100"
+                  height="40"
+                  viewBox="0 0 42 40"
+                  fill="none"
+                >
+                  <path
+                    d="M18.1758 23.6015L9.88727 15.313L7.0625 18.1006L18.1758 29.2139L42.0005 5.38917L39.2129 2.60156L18.1758 23.6015Z"
+                    fill="#259D4A"
+                  />
+                  <circle
+                    cx="19.6991"
+                    cy="19.6991"
+                    r="18.5104"
+                    stroke="#0C424A"
+                    stroke-width="2.37735"
+                  />
+                </svg>
                 <h3>Multiple Starting Dates</h3>
-                <p>
-                  Unlike traditional programs, a student can join the academic
-                  year more than twice every year.
-                </p>
               </div>
+              <p>
+                Unlike traditional programs, a student can join the academic
+                year more than twice every year.
+              </p>
             </div>
             <div className=" world-of-possibilities-2-card">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="100"
-                height="40"
-                viewBox="0 0 42 40"
-                fill="none"
-              >
-                <path
-                  d="M18.1758 23.6015L9.88727 15.313L7.0625 18.1006L18.1758 29.2139L42.0005 5.38917L39.2129 2.60156L18.1758 23.6015Z"
-                  fill="#259D4A"
-                />
-                <circle
-                  cx="19.6991"
-                  cy="19.6991"
-                  r="18.5104"
-                  stroke="#0C424A"
-                  stroke-width="2.37735"
-                />
-              </svg>
-              <div className="">
+              <div className="world-of-possibilities-2-card-head">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="100"
+                  height="40"
+                  viewBox="0 0 42 40"
+                  fill="none"
+                >
+                  <path
+                    d="M18.1758 23.6015L9.88727 15.313L7.0625 18.1006L18.1758 29.2139L42.0005 5.38917L39.2129 2.60156L18.1758 23.6015Z"
+                    fill="#259D4A"
+                  />
+                  <circle
+                    cx="19.6991"
+                    cy="19.6991"
+                    r="18.5104"
+                    stroke="#0C424A"
+                    stroke-width="2.37735"
+                  />
+                </svg>
                 <h3>Career-Focused Programs</h3>
-                <p>
-                  Our courses are designed to meet the specific needs of working
-                  professionals.
-                </p>
               </div>
+              <p>
+                Our courses are designed to meet the specific needs of working
+                professionals.
+              </p>
             </div>
             <div className=" world-of-possibilities-2-card">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="100"
-                height="40"
-                viewBox="0 0 42 40"
-                fill="none"
-              >
-                <path
-                  d="M18.1758 23.6015L9.88727 15.313L7.0625 18.1006L18.1758 29.2139L42.0005 5.38917L39.2129 2.60156L18.1758 23.6015Z"
-                  fill="#259D4A"
-                />
-                <circle
-                  cx="19.6991"
-                  cy="19.6991"
-                  r="18.5104"
-                  stroke="#0C424A"
-                  stroke-width="2.37735"
-                />
-              </svg>
-              <div className="">
+              <div className="world-of-possibilities-2-card-head">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="100"
+                  height="40"
+                  viewBox="0 0 42 40"
+                  fill="none"
+                >
+                  <path
+                    d="M18.1758 23.6015L9.88727 15.313L7.0625 18.1006L18.1758 29.2139L42.0005 5.38917L39.2129 2.60156L18.1758 23.6015Z"
+                    fill="#259D4A"
+                  />
+                  <circle
+                    cx="19.6991"
+                    cy="19.6991"
+                    r="18.5104"
+                    stroke="#0C424A"
+                    stroke-width="2.37735"
+                  />
+                </svg>
                 <h3>Hassle-Free Migration</h3>
-                <p>
-                  During the course of the program, you can also opt to migrate
-                  between multiple campuses on a quarterly basis.
-                </p>
               </div>
+              <p>
+                During the course of the program, you can also opt to migrate
+                between multiple campuses on a quarterly basis.
+              </p>
             </div>
           </div>
         </div>
-        <ButtonDark />
+        <ButtonDark containerStyle={{ justifyContent: "center" }} />
         <Claim_description color="rgba(11, 67, 75, 0.79)" />
         <div className="world-of-possibilities-bottom">
           <div className="world-of-possibilities-icons">
@@ -352,7 +373,7 @@ function world_of_possibilities() {
             landscape. Your first step toward a transformative MBA experience
             starts here.
           </p>
-          <div className="flex gap-6 items-center">
+          <div className="flex gap-3 sm:gap-6 items-center ">
             <h3 className="underline">Download Free Brochure Now</h3>
             <svg
               xmlns="http://www.w3.org/2000/svg"

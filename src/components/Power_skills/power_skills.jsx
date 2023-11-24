@@ -5,7 +5,7 @@ function power_skills() {
   return (
     <div className="power-skill-main">
       <h1>
-        <span className="highlight-green">6 Power Skills</span>
+        <span className="highlight-green">6 Power Skills</span>&nbsp;
         Your MBA Will Unlock: Be the Manager Fortune 500s Hunt For
       </h1>
       <p className="power-skill-description">
@@ -14,27 +14,6 @@ function power_skills() {
       </p>
       <div className="power-skill-cards">
         {/* 1 */}
-        <div className="power-skill-card">
-          <img
-            className="power-skill-card-icon"
-            src="\images\svg\power-skill-2.svg"
-            alt=""
-          />
-          <img
-            className="power-skill-card-img"
-            src="\images\project-mgmnt.png"
-            alt=""
-          />
-          <div className="flex">
-            <img src="\images\svg\power-skill-fire-icon.svg" alt="" />
-            <h3>Financial Expertise</h3>
-          </div>
-          <p>
-            From inception to execution, steer projects with finesse, all while
-            juggling risks and leading teams.
-          </p>
-        </div>
-        {/* 2 */}
         <div className="power-skill-card">
           <img
             className="power-skill-card-icon"
@@ -48,11 +27,32 @@ function power_skills() {
           />
           <div className="flex">
             <img src="\images\svg\power-skill-fire-icon.svg" alt="" />
+            <h3>Financial Expertise</h3>
+          </div>
+          <p>
+          Master the art of dissecting balance sheets, income statements, and
+            cash flows like a financial sage.
+          </p>
+        </div>
+        {/* 2 */}
+        <div className="power-skill-card">
+          <img
+            className="power-skill-card-icon"
+            src="\images\svg\power-skill-2.svg"
+            alt=""
+          />
+          <img
+            className="power-skill-card-img"
+            src="\images\project-mgmnt.png"
+            alt=""
+          />
+          <div className="flex">
+            <img src="\images\svg\power-skill-fire-icon.svg" alt="" />
             <h3>Project Management Excellence</h3>
           </div>
           <p>
-            Master the art of dissecting balance sheets, income statements, and
-            cash flows like a financial sage.
+          From inception to execution, steer projects with finesse, all while
+            juggling risks and leading teams.
           </p>
         </div>
         {/* 3 */}
@@ -141,7 +141,7 @@ function power_skills() {
         </div>
         <img className="power-skill-star" src="\images\svg\star-large-icon.svg" alt="" />
       </div>
-        <ButtonDark/>
+        <ButtonDark containerStyle={{ justifyContent: 'center' }}/>
         <Claim_description color='rgba(11, 67, 75, 0.79)'/>
     </div>
   );

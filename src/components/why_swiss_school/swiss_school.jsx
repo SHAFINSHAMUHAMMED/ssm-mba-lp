@@ -6,7 +6,7 @@ function swiss_school() {
       <h1 className=' swiss-school-h1' >
       Elevate Your Career With &nbsp;
        <span className="wavy-underline-green">Swiss School</span> Of 
-       Management‘s <span className='highlight-orange'>Top Ranked
+       Management‘s <span className='highlight-orange'>Top</span>&nbsp;<span className='highlight-orange'>Ranked
         MBA</span> At An Affordable Fee
       </h1>
       <div>

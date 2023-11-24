@@ -11,8 +11,8 @@ function program_Highlights() {
         <div className="columns Highlight-columns">
           <svg
             className="svg-icon highlight-svg"
-            width="121"
-            height="118"
+            width=""
+            height=""
             viewBox="0 0 121 118"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -67,8 +67,8 @@ function program_Highlights() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="highlight-svg"
-            width="112"
-            height="112"
+            width=""
+            height=""
             viewBox="0 0 112 112"
             fill="none"
           >
@@ -319,9 +319,9 @@ function program_Highlights() {
           </svg>
           <h4 className="text-body-light ps-5">Student support</h4>
         </div>
-        <div className="Highlight-columns2">
+        <div className="Highlight-columns2 hidden sm:block">
           <svg
-            className="Highlight-star-icon"
+            className="Highlight-star-icon hidden lg:block"
             xmlns="http://www.w3.org/2000/svg"
             width="181"
             height="180"
