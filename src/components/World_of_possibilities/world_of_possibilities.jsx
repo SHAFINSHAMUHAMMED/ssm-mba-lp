@@ -358,6 +358,7 @@ function world_of_possibilities() {
               src="\images\svg\scolar-icon.svg"
               alt=""
             />
+            <img className="world-of-possibilities-icon-dot" src="images\svg\dottet-curve-icon.svg" alt="" />
           </div>
         </div>
       </div>

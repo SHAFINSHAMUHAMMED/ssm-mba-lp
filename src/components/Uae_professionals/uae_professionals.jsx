@@ -5,20 +5,14 @@ function uae_professionals() {
   return (
     <div className="uae-professional-main">
       <div className="uae-professional-inner">
-        {/* <img
-          className="uae-professional-graphic-devider"
-          src="\images\GraphicPatter2.png"
-          alt=""
-        /> */}
-        {/* <div className='uae-professional-container'> */}
-        <div className="md:w-[50%] flex flex-col justify-center items-center">
+        <div className=" flex flex-col justify-center items-center">
           <h1>
             How <span className="highlight-green">UAE</span><span className="highlight-green"> Professionals</span> are{" "}
             <span className="wavy-underline-green">Rising to the Top</span>—And
             the Pathway for You to Join Them!
           </h1>
           <img
-          className=" block md:hidden uae-professionals-img"
+          className="uae-professionals-img-1"
           src="\images\professionals-mobile.png"
           alt=""
         />
@@ -41,11 +35,11 @@ function uae_professionals() {
             future by pursuing an MBA.  Time's ticking—take charge of your
             destiny now.
           </p>
-          <ButtonDark containerStyle={{ justifyContent: 'flex-start' }} />
+          <ButtonDark containerStyle={{ justifyContent: 'center' }} />
           <Claim_description color="rgba(11, 67, 75, 0.79)" />
         </div>
         <img
-          className=" hidden md:block uae-professionals-img"
+          className=" uae-professionals-img-2"
           src="\images\professionals.png"
           alt=""
         />

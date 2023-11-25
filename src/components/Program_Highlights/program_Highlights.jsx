@@ -321,7 +321,7 @@ function program_Highlights() {
         </div>
         <div className="Highlight-columns2 hidden sm:block">
           <svg
-            className="Highlight-star-icon hidden lg:block"
+            className="Highlight-star-icon"
             xmlns="http://www.w3.org/2000/svg"
             width="181"
             height="180"

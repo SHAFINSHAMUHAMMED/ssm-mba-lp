@@ -11,12 +11,12 @@ function icf_certification() {
   return (
     <div className="icf-certification-main">
       <img
-        className="hidden md:block"
+        className="icf-certification-pattern-1"
         src="\images\GraphicPatter4.png"
         alt=""
       />
       <img
-        className=" sm:block md:hidden"
+        className=" icf-certification-pattern-2"
         src="\images\graphicPattern-last-mob.png"
         alt=""
       />
@@ -50,7 +50,7 @@ function icf_certification() {
           <span className="wavy-underline-green">
             Scholarships</span> <span className="wavy-underline-green"> Of Upto 30%
           </span>{" "}
-          (Worth AED 9000)
+          <br />(Worth AED 9000)
         </h1>
         <img src="\images\icf-certification-banner.png" alt="" />
         <MultiStepForm />

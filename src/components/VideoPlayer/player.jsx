@@ -11,9 +11,9 @@ function Player() {
   return (
     <div className="player-wrapper">
       <ReactPlayer
-        url=""
+        url="https://youtu.be/5iFu23h5EgY?si=jjTOgP4FG1T_E6PY"
         width="100%"
-        height="500px"
+        height="100%"
         playing={playing}
         className="react-player2"
       />

@@ -1,22 +1,31 @@
 import React, { useState, useRef } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import ReactPlayer from "react-player";
 import Marquee from "react-fast-marquee";
 import ButtonDark from "../Buttons/buttonDark";
 import Claim_description from "../Description/claim_description";
 function ReviewSection() {
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 640 },
+      items: 3
+    },
+    mobile: {
+      breakpoint: { max: 640, min: 0 },
+      items: 3
+    }
   };
-  const carouselRef = useRef();
-  const [videoUrls, setVideoUrls] = useState("url");
-  const [activeIndex, setActiveIndex] = useState(0); // Track the active carousel index
   const [playing, setPlaying] = useState(false);
 
   const handlePlayPause = () => {
@@ -45,8 +54,8 @@ function ReviewSection() {
       </div>
       <div className="review-video-sub">
         <div className="review-video-sub-cards">
-          <Slider {...settings}>
-            <div
+        <Carousel responsive={responsive} infinite={true} removeArrowOnDeviceType={["tablet", "mobile"]} showDots={true}>
+        <div
               className="review-video-sub-card"
               onClick={() => handleCardClick("", 0)}
             >
@@ -86,7 +95,7 @@ function ReviewSection() {
                 alt=""
               />
             </div>
-          </Slider>
+        </Carousel>
         </div>
       </div>
 

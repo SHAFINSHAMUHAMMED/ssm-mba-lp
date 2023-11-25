@@ -10,7 +10,7 @@ function acreditions() {
   {/* <div className='gradient-div h-full'> */}
   <div class="accredit-content w-screen z-10">
     <h1 class="accredit-h1 text-center">Globally <span className='wavy-underline-green'>Recognised</span> & <span className='wavy-underline-green'>Accredited</span> By</h1>
-    <div className=' hidden sm:block'>
+    <div className=' acredits-marquee-1'>
     <Marquee speed={200}>
     <div class="accredit-cards">
       {/* <!-- Repeat this structure for each card --> */}
@@ -43,7 +43,7 @@ function acreditions() {
     </div>
 
     {/* //only for mobile screens */}
-    <div className=' block sm:hidden pb-5 pt-5'>
+    <div className=' acredits-marquee-2 block  pb-5 pt-5'>
     <Marquee>
     <div class="accredit-cards">
       <div class="accredit-card">

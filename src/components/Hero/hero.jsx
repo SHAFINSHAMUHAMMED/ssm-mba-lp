@@ -14,8 +14,8 @@ function hero() {
         '<span class="Hero-Headline highlight-green">Connected</span> <span style="color: #0B434B; class="Hero-Headline">Alumni</span>',
         '<span class="Hero-Headline highlight-green">Career</span> <span style="color: #0B434B; class="Hero-Headline">Opportunities</span>'
       ],
-      typeSpeed: 150,
-      backSpeed: 100,
+      typeSpeed: 30,
+      backSpeed: 20,
       loop: true,
     });
 
@@ -29,8 +29,8 @@ function hero() {
     <div className="hero-section flex justify-center items-center bg-backgrounds-wisdomWhite">
       <div className="hero-sub">
         <div className="hero-left">
-          <div className="sub-heading flex items-center ps-8 pe-8">
-            <img className="w-[36px] h-[36px] sm:w-[74px] sm:h-[74px]" src="\images\svg\target.svg" alt="" />
+          <div className="sub-heading flex items-center  md:pe-8">
+            <img className="w-[36px] h-[36px] md:w-[54px] md:h-[54px]" src="\images\svg\target.svg" alt="" />
             <h4 className="sub-heading-h4 font-bold">
               Ready to launch the career & life you've always wanted?
             </h4>
@@ -39,24 +39,15 @@ function hero() {
           <h1 className="Hero-Headline">Globally</h1>
           <span className="Hero-Headline" ref={el}></span>
           </div>
-          {/* <h1 className="Hero-Headline">
-            Globally<br></br> <span> <Typewriter
-            words={['Accredited MBA.','Connected Alumni.','Career Opportunities.']}
-            loop={false}
-            typeSpeed={100}
-            deleteSpeed={50}
-            delaySpeed={1000}
-          /> </span>
-          </h1> */}
           <p className="">
             Don't just dream of success; make it your reality! Claim your free
             career consultation today, setting the wheels in motion for the
             extraordinary career and life you’ve always aspired to!
           </p>
           <Button1 containerStyle={{ justifyContent: 'center' }} />
-          <div className="flex gap-2 items-center justify-center text-[15px] sm:text-[25px] mt-[15px] md:mt-[20px]">
+          <div className="flex gap-2 items-center justify-center text-[15px] sm:text-[25px] mt-[15px] md:mt-[20px] mb-0 sm:mb-5">
             <h3 className="">Download Free Brochure</h3>
-            <svg className="w-[21px] h-[17px] sm:w-[35px] sm:h-[30px]"
+            <svg className="w-[21px] h-[17px] sm:w-[25px] sm:h-[20px] lg:w-[35px] lg:h-[30px]"
               xmlns="http://www.w3.org/2000/svg"
               width="35"
               height="30"
@@ -85,8 +76,8 @@ function hero() {
         </div>
       </div>
     </div>
-      <img className="graphic-devider hidden md:block" src="\images\GraphicPatter.png" alt="" />
-      <img className="graphic-devider block md:hidden" src="\images\GraphicPatter-mob.png" alt="" />
+      <img className="graphic-devider hidden sm:block" src="\images\GraphicPatter.png" alt="" />
+      <img className="graphic-devider block sm:hidden" src="\images\GraphicPatter-mob.png" alt="" />
 
     </>
   );
