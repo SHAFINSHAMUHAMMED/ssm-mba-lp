@@ -46,7 +46,7 @@ function ReviewSection() {
         {/* Render the video player */}
         <div className="player-container">
           <ReactPlayer
-            url={"https://youtu.be/-OFwii-AgTU?si=_IN3QIi9XwI85RM6"}
+            url={"https://youtu.be/te8keFz5ZdI?si=a3TqyqfJSoo5JUaU"}
             width="100%"
             height="100%"
           />

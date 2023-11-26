@@ -68,8 +68,8 @@ function ResponsiveCarousel() {
           </h4>
         </div>
       </div>
+      
       <div className=" lg:hidden overflow-visible" >
-
   <Carousel responsive={responsive} infinite={true} removeArrowOnDeviceType={["tablet", "mobile"]} showDots={true}>
     <div className=" carousel-card  ">
       <img src="images/svg/balanced-icon.svg" alt="Work-Life" className=" carousel-svg mb-2" />

@@ -196,7 +196,7 @@ const MultiStepForm = () => {
   };
 
   return (
-    <div className="icf-form-main">
+    <div className="icf-form-main" id="contactForm">
       <form className="icf-form">
         {renderForm()}
           <button type="button" onClick={nextStep}>

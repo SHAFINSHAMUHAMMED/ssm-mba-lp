@@ -5,6 +5,8 @@ import Typed from 'typed.js';
 
 function hero() {
 
+  
+
   const el = useRef(null);
 
   useEffect(() => {
@@ -46,6 +48,7 @@ function hero() {
           </p>
           <Button1 containerStyle={{ justifyContent: 'center' }} />
           <div className="flex gap-2 items-center justify-center text-[15px] sm:text-[25px] mt-[15px] md:mt-[20px] mb-0 sm:mb-5">
+            <a href="\images\SSM MBA.pdf" download className="flex gap-2 items-center">
             <h3 className="">Download Free Brochure</h3>
             <svg className="w-[21px] h-[17px] sm:w-[25px] sm:h-[20px] lg:w-[35px] lg:h-[30px]"
               xmlns="http://www.w3.org/2000/svg"
@@ -63,15 +66,16 @@ function hero() {
                 fill="#259D4A"
               />
             </svg>
+            </a>
           </div>
         </div>
         <div className="hero-right">
           <div className="hero-icons-main">
-            <img className="bag-icon" src="\images\svg\bag-icon.svg" alt="" />
+            <img className="bag-icon animated-icon" src="\images\svg\bag-icon.svg" alt="" />
             {/* <img src="\images\svg\graph-icon.svg" alt="" /> */}
             {/* <img className="hero-img" src="\images\hero.png" alt="" /> */}
-            <img className="graph-icon2" src="\images\svg\graph-icon2.svg" alt="" />
-            <img className="rank-icon" src="\images\svg\rank-icon.svg" alt="" />
+            <img className="graph-icon2 animated-icon" src="\images\svg\graph-icon2.svg" alt="" />
+            <img className="rank-icon animated-icon" src="\images\svg\rank-icon.svg" alt="" />
             </div>
         </div>
       </div>

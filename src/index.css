@@ -66,6 +66,9 @@ p {
   line-height: 92%; /* 20.759px */
   text-transform: uppercase;
  }
+ .darkButton2 {
+  justify-content: flex-start;
+ }
 /* u {
   background-image: url('../public/images/svg/wawyUnderlineGreen.svg');
   background-position: bottom;
@@ -92,6 +95,17 @@ p {
   font-weight: 400;
   padding-top: 16px;
 }
+.claim-description-2 {
+  color: rgba(11, 67, 75, 0.79);
+  margin: 0px;
+  max-width: 483px;
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  line-height: 136%; /* 20.4px */
+  font-weight: 400;
+  padding-top: 16px;
+}
 
 
 /* //header styles */
@@ -109,6 +123,26 @@ p {
   align-items: center;
   gap: 10px;
 }
+
+.header-section-2 {
+  padding: 30px 66px 24px 130px;
+}
+.header-section-2-sub {
+  display: flex;
+  justify-content: space-between;
+}
+.header-section-2-logo {
+  width: 230px;
+  height: 59px;
+}
+.header-section-2-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* hero section */
+
 .hero-section {
   /* Set the background image and position it */
   background-image: url('/images/Global\ Map.png');
@@ -129,7 +163,7 @@ p {
 }
 .hero-headline-main {
   max-width:499px ;
-  text-align: center;
+  text-align: left;
 }
 .sub-heading {
   margin-bottom: 30px;
@@ -157,7 +191,7 @@ p {
   line-height: 95px;
 }
 .typed-cursor {
-  font-size: 35px;
+  font-size: 55px;
   color: #259D4A;
 }
 
@@ -226,11 +260,11 @@ p {
   z-index: 1;
 }
 .rank-icon {
-  width: 100px;
-  height: 100px;
+  width: 149px;
+  height: 194px;
   position: absolute;
-  top:420px;
-  left: 400px;
+  top:400px;
+  left: 380px;
   z-index: 1;
 }
 .graphic-devider {
@@ -697,6 +731,12 @@ p {
   display: flex;
   align-items: center;
   gap: 0px;
+}
+.uae-professional-inner-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 .uae-professional-inner h1 {
   line-height: 104%;
@@ -1382,6 +1422,52 @@ margin-bottom:15px;
 }
 
 
+/* /////animations\\\\\\ */
+
+.light-effect-button {
+  position: relative;
+  overflow: hidden; /* Ensure the light effect doesn't spill out */
+}
+
+.light-effect-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%; /* Start off the screen */
+  width: 50%; /* Wide enough to cover the entire button */
+  height: 40%;
+ background: #0b4d57c1;
+  transition: left 2s linear;
+  transform: rotate(60deg); 
+}
+.light-effect-button:hover::before {
+  left: 100%;
+  animation: lightEffect 1s linear infinite;
+}
+@keyframes lightEffect {
+  from {
+    left: -180%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+
+.animated-icon {
+  animation: breathing 3s ease-in-out infinite;
+}
+
+@keyframes breathing {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+
 /* //tablet */
 
 @media only screen and (max-width: 1180px) {
@@ -1404,6 +1490,31 @@ margin-bottom:15px;
    h6 {
     font-size: 16px;
    }
+
+   .darkButton2 {
+    justify-content: center;
+   }
+   .claim-description {
+    margin: auto;
+    max-width: 288px;
+    text-align: center;
+    font-size: 11px;
+    font-style: normal;
+    line-height: 136%; /* 20.4px */
+    font-weight: 400;
+    padding-top: 16px;
+  }
+   .claim-description-2 {
+    color: rgba(11, 67, 75, 0.79);
+    margin: auto;
+    max-width: 288px;
+    text-align: center;
+    font-size: 13px;
+    font-style: normal;
+    line-height: 136%; /* 20.4px */
+    font-weight: 400;
+    padding-top: 16px;
+  }
    .header-section {
     padding: 26px 23px 0px 23px;
     border: none;
@@ -1411,6 +1522,22 @@ margin-bottom:15px;
     border-top-right-radius: 34px;
   }
   .header-section-contact div {
+    display: none;
+  }
+
+  .header-section-2 {
+    padding: 30px 50px 24px 90px;
+  }
+  .header-section-2-sub {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header-section-2-logo {
+    width: 190px;
+    height: 52px;
+  }
+ 
+  .header-section-2-contact div {
     display: none;
   }
   .hero-section {
@@ -1464,7 +1591,10 @@ margin-bottom:15px;
     font-weight: 700; 
     line-height: 50px;
     text-align: left;
-
+  }
+  .typed-cursor {
+    font-size: 35px;
+    color: #259D4A;
   }
   .hero-right {
     display: flex;
@@ -1496,7 +1626,7 @@ margin-bottom:15px;
   }
   .rank-icon {
     width: 90px;
-    height: 110px;
+    height: 118px;
     top:180px;
     left: 180px;
     z-index: 1;
@@ -1547,6 +1677,7 @@ margin-bottom:15px;
   }
   .react-multi-carousel-dot-list {
     gap: 10px;
+    transform: translateY(35px);
   }
   .react-multi-carousel-dot--active button {
     background:#259D4A ;
@@ -1859,6 +1990,12 @@ margin-bottom:15px;
 .uae-professional-inner {
 flex-direction: column;
   padding: 36px 10px 10px 10px ;
+}
+.uae-professional-inner-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .uae-professionals-img-1 {
   display: block;
@@ -2397,7 +2534,22 @@ display: block;
     font-size: 16px;
    }
 
+   .darkButton2 {
+    justify-content: center;
+   }
+
   .claim-description {
+    margin: auto;
+    max-width: 288px;
+    text-align: center;
+    font-size: 11px;
+    font-style: normal;
+    line-height: 136%; /* 20.4px */
+    font-weight: 400;
+    padding-top: 16px;
+  }
+  .claim-description-2 {
+    color: rgba(11, 67, 75, 0.79);
     margin: auto;
     max-width: 288px;
     text-align: center;
@@ -2416,6 +2568,23 @@ display: block;
   .header-section-contact div {
     display: none;
   }
+
+  .header-section-2 {
+    padding: 20px 20px 18px 30px;
+  }
+  .header-section-2-sub {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header-section-2-logo {
+    width: 170px;
+    height: 52px;
+  }
+ 
+  .header-section-2-contact div {
+    display: none;
+  }
+
   .hero-section {
     /* Set the background image and position it */
     background-position: bottom; 
@@ -2469,7 +2638,10 @@ display: block;
     font-weight: 700; 
     line-height: 50px;
     text-align: center;
-
+  }
+  .typed-cursor {
+    font-size: 35px;
+    color: #259D4A;
   }
   .hero-right {
     display: flex;
@@ -2497,14 +2669,14 @@ display: block;
     position: absolute;
     width: 61px;
     height: 61px;
-    top:50px;
-    left: 220px;
+    top:60px;
+    left: 215px;
     z-index: 1;
   }
   .rank-icon {
     position: absolute;
     width: 90px;
-    height: 110px;
+    height: 118px;
     top:150px;
     left: 180px;
     z-index: 1;
@@ -2535,21 +2707,22 @@ display: block;
     font-family:'SK Modernist Bold'; ;
     font-size: 17px;
   }
-  /* .react-multi-carousel-list  {
+  .react-multi-carousel-list  {
     overflow: visible!important;
     overflow-x: hidden!important;
   }
   .react-multi-carousel-track {
     overflow-y: visible!important;
-  } */
+  }
   .react-multi-carousel-list {
     overflow-x: hidden;
     overflow-y: visible; 
     align-items: flex-start;
-    height: 170px;
+    height: 180px;
   }
   .react-multi-carousel-dot-list {
     gap: 10px;
+    transform: translateY(15px);
   }
   .react-multi-carousel-dot--active button {
     background:#259D4A ;
@@ -2574,6 +2747,7 @@ display: block;
 
   }
   .swiss-school-h1 {
+    max-width: 70%;
     padding-left: 20px;
     padding-right: 28px;
     padding-top: 30px;
@@ -2861,6 +3035,12 @@ flex-direction: column;
 /* align-items: flex-start; */
   padding: 36px 10px 10px 10px ;
 }
+.uae-professional-inner-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .uae-professionals-img-1 {
   display: block;
   max-width: 313px;
@@ -3007,6 +3187,8 @@ flex-direction: column;
       border-bottom-right-radius: 37px;
     }
     .world-of-possibilities-icon-dot {
+      position: absolute;
+      left: -10px;
       width: 166px;
       height: 166px;
     }
@@ -3019,7 +3201,7 @@ flex-direction: column;
       position: absolute;
       width: 105px;
       height: 96px;
-      left: 10%;
+      left: 10px;
       bottom: 30px;
     }
     .world-of-possibilities-icon-2 {
@@ -3027,21 +3209,21 @@ flex-direction: column;
       width: 50px;
       height: 50px;
       left: 80px;
-      bottom: 130px;
+      bottom: 120px;
     }
     .world-of-possibilities-icon-3 {
       position: absolute;
       width: 18px;
       height: 18px;
       left: -10px;
-      bottom: 80px;
+      bottom: 100px;
     }
     .world-of-possibilities-icon-4 {
       position: absolute;
       width: 36px;
       height: 36px;
       left: 20px;
-      bottom: 120px;
+      bottom: 130px;
     }
     .world-of-possibilities-brochure {
       width: 90%;

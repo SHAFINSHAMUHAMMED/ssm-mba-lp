@@ -375,7 +375,9 @@ function world_of_possibilities() {
             starts here.
           </p>
           <div className="flex gap-3 sm:gap-6 items-center ">
+          <a href="\images\SSM MBA.pdf" download className="flex gap-3 sm:gap-6 items-center">
             <h3 className="underline">Download Free Brochure Now</h3>
+            
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="35"
@@ -392,6 +394,7 @@ function world_of_possibilities() {
                 fill="#64FF94"
               />
             </svg>
+            </a>
           </div>
         </div>
         <img src="\images\swiss-mba.png" alt="" />

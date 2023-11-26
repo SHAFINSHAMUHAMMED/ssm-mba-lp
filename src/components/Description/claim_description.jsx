@@ -2,7 +2,7 @@ import React from 'react'
 
 function claim_description({color}) {
     const textStyle = {
-        color: color
+        color: color,
       };
     
   return (
