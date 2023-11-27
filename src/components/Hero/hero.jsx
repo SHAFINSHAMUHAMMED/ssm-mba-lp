@@ -12,7 +12,7 @@ function hero() {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        '<span class="Hero-Headline highlight-green">Accredited</span> <span style="color: #0B434B; class="Hero-Headline">MBA</span>',
+        '<span class="Hero-Headline highlight-green">Accredited</span> <span style="color: #0B434B; class=" Hero-Headline">MBA</span>',
         '<span class="Hero-Headline highlight-green">Connected</span> <span style="color: #0B434B; class="Hero-Headline">Alumni</span>',
         '<span class="Hero-Headline highlight-green">Career</span> <span style="color: #0B434B; class="Hero-Headline">Opportunities</span>'
       ],

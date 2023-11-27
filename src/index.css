@@ -128,7 +128,7 @@ p {
 }
 
 .header-section-2 {
-  padding: 30px 66px 24px 130px;
+  padding: 30px 100px 24px 100px;
 }
 .header-section-2-sub {
   display: flex;
@@ -156,16 +156,18 @@ p {
   background-repeat: no-repeat;
   background-size: contain;
   margin: 0px 10px 0px 10px;
-
+  align-items: flex-end;
 }
 .hero-sub {
   max-width: 1180px ;
   display: flex;
-  gap: 60px
+  gap: 60px;
+  align-items: flex-end;
   
 }
 .hero-left {
  max-width:540px ;
+ padding-bottom: 64px;
 }
 .hero-headline-main {
   max-width:499px ;
@@ -667,6 +669,14 @@ p {
   position: relative;
   align-items: flex-start; 
 }
+.power-skill-card-main {
+  /* flex flex-col justify-start */
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
 .power-skill-star {
   width: 300px;
   position: absolute;
@@ -682,26 +692,26 @@ p {
   max-width: 392px;
   justify-content: center;
   align-items: center;
-  padding: 50px 0px 50px 0px;
+  padding: 0px 0px 35px 0px;
 }
 .power-skill-card h3 {
   font-family: 'SK Modernist Bold';
   line-height: 112%; /* 29.166px */
 }
 .power-skill-card div {
-  margin-top: 20px;
-  padding: 0px 10px 0px 10px;
+  margin-top: 10px;
+  padding: 0px 10px 0px 0px;
   display: flex;
   gap: 10px;
 }
 .power-skill-card p {
-  padding: 10px 20px 10px 50px;
+  padding: 10px 20px 10px 0px;
   color: #0B434B;
 }
 .power-skill-card-icon {
   position: absolute;
-  left: 5px;
-  top: 30px;
+  left: -10px;
+  top: -20px;
 }
 .power-skill-card-img {
   max-width:329px ;
@@ -807,7 +817,6 @@ p {
   margin: 0px 10px 0px 10px;
   position: relative;
   padding-top: 80px;
-  /* margin-bottom: 80px; */
   margin-top: 80px;
   border-radius: 64px;
 }
@@ -914,6 +923,7 @@ p {
   padding: 30px 20px 40px 30px;
   transition: background-color 0.3s, color 0.3s;
 }
+
 .world-of-possibilities-2-card-head{
   display: flex;
   gap: 15px;
@@ -945,15 +955,14 @@ margin-bottom: 10px;
 .world-of-possibilities-2-card:hover svg path {
   fill: white;
 }
+.world-of-possibilities-2-card:hover p {
+  color: #fff;
+}
 
 .world-of-possibilities-2-card:hover svg circle {
   stroke: white;
 }
-/* .world-of-possibilities-bg {
-  max-height: 817px;
-  overflow: hidden;
-  border-bottom-left-radius: 64px;
-} */
+
 .world-of-possibilities-bottom {
   display: flex;
   justify-content: flex-end;
@@ -1135,6 +1144,9 @@ margin-bottom: 60px;
   line-height: 100% ;
   padding: 0px 126px 0px 120px ;
 }
+.successful-graduates-sub-1 img {
+  margin: auto;
+}
 .successful-graduates-carousel {
   margin-top: -170px;
   margin-bottom: 45px;
@@ -1144,9 +1156,16 @@ margin-bottom: 60px;
   max-height: 388px;
   overflow: hidden;
 }
+.successful-graduates-carousel-1 {
+  align-items: flex-end;
+}
+.successful-graduates-carousel-2 {
+  align-items: flex-start;
+}
 .gradute-image {
-  max-width: 300px;
+  max-width: 281px;
   margin-left: 2px;
+  object-fit: cover;
 }
 
 
@@ -1319,7 +1338,7 @@ display: none;
   align-items: center;
   max-width: 1025px;
   margin: auto;
-  padding-top: 200px;
+  padding-top: 50px;
 }
 .icf-certification-sub h2 {
   max-width: 426px;
@@ -1373,14 +1392,14 @@ margin-bottom:15px;
   margin: auto;
 }
 .form-svg-bg svg {
-  animation: moveDown 1s ease-in-out infinite;
+  animation: moveDown .7s ease-in-out infinite;
 }
 @keyframes moveDown {
   0% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(10px);
+    transform: translateY(20px);
   }
   100% {
     transform: translateY(0);
@@ -1468,30 +1487,41 @@ margin-bottom:15px;
 
 .light-effect-button {
   position: relative;
+  cursor: pointer;
   overflow: hidden; /* Ensure the light effect doesn't spill out */
+}
+
+.light-effect-button span {
+  display: block;
+  position: relative;
+  z-index: 1; /* Ensure the text stays on top of the light effect */
 }
 
 .light-effect-button::before {
   content: '';
   position: absolute;
-  top: 0;
+  top: 50%;
   left: -150%; /* Start off the screen */
-  width: 50%; /* Wide enough to cover the entire button */
-  height: 40%;
- background: #0b4d57c1;
-  transition: left 2s linear;
-  transform: rotate(60deg); 
-}
-.light-effect-button:hover::before {
-  left: 100%;
-  animation: lightEffect 1s linear infinite;
+  width: 90px; /* Adjust width for desired light effect width */
+  height: 100%;
+  background: hsla(0, 0%, 100%, 0.123);
+  transform: translateY(-50%) skewX(-20deg);
+  animation: lightEffect 1.5s linear infinite;
 }
 @keyframes lightEffect {
-  from {
-    left: -180%;
+  0% {
+    left: -350%;
+    opacity: 0;
   }
-  to {
-    left: 100%;
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    left: 150%;
+    opacity: 0;
   }
 }
 
@@ -1502,10 +1532,10 @@ margin-bottom:15px;
 
 @keyframes breathing {
   0%, 100% {
-    transform: scale(1);
+    transform: translateY(0);
   }
   50% {
-    transform: scale(1.15);
+    transform: translateY(-10px); /* Adjust the pixel value as needed */
   }
 }
 
@@ -1568,7 +1598,7 @@ margin-bottom:15px;
   }
 
   .header-section-2 {
-    padding: 30px 50px 24px 90px;
+    padding: 30px 30px 24px 30px;
   }
   .header-section-2-sub {
     display: flex;
@@ -1601,6 +1631,8 @@ margin-bottom:15px;
   .hero-left {
     width:50% ;
     padding-left: 20px;
+    padding-bottom: 20px;
+
    }
    .sub-heading {
   margin-top:40px ;
@@ -1714,13 +1746,13 @@ margin-bottom:15px;
   } */
   .react-multi-carousel-list {
     overflow-x: hidden;
-    overflow-y: visible; 
+    overflow-y: hidden; 
     align-items: flex-start;
-    height: 170px;
+    height: 200px;
   }
   .react-multi-carousel-dot-list {
     gap: 10px;
-    transform: translateY(35px);
+
   }
   .react-multi-carousel-dot--active button {
     background:#259D4A ;
@@ -1997,11 +2029,18 @@ margin-bottom:15px;
   max-width: 300px;
   padding: 20px 0px 20px 0px;
 }
+.power-skill-card-main {
+  /* flex flex-col justify-start */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
 .power-skill-card div {
   padding: 0px 0px 0px 0px;
 }
 .power-skill-card p {
-  padding: 10px 0px 10px 20px;
+  padding: 10px 0px 10px 0px;
   font-size: 17px;
   line-height: 136%;
 }
@@ -2630,7 +2669,7 @@ display: block;
   }
 
   .header-section-2 {
-    padding: 20px 20px 18px 30px;
+    padding: 20px 20px 18px 20px;
   }
   .header-section-2-sub {
     display: flex;
@@ -2647,7 +2686,8 @@ display: block;
 
   .hero-section {
     /* Set the background image and position it */
-    background-position: bottom; 
+    background-image: url('/images/earth-mobile.webp');
+    background-position-y: 85%; 
     background-repeat: no-repeat;
     background-size: contain;
     margin: 0px 10px 0px 10px;
@@ -2659,7 +2699,7 @@ display: block;
     align-items: center;
     justify-content: center;
     gap: 0px;
-    padding-top: 47px;
+    padding-top: 45px;
   }
   .hero-left {
     width:100% ;
@@ -2668,7 +2708,7 @@ display: block;
    .sub-heading {
     width: 80%;
     margin: auto;
-    margin-top:40px ;
+    margin-top:0px ;
     margin-bottom: 20px;
   }
    .hero-left h4 {
@@ -2747,19 +2787,22 @@ display: block;
     max-width: 90%;
     margin: 0px 20px 0px 20px;
     margin:auto ;
-    transform: translateY(-65px);
+    transform: translateY(-75px);
     background: white;
     border-radius: 20px ;
     font-weight: bold;
     overflow-y: visible;
+    margin-bottom: -30px;
   }
   .carousel-card {
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     text-align: center;
     padding: 25px 20px 15px 20px;
+    z-index: 10;
   }
   .carousel-svg {
     width: 56px;
@@ -2775,31 +2818,23 @@ display: block;
   }
   .react-multi-carousel-track {
     overflow-y: visible!important;
+    gap: 2px;
   }
   .react-multi-carousel-list {
     overflow-x: hidden;
-    overflow-y: visible; 
+    overflow-y: hidden; 
     align-items: flex-start;
-    height: 180px;
+    height: 190px;
   }
   .react-multi-carousel-dot-list {
     gap: 10px;
-    transform: translateY(15px);
   }
   .react-multi-carousel-dot--active button {
     background:#259D4A ;
     border: none;
     position: relative;
   }
-  /* .react-multi-carousel-dot--active button::before {
-    content: "";
-    width: 5px;
-    height: 5px;
-    background: #000;
-    position: absolute;
-    left: 0;
-    transform: translate(-50%,-50%);
-  } */
+ 
   .react-multi-carousel-dot {
     transform: scale(1.3);
   }
@@ -2808,6 +2843,22 @@ display: block;
     background-color:rgba(37, 157, 74, 0.25) ;
 
   }
+  .carousel-main {
+    position: relative;
+    z-index: 0;
+  }
+  .carousel-main::after {
+    position: absolute;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.196);
+    width: 1px;
+    height: 150px;
+    /* transform: translate(-50%,-50%); */
+    top: 0px;
+    left: 50%;
+    z-index: 0;
+  }
+
   .swiss-school-h1 {
     max-width: 80%;
     padding-left: 0px;
@@ -2966,7 +3017,7 @@ display: block;
 .unbeatable-main h1 {
   max-width: 298px;
   margin: auto;
-  padding: 0px 40px 0px 40px;
+  padding: 0px 0px 20px 0px;
   line-height: 105%;
 }
 .unbeatable-video-main {
@@ -2974,7 +3025,7 @@ display: block;
   margin-top: 10px;
 }
 .unbeatable-video-player {
-  width: 80%;
+  width: 90%;
   height: 80%;
   border-radius: 20px;
   overflow: hidden;
@@ -3042,6 +3093,14 @@ display: block;
   margin-top: 15px;
   line-height: 136%; /* 27.2px */
 }
+.power-skill-card-main {
+  /* flex flex-col justify-start */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 80%;
+
+}
 .power-skill-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -3051,6 +3110,7 @@ display: block;
   justify-items: center;
   align-items: center; 
   margin: 0 auto;
+  width: 90%;
 }
 .power-skill-star {
   bottom: 40px;
@@ -3062,10 +3122,11 @@ display: block;
   padding: 20px 0px 20px 0px;
 }
 .power-skill-card div {
-  padding: 0px 20px 0px 20px;
+  /* padding: 0px 15px 0px 15px; */
+  justify-content: flex-start;
 }
 .power-skill-card p {
-  /* padding: 10px 20px 10px 50px; */
+  padding: 0px 15px 0px 0px;
   font-size: 17px;
   line-height: 136%;
 }

@@ -25,7 +25,8 @@ function power_skills() {
             src="\images\financial-expert.webp"
             alt=""
           />
-          <div className="flex">
+          <div className="power-skill-card-main">
+          <div className="flex items-center">
             <img src="\images\svg\power-skill-fire-icon.svg" alt="" />
             <h3>Financial Expertise</h3>
           </div>
@@ -33,6 +34,7 @@ function power_skills() {
           Master the art of dissecting balance sheets, income statements, and
             cash flows like a financial sage.
           </p>
+          </div>
         </div>
         {/* 2 */}
         <div className="power-skill-card">
@@ -46,7 +48,8 @@ function power_skills() {
             src="\images\project-mgmnt.webp"
             alt=""
           />
-          <div className="flex">
+          <div className="power-skill-card-main">
+          <div className="flex items-center">
             <img src="\images\svg\power-skill-fire-icon.svg" alt="" />
             <h3>Project Management Excellence</h3>
           </div>
@@ -54,6 +57,7 @@ function power_skills() {
           From inception to execution, steer projects with finesse, all while
             juggling risks and leading teams.
           </p>
+          </div>
         </div>
         {/* 3 */}
         <div className="power-skill-card">
@@ -67,7 +71,8 @@ function power_skills() {
             src="\images\marketing.webp"
             alt=""
           />
-          <div className="flex">
+          <div className="power-skill-card-main">
+          <div className="flex items-center">
             <img src="\images\svg\power-skill-fire-icon.svg" alt="" />
             <h3>Advanced Marketing Strategies</h3>
           </div>
@@ -75,6 +80,7 @@ function power_skills() {
             Dive into market psyches, conjure brands, and craft campaigns that
             leave a mark.
           </p>
+          </div>
         </div>
         {/* 4 */}
         <div className="power-skill-card">
@@ -88,7 +94,8 @@ function power_skills() {
             src="\images\leadership.webp"
             alt=""
           />
-          <div className="flex">
+          <div className="power-skill-card-main">
+          <div className="flex items-center">
             <img src="\images\svg\power-skill-fire-icon.svg" alt="" />
             <h3>Leadership and Conflict Resolution</h3>
           </div>
@@ -96,6 +103,7 @@ function power_skills() {
             Lead with charisma, resolve conflicts like a diplomat and spark
             motivation like a coach.
           </p>
+          </div>
         </div>
         {/* 5 */}
         <div className="power-skill-card">
@@ -109,7 +117,8 @@ function power_skills() {
             src="\images\strategy.webp"
             alt=""
           />
-          <div className="flex">
+          <div className="power-skill-card-main">
+          <div className="flex items-center">
             <img src="\images\svg\power-skill-fire-icon.svg" alt="" />
             <h3>Strategic Problem-Solving</h3>
           </div>
@@ -117,6 +126,7 @@ function power_skills() {
             Dissect business challenges, spotlight the crux, and architect
             game-changing solutions.
           </p>
+          </div>
         </div>
         {/* 6 */}
         <div className="power-skill-card">
@@ -130,7 +140,8 @@ function power_skills() {
             src="\images\innovation.webp"
             alt=""
           />
-          <div className="flex">
+          <div className="power-skill-card-main">
+          <div className="flex items-center">
             <img src="\images\svg\power-skill-fire-icon.svg" alt="" />
             <h3>Entrepreneurial Innovation</h3>
           </div>
@@ -138,6 +149,7 @@ function power_skills() {
             Ignite the entrepreneurial fire within, dreaming up ventures and
             crafting business plans that could disrupt markets.
           </p>
+          </div>
         </div>
         <img className="power-skill-star" src="\images\svg\star-large-icon.svg" alt="" />
       </div>
