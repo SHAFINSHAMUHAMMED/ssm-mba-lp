@@ -9,6 +9,7 @@ function steps_to_unlock_career() {
         Success With an MBA
       </h1>
       <div className="steps-to-unlock-cards">
+        <div className="steps-to-unlock-cards-main">
       <svg className="star-svg hidden sm:block" xmlns="http://www.w3.org/2000/svg" width="188" height="188" viewBox="0 0 197 195" fill="none">
   <path fill-rule="evenodd" clip-rule="evenodd" d="M145.551 153.362L189.287 154.679L143.704 100.556L196.121 53.021L152.604 48.471L150.461 6.39944L101.669 50.6474L59.2361 0.265126L51.4824 41.6715L7.7477 40.3565L53.3334 94.4817L0.914289 142.019L44.4339 146.567L46.5739 188.64L95.3679 144.391L137.799 194.77L145.551 153.362Z" fill="#259D4A" fill-opacity="0.15"/>
 </svg>
@@ -144,6 +145,7 @@ width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
       <svg className="svg-icon2" xmlns="http://www.w3.org/2000/svg" width="356" height="433" viewBox="0 0 356 433" fill="none">

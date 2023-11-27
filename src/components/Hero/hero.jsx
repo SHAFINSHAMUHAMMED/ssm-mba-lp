@@ -73,15 +73,15 @@ function hero() {
           <div className="hero-icons-main">
             <img className="bag-icon animated-icon" src="\images\svg\bag-icon.svg" alt="" />
             {/* <img src="\images\svg\graph-icon.svg" alt="" /> */}
-            {/* <img className="hero-img" src="\images\hero.png" alt="" /> */}
+            {/* <img className="hero-img" src="\images\hero.webp" alt="" /> */}
             <img className="graph-icon2 animated-icon" src="\images\svg\graph-icon2.svg" alt="" />
             <img className="rank-icon animated-icon" src="\images\svg\rank-icon.svg" alt="" />
             </div>
         </div>
       </div>
     </div>
-      <img className="graphic-devider hidden sm:block" src="\images\GraphicPatter.png" alt="" />
-      <img className="graphic-devider block sm:hidden" src="\images\GraphicPatter-mob.png" alt="" />
+      <img className="graphic-devider hidden sm:block" src="\images\GraphicPatter.webp" alt="" />
+      <img className="graphic-devider block sm:hidden" src="\images\GraphicPatter-mob.webp" alt="" />
 
     </>
   );

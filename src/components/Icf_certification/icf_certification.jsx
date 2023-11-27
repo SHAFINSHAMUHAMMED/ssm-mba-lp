@@ -12,12 +12,12 @@ function icf_certification() {
     <div className="icf-certification-main">
       <img
         className="icf-certification-pattern-1"
-        src="\images\GraphicPatter4.png"
+        src="\images\GraphicPatter4.webp"
         alt=""
       />
       <img
         className=" icf-certification-pattern-2"
-        src="\images\graphicPattern-last-mob.png"
+        src="\images\graphicPattern-last-mob.webp"
         alt=""
       />
       <div className="icf-certification-sub">
@@ -52,18 +52,18 @@ function icf_certification() {
           </span>{" "}
           <br />(Worth AED 9000)
         </h1>
-        <img src="\images\icf-certification-banner.png" alt="" />
+        <img src="\images\icf-certification-banner.webp" alt="" />
         <MultiStepForm />
       </div>
       <div className="bottom-man-image-div">
         <img
           className="bottom-man-image hidden md:block"
-          src="\images\bottom-man.png"
+          src="\images\bottom-man.webp"
           alt=""
         />
         <img
           className="bottom-man-image block md:hidden"
-          src="\images\bottom-man-mob.png"
+          src="\images\bottom-man-mob.webp"
           alt=""
         />
       </div>

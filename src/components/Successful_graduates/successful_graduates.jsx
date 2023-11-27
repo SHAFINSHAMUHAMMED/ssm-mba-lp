@@ -13,34 +13,34 @@ function successful_graduates() {
           <span className="wavy-underline">Graduates</span> & Take Charge Of
           Your Career
         </h1>
-        <img className="hidden sm:block" src="\images\graduates.png" alt="" />
-        <img className="block sm:hidden" src="\images\graduates-mobile.png" alt="" />
+        <img className="hidden sm:block" src="\images\graduates.webp" alt="" />
+        <img className="block sm:hidden" src="\images\graduates-mobile.webp" alt="" />
 
       </div>
-      <img className="hidden sm:block" src="images\GraphicPatter5.png" alt="" />
-      <img className="block sm:hidden" src="images\GraphicPatter5-mobile.png" alt="" />
+      <img className="hidden sm:block" src="images\GraphicPatter5.webp" alt="" />
+      <img className="block sm:hidden" src="images\GraphicPatter5-mobile.webp" alt="" />
 
       <div className="successful-graduates-carousel">
         <Marquee speed={70} direction="right">
         <div className="successful-graduates-carousel-1 ">
-            <img className="gradute-image" src="\images\graduate-1.png" alt="" />
-            <img className="gradute-image" src="\images\graduate-2.png" alt="" />
-            <img className="gradute-image" src="\images\graduate-3.png" alt="" />
-            <img className="gradute-image" src="\images\graduate-4.png" alt="" />
-            <img className="gradute-image" src="\images\graduate-5.png" alt="" />
-            <img className="gradute-image" src="\images\graduate-6.png" alt="" />
-            <img className="gradute-image" src="\images\graduate-7.png" alt="" />
+            <img className="gradute-image" src="\images\graduate-1.webp" alt="" />
+            <img className="gradute-image" src="\images\graduate-2.webp" alt="" />
+            <img className="gradute-image" src="\images\graduate-3.webp" alt="" />
+            <img className="gradute-image" src="\images\graduate-4.webp" alt="" />
+            <img className="gradute-image" src="\images\graduate-5.webp" alt="" />
+            <img className="gradute-image" src="\images\graduate-6.webp" alt="" />
+            <img className="gradute-image" src="\images\graduate-7.webp" alt="" />
         </div>
         </Marquee>
         <Marquee speed={70} direction="left">
         <div className="successful-graduates-carousel-2 ">
-            <img className="gradute-image" src="\images\graduate-2.png" alt="" />
-            <img className="gradute-image" src="\images\graduate-4.png" alt="" />
-            <img className="gradute-image" src="\images\graduate-1.png" alt="" />
-            <img className="gradute-image" src="\images\graduate-7.png" alt="" />
-            <img className="gradute-image" src="\images\graduate-6.png" alt="" />
-            <img className="gradute-image" src="\images\graduate-3.png" alt="" />
-            <img className="gradute-image" src="\images\graduate-5.png" alt="" />
+            <img className="gradute-image" src="\images\graduate-2.webp" alt="" />
+            <img className="gradute-image" src="\images\graduate-4.webp" alt="" />
+            <img className="gradute-image" src="\images\graduate-1.webp" alt="" />
+            <img className="gradute-image" src="\images\graduate-7.webp" alt="" />
+            <img className="gradute-image" src="\images\graduate-6.webp" alt="" />
+            <img className="gradute-image" src="\images\graduate-3.webp" alt="" />
+            <img className="gradute-image" src="\images\graduate-5.webp" alt="" />
         </div>
         </Marquee>
       </div>

@@ -339,22 +339,22 @@ function world_of_possibilities() {
         <div className="world-of-possibilities-bottom">
           <div className="world-of-possibilities-icons">
             <img
-              className="world-of-possibilities-icon-1"
+              className="world-of-possibilities-icon-1 "
               src="\images\svg\up-graph-icon.svg"
               alt=""
             />
             <img
-              className="world-of-possibilities-icon-2"
+              className="world-of-possibilities-icon-2 animated-icon"
               src="\images\svg\sales-icon.svg"
               alt=""
             />
             <img
-              className="world-of-possibilities-icon-3"
+              className="world-of-possibilities-icon-3 animated-icon"
               src="\images\svg\target-2-icon.svg"
               alt=""
             />
             <img
-              className="world-of-possibilities-icon-4"
+              className="world-of-possibilities-icon-4 animated-icon"
               src="\images\svg\scolar-icon.svg"
               alt=""
             />
@@ -366,7 +366,7 @@ function world_of_possibilities() {
         <div className="world-of-possibilities-brochure-left">
           <h1>
             Get Instant Access To{" "}
-            <span className="wavy-underline-green2">The SSM MBA Brochure</span>
+            <span className="wavy-underline-green">The SSM MBA</span><span className="wavy-underline-green"> Brochure</span>
           </h1>
           <p>
             Get an inside look at our prestigious programs, faculty, and the
@@ -397,7 +397,7 @@ function world_of_possibilities() {
             </a>
           </div>
         </div>
-        <img src="\images\swiss-mba.png" alt="" />
+        <img src="\images\swiss-mba.webp" alt="" />
       </div>
     </div>
   );

@@ -118,10 +118,13 @@ p {
   border-bottom: 1px solid rgba(0, 0, 0, 0.24);
 
 }
-.header-section-contact{
+.header-section-contact {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.header-section-contact p {
+  line-height: 1;
 }
 
 .header-section-2 {
@@ -140,12 +143,15 @@ p {
   align-items: center;
   gap: 10px;
 }
+.header-section-2-contact p {
+  line-height: 1;
+}
 
 /* hero section */
 
 .hero-section {
   /* Set the background image and position it */
-  background-image: url('/images/Global\ Map.png');
+  background-image: url('/images/Global\ Map.webp');
   background-position: center right; 
   background-repeat: no-repeat;
   background-size: contain;
@@ -166,6 +172,7 @@ p {
   text-align: left;
 }
 .sub-heading {
+  margin-top:90px ;
   margin-bottom: 30px;
 }
 .hero-left h4 {
@@ -233,7 +240,7 @@ p {
  justify-content: center;
  height: 758px;
  width: 645px;
- background-image: url('/images/hero.png');
+ background-image: url('/images/hero.webp');
  background-position: center bottom;
  background-size: contain;
  background-repeat: no-repeat;
@@ -457,7 +464,7 @@ p {
   justify-content: center;
   align-items: flex-end;
   position: relative;
-  background-image: url('/images/earth.png');
+  background-image: url('/images/earth.webp');
   background-position: top; 
   background-repeat: no-repeat;
   background-size: 903px 528px;
@@ -522,7 +529,7 @@ p {
   position: relative;
   height: 734px;
   margin-top: 40px;
-  background-image: url('/images/arch-bg.png');
+  background-image: url('/images/arch-bg.webp');
   background-position: center left; 
   background-repeat: no-repeat;
   background-size: contain;
@@ -718,7 +725,7 @@ p {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url('../public//images//building-burj.jpg');
+  background-image: url('../public//images//building-burj.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -818,7 +825,7 @@ p {
   justify-content:flex-end;
   align-items: center;
   max-width: 1183px;
-  background-image: url('/images/map-bg.png');
+  background-image: url('/images/map-bg.webp');
   background-position: center; 
   background-repeat: no-repeat;
   background-size: contain;
@@ -951,7 +958,7 @@ margin-bottom: 10px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-image: url('/images/professional2.png');
+  background-image: url('/images/professional2.webp');
   background-position: bottom; 
   background-repeat: no-repeat;
   background-size: contain;
@@ -1054,7 +1061,7 @@ margin-bottom: 10px;
 .review-video-sub {
   height: 253px;
   width: 100%;
-  background-image: url('/images/GraphicPatter3.png');
+  background-image: url('/images/GraphicPatter3.webp');
   background-position: bottom center ; 
   background-repeat: no-repeat;
   margin: 80px 0px 50px 0px;
@@ -1157,6 +1164,23 @@ margin-bottom: 60px;
   bottom: 50px;
   right: 0px;
 }
+.steps-to-unlock-cards-main {
+  max-width: 760px;
+  margin: auto;
+  position: relative;
+}
+.steps-to-unlock-cards-main::after {
+  position: absolute;
+  content: '';
+  bottom: 150px;;
+  left: 60px;
+  width: 10%;
+  height: 980px;
+  background-image: url('/images/svg/connecting-dot.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
 .steps-to-unlock-cards {
   margin-top: 60px;
   padding: 0px 0px 40px 0px;
@@ -1233,7 +1257,7 @@ margin-bottom: 60px;
 /* 100% student support guarantee section */
 
 .student-support-main {
-  background-image: url('/images/background-img.png');
+  background-image: url('/images/background-img.webp');
   object-fit: contain;
   background-repeat: no-repeat;
   padding: 70px 0px 30px 0px;
@@ -1277,7 +1301,7 @@ display: none;
   background-color:#EDE6D8 ;
   position: relative;
   /* height: 2534px;
-  background-image: url('../public/images/bottom-man.png'); 
+  background-image: url('../public/images/bottom-man.webp'); 
   background-repeat: no-repeat; 
    background-position: bottom;
   background-size: contain; */
@@ -1424,6 +1448,24 @@ margin-bottom:15px;
 
 /* /////animations\\\\\\ */
 
+.header-section-2 {
+  animation: fadeUp 0.5s ease;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 .light-effect-button {
   position: relative;
   overflow: hidden; /* Ensure the light effect doesn't spill out */
@@ -1561,6 +1603,7 @@ margin-bottom:15px;
     padding-left: 20px;
    }
    .sub-heading {
+  margin-top:40px ;
     margin-bottom: 20px;
   }
    .hero-left h4 {
@@ -1601,7 +1644,7 @@ margin-bottom:15px;
     align-items: center;
     width: 374px;
     height: 432px;
-    background-image: url('/images/hero-mob.png');
+    background-image: url('/images/hero-mob.webp');
     background-position: center bottom;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1716,7 +1759,7 @@ margin-bottom:15px;
   }
   .swiss-school-p-main  {
     margin: 0px 40px 0px 20px;
-    max-width: 70%;
+    max-width: 80%;
     margin: auto;
    }
   .swiss-school-p-main .p-margine {
@@ -1864,7 +1907,7 @@ margin-bottom:15px;
 .unbeatable-video-main {
   height: 380px;
   margin-top: 10px;
-  background-image: url('/images/arch-bg-mob.png');
+  background-image: url('/images/arch-bg-mob.webp');
   background-position: center left; 
   background-repeat: no-repeat;
   background-size: contain;
@@ -1981,7 +2024,7 @@ margin-bottom:15px;
 }
 .uae-professional-main::before {
 
-  background-image: url('/images/building-burj-mobile.png');
+  background-image: url('/images/building-burj-mobile.webp');
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -2063,7 +2106,7 @@ flex-direction: column;
   flex-direction: column;
   justify-content:flex-end;
   align-items: center;
-  background-image: url('/images/map-bg.png');
+  background-image: url('/images/map-bg.webp');
   background-position: top; 
   background-repeat: no-repeat;
   background-size: contain;
@@ -2142,7 +2185,7 @@ flex-direction: column;
     .world-of-possibilities-bottom {
       justify-content: flex-end;
       align-items: center;
-      background-image: url('/images/professional2.png');
+      background-image: url('/images/professional2.webp');
       background-position: top; 
       background-size: cover;
       height: 500px;
@@ -2254,7 +2297,7 @@ flex-direction: column;
 .review-video-sub {
   height: 253px;
   width: 100%;
-  background-image: url('/images/GraphicPatter3.png');
+  background-image: url('/images/GraphicPatter3.webp');
   background-position: bottom center ; 
   background-repeat: no-repeat;
   margin: 40px 0px 50px 0px;
@@ -2332,16 +2375,33 @@ margin-bottom: 60px;
 }
 
 /* Steps to unlock career section */
-
+.steps-to-unlock-cards-main {
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+}
+.steps-to-unlock-cards-main::after {
+  position: absolute;
+  content: '';
+  bottom: 80px;;
+  left: 40px;
+  width: 10%;
+  height: 840px;
+  background-image: url('/images/svg/connecting-dot.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
 .steps-to-unlock-cards {
   margin-top: 30px;
   padding: 0px 0px 32px 0px;
 }
+
 .steps-to-unlock-card-main {
   margin-bottom: 33px;
 }
 .steps-to-unlock-card {
-  max-width: 500px;
+  width: 500px;
   padding: 15px 30px 15px 30px ;
 }
 .steps-to-unlock-card-content {
@@ -2412,7 +2472,7 @@ display: block;
 
 .icf-certification-main {
   /* height: 1568px;
-  background-image: url('../public/images/bottom-man-mob.png'); 
+  background-image: url('../public/images/bottom-man-mob.webp'); 
   background-repeat: no-repeat; 
   background-position: bottom;
   background-size: contain; */
@@ -2608,6 +2668,7 @@ display: block;
    .sub-heading {
     width: 80%;
     margin: auto;
+    margin-top:40px ;
     margin-bottom: 20px;
   }
    .hero-left h4 {
@@ -2648,7 +2709,7 @@ display: block;
     align-items: center;
     width: 90%;
     height: 432px;
-    background-image: url('/images/hero-mob.png');
+    background-image: url('/images/hero-mob.webp');
     background-position: center bottom;
     background-size: contain;
     background-repeat: no-repeat;
@@ -2696,6 +2757,7 @@ display: block;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     text-align: center;
     padding: 25px 20px 15px 20px;
   }
@@ -2747,21 +2809,21 @@ display: block;
 
   }
   .swiss-school-h1 {
-    max-width: 70%;
-    padding-left: 20px;
-    padding-right: 28px;
-    padding-top: 30px;
+    max-width: 80%;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
     line-height: 105%;
     text-align: center;
     font-weight: 700;
     font-size: 37px;
   }
   .swiss-school-p-main  {
-    margin: 0px 40px 0px 20px;
+    margin: 0px 0px 0px 20px;
    }
   .swiss-school-p-main .p-margine {
     color: #305C62;
-    margin-bottom:33px ;
+    margin-bottom:25px ;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -2771,11 +2833,10 @@ display: block;
   /* program-highlights */
 
   .highlight-main {
-    margin: 0px 10px 0px 10px;
+    margin: 40px 10px 0px 10px;
     position: relative;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    margin-top: 80px;
+    padding-top: 33px;
+    padding-bottom: 33px;
     border-radius: 38px;
     display: flex;
     flex-direction: column;
@@ -2822,6 +2883,7 @@ display: block;
   }
   .Highlight-columns2:last-child {
     border-top: none;
+    display: none;
   }
   .Highlight-columns h4 {
     width: 80%;
@@ -2867,7 +2929,7 @@ display: block;
   
 }
 .accredit-main h1 {
-  padding: 0px 10px 20px 10px;
+  padding: 0px 10px 10px 10px;
   max-width: 287px ;
   line-height: 105%; /* 38.85px */
 }
@@ -2941,7 +3003,7 @@ display: block;
 .unbeatable-inner-flex {
   display: flex;
   align-items: flex-start;
-  padding: 30px 20px 38px 10px;
+  padding: 20px 20px 29px 10px;
 }
 .unbetable-inner-icon{
   width: 60px;
@@ -2966,6 +3028,7 @@ display: block;
 /* 6-power-skills section */
 
 .power-skill-main{
+ padding-bottom: 36px;
   margin-top: 40px;
 }
 .power-skill-main h1 {
@@ -3024,7 +3087,7 @@ display: block;
 }
 .uae-professional-main::before {
 
-  background-image: url('/images/building-burj-mobile.png');
+  background-image: url('/images/building-burj-mobile.webp');
   background-size: contain;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -3107,7 +3170,7 @@ flex-direction: column;
   flex-direction: column;
   justify-content:flex-end;
   align-items: center;
-  background-image: url('/images/map-bg.png');
+  background-image: url('/images/map-bg.webp');
   background-position: top; 
   background-repeat: no-repeat;
   background-size: contain;
@@ -3180,7 +3243,7 @@ flex-direction: column;
     .world-of-possibilities-bottom {
       justify-content: flex-end;
       align-items: center;
-      background-image: url('/images/professional2.png');
+      background-image: url('/images/professional2.webp');
       background-position: center top; 
       height: 316px;
       border-bottom-left-radius: 37px;
@@ -3279,7 +3342,7 @@ flex-direction: column;
 }
 .review-video-sub {
   height: 143px;
-  background-image: url('/images/GraphicPatter3-mob.png');
+  background-image: url('/images/GraphicPatter3-mob.webp');
   background-size: 100%;
 }
 .review-video-sub .react-multi-carousel-list  {
@@ -3342,7 +3405,7 @@ padding: 0px 10px 0px 10px;
 }
 .successful-graduates-carousel {
   margin-top: -80px;
-  margin-bottom: 5px;
+  margin-bottom: 29px;
 }
 .successful-graduates-carousel-1 , .successful-graduates-carousel-2  {
   max-height: 247px;
@@ -3364,6 +3427,23 @@ padding: 0px 10px 0px 10px;
   max-width: 288px;
   padding: 0px 0px 0px 0px;
 }
+.steps-to-unlock-cards-main {
+  max-width: 330px;
+  margin: auto;
+  position: relative;
+}
+.steps-to-unlock-cards-main::after {
+  position: absolute;
+  content: '';
+  bottom: 150px;;
+  left: 30px;
+  width: 10%;
+  height: 1250px;
+  background-image: url('/images/svg/connecting-dot.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
 .steps-to-unlock-cards {
   margin-top: 28px;
   padding: 0px 0px 0px 0px;
@@ -3376,7 +3456,7 @@ padding: 0px 10px 0px 10px;
   margin-bottom: 33px;
 }
 .steps-to-unlock-card {
-  max-width: 268px;
+  width: 268px;
   border: none;
   background-color: #fff;
   padding: 24px 22px 30px 24px ;
@@ -3432,7 +3512,7 @@ display: block;
 
 .icf-certification-main {
   /* height: 1568px;
-  background-image: url('../public/images/bottom-man-mob.png'); 
+  background-image: url('../public/images/bottom-man-mob.webp'); 
   background-repeat: no-repeat; 
   background-position: bottom;
   background-size: contain; */

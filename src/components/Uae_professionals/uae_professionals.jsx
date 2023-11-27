@@ -19,7 +19,7 @@ function uae_professionals() {
           </h1>
           <img
           className="uae-professionals-img-1"
-          src="\images\professionals-mobile.png"
+          src="\images\professionals-mobile.webp"
           alt=""
         />
           <p className="uae-professional-p">
@@ -52,7 +52,7 @@ function uae_professionals() {
         </div>
         <img
           className=" uae-professionals-img-2"
-          src="\images\professionals.png"
+          src="\images\professionals.webp"
           alt=""
         />
       </div>

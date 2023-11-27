@@ -61,7 +61,7 @@ function ReviewSection() {
             >
               <img
                 className="w-[135px] sm:w-auto"
-                src="\images\video-card.png"
+                src="\images\video-card.webp"
                 alt=""
               />
             </div>
@@ -71,7 +71,7 @@ function ReviewSection() {
             >
               <img
                 className="w-[135px] sm:w-auto"
-                src="\images\video-card.png"
+                src="\images\video-card.webp"
                 alt=""
               />
             </div>
@@ -81,7 +81,7 @@ function ReviewSection() {
             >
               <img
                 className="w-[135px] sm:w-auto"
-                src="\images\video-card.png"
+                src="\images\video-card.webp"
                 alt=""
               />
             </div>
@@ -91,7 +91,7 @@ function ReviewSection() {
             >
               <img
                 className="w-[135px] sm:w-auto"
-                src="\images\video-card.png"
+                src="\images\video-card.webp"
                 alt=""
               />
             </div>
@@ -137,7 +137,7 @@ function ReviewSection() {
                 about my program and she is really very much experienced
                 overall. Thanks Anousha and team gain.
               </p>
-              <div className="flex justify-between">
+              <div className="flex justify-between items-center">
                 <div className="flex gap-2 items-center">
                   <svg
                     className="review-user-icon"
@@ -193,7 +193,7 @@ function ReviewSection() {
                 about my program and she is really very much experienced
                 overall. Thanks Anousha and team gain.
               </p>
-              <div className="flex justify-between">
+              <div className="flex justify-between items-center">
                 <div className="flex gap-2 items-center">
                   <svg
                     className="review-user-icon"
@@ -249,7 +249,7 @@ function ReviewSection() {
                 about my program and she is really very much experienced
                 overall. Thanks Anousha and team gain.
               </p>
-              <div className="flex justify-between">
+              <div className="flex justify-between items-center">
                 <div className="flex gap-2 items-center">
                   <svg
                     className="review-user-icon"
@@ -305,7 +305,7 @@ function ReviewSection() {
                 about my program and she is really very much experienced
                 overall. Thanks Anousha and team gain.
               </p>
-              <div className="flex justify-between">
+              <div className="flex justify-between items-center">
                 <div className="flex gap-2 items-center">
                   <svg
                     className="review-user-icon"
@@ -365,7 +365,7 @@ function ReviewSection() {
                 about my program and she is really very much experienced
                 overall. Thanks Anousha and team gain.
               </p>
-              <div className="flex justify-between">
+              <div className="flex justify-between items-center">
                 <div className="flex gap-2 items-center">
                   <svg
                     className="review-user-icon"
@@ -421,7 +421,7 @@ function ReviewSection() {
                 about my program and she is really very much experienced
                 overall. Thanks Anousha and team gain.
               </p>
-              <div className="flex justify-between">
+              <div className="flex justify-between items-center">
                 <div className="flex gap-2 items-center">
                   <svg
                     className="review-user-icon"
@@ -477,7 +477,7 @@ function ReviewSection() {
                 about my program and she is really very much experienced
                 overall. Thanks Anousha and team gain.
               </p>
-              <div className="flex justify-between">
+              <div className="flex justify-between items-center">
                 <div className="flex gap-2 items-center">
                   <svg
                     className="review-user-icon"
@@ -533,7 +533,7 @@ function ReviewSection() {
                 about my program and she is really very much experienced
                 overall. Thanks Anousha and team gain.
               </p>
-              <div className="flex justify-between">
+              <div className="flex justify-between items-center">
                 <div className="flex gap-2 items-center">
                   <svg
                     className="review-user-icon"

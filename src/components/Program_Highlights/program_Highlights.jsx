@@ -319,7 +319,7 @@ function program_Highlights() {
           </svg>
           <h4 className="text-body-light ps-5">Student support</h4>
         </div>
-        <div className="Highlight-columns2 hidden sm:block">
+        <div className="Highlight-columns2 ">
           <svg
             className="Highlight-star-icon"
             xmlns="http://www.w3.org/2000/svg"

@@ -6,7 +6,7 @@ function acreditions() {
   return (
     <div class="accredit-main">
     <div className="accredit-overlay"></div>
-  {/* <img src="\images\earth.png" alt="Globe Background" class="glob-background"/> */}
+  {/* <img src="\images\earth.webp" alt="Globe Background" class="glob-background"/> */}
   {/* <div className='gradient-div h-full'> */}
   <div class="accredit-content w-screen z-10">
     <h1 class="accredit-h1 text-center">Globally <span className='wavy-underline-green'>Recognised</span> & <span className='wavy-underline-green'>Accredited</span> By</h1>

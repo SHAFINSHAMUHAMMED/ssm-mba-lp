@@ -22,7 +22,7 @@ function power_skills() {
           />
           <img
             className="power-skill-card-img"
-            src="\images\financial-expert.png"
+            src="\images\financial-expert.webp"
             alt=""
           />
           <div className="flex">
@@ -43,7 +43,7 @@ function power_skills() {
           />
           <img
             className="power-skill-card-img"
-            src="\images\project-mgmnt.png"
+            src="\images\project-mgmnt.webp"
             alt=""
           />
           <div className="flex">
@@ -64,7 +64,7 @@ function power_skills() {
           />
           <img
             className="power-skill-card-img"
-            src="\images\marketing.png"
+            src="\images\marketing.webp"
             alt=""
           />
           <div className="flex">
@@ -85,7 +85,7 @@ function power_skills() {
           />
           <img
             className="power-skill-card-img"
-            src="\images\leadership.png"
+            src="\images\leadership.webp"
             alt=""
           />
           <div className="flex">
@@ -106,7 +106,7 @@ function power_skills() {
           />
           <img
             className="power-skill-card-img"
-            src="\images\strategy.png"
+            src="\images\strategy.webp"
             alt=""
           />
           <div className="flex">
@@ -127,7 +127,7 @@ function power_skills() {
           />
           <img
             className="power-skill-card-img"
-            src="\images\innovation.png"
+            src="\images\innovation.webp"
             alt=""
           />
           <div className="flex">
