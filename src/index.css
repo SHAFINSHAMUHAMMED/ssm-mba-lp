@@ -2687,7 +2687,7 @@ display: block;
   .hero-section {
     /* Set the background image and position it */
     background-image: url('/images/earth-mobile.webp');
-    background-position-y: 85%; 
+    background-position-y: 80%; 
     background-repeat: no-repeat;
     background-size: contain;
     margin: 0px 10px 0px 10px;
