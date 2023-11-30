@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ButtonDark from "../Buttons/buttonDark";
 import Claim_description from "../Description/claim_description";
+import AOS from "aos";
+import 'aos/dist/aos.css'
 function world_of_possibilities() {
+  useEffect(() => {
+    AOS.init({duration:2000})
+  }, [])
+  
   return (
     <div>
       <div className="world-of-possibilities-main">
@@ -13,7 +19,7 @@ function world_of_possibilities() {
         <div className="world-of-possibilities-sub-1">
           <img
             className="w-[316px] h-[316px] breathing-image"
-            src="\images\svg\university-icon-large.svg"
+            src="images/svg/university-icon-large.svg"
             alt=""
           />
           <div className="world-of-possibilities-cards ">
@@ -337,36 +343,46 @@ function world_of_possibilities() {
         <ButtonDark containerStyle={{ justifyContent: "center" }} />
         <Claim_description color="rgba(11, 67, 75, 0.79)" />
         <div className="world-of-possibilities-bottom">
-          <div className="world-of-possibilities-icons">
+          <div className="world-of-possibilities-icons" >
             <img
               className="world-of-possibilities-icon-1 "
-              src="\images\svg\up-graph-icon.svg"
+              src="images/svg/up-graph-icon.svg"
               alt=""
             />
             <img
-              className="world-of-possibilities-icon-2 animated-icon"
-              src="\images\svg\sales-icon.svg"
+              className="world-of-possibilities-icon-2 animated-icon2"
+              src="images/svg/sales-icon.svg"
               alt=""
+              data-aos="fade-in"
+              data-aos-delay="800"
             />
             <img
-              className="world-of-possibilities-icon-3 animated-icon"
-              src="\images\svg\target-2-icon.svg"
+              className="world-of-possibilities-icon-3 animated-icon2"
+              src="images/svg/target-2-icon.svg"
               alt=""
+              data-aos="fade-in"
+              data-aos-delay="0"
             />
             <img
-              className="world-of-possibilities-icon-4 animated-icon"
-              src="\images\svg\scolar-icon.svg"
+              className="world-of-possibilities-icon-4 animated-icon2"
+              src="images/svg/scolar-icon.svg"
               alt=""
+              data-aos="fade-in"
+              data-aos-delay="400"
             />
-            <img className="world-of-possibilities-icon-dot" src="images\svg\dottet-curve-icon.svg" alt="" />
+            <img 
+            className="world-of-possibilities-icon-dot" 
+            src="images/svg/dottet-curve-icon.svg" 
+            alt="" 
+            />
           </div>
         </div>
       </div>
       <div className="world-of-possibilities-brochure ">
         <div className="world-of-possibilities-brochure-left">
           <h1>
-            Get Instant Access To{" "}
-            <span className="wavy-underline-green">The SSM MBA</span><span className="wavy-underline-green"> Brochure</span>
+            Get Instant Access To &nbsp;
+            <span className="wavy-underline-green">The</span><span className="wavy-underline-green">&nbsp;SSM MBA</span>&nbsp; <span className="wavy-underline-green">Brochure</span>
           </h1>
           <p>
             Get an inside look at our prestigious programs, faculty, and the
@@ -375,7 +391,7 @@ function world_of_possibilities() {
             starts here.
           </p>
           <div className="flex gap-3 sm:gap-6 items-center ">
-          <a href="\images\SSM MBA.pdf" download className="flex gap-3 sm:gap-6 items-center">
+          <a href="images/SSM MBA.pdf" download className="flex gap-3 sm:gap-6 items-center">
             <h3 className="underline">Download Free Brochure Now</h3>
             
             <svg
@@ -397,7 +413,9 @@ function world_of_possibilities() {
             </a>
           </div>
         </div>
-        <img src="\images\swiss-mba.webp" alt="" />
+        <img className='swiss-img-1' src="images/swiss-mba.webp" alt="" />
+        <img className='swiss-img-2' src="images/swiss-mba-tab.webp" alt="" />
+
       </div>
     </div>
   );

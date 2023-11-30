@@ -14,12 +14,12 @@ function uae_professionals() {
         <div className=" uae-professional-inner-1">
           <h1>
             How <span className="highlight-green">UAE</span><span className="highlight-green"> Professionals</span> are{" "}
-            <span className="wavy-underline-green">Rising to the Top</span>—And
+            <span className="wavy-underline-green">Rising</span><span className="wavy-underline-green2"> to </span><span className="wavy-underline-green2">the Top</span>—And
             the Pathway for You to Join Them!
           </h1>
           <img
           className="uae-professionals-img-1"
-          src="\images\professionals-mobile.webp"
+          src="images/professionals-mobile.webp"
           alt=""
         />
           <p className="uae-professional-p">
@@ -52,7 +52,7 @@ function uae_professionals() {
         </div>
         <img
           className=" uae-professionals-img-2"
-          src="\images\professionals.webp"
+          src="images/professionals.webp"
           alt=""
         />
       </div>

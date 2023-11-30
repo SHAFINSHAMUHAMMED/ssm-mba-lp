@@ -1,5 +1,6 @@
 {
   "name": "lp-design",
+  "homepage": "/ssm-mba",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,12 +11,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "lottie-react": "^2.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.2",
     "react-multi-carousel": "^2.8.4",
     "react-player": "^2.13.0",
+    "react-scroll": "^1.9.0",
     "react-simple-typewriter": "^5.0.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",

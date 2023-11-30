@@ -20,7 +20,7 @@ function ResponsiveCarousel() {
         },
         mobile: {
           breakpoint: { max: 640, min: 0 },
-          items: 2
+          items: 2,
         }
       };
 
@@ -41,7 +41,7 @@ function ResponsiveCarousel() {
         <Divider/>
         <div className="carousel-card ">
           <img
-            src="\images\svg\timer-icon.svg"
+            src="images/svg/timer-icon.svg"
             alt="12 Months"
             className="mb-2 carousel-svg"
           />
@@ -59,7 +59,7 @@ function ResponsiveCarousel() {
         <Divider/>
         <div className="carousel-card">
           <img
-            src="images\svg\money-icon.svg"
+            src="images/svg/money-icon.svg"
             alt="Scholarships"
             className="mb-2 carousel-svg"
           />
@@ -70,7 +70,7 @@ function ResponsiveCarousel() {
       </div>
       
       <div className=" carousel-main lg:hidden overflow-visible h-auto" >
-  <Carousel responsive={responsive} infinite={true} removeArrowOnDeviceType={["tablet", "mobile"]} showDots={true}>
+  <Carousel responsive={responsive} infinite={true} removeArrowOnDeviceType={["tablet", "mobile"]} showDots={true} autoPlay={true} autoPlaySpeed={2000} >
     <div className=" carousel-card  ">
       <img src="images/svg/balanced-icon.svg" alt="Work-Life" className=" carousel-svg mb-2" />
       <h4 className="text-sm sm:text-base">Balanced Work-Life Structure</h4>

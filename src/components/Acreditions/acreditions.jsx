@@ -6,37 +6,38 @@ function acreditions() {
   return (
     <div class="accredit-main">
     <div className="accredit-overlay"></div>
-  {/* <img src="\images\earth.webp" alt="Globe Background" class="glob-background"/> */}
-  {/* <div className='gradient-div h-full'> */}
   <div class="accredit-content w-screen z-10">
     <h1 class="accredit-h1 text-center">Globally <span className='wavy-underline-green'>Recognised</span> & <span className='wavy-underline-green'>Accredited</span> By</h1>
     <div className=' acredits-marquee-1'>
     <Marquee speed={200}>
     <div class="accredit-cards">
-      {/* <!-- Repeat this structure for each card --> */}
       <div class="accredit-card">
-        <img src="/images/svg/Accredit-iao-1-icon.svg" alt="" />
+        <img src="images/svg/Accredit-iao-1-icon.svg" alt="" />
       </div>
       <div class="accredit-card">
-        <img src="/images/svg/Accredit-iao-icon.svg" alt="" />
+        <img src="images/svg/Accredit-iao-icon.svg" alt="" />
       </div>
       <div class="accredit-card">
-        <img src="\images\svg\Accredit-eduqua-icon.svg" alt="" />
+        <img src="images/svg/Accredit-eduqua-icon.svg" alt="" />
       </div>
       <div class="accredit-card">
-        <img src="\images\svg\Accredit-usr-lazio-icon.svg" alt="" />
+        <img src="images/svg/Accredit-usr-lazio-icon.svg" alt="" />
       </div>
       <div class="accredit-card">
-        <img src="\images\svg\Accredit-businet-icon.svg" alt="" />
+        <img src="images/svg/Accredit-businet-icon.svg" alt="" />
+      </div>
+     
+      <div class="accredit-card">
+        <img src="images/svg/Accredit-chea-icon.svg" alt="" />
       </div>
       <div class="accredit-card">
-        <img src="\images\svg\Accredit-chea-icon.svg" alt="" />
+        <img src="images/svg/Accredit-iao-1-icon.svg" alt="" />
       </div>
       <div class="accredit-card">
-        <img src="\images\svg\Accredit-xila-icon.svg" alt="" />
+        <img src="images/svg/Accredit-xila-icon.svg" alt="" />
       </div>
       <div class="accredit-card">
-        <img src="\images\svg\Accredit-indian-icon.svg" alt="" />
+        <img src="images/svg/Accredit-indian-icon.svg" alt="" />
       </div>
     </div>
     </Marquee>
@@ -47,38 +48,44 @@ function acreditions() {
     <Marquee>
     <div class="accredit-cards">
       <div class="accredit-card">
-        <img className='accredit-card-img' src="/images/svg/Accredit-iao-1-icon.svg" alt="" />
+        <img className='accredit-card-img' src="images/svg/Accredit-iao-1-icon.svg" alt="" />
       </div>
       <div class="accredit-card">
-        <img className='accredit-card-img' src="/images/svg/Accredit-iao-icon.svg" alt="" />
+        <img className='accredit-card-img' src="images/svg/Accredit-iao-icon.svg" alt="" />
       </div>
       <div class="accredit-card">
-        <img className='accredit-card-img' src="\images\svg\Accredit-eduqua-icon.svg" alt="" />
+        <img className='accredit-card-img' src="images/svg/Accredit-eduqua-icon.svg" alt="" />
       </div>
       <div class="accredit-card">
-        <img className='accredit-card-img' src="\images\svg\Accredit-usr-lazio-icon.svg" alt="" />
+        <img className='accredit-card-img' src="images/svg/Accredit-usr-lazio-icon.svg" alt="" />
       </div>
       <div class="accredit-card">
-        <img className='accredit-card-img' src="\images\svg\Accredit-businet-icon.svg" alt="" />
+        <img className='accredit-card-img' src="images/svg/Accredit-indian-icon.svg" alt="" />
+      </div>
+      <div class="accredit-card">
+        <img className='accredit-card-img' src="images/svg/Accredit-businet-icon.svg" alt="" />
       </div>
     </div>
     </Marquee>
     <Marquee direction='right'>
     <div class="accredit-cards">
-      <div class="accredit-card">
-        <img className='accredit-card-img' src="\images\svg\Accredit-usr-lazio-icon.svg" alt="" />
+    <div class="accredit-card">
+        <img className='accredit-card-img' src="images/svg/Accredit-iao-1-icon.svg" alt="" />
       </div>
       <div class="accredit-card">
-        <img className='accredit-card-img' src="\images\svg\Accredit-businet-icon.svg" alt="" />
+        <img className='accredit-card-img' src="images/svg/Accredit-usr-lazio-icon.svg" alt="" />
       </div>
       <div class="accredit-card">
-        <img className='accredit-card-img' src="\images\svg\Accredit-chea-icon.svg" alt="" />
+        <img className='accredit-card-img' src="images/svg/Accredit-chea-icon.svg" alt="" />
       </div>
       <div class="accredit-card">
-        <img className='accredit-card-img' src="\images\svg\Accredit-xila-icon.svg" alt="" />
+        <img className='accredit-card-img' src="images/svg/Accredit-xila-icon.svg" alt="" />
       </div>
       <div class="accredit-card">
-        <img className='accredit-card-img' src="\images\svg\Accredit-indian-icon.svg" alt="" />
+        <img className='accredit-card-img' src="images/svg/Accredit-businet-icon.svg" alt="" />
+      </div>
+      <div class="accredit-card">
+        <img className='accredit-card-img' src="images/svg/Accredit-indian-icon.svg" alt="" />
       </div>
     </div>
     </Marquee>

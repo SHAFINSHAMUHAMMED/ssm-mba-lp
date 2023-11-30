@@ -17,17 +17,17 @@ function power_skills() {
         <div className="power-skill-card">
           <img
             className="power-skill-card-icon"
-            src="\images\svg\power-skill-1.svg"
+            src="images/svg/power-skill-1.svg"
             alt=""
           />
           <img
             className="power-skill-card-img"
-            src="\images\financial-expert.webp"
+            src="images/financial-expert.webp"
             alt=""
           />
           <div className="power-skill-card-main">
           <div className="flex items-center">
-            <img src="\images\svg\power-skill-fire-icon.svg" alt="" />
+            <img src="images/svg/power-skill-fire-icon.svg" alt="" />
             <h3>Financial Expertise</h3>
           </div>
           <p>
@@ -40,17 +40,17 @@ function power_skills() {
         <div className="power-skill-card">
           <img
             className="power-skill-card-icon"
-            src="\images\svg\power-skill-2.svg"
+            src="images/svg/power-skill-2.svg"
             alt=""
           />
           <img
             className="power-skill-card-img"
-            src="\images\project-mgmnt.webp"
+            src="images/project-mgmnt.webp"
             alt=""
           />
           <div className="power-skill-card-main">
           <div className="flex items-center">
-            <img src="\images\svg\power-skill-fire-icon.svg" alt="" />
+            <img src="images/svg/power-skill-fire-icon.svg" alt="" />
             <h3>Project Management Excellence</h3>
           </div>
           <p>
@@ -63,17 +63,17 @@ function power_skills() {
         <div className="power-skill-card">
           <img
             className="power-skill-card-icon"
-            src="\images\svg\power-skill-3.svg"
+            src="images/svg/power-skill-3.svg"
             alt=""
           />
           <img
             className="power-skill-card-img"
-            src="\images\marketing.webp"
+            src="images/marketing.webp"
             alt=""
           />
           <div className="power-skill-card-main">
           <div className="flex items-center">
-            <img src="\images\svg\power-skill-fire-icon.svg" alt="" />
+            <img src="images/svg/power-skill-fire-icon.svg" alt="" />
             <h3>Advanced Marketing Strategies</h3>
           </div>
           <p>
@@ -86,17 +86,17 @@ function power_skills() {
         <div className="power-skill-card">
           <img
             className="power-skill-card-icon"
-            src="\images\svg\power-skill-4.svg"
+            src="images/svg/power-skill-4.svg"
             alt=""
           />
           <img
             className="power-skill-card-img"
-            src="\images\leadership.webp"
+            src="images/leadership.webp"
             alt=""
           />
           <div className="power-skill-card-main">
           <div className="flex items-center">
-            <img src="\images\svg\power-skill-fire-icon.svg" alt="" />
+            <img src="images/svg/power-skill-fire-icon.svg" alt="" />
             <h3>Leadership and Conflict Resolution</h3>
           </div>
           <p>
@@ -109,17 +109,17 @@ function power_skills() {
         <div className="power-skill-card">
           <img
             className="power-skill-card-icon"
-            src="\images\svg\power-skill-5.svg"
+            src="images/svg/power-skill-5.svg"
             alt=""
           />
           <img
             className="power-skill-card-img"
-            src="\images\strategy.webp"
+            src="images/strategy.webp"
             alt=""
           />
           <div className="power-skill-card-main">
           <div className="flex items-center">
-            <img src="\images\svg\power-skill-fire-icon.svg" alt="" />
+            <img src="images/svg/power-skill-fire-icon.svg" alt="" />
             <h3>Strategic Problem-Solving</h3>
           </div>
           <p>
@@ -132,17 +132,17 @@ function power_skills() {
         <div className="power-skill-card">
           <img
             className="power-skill-card-icon"
-            src="\images\svg\power-skill-6.svg"
+            src="images/svg/power-skill-6.svg"
             alt=""
           />
           <img
             className="power-skill-card-img"
-            src="\images\innovation.webp"
+            src="images/innovation.webp"
             alt=""
           />
           <div className="power-skill-card-main">
           <div className="flex items-center">
-            <img src="\images\svg\power-skill-fire-icon.svg" alt="" />
+            <img src="images/svg/power-skill-fire-icon.svg" alt="" />
             <h3>Entrepreneurial Innovation</h3>
           </div>
           <p>
@@ -151,7 +151,7 @@ function power_skills() {
           </p>
           </div>
         </div>
-        <img className="power-skill-star" src="\images\svg\star-large-icon.svg" alt="" />
+        <img className="power-skill-star" src="images/svg/star-large-icon.svg" alt="" />
       </div>
         <ButtonDark containerStyle={{ justifyContent: 'center' }}/>
         <Claim_description color='rgba(11, 67, 75, 0.79)'/>

@@ -19,13 +19,16 @@
   font-weight: normal;
   font-style: normal;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 ::-webkit-scrollbar {
   width: 0px; /* Set your desired width */
 }
 ::-webkit-scrollbar-track {
     background-color: #f1f1f1; /* Set your desired background color */
   }
+  
 h1, h2, h3, h4, h5, h6 {
  
   color: #0B434B;
@@ -69,13 +72,6 @@ p {
  .darkButton2 {
   justify-content: flex-start;
  }
-/* u {
-  background-image: url('../public/images/svg/wawyUnderlineGreen.svg');
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  text-decoration: none;
-} */
 
 .highlight-green {
     color: #259D4A;
@@ -151,7 +147,7 @@ p {
 
 .hero-section {
   /* Set the background image and position it */
-  background-image: url('/images/Global\ Map.webp');
+  background-image: url('images/GlobalMap.webp');
   background-position: center right; 
   background-repeat: no-repeat;
   background-size: contain;
@@ -216,7 +212,7 @@ p {
   left: 0;
   width: 100%;
   height: 20px;
-  background-image: url('/images/svg/wawyUnderline.svg');
+  background-image: url('images/svg/wawyUnderline.svg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -232,7 +228,7 @@ p {
   left: 0;
   width: 100%;
   height: 20px;
-  background-image: url('/images/svg/wawyUnderline-large.svg');
+  background-image: url('images/svg/wawyUnderline-large.svg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -242,7 +238,7 @@ p {
  justify-content: center;
  height: 758px;
  width: 645px;
- background-image: url('/images/hero.webp');
+ background-image: url('images/hero.webp');
  background-position: center bottom;
  background-size: contain;
  background-repeat: no-repeat;
@@ -332,9 +328,8 @@ p {
   left: 0;
   width: 100%;
   height: 20px;
-  background-image: url('/images/svg/wawyUnderlineGreen.svg');
+  background-image: url('images/svg/wawyUnderlineGreen.svg');
   background-repeat: no-repeat;
-  /* background-size: 100% 100%; */
   background-position: bottom;
 }
 .wavy-underline-green2 {
@@ -348,9 +343,8 @@ p {
   left: 0;
   width: 100%;
   height: 20px;
-  background-image: url('/images/svg/wawyUnderlineGreen2.svg');
+  background-image: url('images/svg/wawyUnderlineGreen2.svg');
   background-repeat: no-repeat;
-  /* background-size: 100% 100%; */
   background-position: bottom;
 }
 .swiss-school-p-main {
@@ -401,7 +395,6 @@ p {
 
 .Highlight-columns {
   display: flex;
-  /* flex-wrap: wrap; */
   align-items: center;
   border-top: 1px solid #D9D9D9;
   border-right: 1px solid #D9D9D9;
@@ -442,7 +435,7 @@ p {
   fill:#259D4A 
 }
 .columns:hover .highlight-svg path {
-  fill: #fafafa; /* New color on hover */
+  fill: #fafafa;
 }
 .highlight-description {
   margin: auto;
@@ -466,23 +459,12 @@ p {
   justify-content: center;
   align-items: flex-end;
   position: relative;
-  background-image: url('/images/earth.webp');
+  background-image: url('images/earth.webp');
   background-position: top; 
   background-repeat: no-repeat;
   background-size: 903px 528px;
   min-height: 650px;
 }
-/* .accredit-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(358deg, rgba(255, 255, 255, 0.96) 39.89%, rgba(255, 255, 255, 0.00) 80.81%);
-  filter: blur(10px);
-  pointer-events: none;
-  z-index: 1;
-} */
 .accredit-main h1 {
   max-width: 552px ;
   margin: auto;
@@ -493,7 +475,6 @@ p {
   gap: 20px;
   padding-top: 23px;
   padding-bottom: 31px;
-  /* width: 1440px; */
 }
 .accredit-card {
   display: flex;
@@ -503,9 +484,10 @@ p {
   height: 106px;
   border-radius: 26.853px;
   background: #FFF;
-  margin-left: 25px;
-  margin-right: 25px;
-  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(145, 143, 143, 0.249);
+}
+.accredit-cards .accredit-card:first-child {
+  margin-left: 20p;
 }
 
 /* Unbeatable section */
@@ -531,7 +513,7 @@ p {
   position: relative;
   height: 734px;
   margin-top: 40px;
-  background-image: url('/images/arch-bg.webp');
+  background-image: url('images/arch-bg.webp');
   background-position: center left; 
   background-repeat: no-repeat;
   background-size: contain;
@@ -545,11 +527,11 @@ p {
 .player-wrapper {
   height: 100%;
   position: relative;
-  overflow: hidden; /* Add this to ensure the player respects border-radius */
+  overflow: hidden; 
 }
 
 .react-player {
-  border-radius: 20px; /* Your desired border-radius */
+  border-radius: 20px;
 }
 
 .custom-play-button {
@@ -561,13 +543,31 @@ p {
 }
 
 .play-icon {
-  position: relative; /* Required for absolute positioning of the ::after pseudo-element */
+  position: relative; 
   width: 98px;
   height: 98px;
-  border-radius: 50%; /* Makes the element circular */
+  border-radius: 50%;
+  position: relative;
+  border: none;
+  -webkit-box-shadow: 0 0 0 0 #EDE6D8;
+  box-shadow: 0 0 0 0 #EDE6D8;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-animation: pulse 1.8s cubic-bezier(.66,0,0,1) infinite;
+  animation: pulse 1.8s cubic-bezier(.66,0,0,1) infinite;
+  text-indent: 1000%;
+  overflow: hidden;
+  white-space: nowrap
 }
 
-.play-icon::after {
+@keyframes pulse {
+  to {
+      -webkit-box-shadow: 0 0 0 30px transparent;
+      box-shadow: 0 0 0 30px transparent
+  }
+}
+
+/* .play-icon::after {
   content: '';
   position: absolute;
   top: 0;
@@ -575,10 +575,10 @@ p {
   width: 100%;
   height: 100%;
   background: white;
-  border-radius: 50%; /* Ensures the pseudo-element is also circular */
+  border-radius: 50%; 
   animation: breathingEffect 3s ease-out infinite;
-  z-index: -1; /* Positions the pseudo-element behind the icon */
-}
+  z-index: -1;
+} */
 
 /* Keyframes for the breathing effect */
 @keyframes breathingEffect {
@@ -594,7 +594,6 @@ p {
 
 
 .unbeatable-outer-container {
-  /* width: 65%; */
   margin: auto;
   padding: 50px 0px 0px 0px;
   max-width: 65% ;
@@ -670,7 +669,6 @@ p {
   align-items: flex-start; 
 }
 .power-skill-card-main {
-  /* flex flex-col justify-start */
   margin-top: 0px;
   display: flex;
   flex-direction: column;
@@ -735,7 +733,7 @@ p {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url('../public//images//building-burj.webp');
+  background-image: url('images/building-burj.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -794,19 +792,23 @@ p {
 .alumini-carousel-cards-1  {
   display: flex;
   justify-content: center;
-  gap: 5px;
+  gap: 10px;
   margin-bottom: 10px;
 }
 .alumini-carousel-cards-2  {
   display: flex;
   justify-content: center;
-  gap: 5px;
+  gap: 10px;
   margin-bottom: 10px;
 }
 .alumini-carousel-card {
-  width: 205px;
-  height: 83px;
-  background: gray;
+  width: 247px;
+  height: 94px;
+  border: 1px solid rgba(165, 162, 162, 0.208);
+  border-radius: 15px;
+}
+.alumini-carousel-cards .alumini-carousel-card:first-child {
+  margin-left: 10px;
 }
 
 
@@ -830,11 +832,10 @@ p {
 .world-of-possibilities-sub-1 {
   display: flex;
   flex-direction: column;
-  /* gap: 100px; */
   justify-content:flex-end;
   align-items: center;
   max-width: 1183px;
-  background-image: url('/images/map-bg.webp');
+  background-image: url('images/map-bg.webp');
   background-position: center; 
   background-repeat: no-repeat;
   background-size: contain;
@@ -967,8 +968,8 @@ margin-bottom: 10px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-image: url('/images/professional2.webp');
-  background-position: bottom; 
+  background-image: url('images/professional2.webp');
+  background-position: left; 
   background-repeat: no-repeat;
   background-size: contain;
   height: 700px;
@@ -1006,8 +1007,12 @@ margin-bottom: 10px;
   bottom: 230px;
 }
 .world-of-possibilities-brochure {
-  max-width: 90%;
-  background: #0C434B;
+  max-width: 1180px;
+  background-color: #0C434B;
+  background-image: url("images/pattern-bg.webp");
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
   border-radius: 64px;
   padding: 0px 55px 0px 80px;
   margin: auto;
@@ -1034,8 +1039,13 @@ margin-bottom: 10px;
   margin-bottom: 30px;
   padding-right: 60px;
 }
-.world-of-possibilities-brochure img {
-  max-height: 449px;
+.swiss-img-1 {
+  width: 449px;
+  display: block;
+
+}
+.swiss-img-2 {
+  display: none;
 }
 .world-of-possibilities-brochure-left {
   padding: 67px 0px 92px 0px
@@ -1058,6 +1068,8 @@ margin-bottom: 10px;
   height: 708px;
   margin: auto;
   margin-top: 53px;
+  position: relative;
+
 }
 .carousel-container {
   position: relative;
@@ -1067,13 +1079,61 @@ margin-bottom: 10px;
   overflow: hidden;
   height: 100%;
 }
+.player-container svg {
+  width: 140px;
+  height: 140px;
+}
+.custom-play-button2 {
+  position: relative;
+  display: inline-block;
+  width: 144px;
+  height: 144px;
+}
+.pulse-circle {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border: none;
+  -webkit-box-shadow: 0 0 0 0 #259D4A;
+  box-shadow: 0 0 0 0 #259D4A;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-animation: pulse 1.8s cubic-bezier(.66,0,0,1) infinite;
+  animation: pulse 1.8s cubic-bezier(.66,0,0,1) infinite;
+  text-indent: 1000%;
+  overflow: hidden;
+  white-space: nowrap
+}
+
+@keyframes pulse {
+  to {
+      -webkit-box-shadow: 0 0 0 30px transparent;
+      box-shadow: 0 0 0 30px transparent
+  }
+}
+.custom-prev-button, .custom-next-button {
+  position: absolute;
+  top: 50%;
+  width: 59px;
+  height: 59px;
+}
+
+.custom-prev-button {
+  left: -30px;
+}
+
+.custom-next-button {
+  right: -30px; 
+}
+
+
 .review-video-sub {
   height: 253px;
   width: 100%;
-  background-image: url('/images/GraphicPatter3.webp');
+  background-image: url('images/GraphicPatter3.webp');
   background-position: bottom center ; 
   background-repeat: no-repeat;
-  margin: 80px 0px 50px 0px;
+  margin: 70px 0px 50px 0px;
   position: relative;
 }
 .review-video-sub .react-multi-carousel-list  {
@@ -1083,13 +1143,33 @@ margin-bottom: 10px;
 .review-video-sub .react-multi-carousel-dot-list {
   display: none;
 }
+.review-video-sub-cards .react-multi-carousel-track  {
+  gap: 9px!important;
+}
+.review-video-sub-card {
+  width: 100%;
+  border-radius: 27px;
+  position: relative;
+  border: 2px solid white;
 
-
+}
+.review-video-sub-card img {
+  border-radius: 27px;
+  max-height: 100%;
+}
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 30%;
+}
 
 .user-reviews {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 21px;
   padding: 10px 0px 45px 0px;
 }
 .user-review-card {
@@ -1104,12 +1184,13 @@ margin-bottom: 10px;
   height:51px ;
 }
 .user-review-card p {
-  color: #24626A;
+color: #24626A;
 font-size: 18px;
 font-style: normal;
 font-weight: 400;
 line-height: 144%; /* 25.92px */
 margin-bottom: 60px;
+height: 260px;
 }
 .review-user-icon {
   width: 48px;
@@ -1195,7 +1276,7 @@ margin-bottom: 60px;
   left: 60px;
   width: 10%;
   height: 980px;
-  background-image: url('/images/svg/connecting-dot.svg');
+  background-image: url('images/svg/connecting-dot.svg');
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 1;
@@ -1276,7 +1357,7 @@ margin-bottom: 60px;
 /* 100% student support guarantee section */
 
 .student-support-main {
-  background-image: url('/images/background-img.webp');
+  background-image: url('images/background-img.webp');
   object-fit: contain;
   background-repeat: no-repeat;
   padding: 70px 0px 30px 0px;
@@ -1320,7 +1401,7 @@ display: none;
   background-color:#EDE6D8 ;
   position: relative;
   /* height: 2534px;
-  background-image: url('../public/images/bottom-man.webp'); 
+  background-image: url('../publicimages/bottom-man.webp'); 
   background-repeat: no-repeat; 
    background-position: bottom;
   background-size: contain; */
@@ -1349,8 +1430,56 @@ font-weight: 700;
 line-height: 107.5%; /* 30.445px */
 margin-bottom:15px;
 }
-.icf-progress-bar{
+/* .icf-progress-bar{
   width: 403px;
+} */
+.progress-container {
+  width: 50%;
+  background: rgba(158, 163, 159, 0.22);
+  height: 16px;
+  border-radius: 31px;
+}
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background-color: #DD8534;
+  text-align: center;
+  border-radius: 31px;
+  position: relative;
+  overflow: hidden;
+  animation: fillProgress 1s forwards infinite;
+}
+.progress-bar::after {
+  position: absolute;
+  content: '';
+  width: 100px;
+  /* transform: rotate(-30deg); */
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(240, 211, 211, 0.388), transparent);
+  position: absolute;
+  top: 0;
+  left: -100px;
+  animation: moveLight 2s infinite linear;
+}
+
+@keyframes moveLight {
+  0% {
+    left: -80px;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes fillProgress {
+  0% {
+    width: 89%;
+  }
+  100% {
+    width: 90%;
+  }
 }
 .icf-certification-sub h1 {
   max-width: 831px;
@@ -1473,6 +1602,7 @@ margin-bottom:15px;
   top: 0;
   z-index: 1000;
 }
+
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -1676,7 +1806,7 @@ margin-bottom:15px;
     align-items: center;
     width: 374px;
     height: 432px;
-    background-image: url('/images/hero-mob.webp');
+    background-image: url('images/hero-mob.webp');
     background-position: center bottom;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1901,14 +2031,14 @@ margin-bottom:15px;
   line-height: 105%; /* 38.85px */
 }
 .accredit-cards {
-  gap: 2px;
+  gap: 4px;
   padding-top: 0px;
   padding-bottom: 10px;
   /* width: 1440px; */
 }
 .accredit-card {
-  width: 125px;
-  height: 65px;
+  width: 185px;
+  height: 90px;
   margin-left: 3px;
   margin-right: 3px;
   border-radius: 14.533px;
@@ -1917,8 +2047,8 @@ margin-bottom:15px;
   border: 1px solid rgba(0, 0, 0, 0.12);
 }
 .accredit-card-img {
-  width: 87px;
-  height: 51px;
+  width: 100px;
+  height: 70px;
 }
   
 /* Unbeatable section */
@@ -1939,23 +2069,33 @@ margin-bottom:15px;
 .unbeatable-video-main {
   height: 380px;
   margin-top: 10px;
-  background-image: url('/images/arch-bg-mob.webp');
+  background-image: url('images/arch-bg-mob.webp');
   background-position: center left; 
   background-repeat: no-repeat;
   background-size: contain;
 }
 .unbeatable-video-player {
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 85%;
   border-radius: 20px;
   overflow: hidden;
 }
 .play-icon {
-  animation: breathingEffect 3s ease-out infinite;
-  background: white;
-  border-radius: 150px;
-  width:98px ;
+  position: relative; 
+  width: 98px;
   height: 98px;
+  border-radius: 50%;
+  position: relative;
+  border: none;
+  -webkit-box-shadow: 0 0 0 0 #EDE6D8;
+  box-shadow: 0 0 0 0 #EDE6D8;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-animation: pulse 1.8s cubic-bezier(.66,0,0,1) infinite;
+  animation: pulse 1.8s cubic-bezier(.66,0,0,1) infinite;
+  text-indent: 1000%;
+  overflow: hidden;
+  white-space: nowrap
 }
 .unbeatable-outer-container {
   /* width: 65%; */
@@ -2063,7 +2203,7 @@ margin-bottom:15px;
 }
 .uae-professional-main::before {
 
-  background-image: url('/images/building-burj-mobile.webp');
+  background-image: url('images/building-burj-mobile.webp');
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -2071,7 +2211,7 @@ margin-bottom:15px;
 }
 .uae-professional-inner {
 flex-direction: column;
-  padding: 36px 10px 10px 10px ;
+  padding: 36px 10px 30px 10px ;
 }
 .uae-professional-inner-1 {
   display: flex;
@@ -2118,13 +2258,12 @@ flex-direction: column;
 .alumini-carousel-cards-1  {
   display: flex;
   justify-content: center;
-  gap: 5px;
+  gap: 10px;
   margin-bottom: 10px;
 }
 .alumini-carousel-card {
   width: 148px;
   height: 64px;
-  background: gray;
 }
 /* World of possibilities section */
 
@@ -2145,7 +2284,7 @@ flex-direction: column;
   flex-direction: column;
   justify-content:flex-end;
   align-items: center;
-  background-image: url('/images/map-bg.webp');
+  background-image: url('images/map-bg.webp');
   background-position: top; 
   background-repeat: no-repeat;
   background-size: contain;
@@ -2207,12 +2346,18 @@ flex-direction: column;
   padding: 30px 20px 30px 20px;
   justify-content: center;
 }
+.world-of-possibilities-cards-2 svg {
+  min-width: 42px; /* Adjust this value to your desired minimum width */
+  min-height: 39px; /* Adjust this value to your desired minimum height */
+}
 .world-of-possibilities-2-card {
-  max-width: 100%;
+  width: 100%;
   justify-content: center;
   gap: 10px;
   padding: 28px 25px 28px 25px;
   transition: background-color 0.3s, color 0.3s;
+  margin-left: auto;
+  margin-right: auto;
 }
 .world-of-possibilities-2-card h3 {
   font-size: 21px;
@@ -2224,7 +2369,7 @@ flex-direction: column;
     .world-of-possibilities-bottom {
       justify-content: flex-end;
       align-items: center;
-      background-image: url('/images/professional2.webp');
+      background-image: url('images/professional2.webp');
       background-position: top; 
       background-size: cover;
       height: 500px;
@@ -2272,26 +2417,27 @@ flex-direction: column;
     }
     .world-of-possibilities-brochure {
       width: 90%;
-      background: #0C434B;
+      background-color: #0C434B;
       border-radius: 44px;
       padding: 0px 10px 0px 20px;
       margin: auto;
-      flex-direction: column;
       justify-content: center;
-      align-items: center;
+      align-items: flex-end;
       bottom: 80px;
+
     }
     .world-of-possibilities-brochure h1 {
       margin-bottom: 30px;
       margin-top: 50px;
-      text-align: center;
-      max-width: 90%;
+      text-align: left;
+      max-width: 100%;
     }
     .world-of-possibilities-brochure p {
       font-size: 17px;
       font-weight: 400;
       margin-bottom: 20px;
-      padding-right: 40px;
+      padding-right: 0;
+    
     }
     .world-of-possibilities-brochure h3 {
       font-size: 16px;
@@ -2300,11 +2446,16 @@ flex-direction: column;
       width: 21px;
       height: 18px;
     }
-    .world-of-possibilities-brochure img {
-      max-height: 358px;
+    .swiss-img-1 {
+      display: none;
+    }
+    .swiss-img-2 {
+      display: block;
+      width: 280px;
     }
     .world-of-possibilities-brochure-left {
-      padding: 0px 0px 0px 0px
+      width: 60%;
+      padding: 0px 20px 40px 20px
     }
 
     /* Review section */
@@ -2333,13 +2484,20 @@ flex-direction: column;
   overflow: hidden;
   height: 100%;
 }
+.player-container svg {
+  width: 90px;
+  height: 90px;
+}
+.custom-prev-button, .custom-next-button {
+ display: none;
+}
 .review-video-sub {
   height: 253px;
   width: 100%;
-  background-image: url('/images/GraphicPatter3.webp');
+  background-image: url('images/GraphicPatter3.webp');
   background-position: bottom center ; 
   background-repeat: no-repeat;
-  margin: 40px 0px 50px 0px;
+  margin: 45px 0px 50px 0px;
   position: relative;
 }
 .review-video-sub .react-multi-carousel-list  {
@@ -2349,10 +2507,26 @@ flex-direction: column;
 .review-video-sub .react-multi-carousel-dot-list {
   display: none;
 }
+.review-video-sub-cards .react-multi-carousel-track  {
+  gap: 5px!important;
+}
+.review-video-sub-card {
+  width: 100%;
+  border-radius: 10px;
+}
+.review-video-sub-card img {
+  border-radius: 10px;
+  max-height: 100%;
+  object-fit: contain;
+}
+.play-button {
+  width: 30%;
+  height: 30%; 
+}
 .user-reviews {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 15px;
   padding: 10px 0px 45px 0px;
 }
 .user-review-card {
@@ -2368,11 +2542,13 @@ flex-direction: column;
 }
 .user-review-card p {
   color: #24626A;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 144%; /* 25.92px */
-margin-bottom: 60px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 144%; /* 25.92px */
+  margin-bottom: 60px;
+  height: 260px;
+
 }
 .review-user-icon {
   width: 48px;
@@ -2426,7 +2602,7 @@ margin-bottom: 60px;
   left: 40px;
   width: 10%;
   height: 840px;
-  background-image: url('/images/svg/connecting-dot.svg');
+  background-image: url('images/svg/connecting-dot.svg');
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 1;
@@ -2511,7 +2687,7 @@ display: block;
 
 .icf-certification-main {
   /* height: 1568px;
-  background-image: url('../public/images/bottom-man-mob.webp'); 
+  background-image: url('../publicimages/bottom-man-mob.webp'); 
   background-repeat: no-repeat; 
   background-position: bottom;
   background-size: contain; */
@@ -2532,9 +2708,15 @@ display: block;
   font-size: 18px;
   margin-bottom:15px;
 }
-.icf-progress-bar{
-  width: 316px;
+.progress-container {
+  width: 50%;
+  background: rgba(158, 163, 159, 0.22);
+  height: 16px;
+  border-radius: 31px;
 }
+/* .icf-progress-bar{
+  width: 316px;
+} */
 .icf-certification-sub h1 {
   max-width: 70%;
   font-size: 37px;
@@ -2686,7 +2868,7 @@ display: block;
 
   .hero-section {
     /* Set the background image and position it */
-    background-image: url('/images/earth-mobile.webp');
+    background-image: url('images/earth-mobile.webp');
     background-position-y: 80%; 
     background-repeat: no-repeat;
     background-size: contain;
@@ -2749,7 +2931,7 @@ display: block;
     align-items: center;
     width: 100%;
     height: 445px;
-    background-image: url('/images/hero-mob.webp');
+    background-image: url('images/hero-mob.webp');
     background-position:  top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -3031,11 +3213,21 @@ display: block;
   overflow: hidden;
 }
 .play-icon {
-  animation: breathingEffect 3s ease-out infinite;
-  background: white;
-  border-radius: 150px;
-  width:98px ;
+  position: relative; 
+  width: 98px;
   height: 98px;
+  border-radius: 50%;
+  position: relative;
+  border: none;
+  -webkit-box-shadow: 0 0 0 0 #EDE6D8;
+  box-shadow: 0 0 0 0 #EDE6D8;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-animation: pulse 1.8s cubic-bezier(.66,0,0,1) infinite;
+  animation: pulse 1.8s cubic-bezier(.66,0,0,1) infinite;
+  text-indent: 1000%;
+  overflow: hidden;
+  white-space: nowrap
 }
 .unbeatable-outer-container {
   /* width: 65%; */
@@ -3148,7 +3340,7 @@ display: block;
 }
 .uae-professional-main::before {
 
-  background-image: url('/images/building-burj-mobile.webp');
+  background-image: url('images/building-burj-mobile.webp');
   background-size: contain;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -3157,7 +3349,7 @@ display: block;
 .uae-professional-inner {
 flex-direction: column;
 /* align-items: flex-start; */
-  padding: 36px 10px 10px 10px ;
+  padding: 36px 10px 30px 10px ;
 }
 .uae-professional-inner-1 {
   display: flex;
@@ -3204,12 +3396,11 @@ flex-direction: column;
   display: flex;
   justify-content: center;
   gap: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .alumini-carousel-card {
-  width: 122px;
-  height: 54px;
-  background: gray;
+  width: 135px;
+  height: 60px;
 }
 
 /* World of possibilities section */
@@ -3231,7 +3422,7 @@ flex-direction: column;
   flex-direction: column;
   justify-content:flex-end;
   align-items: center;
-  background-image: url('/images/map-bg.webp');
+  background-image: url('images/map-bg.webp');
   background-position: top; 
   background-repeat: no-repeat;
   background-size: contain;
@@ -3304,7 +3495,7 @@ flex-direction: column;
     .world-of-possibilities-bottom {
       justify-content: flex-end;
       align-items: center;
-      background-image: url('/images/professional2.webp');
+      background-image: url('images/professional2.webp');
       background-position: center top; 
       height: 316px;
       border-bottom-left-radius: 37px;
@@ -3351,7 +3542,10 @@ flex-direction: column;
     }
     .world-of-possibilities-brochure {
       width: 90%;
-      background: #0C434B;
+      background-image: url("images/pattern-bg-mob.webp");
+      background-position: bottom ;
+      background-size: 100% 50%;
+      background-repeat: no-repeat;
       border-radius: 44px;
       padding: 0px 10px 0px 20px;
       margin: auto;
@@ -3364,13 +3558,13 @@ flex-direction: column;
       margin-bottom: 30px;
       margin-top: 50px;
       text-align: center;
-      max-width: 90%;
+      width: 90%;
     }
     .world-of-possibilities-brochure p {
       font-size: 17px;
       font-weight: 400;
       margin-bottom: 20px;
-      padding-right: 40px;
+      padding-right: 30px;
     }
     .world-of-possibilities-brochure h3 {
       font-size: 16px;
@@ -3379,10 +3573,16 @@ flex-direction: column;
       width: 21px;
       height: 18px;
     }
-    .world-of-possibilities-brochure img {
-      max-height: 358px;
+    .swiss-img-1 {
+      width: 358px;
+      display: block;
+
+    }
+    .swiss-img-2 {
+      display: none;
     }
     .world-of-possibilities-brochure-left {
+      width: 100%;
       padding: 0px 0px 0px 0px
     }
 
@@ -3401,10 +3601,19 @@ flex-direction: column;
   border-radius: 18px;
   height: 100%;
 }
+.player-container svg {
+  width: 76px;
+  height: 76px;
+}
+.custom-prev-button, .custom-next-button {
+  display: none;
+}
 .review-video-sub {
-  height: 143px;
-  background-image: url('/images/GraphicPatter3-mob.webp');
+  height: 126px;
+  background-image: url('images/GraphicPatter3-mob.webp');
   background-size: 100%;
+  margin: 40px 0px 24px 0px;
+
 }
 .review-video-sub .react-multi-carousel-list  {
   overflow: hidden;
@@ -3412,6 +3621,22 @@ flex-direction: column;
 .review-video-sub-cards {
   gap: 0px;
   top: 0px;
+}
+.review-video-sub-cards .react-multi-carousel-track  {
+  gap: 3px!important;
+}
+.review-video-sub-card {
+  width: 100%;
+  border-radius: 10px;
+}
+.review-video-sub-card img {
+  border-radius: 10px;
+  max-height: 100%;
+  object-fit: contain;
+}
+.play-button {
+  width: 30%;
+  height: 30%; 
 }
 .user-reviews {
   gap: 15px;
@@ -3432,9 +3657,11 @@ flex-direction: column;
   height: 20px;
 }
 .user-review-card p {
-font-size: 13px;
+font-size: 15px;
 margin-bottom: 50px;
 padding: 0px 10px 0px 10px;
+height: 230px;
+
 }
 .review-user-icon {
   width: 35px;
@@ -3500,7 +3727,7 @@ padding: 0px 10px 0px 10px;
   left: 30px;
   width: 10%;
   height: 1250px;
-  background-image: url('/images/svg/connecting-dot.svg');
+  background-image: url('images/svg/connecting-dot.svg');
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 1;
@@ -3573,7 +3800,7 @@ display: block;
 
 .icf-certification-main {
   /* height: 1568px;
-  background-image: url('../public/images/bottom-man-mob.webp'); 
+  background-image: url('../publicimages/bottom-man-mob.webp'); 
   background-repeat: no-repeat; 
   background-position: bottom;
   background-size: contain; */
@@ -3593,6 +3820,10 @@ display: block;
   padding-right: 17px;
   font-size: 18px;
   margin-bottom:15px;
+}
+.progress-container {
+  width: 80%;
+  height: 11px;
 }
 .icf-progress-bar{
   width: 316px;

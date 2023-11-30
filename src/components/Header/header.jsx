@@ -45,7 +45,7 @@ function header() {
           <div className="flex justify-between  sm:ps-0 sm:pe-0 sm:pb-5">
             <img
               className="w-[204px] h-[53px] sm:w-[220px] md:h-[66px]"
-              src="\images\svg\logo.svg"
+              src="images/svg/logo.svg"
               alt=""
             />
             <div className="header-section-contact">
@@ -86,13 +86,11 @@ function header() {
         </header>
       )}
       {showStickyDiv && (
-        <header
-          className="header-section-2 bg-white"
-        >
+        <header className="header-section-2 bg-white">
           <div className="header-section-2-sub ">
             <img
               className="header-section-2-logo"
-              src="\images\svg\logo.svg"
+              src="images/svg/logo.svg"
               alt=""
             />
             <div className="header-section-2-contact">
