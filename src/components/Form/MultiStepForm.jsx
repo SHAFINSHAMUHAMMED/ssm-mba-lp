@@ -200,7 +200,7 @@ const MultiStepForm = () => {
       <form className="icf-form">
         {renderForm()}
           <button type="button" onClick={nextStep}>
-            {currentStep < 5 ? "CONTINUE" : "SUBMIT"}
+            {currentStep < 5 ? "CONTINUE" : "Claim Your Free Consultation Now"}
           </button>
       </form>
       <div className="form-svg-bg" >

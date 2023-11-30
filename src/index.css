@@ -3290,7 +3290,7 @@ display: block;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 80%;
+  width: 90%;
 
 }
 .power-skill-cards {
@@ -3328,7 +3328,7 @@ display: block;
   top: 0px;
 }
 .power-skill-card-img {
-  max-width:329px ; 
+  max-width:300px ; 
 }
 
 /* Uae professional section */
