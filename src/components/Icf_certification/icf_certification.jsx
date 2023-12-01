@@ -24,12 +24,12 @@ function icf_certification() {
     <div className="icf-certification-main">
       <img
         className="icf-certification-pattern-1"
-        src="images/GraphicPatter4.webp"
+        src="images/svg/GraphicPatter4.svg"
         alt=""
       />
       <img
         className=" icf-certification-pattern-2"
-        src="images/graphicPattern-last-mob.webp"
+        src="images/svg/graphicPattern-last-mob.svg"
         alt=""
       />
       <div className="icf-certification-sub">
@@ -55,12 +55,12 @@ function icf_certification() {
       </div>
       <div className="bottom-man-image-div">
         <img
-          className="bottom-man-image hidden md:block"
+          className="bottom-man-image-1 "
           src="images/bottom-man.webp"
           alt=""
         />
         <img
-          className="bottom-man-image block md:hidden"
+          className="bottom-man-image-2"
           src="images/bottom-man-mob.webp"
           alt=""
         />

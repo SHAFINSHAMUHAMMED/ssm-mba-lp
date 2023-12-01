@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Claim_description from "../Description/claim_description";
+import 'react-phone-input-2/lib/style.css';
+import PhoneInput from 'react-phone-input-2';
 
 const MultiStepForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -9,6 +11,7 @@ const MultiStepForm = () => {
     jobRole: "",
     location: "",
     email: "",
+    whatsapp: "",
   });
 
   const [formErrors, setFormErrors] = useState({});
@@ -55,6 +58,19 @@ const MultiStepForm = () => {
           isValid = false;
         }
         break;
+        case 6:
+    const digits = formData.whatsapp.replace(/\D/g, '');
+    if (!formData.whatsapp.trim()) {
+      errors.whatsapp = "WhatsApp number is required";
+      isValid = false;
+    } else if (digits.length > 15) {
+      errors.whatsapp = "Phone number is too long";
+      isValid = false;
+    } else if (digits.length < 8) {
+      errors.whatsapp = "Phone number is too short";
+      isValid = false;
+    }
+    break;
       default:
         break;
     }
@@ -65,9 +81,9 @@ const MultiStepForm = () => {
 
   const nextStep = () => {
     if (validateCurrentStep()) {
-      if (currentStep < 5) {
+      if (currentStep < 6) {
         setCurrentStep(currentStep + 1);
-        console.log(currentStep);
+        // console.log(currentStep);
       } else {
         handleSubmit();
       }
@@ -116,6 +132,7 @@ const MultiStepForm = () => {
             <h2 className="form-question">
               Let’s take your career higher. But first, what do we call you?
             </h2>
+            <p>This will only take 20 seconds (or less!)</p>
             <input
               type="text"
               name="name"
@@ -133,6 +150,7 @@ const MultiStepForm = () => {
               Awesome, {formData.name}! Which specialization sparks your
               interest?
             </h2>
+            <p>We want to make sure your journey is tailored just for you.</p>
             <input
               type="text"
               name="specialization"
@@ -147,6 +165,7 @@ const MultiStepForm = () => {
         return (
           <>
             <h2>What's your current job role?</h2>
+            <p>It's great to know where you're starting from!</p>
             <input
               type="text"
               name="jobRole"
@@ -188,6 +207,23 @@ const MultiStepForm = () => {
               placeholder="Type Here..."
             />
             {renderError("email")}
+          </>
+        );
+        case 6:
+        return (
+          <>
+            <h2>
+            And WhatsApp number?
+            </h2>
+            <p>To easily send you all the details</p>
+            <PhoneInput
+      country={'ae'}
+      value={formData.whatsapp}
+      placeholder={"Type Here..."}
+      
+      onChange={(phone) => setFormData({ ...formData, whatsapp: phone })}
+    />
+            {renderError("whatsapp")}
           </>
         );
       default:

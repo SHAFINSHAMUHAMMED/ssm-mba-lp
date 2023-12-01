@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import Button1 from "../Buttons/buttonDark";
-import { Cursor, Typewriter } from "react-simple-typewriter";
 import Typed from "typed.js";
 
 function hero() {
@@ -29,11 +28,13 @@ function hero() {
         <div className="hero-sub">
           <div className="hero-left">
             <div className="sub-heading flex items-center  md:pe-8">
+              <div className="subheding-icon">
               <img
                 className="w-[36px] h-[36px] md:w-[54px] md:h-[54px]"
                 src="images/svg/target.svg"
                 alt=""
               />
+              </div>
               <h4 className="sub-heading-h4 font-bold">
                 Ready to launch the career & life you've always wanted?
               </h4>
@@ -78,19 +79,19 @@ function hero() {
           <div className="hero-right">
             <div className="hero-icons-main">
               <img
-                className="bag-icon animated-icon"
+                className="bag-icon animated-icon-1"
                 src="images/svg/bag-icon.svg"
                 alt=""
               />
               {/* <img src="\images\svg\graph-icon.svg" alt="" /> */}
               {/* <img className="hero-img" src="\images\hero.webp" alt="" /> */}
               <img
-                className="graph-icon2 animated-icon"
+                className="graph-icon2 animated-icon-2"
                 src="images/svg/graph-icon2.svg"
                 alt=""
               />
               <img
-                className="rank-icon animated-icon"
+                className="rank-icon animated-icon-3"
                 src="images/svg/rank-icon.svg"
                 alt=""
               />
@@ -100,12 +101,12 @@ function hero() {
       </div>
       <img
         className="graphic-devider hidden sm:block"
-        src="images/GraphicPatter.webp"
+        src="images/svg/GraphicPattern.svg"
         alt=""
       />
       <img
         className="graphic-devider block sm:hidden"
-        src="images/GraphicPatter-mob.webp"
+        src="images/svg/GraphicPattern-mob.svg"
         alt=""
       />
     </>

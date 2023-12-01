@@ -9,7 +9,7 @@ function student_support() {
         <img className='student-support-img-1' src="images/svg/student-support-img.svg" alt="" />
         <img className='student-support-img-2' src="images/svg/student-support-img-2.svg" alt="" />
         {/* <h1 className='hidden md:block'>100% Student Support Guarantee for a Smooth Learning Experience</h1> */}
-        <h1>100% Student Support Guarantee <span className='wavy-underline-green'>for a</span> <span className='wavy-underline-green '> Smooth Learning</span> <span className='wavy-underline-green'> Experience</span></h1>
+        <h1>100% Student Support Guarantee <span className='wavy-underline-green'>for a</span> <span className='wavy-underline-green '> Smooth</span><span className='wavy-underline-green '>Learning</span> <span className='wavy-underline-green'> Experience</span></h1>
 
         <p>Receive complete support throughout your academic journey, from application to graduation, for a seamless experience.</p>
       </div>
