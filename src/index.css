@@ -971,6 +971,7 @@ button {
 .world-of-possibilities-main h1 {
   max-width: 791px;
   margin: auto;
+  margin-bottom: 30px;
   text-align: center;
   padding: 0px 10px 0px 10px;
   line-height: 104%;
@@ -984,14 +985,14 @@ button {
   align-items: center;
   max-width: 1183px;
   background-image: url('images/map-bg.webp');
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: contain;
   margin: auto;
   margin-top: 0px;
   border-bottom: 2.5px solid rgba(11, 67, 75, 0.10);
   padding-top: 0px;
-  height: 823px;
+  height: 713px;
 }
 
 .breathing-image {
@@ -1857,6 +1858,7 @@ button {
 }
 
 .react-tel-input .form-control {
+  height:87px ;
   width: 700px;
   border-radius: 73px;
   border: 1px solid rgba(0, 0, 0, 0.47);
@@ -1876,7 +1878,7 @@ button {
   position: absolute;
   background-color: transparent;
   border-radius: 5px;
-  top: 15%;
+  top: 25%;
   transform: translate(50%, 50%);
   height: 30px;
 }
