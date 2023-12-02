@@ -1,10 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Button1 from "../Buttons/buttonDark";
+import Popup from "../Popup_page/popup";
 import Typed from "typed.js";
+import { usePopup } from "../Hoocks/PopupContext";
 
 function hero() {
   const el = useRef(null);
-
+  const { isPopupOpen, togglePopup } = usePopup();
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
@@ -24,7 +26,7 @@ function hero() {
 
   return (
     <>
-      <div className="hero-section flex justify-center items-center bg-backgrounds-wisdomWhite">
+      <div className={`hero-section flex justify-center items-center bg-backgrounds-wisdomWhite ${isPopupOpen ? 'blur-effect' : ''}`}>
         <div className="hero-sub">
           <div className="hero-left">
             <div className="sub-heading flex items-center  md:pe-8">
@@ -51,11 +53,13 @@ function hero() {
             <Button1 containerStyle={{ justifyContent: "center" }} />
             <div className="flex gap-2 items-center justify-center text-[15px] sm:text-[25px] mt-[15px] md:mt-[20px] mb-0 sm:mb-5">
               <a
-                href="\images\SSM MBA.pdf"
-                download
+              onClick={togglePopup}
+                // href="\images\SSM MBA.pdf"
+                // download
                 className="flex gap-2 items-center"
+                style={{cursor:'pointer'}}
               >
-                <h3 className="">Download Free Brochure</h3>
+                <h3 className="" >Download Free Brochure</h3>
                 <svg
                   className="w-[21px] h-[17px] sm:w-[25px] sm:h-[20px] lg:w-[35px] lg:h-[30px]"
                   xmlns="http://www.w3.org/2000/svg"
@@ -100,15 +104,16 @@ function hero() {
         </div>
       </div>
       <img
-        className="graphic-devider hidden sm:block"
+        className={`graphic-devider hidden sm:block ${isPopupOpen ? 'blur-effect' : ''} `}
         src="images/svg/GraphicPattern.svg"
         alt=""
       />
       <img
-        className="graphic-devider block sm:hidden"
+        className={`graphic-devider block sm:hidden  ${isPopupOpen ? 'blur-effect' : ''}`}
         src="images/svg/GraphicPattern-mob.svg"
         alt=""
       />
+      {isPopupOpen && <Popup closePopup={togglePopup} />}
     </>
   );
 }

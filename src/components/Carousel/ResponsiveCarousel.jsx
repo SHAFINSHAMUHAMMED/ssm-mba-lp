@@ -1,9 +1,10 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { usePopup } from "../Hoocks/PopupContext";
 
 function ResponsiveCarousel() {
-    
+  const { isPopupOpen } = usePopup();
       const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
@@ -28,7 +29,7 @@ function ResponsiveCarousel() {
     <div className="divider mx- h-[200px] bg-gray-300" style={{ width: '1px' }}></div>
   );
   return (
-    <div className="carousel">
+    <div className={`carousel ${isPopupOpen ? 'blur-effect' : ''}`}>
       <div className="hidden lg:flex justify-center items-center w-full   ">
         <div className="carousel-card ">
           <img

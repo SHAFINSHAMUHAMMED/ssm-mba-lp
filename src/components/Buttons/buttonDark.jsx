@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, Element } from 'react-scroll';
 
 function buttonDark({containerStyle }) {
   const handleClick = () => {

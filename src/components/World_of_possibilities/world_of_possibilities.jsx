@@ -3,13 +3,19 @@ import ButtonDark from "../Buttons/buttonDark";
 import Claim_description from "../Description/claim_description";
 import AOS from "aos";
 import 'aos/dist/aos.css'
+import Popup from "../Popup_page/popup";
+import { usePopup } from "../Hoocks/PopupContext";
+
 function world_of_possibilities() {
+
+  const { isPopupOpen, togglePopup } = usePopup();
+
   useEffect(() => {
     AOS.init({duration:2000})
   }, [])
   
   return (
-    <div>
+    <div className={isPopupOpen ? 'blur-effect' : ''}>
       <div className="world-of-possibilities-main">
         <h1>
           <span className="wavy-underline-green">A World of</span>{" "}
@@ -391,7 +397,9 @@ function world_of_possibilities() {
             starts here.
           </p>
           <div className="flex gap-3 sm:gap-6 items-center ">
-          <a href="images/SSM MBA.pdf" download className="flex gap-3 sm:gap-6 items-center">
+          <a 
+          onClick={togglePopup}
+          className="flex gap-3 sm:gap-6 items-center">
             <h3 className="underline">Download Free Brochure Now</h3>
             
             <svg
@@ -415,8 +423,8 @@ function world_of_possibilities() {
         </div>
         <img className='swiss-img-1' src="images/swiss-mba.webp" alt="" />
         <img className='swiss-img-2' src="images/swiss-mba-tab.webp" alt="" />
-
       </div>
+      {isPopupOpen && <Popup  />}
     </div>
   );
 }

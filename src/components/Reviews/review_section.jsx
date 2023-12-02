@@ -5,8 +5,11 @@ import ReactPlayer from "react-player";
 import Marquee from "react-fast-marquee";
 import ButtonDark from "../Buttons/buttonDark";
 import Claim_description from "../Description/claim_description";
+import { usePopup } from "../Hoocks/PopupContext";
+
 function ReviewSection() {
   const [currentVideoUrl, setCurrentVideoUrl] = useState("");
+  const { isPopupOpen, togglePopup } = usePopup();
 
   useEffect(() => {
     const defaultVideoUrl = "https://youtu.be/LJ-LdPUnywM?si=PZr2husnFLlRF4Q4";
@@ -54,7 +57,7 @@ function ReviewSection() {
     }
   };
   return (
-    <div className="review-section-main">
+    <div className={`review-section-main ${isPopupOpen ? 'blur-effect' : ''}`}>
       <h1>
         See What Our <span className="highlight-green">Graduates Have</span>{" "}
         <span className="highlight-green"> To Say</span> About Us
