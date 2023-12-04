@@ -13,7 +13,7 @@ function uae_professionals() {
       <div className="uae-professional-inner">
         <div className=" uae-professional-inner-1">
           <h1>
-            How <span className="highlight-green">UAE</span><span className="highlight-green"> Professionals</span> are{" "}
+            How <span className="highlight-green">UAE</span> <span className="text-[#259D4A]">Professionals</span> are&nbsp;
             <span className="wavy-underline-green">Rising</span><span className="wavy-underline-green2"> to </span><span className="wavy-underline-green2">the Top</span>—And
             the Pathway for You to Join Them!
           </h1>

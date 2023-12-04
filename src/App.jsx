@@ -18,31 +18,53 @@ import Icf_certification from "./components/Icf_certification/icf_certification"
 import Footer from "./components/Footer/footer";
 import { PopupProvider, usePopup } from "./components/Hoocks/PopupContext";
 import Popup from "./components/Popup_page/popup";
+import { debounce } from "lodash";
 
 function App() {
   const { isPopupOpen, togglePopup } = usePopup();
-  // for only work once
   const [exitIntentTriggered, setExitIntentTriggered] = useState(false);
-
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      if (e.clientY <= 1 && !isPopupOpen) {
-        // only once
+    const handleMouseMove = debounce((e) => {
+      if (e.clientY <= 50 && !isPopupOpen && !exitIntentTriggered) {
         setExitIntentTriggered(true);
         togglePopup();
       }
-    };
-    // only once
-    if (!exitIntentTriggered) {
+    }, 100);
       document.addEventListener("mousemove", handleMouseMove);
-    }
 
-    return () => document.removeEventListener("mousemove", handleMouseMove);
-  }, [togglePopup, isPopupOpen]);
+      return () => {
+        document.removeEventListener("mousemove", handleMouseMove);
+        handleMouseMove.cancel();
+      };
+    }, [togglePopup, isPopupOpen, exitIntentTriggered]);
+
+    const handleClosePopup = () => {
+      togglePopup();
+      setExitIntentTriggered(false); // Reset the state when closing the popup
+    };
+  // const { isPopupOpen, togglePopup } = usePopup();
+  // // for only work once
+  // const [exitIntentTriggered, setExitIntentTriggered] = useState(false);
+
+  // useEffect(() => {
+  //   const handleMouseMove = (e) => {
+  //     if (e.clientY <= 1 && !isPopupOpen) {
+  //       // only once
+  //       setExitIntentTriggered(true);
+  //       togglePopup();
+  //     }
+  //   };
+  //   // only once
+  //   if (!exitIntentTriggered) {
+  //     document.addEventListener("mousemove", handleMouseMove);
+  //   }
+
+  //   return () => document.removeEventListener("mousemove", handleMouseMove);
+  // }, [togglePopup, isPopupOpen]);
 
   return (
     <PopupProvider>
-      <div className="body !scroll-smooth">
+      <div className="body">
         <Header />
         <Hero />
         <Carousel />
@@ -60,7 +82,7 @@ function App() {
         <Student_support />
         <Icf_certification />
         <Footer />
-        {isPopupOpen && <Popup closePopup={togglePopup} />}
+        {isPopupOpen && <Popup closePopup={handleClosePopup} />}
       </div>
     </PopupProvider>
   );

@@ -1,82 +1,97 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { usePopup } from "../Hoocks/PopupContext";
-function popup({closePopup}) {
-    const [formData, setFormData] = useState({ name: "", email: "" });
-    const [errors, setErrors] = useState({});
-    const { togglePopup } = usePopup();
-    const validate = () => {
-        let tempErrors = {};
-        let formIsValid = true;
-    
-        // Name validation
-        if (!formData.name) {
-          formIsValid = false;
-          tempErrors["name"] = "Cannot be empty";
-        } else if (formData.name.length < 3 || formData.name.length > 25) {
-          formIsValid = false;
-          tempErrors["name"] = "Name must be between 3 and 25 characters";
-        }
-    
-        // Email validation
-        if (!formData.email) {
-          formIsValid = false;
-          tempErrors["email"] = "Cannot be empty";
-        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-          formIsValid = false;
-          tempErrors["email"] = "Email is not valid";
-        }
-    
-        setErrors(tempErrors);
-        return formIsValid;
-      };
+import ClipLoader from 'react-spinners/ClipLoader';
 
-      const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-      };
-    
-      const handleSubmit = async (e) => {
-        e.preventDefault();
-        if (validate()) {
-          try {
-            const response = await fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzZjA0MzM1MjZhNTUzZDUxMzEi_pc", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(formData),
-            });
-    
-            if (response.ok) {
-                console.log(response);
-              // Handle success - close the popup or show a success message
-              downloadPdf("images/SSM MBA.pdf");
-              togglePopup();
-            } else {
-              // Handle server errors
-              console.error("Server error");
-            }
-          } catch (error) {
-            // Handle network errors
-            console.error("Network error:", error);
-          }
-        }
-      };
+function popup({ closePopup }) {
+  const [formData, setFormData] = useState({ name: "", email: "" });
+  const [errors, setErrors] = useState({});
+  const { togglePopup } = usePopup();
+  const [isFormComplete, setIsFormComplete] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-      const downloadPdf = (pdfUrl) => {
-        const link = document.createElement("a");
-        link.href = pdfUrl;
-        link.download = "SSM_MBA_Brochure.pdf";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      };
+  const validate = () => {
+    let tempErrors = {};
+    let formIsValid = true;
+
+    // Name validation
+    if (!formData.name) {
+      formIsValid = false;
+      tempErrors["name"] = "Cannot be empty";
+    } else if (formData.name.length < 3 || formData.name.length > 25) {
+      formIsValid = false;
+      tempErrors["name"] = "Name must be between 3 and 25 characters";
+    }
+
+    // Email validation
+    if (!formData.email) {
+      formIsValid = false;
+      tempErrors["email"] = "Cannot be empty";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      formIsValid = false;
+      tempErrors["email"] = "Email is not valid";
+    }
+
+    setErrors(tempErrors);
+    return formIsValid;
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    const formComplete =
+      formData.name.trim() !== "" && /\S+@\S+\.\S+/.test(formData.email);
+    setIsFormComplete(formComplete);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (validate()) {
+      setIsLoading(true); // Show loader
+      const loaderTimeout = setTimeout(() => setIsLoading(false), 3000); // Minimum 3 seconds
+  
+      try {
+        const response = await fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzZjA0MzM1MjZhNTUzZDUxMzEi_pc", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+  
+        if (response.ok) {
+          console.log(response);
+          downloadPdf("images/SSM MBA.pdf");
+          clearTimeout(loaderTimeout);
+      setIsLoading(false);
+          closePopup()
+        } else {
+          console.error("Server error");
+          clearTimeout(loaderTimeout);
+      setIsLoading(false); // Hide loader
+        }
+      } catch (error) {
+        console.error("Network error:", error);
+        clearTimeout(loaderTimeout);
+      setIsLoading(false); // Hide loader
+      }
+  
+    }
+  };
+  
+
+  const downloadPdf = (pdfUrl) => {
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "SSM_MBA_Brochure.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
-
     <div className={`popup-main `}>
       <svg
-        className="popup-close-button"
+        className="popup-close-button cursor-pointer"
         onClick={closePopup}
         xmlns="http://www.w3.org/2000/svg"
         width="27"
@@ -97,34 +112,71 @@ function popup({closePopup}) {
         benefits that set us a
       </p>
       <div className="popup-sub">
-        <form className="popup-form" onSubmit={handleSubmit} >
+        <form className="popup-form" onSubmit={handleSubmit}>
           <h5>Name</h5>
-          <input type="text"
-           name="name"
+          <input
+            type="text"
+            name="name"
             placeholder="Enter your name here"
             value={formData.name}
             onChange={handleChange}
-            />
-            {errors.name && <p className="error" style={{ color: 'red', fontSize: '15px',marginTop:'5px' }}>{errors.name}</p>}
+          />
+          {errors.name && (
+            <p
+              className="error"
+              style={{ color: "#8e9abe", fontSize: "15px", marginTop: "5px", lineHeight:"20px" }}
+            >
+              {errors.name}
+            </p>
+          )}
           <h5>Email</h5>
-          <input 
-          type="text"
-          name="email"
+          <input
+            type="text"
+            name="email"
             placeholder="Enter your Email here"
             value={formData.email}
             onChange={handleChange}
           />
-          {errors.email && <p className="error" style={{ color: 'red', fontSize: '15px',marginTop:'5px' }} >{errors.email}</p>}
-          <button type="submit">Download My Free Brochure</button>
+          {errors.email && (
+            <p
+              className="error"
+              style={{ color: "red", fontSize: "15px", marginTop: "5px" }}
+            >
+              {errors.email}
+            </p>
+          )}
+          <button
+            type="submit"
+            disabled={!isFormComplete}
+            style={{
+              backgroundColor: isFormComplete ? "#259D4A" : "#cccccc",
+              color: isFormComplete ? "white" : "grey",
+              cursor: isFormComplete ? "pointer" : "not-allowed",
+              // other styles
+            }}
+          >
+            {isLoading ? (
+    <ClipLoader color={"#ffffff"} size={20} />
+  ) : (
+    "Download My Free Brochure"
+  )}
+          </button>
           <p>
             🔒 We respect your privacy & promise never to rent or share your
             details with anybody without your consent
           </p>
         </form>
         <div className="popup-img">
-          <img className="popup-img-desktop" src="images/popup-img.webp" alt="" />
-          <img className="popup-img-mob" src="images/popup-img-mob.webp" alt="" />
-
+          <img
+            className="popup-img-desktop"
+            src="images/popup-img.webp"
+            alt=""
+          />
+          <img
+            className="popup-img-mob"
+            src="images/popup-img-mob.webp"
+            alt=""
+          />
         </div>
       </div>
     </div>

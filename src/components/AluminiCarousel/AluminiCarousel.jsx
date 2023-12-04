@@ -6,7 +6,7 @@ function AluminiCarousel() {
     <div className="alumini-carousel-main">
       <h1 className="">
         After the Cap and Gown: Discover Where{" "}
-        <span className="highlight-green">Our Alumni Thrive</span>
+        <span className="highlight-green">Our</span><span className="text-[#259D4A]"> Alumni</span><span className="text-[#259D4A]">&nbsp;Thrive </span>
       </h1>
       <div className="alumini-carousel-cards m-auto">
         <Marquee direction="right" speed={100}>
