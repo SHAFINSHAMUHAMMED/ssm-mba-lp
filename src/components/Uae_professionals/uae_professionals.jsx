@@ -1,13 +1,8 @@
 import React from "react";
-import ButtonDark from "../Buttons/buttonDark";
-import Claim_description from "../Description/claim_description";
+import { Link, Element } from "react-scroll";
+
 function uae_professionals() {
-  const handleClick = () => {
-    const section = document.getElementById('contactForm');
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+ 
   return (
     <div className="uae-professional-main">
       <div className="uae-professional-inner">
@@ -43,9 +38,14 @@ function uae_professionals() {
           </p>
           {/* //this button only here others are components */}
           <div id="NewRootRoot" className="flex flex-row w-full darkButton2">
-    <button onClick={handleClick} className="bg-[#0b434b] w-[90%] sm:w-[539px]  rounded-[56px] sm:rounded-[91px] pt-[25px] pb-[25px] text-[15px] md:text-[15px] xl:text-[23px] font-bold">
+    <Link
+    to='contactForm'
+    spy={true}
+   smooth={true}
+     duration={2800}
+    className=" button bg-[#0b434b] w-[90%] sm:w-[539px]  rounded-[56px] sm:rounded-[91px] pt-[25px] pb-[25px] text-[15px] md:text-[15px] xl:text-[23px] font-bold">
       Claim Your Free Consultation Now
-    </button>
+    </Link>
   </div>
           <p className="claim-description-2">Claim Your Free Consultation With Our Career Coach & Get Scholarships Of Upto 30% <br /><b>(Worth AED6500)</b></p>
           

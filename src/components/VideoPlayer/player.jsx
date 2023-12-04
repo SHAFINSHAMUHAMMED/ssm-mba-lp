@@ -1,5 +1,21 @@
-import React, { useState } from "react";
-import ReactPlayer from "react-player";
+import React, { useState, Suspense  } from "react";
+import { BounceLoader } from 'react-spinners';
+const ReactPlayer = React.lazy(()=> import("react-player"))
+
+function Loader() {
+  return (
+    <div style={{
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      textAlign: 'center',
+    }}>
+      <BounceLoader color="#0B434B" />
+      <p>Loading video...</p>
+    </div>
+  );
+}
 
 function Player() {
   const [playing, setPlaying] = useState(false);
@@ -9,7 +25,8 @@ function Player() {
   };
 
   return (
-    <div className="player-wrapper">
+    <div className="player-wrapper" style={{ position: 'relative', width: '100%', height: '100%' }}>
+      <Suspense fallback={<Loader/>}>
       <ReactPlayer
         url="https://youtu.be/E-Z1-X9wSOs?si=B6LoTJ-zhODETI0g"
         width="100%"
@@ -20,6 +37,7 @@ function Player() {
         onPause={() => setPlaying(false)}
         onEnded={() => setPlaying(false)}
       />
+      </Suspense>
       {!playing && (
         <div className="custom-play-button" onClick={handlePlayPause}>
           <svg

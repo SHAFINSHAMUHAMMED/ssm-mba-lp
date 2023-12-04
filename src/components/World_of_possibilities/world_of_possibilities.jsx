@@ -346,7 +346,7 @@ function world_of_possibilities() {
             </div>
           </div>
         </div>
-        <ButtonDark containerStyle={{ justifyContent: "center" }} />
+        <ButtonDark duration={2000} containerStyle={{ justifyContent: "center" }} />
         <Claim_description color="rgba(11, 67, 75, 0.79)" />
         <div className="world-of-possibilities-bottom">
           <div className="world-of-possibilities-icons" >

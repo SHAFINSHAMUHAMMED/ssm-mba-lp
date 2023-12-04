@@ -90,7 +90,7 @@ function acreditions() {
     </div>
     </Marquee>
     </div>
-    <ButtonDark containerStyle={{ justifyContent: 'center' }}/>
+    <ButtonDark duration={2500} containerStyle={{ justifyContent: 'center' }}/>
     <Claim_description color='rgba(11, 67, 75, 0.79)'/>
   </div>
   {/* </div> */}

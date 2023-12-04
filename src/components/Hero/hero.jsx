@@ -50,7 +50,7 @@ function hero() {
               career consultation today, setting the wheels in motion for the
               extraordinary career and life you’ve always aspired to!
             </p>
-            <Button1 containerStyle={{ justifyContent: "center" }} />
+            <Button1 duration={3500} containerStyle={{ justifyContent: "center" }} />
             <div className="flex gap-2 items-center justify-center text-[15px] sm:text-[25px] mt-[15px] md:mt-[20px] mb-0 sm:mb-5">
               <a
               onClick={togglePopup}

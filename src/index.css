@@ -1505,7 +1505,7 @@ button {
 }
 
 .steps-to-unlock-cards-main {
-  max-width: 760px;
+  width: 760px;
   margin: auto;
   position: relative;
 }
@@ -1514,7 +1514,6 @@ button {
   position: absolute;
   content: '';
   bottom: 150px;
-  ;
   left: 60px;
   width: 10%;
   height: 980px;
@@ -1591,7 +1590,7 @@ button {
 }
 
 .steps-to-unlock-card p {
-  max-width: 315px;
+  width: 315px;
   color: #0B434B;
   font-size: 18.773px;
   font-style: normal;
@@ -1611,6 +1610,7 @@ button {
 .steps-to-unlock-svg {
   height: 100px;
   width: 100px;
+  z-index: 10;
 }
 
 /* 100% student support guarantee section */
@@ -1800,7 +1800,7 @@ button {
   transform: translateX(-50%);
 }
 
-.icf-form-main svg {
+.icf-form-main-svg {
   width: 75px;
   height: 155px;
   margin: auto;
@@ -2925,7 +2925,7 @@ button {
     width: 280px;
     align-items: center;
     border-right: none;
-    border-right: 2.5px solid rgba(11, 67, 75, 0.10);
+    /* border-right: 2.5px solid rgba(11, 67, 75, 0.10); */
     padding: 10px 0px 20px 30px;
   }
 
@@ -3248,7 +3248,7 @@ button {
 
   /* Steps to unlock career section */
   .steps-to-unlock-cards-main {
-    max-width: 600px;
+    width: 600px;
     margin: auto;
     position: relative;
   }
@@ -3256,11 +3256,10 @@ button {
   .steps-to-unlock-cards-main::after {
     position: absolute;
     content: '';
-    bottom: 80px;
-    ;
+    bottom: 100px;
     left: 40px;
     width: 10%;
-    height: 840px;
+    height: 850px;
     background-image: url('images/svg/connecting-dot.svg');
     background-repeat: no-repeat;
     background-size: contain;
@@ -3313,7 +3312,7 @@ button {
   }
 
   .steps-to-unlock-card p {
-    max-width: 315px;
+    width: 90%;
     color: #0B434B;
     font-size: 18.773px;
     font-style: normal;
@@ -3427,7 +3426,7 @@ button {
     transform: translateX(-50%);
   }
 
-  .icf-form-main svg {
+  .icf-form-main-svg {
     width: 63px;
     height: 139px;
     margin: auto;
@@ -4248,7 +4247,7 @@ button {
 
   .uae-professionals-img-1 {
     display: block;
-    width: 100%;
+    width: 95%;
     max-height: 641px;
   }
 
@@ -4675,7 +4674,7 @@ button {
   }
 
   .steps-to-unlock-cards-main {
-    max-width: 330px;
+    width: 90%;
     margin: auto;
     position: relative;
   }
@@ -4683,12 +4682,12 @@ button {
   .steps-to-unlock-cards-main::after {
     position: absolute;
     content: '';
-    bottom: 150px;
-    ;
-    left: 30px;
+    /* bottom: 70px; */
+    left: 5%;
+    top: 0;
     width: 10%;
-    height: 1250px;
-    background-image: url('images/svg/connecting-dot.svg');
+    height: 95%;
+    background-image: url('images/svg/connecting-dot-mob.svg');
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 1;
@@ -4703,15 +4702,15 @@ button {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
     margin-bottom: 33px;
   }
 
   .steps-to-unlock-card {
-    width: 268px;
+    width: 100%;
     border: none;
     background-color: #fff;
-    padding: 24px 22px 30px 24px;
+    padding: 24px 20px 30px 20px;
   }
 
   .steps-to-unlock-card-content {
@@ -4732,13 +4731,13 @@ button {
   }
 
   .steps-to-unlock-card p {
-    max-width: 201px;
+    width: 100%;
     font-size: 16px;
   }
 
   .steps-to-unlock-svg {
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
     margin-top: 25px;
   }
 
@@ -4837,11 +4836,29 @@ button {
     transform: translateX(-50%);
   }
 
-  .icf-form-main svg {
-    width: 63px;
-    height: 139px;
+  .icf-form-main-svg {
+    width: 60px;
+    height: 119px;
     margin: auto;
   }
+  .form-svg-bg svg {
+    animation: moveDown .6s ease-in-out infinite;
+  }
+  
+  @keyframes moveDown {
+    0% {
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(22px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
 
   .icf-form {
     width: 100%;
@@ -4878,10 +4895,10 @@ button {
     border-radius: 40px;
     border: 1px solid rgba(0, 0, 0, 0.47);
     background: #FCFCFC;
-    padding: 15px 30px 15px 17%;
+    padding: 15px 30px 15px 70px;
     margin-bottom: 16px !important;
     margin-top: 16px !important;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .react-tel-input .flag-dropdown {
@@ -5097,5 +5114,12 @@ button {
   .popup-img-mob {
     height: 240px;
 
+  }
+
+  .steps-to-unlock-cards-main::after {
+    bottom: 260px;
+    left: 8%;
+    width: 10%;
+    height: 80%;
   }
 }

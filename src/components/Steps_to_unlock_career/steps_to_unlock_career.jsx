@@ -151,7 +151,7 @@ width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.
       <svg className="svg-icon2" xmlns="http://www.w3.org/2000/svg" width="356" height="433" viewBox="0 0 356 433" fill="none">
   <path fill-rule="evenodd" clip-rule="evenodd" d="M321.609 340.17L418.718 343.095L317.508 222.927L433.89 117.384L337.269 107.281L332.512 13.8697L224.179 112.114L129.964 0.249572L112.749 92.1842L15.6444 89.2645L116.858 209.439L0.472103 314.986L97.0989 325.084L101.85 418.5L210.188 320.252L304.398 432.11L321.609 340.17Z" fill="#259D4A" fill-opacity="0.12"/>
 </svg>
-<ButtonDark containerStyle={{ justifyContent: 'center' }}/>
+<ButtonDark duration={2000} containerStyle={{ justifyContent: 'center' }}/>
 <Claim_description color='rgba(11, 67, 75, 0.79)'/>
     </div>
   );

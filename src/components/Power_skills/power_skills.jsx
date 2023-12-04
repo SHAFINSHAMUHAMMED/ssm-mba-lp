@@ -153,7 +153,7 @@ function power_skills() {
         </div>
         <img className="power-skill-star" src="images/svg/star-large-icon.svg" alt="" />
       </div>
-        <ButtonDark containerStyle={{ justifyContent: 'center' }}/>
+        <ButtonDark duration={2200} containerStyle={{ justifyContent: 'center' }}/>
         <Claim_description color='rgba(11, 67, 75, 0.79)'/>
     </div>
   );

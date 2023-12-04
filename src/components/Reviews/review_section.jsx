@@ -1,11 +1,28 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, Suspense } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import ReactPlayer from "react-player";
 import Marquee from "react-fast-marquee";
 import ButtonDark from "../Buttons/buttonDark";
 import Claim_description from "../Description/claim_description";
 import { usePopup } from "../Hoocks/PopupContext";
+import { BounceLoader } from 'react-spinners';
+
+const ReactPlayer = React.lazy(() => import("react-player"));
+
+function Loader() {
+  return (
+    <div style={{
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      textAlign: 'center',
+    }}>
+      <BounceLoader color="#0B434B" />
+      <p>Loading video...</p>
+    </div>
+  );
+}
 
 function ReviewSection() {
   const [currentVideoUrl, setCurrentVideoUrl] = useState("");
@@ -102,6 +119,7 @@ function ReviewSection() {
           </svg>
         </button>
         <div className="player-container">
+        <Suspense fallback={<Loader />}>
           <ReactPlayer
             url={currentVideoUrl}
             playing={playing}
@@ -111,6 +129,7 @@ function ReviewSection() {
             onPause={() => setPlaying(false)}
             onEnded={() => setPlaying(false)}
           />
+          </Suspense>
           {!playing && (
             <div className="custom-play-button" onClick={handlePlayPause}>
               {/* <div className="pulse-circle"></div> */}
@@ -727,7 +746,7 @@ function ReviewSection() {
           </div>
         </Marquee>
       </div>
-      <ButtonDark containerStyle={{ justifyContent: "center" }} />
+      <ButtonDark duration={2500} containerStyle={{ justifyContent: "center" }} />
       <Claim_description color="rgba(11, 67, 75, 0.79)" />
     </div>
   );

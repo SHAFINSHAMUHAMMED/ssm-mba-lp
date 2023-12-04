@@ -48,7 +48,7 @@ function unbeatable_reason() {
                 <h6>An MBA transforms you into a leader. Swiss School of Management's motto is to create leaders. It's about more than leadership skills; it's personal and interpersonal growth. You'll learn active listening, being there for others, and the challenges of leadership, growing as a person, specialist, and professional.</h6>
             </div>
         </div>
-       <ButtonDark containerStyle={{ justifyContent: 'center' }}/>
+       <ButtonDark duration={2400} containerStyle={{ justifyContent: 'center' }}/>
        <Claim_description color='rgba(11, 67, 75, 0.79)'/>
     </div>
 </div>

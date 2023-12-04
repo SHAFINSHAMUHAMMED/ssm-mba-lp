@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Claim_description from "../Description/claim_description";
 import 'react-phone-input-2/lib/style.css';
 import PhoneInput from 'react-phone-input-2';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const MultiStepForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -213,7 +214,7 @@ const MultiStepForm = () => {
         return (
           <>
             <h2>
-            And WhatsApp number?
+            And <FaWhatsapp style={{ fontSize: 'inherit', color:'green', marginBottom:'5px', display:'inline' }} />WhatsApp Number?
             </h2>
             <p>To easily send you all the details</p>
             <PhoneInput
@@ -241,6 +242,7 @@ const MultiStepForm = () => {
       </form>
       <div className="form-svg-bg" >
         <svg
+        className="icf-form-main-svg "
           xmlns="http://www.w3.org/2000/svg"
           width="156"
           height="75"
