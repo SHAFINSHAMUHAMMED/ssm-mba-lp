@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { usePopup } from "../Hoocks/PopupContext";
+
 function header() {
   const [showStickyDiv, setShowStickyDiv] = useState(false);
-
+  const { isPopupOpen, togglePopup } = usePopup();
+  
   function debounce(func, wait) {
     let timeout;
 
@@ -86,7 +89,7 @@ function header() {
         </header>
       )}
       {showStickyDiv && (
-        <header className="header-section-2 bg-white">
+        <header className="header-section-2 bg-white" style={{ zIndex: 10 }}>
           <div className="header-section-2-sub ">
             <img
               className="header-section-2-logo"

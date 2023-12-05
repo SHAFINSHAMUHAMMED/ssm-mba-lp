@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { usePopup } from "../Hoocks/PopupContext";
 import ClipLoader from 'react-spinners/ClipLoader';
+import 'react-phone-input-2/lib/style.css';
+import PhoneInput from 'react-phone-input-2';
 
 function popup({ closePopup }) {
-  const [formData, setFormData] = useState({ name: "", email: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
   const [errors, setErrors] = useState({});
   const { togglePopup } = usePopup();
   const [isFormComplete, setIsFormComplete] = useState(false);
@@ -30,6 +32,18 @@ function popup({ closePopup }) {
       formIsValid = false;
       tempErrors["email"] = "Email is not valid";
     }
+    // Phone validation
+    const digits = formData.phone.replace(/\D/g, '');
+    if (!formData.phone.trim()) {
+      formIsValid = false;
+      tempErrors["phone"] = "WhatsApp number is required";
+    } else if (digits.length > 15) {
+      formIsValid = false;
+      tempErrors["phone"] = "Phone number is too long";
+    } else if (digits.length < 8) {
+      formIsValid = false;
+      tempErrors["phone"] = "Phone number is too short";
+    }
 
     setErrors(tempErrors);
     return formIsValid;
@@ -39,7 +53,7 @@ function popup({ closePopup }) {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
     const formComplete =
-      formData.name.trim() !== "" && /\S+@\S+\.\S+/.test(formData.email);
+      formData.name.trim() !== "" && /\S+@\S+\.\S+/.test(formData.email)  && /\d/.test(formData.phone);
     setIsFormComplete(formComplete);
   };
 
@@ -145,6 +159,13 @@ function popup({ closePopup }) {
               {errors.email}
             </p>
           )}
+          <h5>Phone</h5>
+          <PhoneInput
+      country={'ae'}
+      value={formData.phone}
+      placeholder={"Enter your Phone Number"}
+      onChange={(phone) => setFormData({ ...formData, phone: phone })}
+    />   
           <button
             type="submit"
             disabled={!isFormComplete}

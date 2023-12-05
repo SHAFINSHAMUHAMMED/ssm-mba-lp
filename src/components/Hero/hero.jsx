@@ -10,11 +10,11 @@ function hero() {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        '<span class="Hero-Headline highlight-green">Accredited</span> <span style="color: #0B434B; class=" Hero-Headline">MBA</span>',
-        '<span class="Hero-Headline highlight-green">Connected</span> <span style="color: #0B434B; class="Hero-Headline">Alumni</span>',
-        '<span class="Hero-Headline highlight-green">Career</span> <span style="color: #0B434B; class="Hero-Headline">Opportunities</span>',
+        '<span class="Hero-Headline highlight-green">Accredited</span> <span style="color: #0B434B; class=" Hero-Headline"></br>MBA</span>',
+        '<span class="Hero-Headline highlight-green">Connected</span> <span style="color: #0B434B; class="Hero-Headline"></br>Alumni</span>',
+        '<span class="Hero-Headline highlight-green">Career</span> <span style="color: #0B434B; class="Hero-Headline"></br>Opportunities</span>',
       ],
-      typeSpeed: 30,
+      typeSpeed: 20,
       backSpeed: 20,
       loop: true,
     });
@@ -50,7 +50,7 @@ function hero() {
               career consultation today, setting the wheels in motion for the
               extraordinary career and life you’ve always aspired to!
             </p>
-            <Button1 duration={3500} containerStyle={{ justifyContent: "center" }} />
+            <Button1 duration={1500} containerStyle={{ justifyContent: "center" }} />
             <div className="flex gap-2 items-center justify-center text-[15px] sm:text-[25px] mt-[15px] md:mt-[20px] mb-0 sm:mb-5">
               <a
               onClick={togglePopup}
@@ -87,8 +87,6 @@ function hero() {
                 src="images/svg/bag-icon.svg"
                 alt=""
               />
-              {/* <img src="\images\svg\graph-icon.svg" alt="" /> */}
-              {/* <img className="hero-img" src="\images\hero.webp" alt="" /> */}
               <img
                 className="graph-icon2 animated-icon-2"
                 src="images/svg/graph-icon2.svg"

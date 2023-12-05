@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense, lazy } from "react";
 import Header from "./components/Header/header";
 import Hero from "./components/Hero/hero";
 import Carousel from "./components/Carousel/ResponsiveCarousel";
@@ -30,37 +30,18 @@ function App() {
         togglePopup();
       }
     }, 100);
-      document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mousemove", handleMouseMove);
 
-      return () => {
-        document.removeEventListener("mousemove", handleMouseMove);
-        handleMouseMove.cancel();
-      };
-    }, [togglePopup, isPopupOpen, exitIntentTriggered]);
-
-    const handleClosePopup = () => {
-      togglePopup();
-      setExitIntentTriggered(false); // Reset the state when closing the popup
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+      handleMouseMove.cancel();
     };
-  // const { isPopupOpen, togglePopup } = usePopup();
-  // // for only work once
-  // const [exitIntentTriggered, setExitIntentTriggered] = useState(false);
+  }, [togglePopup, isPopupOpen, exitIntentTriggered]);
 
-  // useEffect(() => {
-  //   const handleMouseMove = (e) => {
-  //     if (e.clientY <= 1 && !isPopupOpen) {
-  //       // only once
-  //       setExitIntentTriggered(true);
-  //       togglePopup();
-  //     }
-  //   };
-  //   // only once
-  //   if (!exitIntentTriggered) {
-  //     document.addEventListener("mousemove", handleMouseMove);
-  //   }
-
-  //   return () => document.removeEventListener("mousemove", handleMouseMove);
-  // }, [togglePopup, isPopupOpen]);
+  const handleClosePopup = () => {
+    togglePopup();
+    setExitIntentTriggered(false); // Reset the state when closing the popup
+  };
 
   return (
     <PopupProvider>
@@ -82,7 +63,7 @@ function App() {
         <Student_support />
         <Icf_certification />
         <Footer />
-        {isPopupOpen && <Popup closePopup={handleClosePopup} />}
+        {isPopupOpen && <Popup closePopup={handleClosePopup}  />}
       </div>
     </PopupProvider>
   );

@@ -346,7 +346,7 @@ function world_of_possibilities() {
             </div>
           </div>
         </div>
-        <ButtonDark duration={2000} containerStyle={{ justifyContent: "center" }} />
+        <ButtonDark duration={2500} containerStyle={{ justifyContent: "center" }} />
         <Claim_description color="rgba(11, 67, 75, 0.79)" />
         <div className="world-of-possibilities-bottom">
           <div className="world-of-possibilities-icons" >
@@ -399,7 +399,7 @@ function world_of_possibilities() {
           <div className="flex gap-3 sm:gap-6 items-center ">
           <a 
           onClick={togglePopup}
-          className="flex gap-3 sm:gap-6 items-center">
+          className="flex gap-3 sm:gap-6 items-center cursor-pointer">
             <h3 className="underline">Download Free Brochure Now</h3>
             
             <svg

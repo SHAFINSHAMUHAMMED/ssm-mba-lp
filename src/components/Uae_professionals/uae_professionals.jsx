@@ -40,10 +40,11 @@ function uae_professionals() {
           <div id="NewRootRoot" className="flex flex-row w-full darkButton2">
     <Link
     to='contactForm'
-    spy={true}
+    // spy={true}
    smooth={true}
      duration={2800}
-    className=" button bg-[#0b434b] w-[90%] sm:w-[539px]  rounded-[56px] sm:rounded-[91px] pt-[25px] pb-[25px] text-[15px] md:text-[15px] xl:text-[23px] font-bold">
+     delay={200}
+    className=" button bg-[#0b434b] w-[95%] sm:w-[539px]  rounded-[56px] sm:rounded-[91px] pt-[25px] pb-[25px] text-[15px] md:text-[15px] xl:text-[23px] font-bold cursor-pointer">
       Claim Your Free Consultation Now
     </Link>
   </div>

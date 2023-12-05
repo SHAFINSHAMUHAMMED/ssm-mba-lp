@@ -13,7 +13,7 @@ function student_support() {
 
         <p>Receive complete support throughout your academic journey, from application to graduation, for a seamless experience.</p>
       </div>
-      <ButtonDark duration={2000} containerStyle={{ justifyContent: 'center' }}/>
+      <ButtonDark duration={1500} containerStyle={{ justifyContent: 'center' }}/>
         <Claim_description color='rgba(11, 67, 75, 0.79)' />
     </div>
   )
