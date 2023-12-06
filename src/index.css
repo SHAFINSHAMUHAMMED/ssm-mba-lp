@@ -233,8 +233,8 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 60%;
-  height: 45%;
+  width: 30px;
+  height: 30px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   outline: 0.5px solid #003b459d;
@@ -1099,6 +1099,7 @@ button {
 
 .world-of-possibilities-2-card h3 {
   font-family: 'SK Modernist Bold';
+  line-height: 24px;
   font-size: 25px;
   margin-bottom: 10px;
 }
@@ -1453,6 +1454,7 @@ button {
 
 .successful-graduates-carousel-1 {
   align-items: flex-end;
+  margin-bottom: 2px;
 }
 
 .successful-graduates-carousel-2 {
@@ -1514,6 +1516,7 @@ button {
 
 .steps-to-unlock-card-main {
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
   gap: 44px;
@@ -1551,7 +1554,7 @@ button {
   font-size: 96.088px;
   font-style: normal;
   font-weight: 700;
-  line-height: 114.5%;
+  line-height: 105.5%;
 }
 
 .steps-to-unlock-card h4 {
@@ -1560,8 +1563,8 @@ button {
   font-size: 30.199px;
   font-style: normal;
   font-weight: 700;
-  padding-bottom: 30px;
-  line-height: 122%;
+  padding-bottom: 15px;
+  line-height: 100%;
 }
 
 .steps-to-unlock-card p {
@@ -1854,13 +1857,27 @@ button {
   transform: translate(50%, 50%);
   height: 30px;
 }
-
+.button-wrapper {
+  width:100% ;
+}
 .icf-form button {
-  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   background: #0B434B;
   border-radius: 91.765px;
   padding: 26px 0px 30px 0px;
   margin-bottom: 18px;
+}
+.icf-button-lottie {
+  width: 40px; 
+  height: 25px;
+  margin-left: 10px;
+}
+.icf-button-lottie svg {
+  width: 100%;
+  height: 100%;
 }
 
 .icf-form .form-error {
@@ -1912,6 +1929,24 @@ button {
   z-index: 1000;
   padding: 53px 54px 0px 52px;
 }
+.popup-enter {
+  opacity: 0;
+}
+
+.popup-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.popup-exit {
+  opacity: 1;
+}
+
+.popup-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out
+}
+
 
 .popup-close-button {
   position: absolute;
@@ -2036,7 +2071,7 @@ button {
   animation: fadeUp 0.5s ease;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
 }
 
 @keyframes fadeUp {
@@ -2271,6 +2306,10 @@ button {
   .sub-heading {
     margin-top: 40px;
     margin-bottom: 20px;
+  }
+  .subheding-icon::after {
+    width: 20px;
+    height: 20px;
   }
 
   .hero-left h4 {
@@ -3433,7 +3472,15 @@ button {
     font-size: 15px !important;
     font-family: 'SK Modernist Regular';
   }
-
+  .icf-button-lottie {
+    width: 35px; 
+    height: 20px;
+    margin-left: 10px;
+  }
+  .icf-button-lottie svg {
+    width: 100%;
+    height: 100%;
+  }
   .icf-form .form-error {
     margin-bottom: 10px;
   }
@@ -3666,7 +3713,10 @@ button {
     margin-top: 0px;
     margin-bottom: 20px;
   }
-
+  .subheding-icon::after {
+    width: 25px;
+    height: 25px;
+  }
   .hero-left img {
     width: 56px;
     height: 56px;
@@ -4205,7 +4255,7 @@ button {
 
   .uae-professionals-img-1 {
     display: block;
-    width: 95%;
+    width: 313px;
     max-height: 641px;
   }
 
@@ -4345,7 +4395,7 @@ button {
   }
 
   .world-of-possibilities-2-card {
-    max-width: 100%;
+    width: 100%;
     justify-content: center;
     gap: 10px;
     padding: 28px 25px 28px 25px;
@@ -4866,6 +4916,12 @@ button {
     font-size: 15px !important;
     font-family: 'SK Modernist Regular';
   }
+  .icf-button-lottie {
+    width: 30px; 
+    height: 15px;
+    margin-left: 2px;
+  }
+
 
   .icf-form .form-error {
     margin-bottom: 10px;

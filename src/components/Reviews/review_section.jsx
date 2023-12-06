@@ -337,7 +337,7 @@ function ReviewSection() {
       </div>
 
       <div className="user-reviews">
-        <Marquee speed={100} pauseOnClick="true">
+        <Marquee speed={70} pauseOnClick="true">
           <div className="flex gap-[15px] overflow-hidden">
             <div className="user-review-card ms-[15px]">
               <div className="flex justify-between mb-6">
@@ -543,7 +543,7 @@ function ReviewSection() {
             </div>
           </div>
         </Marquee>
-        <Marquee speed={100} direction="right" pauseOnClick="true">
+        <Marquee speed={70} direction="right" pauseOnClick="true">
           <div className="flex gap-[15px] overflow-hidden">
             <div className="user-review-card ms-[15px]">
               <div className="flex justify-between mb-6">

@@ -89,7 +89,7 @@ function header() {
         </header>
       )}
       {showStickyDiv && (
-        <header className="header-section-2 bg-white" style={{ zIndex: 10 }}>
+        <header className="header-section-2 bg-white" >
           <div className="header-section-2-sub ">
             <img
               className="header-section-2-logo"

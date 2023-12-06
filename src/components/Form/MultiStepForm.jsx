@@ -3,9 +3,13 @@ import Claim_description from "../Description/claim_description";
 import 'react-phone-input-2/lib/style.css';
 import PhoneInput from 'react-phone-input-2';
 import { FaWhatsapp } from 'react-icons/fa';
+import Lottie from "lottie-react";
+import arrow from "../../../public/images/arrow.json"
 
 const MultiStepForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
+  const [showAnimation, setShowAnimation] = useState(true);
+
   const [formData, setFormData] = useState({
     name: "",
     specialization: "",
@@ -84,14 +88,17 @@ const MultiStepForm = () => {
     if (validateCurrentStep()) {
       if (currentStep < 6) {
         setCurrentStep(currentStep + 1);
+        setShowAnimation(currentStep + 1 < 6);
         // console.log(currentStep);
       } else {
+        setShowAnimation(false);
         handleSubmit();
       }
     }
   };
 
   const handleSubmit = async () => {
+    console.log('oooooooooookkkkkkkkkkk');
     // Webhook URL
     const webhookUrl =
       "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzMTA0MzA1MjY1NTUzZDUxMzAi_pc";
@@ -126,6 +133,15 @@ const MultiStepForm = () => {
   };
 
   const renderForm = () => {
+    const handleKeyPress = (e) => {
+      if (e.key === "Enter") {
+        if (currentStep < 6) {
+          nextStep();
+        }else {
+          handleSubmit()
+        }
+      }
+    };
     switch (currentStep) {
       case 1:
         return (
@@ -140,6 +156,7 @@ const MultiStepForm = () => {
               value={formData.name}
               onChange={handleChange}
               placeholder="Type Here..."
+              onKeyUp={handleKeyPress}
             />
             {renderError("name")}
           </>
@@ -158,6 +175,7 @@ const MultiStepForm = () => {
               value={formData.specialization}
               onChange={handleChange}
               placeholder="Type Here..."
+              onKeyUp={handleKeyPress}
             />
             {renderError("specialization")}
           </>
@@ -173,6 +191,7 @@ const MultiStepForm = () => {
               value={formData.jobRole}
               onChange={handleChange}
               placeholder="Type Here..."
+              onKeyUp={handleKeyPress}
             />
             {renderError("jobRole")}
           </>
@@ -189,6 +208,7 @@ const MultiStepForm = () => {
               value={formData.location}
               onChange={handleChange}
               placeholder="Type Here..."
+              onKeyUp={handleKeyPress}
             />
             {renderError("location")}
           </>
@@ -206,6 +226,7 @@ const MultiStepForm = () => {
               value={formData.email}
               onChange={handleChange}
               placeholder="Type Here..."
+              onKeyUp={handleKeyPress}
             />
             {renderError("email")}
           </>
@@ -221,6 +242,7 @@ const MultiStepForm = () => {
       country={'ae'}
       value={formData.whatsapp}
       placeholder={"Type Here..."}
+      onKeyDown={handleKeyPress}
       
       onChange={(phone) => setFormData({ ...formData, whatsapp: phone })}
     />
@@ -234,12 +256,22 @@ const MultiStepForm = () => {
 
   return (
     <div className="icf-form-main" id="contactForm">
-      <form className="icf-form">
-        {renderForm()}
-          <button type="button" onClick={nextStep}>
-            {currentStep < 6 ? "CONTINUE" : "Claim Your Free Consultation Now"}
-          </button>
-      </form>
+       <form className="icf-form" onSubmit={(e) => e.preventDefault()}>
+      {renderForm()}
+      <div className="button-wrapper">
+  <button type="button" onClick={nextStep} >
+    {currentStep < 6 ? "CONTINUE" : "Claim Your Free Consultation Now"}
+    {currentStep < 6 && showAnimation && (
+      <Lottie
+        animationData={arrow}
+        loop={true}
+        className="icf-button-lottie"
+      />
+    )}
+  </button>
+</div>
+
+    </form>
       <div className="form-svg-bg" >
         <svg
         className="icf-form-main-svg "
