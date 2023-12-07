@@ -17,8 +17,8 @@ function successful_graduates() {
         <img className="block sm:hidden" src="images/graduates-mobile.webp" alt="" />
 
       </div>
-      <img className="hidden sm:block" src="images/GraphicPatter5.webp" alt="" />
-      <img className="block sm:hidden" src="images/GraphicPatter5-mobile.webp" alt="" />
+      <img className="hidden sm:block" src="images/svg/GraphicPatter5.svg" alt="" />
+      <img className="block sm:hidden" src="images/svg/GraphicPatter5-mob.svg" alt="" />
 
       <div className="successful-graduates-carousel">
         <Marquee speed={70} direction="right">
