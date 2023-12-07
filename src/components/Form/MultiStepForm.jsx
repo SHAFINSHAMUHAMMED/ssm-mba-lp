@@ -101,7 +101,7 @@ const MultiStepForm = () => {
     console.log('oooooooooookkkkkkkkkkk');
     // Webhook URL
     const webhookUrl =
-      "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzMTA0MzA1MjY1NTUzZDUxMzAi_pc";
+      "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzMzA0M2Q1MjZiNTUzYzUxMzEi_pc";
 
     try {
       const response = await fetch(webhookUrl, {
@@ -114,6 +114,7 @@ const MultiStepForm = () => {
 
       if (response.ok) {
         console.log("Form data sent successfully");
+        window.location.href = "https://offer.learnersuae.com/confirmation/";
         // Handle success
       } else {
         console.error("Failed to send form data");

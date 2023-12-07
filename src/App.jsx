@@ -19,6 +19,7 @@ import Footer from "./components/Footer/footer";
 import { PopupProvider, usePopup } from "./components/Hoocks/PopupContext";
 import Popup from "./components/Popup_page/popup";
 import { debounce } from "lodash";
+import GoogleTagManager from "./components/Google_tag_mgr/GoogleTagManager";
 
 function App() {
   const { isPopupOpen, togglePopup } = usePopup();
@@ -46,6 +47,7 @@ function App() {
   return (
     <PopupProvider>
       <div className="body">
+        <GoogleTagManager/>
         <Header />
         <Hero />
         <Carousel />
