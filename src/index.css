@@ -27,13 +27,11 @@
 }
 
 
-::-webkit-scrollbar {
-  width: 0px;
+.body {
+  overflow-y: hidden;
 }
 
-::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
-}
+
 
 h1,
 h2,
@@ -795,13 +793,13 @@ button {
   align-items: flex-start;
 }
 
-.power-skill-card-main {
-  margin-top: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  .power-skill-card-main {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
-}
+  }
 
 .power-skill-star {
   width: 300px;

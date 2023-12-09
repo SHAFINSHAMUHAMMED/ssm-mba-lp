@@ -5,6 +5,10 @@ import PhoneInput from 'react-phone-input-2';
 import { FaWhatsapp } from 'react-icons/fa';
 import Lottie from "lottie-react";
 import arrow from "../../../public/images/arrow.json"
+import 'rsuite/dist/rsuite.min.css';
+import {Steps} from "rsuite"
+
+
 
 const MultiStepForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -23,6 +27,10 @@ const MultiStepForm = () => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const calculateProgress = () => {
+    return ((currentStep - 1) / 5) * 100; // Adjusted for 6 steps
   };
 
   const validateCurrentStep = () => {
@@ -98,7 +106,6 @@ const MultiStepForm = () => {
   };
 
   const handleSubmit = async () => {
-    console.log('oooooooooookkkkkkkkkkk');
     // Webhook URL
     const webhookUrl =
       "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzMzA0M2Q1MjZiNTUzYzUxMzEi_pc";
@@ -113,9 +120,9 @@ const MultiStepForm = () => {
       });
 
       if (response.ok) {
+        // Handle success
         console.log("Form data sent successfully");
         window.location.href = "https://offer.learnersuae.com/confirmation/";
-        // Handle success
       } else {
         console.error("Failed to send form data");
         // Handle error
@@ -257,6 +264,16 @@ const MultiStepForm = () => {
 
   return (
     <div className="icf-form-main" id="contactForm">
+      {/* progress steps */}
+      {/* <Progress.Line percent={calculateProgress()} strokeColor="#0B434B" /> */}
+      <Steps current={currentStep - 1}>
+        <Steps.Item title="" />
+        <Steps.Item title=""/>
+        <Steps.Item title=""/>
+        <Steps.Item  title="" />
+        <Steps.Item title=""/>
+        <Steps.Item title="" />
+      </Steps>
        <form className="icf-form" onSubmit={(e) => e.preventDefault()}>
       {renderForm()}
       <div className="button-wrapper">
