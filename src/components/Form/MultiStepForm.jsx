@@ -5,8 +5,7 @@ import PhoneInput from 'react-phone-input-2';
 import { FaWhatsapp } from 'react-icons/fa';
 import Lottie from "lottie-react";
 import arrow from "../../../public/images/arrow.json"
-import 'rsuite/dist/rsuite.min.css';
-import {Steps} from "rsuite"
+import MultiStepProgressBar from "../Progress_bar/MultiStepProgressBar";
 
 
 
@@ -29,9 +28,6 @@ const MultiStepForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const calculateProgress = () => {
-    return ((currentStep - 1) / 5) * 100; // Adjusted for 6 steps
-  };
 
   const validateCurrentStep = () => {
     let errors = {};
@@ -265,15 +261,7 @@ const MultiStepForm = () => {
   return (
     <div className="icf-form-main" id="contactForm">
       {/* progress steps */}
-      {/* <Progress.Line percent={calculateProgress()} strokeColor="#0B434B" /> */}
-      <Steps current={currentStep - 1}>
-        <Steps.Item title="" />
-        <Steps.Item title=""/>
-        <Steps.Item title=""/>
-        <Steps.Item  title="" />
-        <Steps.Item title=""/>
-        <Steps.Item title="" />
-      </Steps>
+      <MultiStepProgressBar currentStep={currentStep} />
        <form className="icf-form" onSubmit={(e) => e.preventDefault()}>
       {renderForm()}
       <div className="button-wrapper">
