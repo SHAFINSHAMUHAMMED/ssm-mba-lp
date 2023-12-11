@@ -3,6 +3,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Marquee from "react-fast-marquee";
 import ButtonDark from "../Buttons/buttonDark";
+import { Link, Element } from "react-scroll";
 import Claim_description from "../Description/claim_description";
 import { usePopup } from "../Hoocks/PopupContext";
 import { BounceLoader } from "react-spinners";
@@ -748,10 +749,17 @@ function ReviewSection() {
           </div>
         </Marquee>
       </div>
-      <ButtonDark
-        duration={2500}
-        containerStyle={{ justifyContent: "center" }}
-      />
+      <div id="NewRootRoot" className="flex justify-center w-full ">
+    <Link
+    to='contactForm'
+    // spy={true}
+   smooth={true}
+     duration={2800}
+     delay={200}
+    className=" button bg-[#0b434b] w-[95%] sm:w-[539px]  rounded-[56px] sm:rounded-[91px] pt-[25px] pb-[25px] text-[15px] md:text-[15px] xl:text-[23px] font-bold cursor-pointer">
+      Start Your Journey Now
+    </Link>
+  </div>
       <Claim_description color="rgba(11, 67, 75, 0.79)" />
     </div>
   );

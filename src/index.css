@@ -27,12 +27,6 @@
 }
 
 
-.body {
-  overflow-y: hidden;
-}
-
-
-
 h1,
 h2,
 h3,
@@ -582,6 +576,8 @@ button {
   background-repeat: no-repeat;
   background-size: 903px 528px;
   min-height: 650px;
+  overflow: hidden;
+
 }
 
 .accredit-main h1 {
@@ -590,11 +586,14 @@ button {
 }
 
 .accredit-cards {
+  width: 100%;
   display: flex;
   justify-content: center;
   gap: 20px;
   padding-top: 23px;
   padding-bottom: 31px;
+  overflow: hidden;
+
 }
 
 .accredit-card {
@@ -606,6 +605,8 @@ button {
   border-radius: 26.853px;
   background: #FFF;
   border: 1px solid rgba(145, 143, 143, 0.249);
+  overflow: hidden;
+
 }
 
 .accredit-cards .accredit-card:first-child {
@@ -760,94 +761,6 @@ button {
 }
 
 
-/* 6-power-skills section */
-
-.power-skill-main {
-  padding-bottom: 80px;
-  overflow: hidden;
-}
-
-.power-skill-main h1 {
-  margin: auto;
-  max-width: 727px;
-  text-align: center;
-  line-height: 104%;
-}
-
-.power-skill-description {
-  max-width: 491px;
-  text-align: center;
-  margin: auto;
-  margin-top: 20px;
-  line-height: 136%;
-}
-
-.power-skill-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 50px 20px 30px 20px;
-  margin: 0 auto;
-  max-width: 1120px;
-  position: relative;
-  align-items: flex-start;
-}
-
-  .power-skill-card-main {
-    margin-top: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
-  }
-
-.power-skill-star {
-  width: 300px;
-  position: absolute;
-  bottom: 150px;
-  right: -100px;
-  z-index: -1;
-}
-
-.power-skill-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  max-width: 392px;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 0px 35px 0px;
-}
-
-.power-skill-card h3 {
-  font-family: 'SK Modernist Bold';
-  line-height: 112%;
-}
-
-.power-skill-card div {
-  margin-top: 10px;
-  padding: 0px 10px 0px 0px;
-  display: flex;
-  gap: 10px;
-}
-
-.power-skill-card p {
-  padding: 10px 20px 10px 0px;
-  font-size: 18px;
-  color: #0B434B;
-  line-height: 24px;
-}
-
-.power-skill-card-icon {
-  position: absolute;
-  left: -10px;
-  top: -20px;
-}
-
-.power-skill-card-img {
-  width: 329px;
-  height: auto;
-}
 
 
 /* Uae professional section */
@@ -859,6 +772,7 @@ button {
 }
 
 .uae-professional-main::before {
+  border-radius: 64px;
   content: '';
   position: absolute;
   top: 0;
@@ -1814,7 +1728,8 @@ button {
   color: #0B434B;
 }
 
-.icf-form input {
+.icf-form input, 
+.icf-form select {
   width: 700px;
   border-radius: 73px;
   border: 1px solid rgba(0, 0, 0, 0.47);
@@ -1828,6 +1743,13 @@ button {
 .icf-form input::placeholder {
   font-size: 25px;
   color: #5B5454;
+}
+.icf-form select option {
+  background-color: #fdfdfd;
+  color: #3a3a3a;
+}
+.icf-form select:focus {
+  outline: none;
 }
 
 .react-tel-input .form-control {
@@ -2711,75 +2633,7 @@ button {
     line-height: 136%;
   }
 
-  /* 6-power-skills section */
-
-  .power-skill-main {
-    margin-top: 40px;
-  }
-
-  .power-skill-main h1 {
-    max-width: 80%;
-    text-align: center;
-    line-height: 105%;
-  }
-
-  .power-skill-description {
-    max-width: 70%;
-    font-size: 18px;
-    margin-top: 15px;
-    line-height: 136%;
-  }
-
-  .power-skill-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 5px;
-    padding: 10px 10px 0px 10px;
-    position: relative;
-    justify-content: center;
-    justify-items: center;
-    align-items: flex-start;
-    margin: 0 auto;
-  }
-
-  .power-skill-star {
-    bottom: 40px;
-    right: -100px;
-    z-index: -1;
-  }
-
-  .power-skill-card {
-    max-width: 300px;
-    padding: 20px 0px 20px 0px;
-  }
-
-  .power-skill-card-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
-  }
-
-  .power-skill-card div {
-    padding: 0px 0px 0px 0px;
-  }
-
-  .power-skill-card p {
-    padding: 10px 0px 10px 0px;
-    font-size: 17px;
-    line-height: 23px;
-  }
-
-  .power-skill-card-icon {
-    position: absolute;
-    left: -10px;
-    top: 0px;
-  }
-
-  .power-skill-card-img {
-    width: 300px;
-  }
-
+  
   /* Uae professional section */
 
   .uae-professional-main {
@@ -2790,7 +2644,7 @@ button {
   }
 
   .uae-professional-main::before {
-
+    border-radius: 38px;
     background-image: url('images/building-burj-mobile.webp');
     background-size: cover;
     background-position: bottom;
@@ -4150,78 +4004,7 @@ button {
     line-height: 136%;
   }
 
-
-  /* 6-power-skills section */
-
-  .power-skill-main {
-    padding-bottom: 36px;
-    margin-top: 40px;
-  }
-
-  .power-skill-main h1 {
-    max-width: 80%;
-    text-align: center;
-    line-height: 105%;
-  }
-
-  .power-skill-description {
-    max-width: 70%;
-    font-size: 18px;
-    margin-top: 15px;
-    line-height: 136%;
-  }
-
-  .power-skill-card-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 95%;
-
-  }
-
-  .power-skill-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-    gap: 10px;
-    padding: 10px 10px 0px 10px;
-    position: relative;
-    justify-items: center;
-    align-items: center;
-    margin: 0 auto;
-    width: 100%;
-  }
-
-  .power-skill-star {
-    bottom: 40px;
-    right: -100px;
-    z-index: -1;
-  }
-
-  .power-skill-card {
-    max-width: 90%;
-    padding: 20px 0px 20px 0px;
-  }
-
-  .power-skill-card div {
-    justify-content: flex-start;
-  }
-
-  .power-skill-card p {
-    padding: 0px 15px 0px 0px;
-    font-size: 17px;
-    line-height: 23px;
-  }
-
-  .power-skill-card-icon {
-    position: absolute;
-    left: 5px;
-    top: 0px;
-  }
-
-  .power-skill-card-img {
-    width: 100%;
-  }
-
+  
   /* Uae professional section */
 
   .uae-professional-main {
@@ -4231,7 +4014,7 @@ button {
   }
 
   .uae-professional-main::before {
-
+    border-radius: 38px;
     background-image: url('images/building-burj-mobile.webp');
     background-size: contain;
     background-position: bottom;

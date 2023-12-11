@@ -1,5 +1,6 @@
 import React from 'react'
 import ButtonDark from '../Buttons/buttonDark'
+import { Link, Element } from "react-scroll";
 import Claim_description from '../Description/claim_description'
 
 function student_support() {
@@ -13,7 +14,17 @@ function student_support() {
 
         <p>Receive complete support throughout your academic journey, from application to graduation, for a seamless experience.</p>
       </div>
-      <ButtonDark duration={1500} containerStyle={{ justifyContent: 'center' }}/>
+      <div id="NewRootRoot" className="flex justify-center w-full">
+    <Link
+    to='contactForm'
+    // spy={true}
+   smooth={true}
+     duration={1500}
+     delay={200}
+    className=" button bg-[#0b434b] w-[95%] sm:w-[539px]  rounded-[56px] sm:rounded-[91px] pt-[25px] pb-[25px] text-[15px] md:text-[15px] xl:text-[23px] font-bold cursor-pointer">
+      Connect With Your Advisor
+    </Link>
+  </div>
         <Claim_description color='rgba(11, 67, 75, 0.79)' />
     </div>
   )

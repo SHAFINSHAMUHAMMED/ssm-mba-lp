@@ -17,7 +17,7 @@ const MultiStepForm = () => {
     name: "",
     specialization: "",
     jobRole: "",
-    location: "",
+    // location: "",
     email: "",
     whatsapp: "",
   });
@@ -52,13 +52,13 @@ const MultiStepForm = () => {
           isValid = false;
         }
         break;
+      // case 4:
+      //   if (!formData.location.trim()) {
+      //     errors.location = "Location is required";
+      //     isValid = false;
+      //   }
+      //   break;
       case 4:
-        if (!formData.location.trim()) {
-          errors.location = "Location is required";
-          isValid = false;
-        }
-        break;
-      case 5:
         if (!formData.email.trim()) {
           errors.email = "Email is required";
           isValid = false;
@@ -67,7 +67,7 @@ const MultiStepForm = () => {
           isValid = false;
         }
         break;
-        case 6:
+        case 5:
     const digits = formData.whatsapp.replace(/\D/g, '');
     if (!formData.whatsapp.trim()) {
       errors.whatsapp = "WhatsApp number is required";
@@ -90,9 +90,9 @@ const MultiStepForm = () => {
 
   const nextStep = () => {
     if (validateCurrentStep()) {
-      if (currentStep < 6) {
+      if (currentStep < 5) {
         setCurrentStep(currentStep + 1);
-        setShowAnimation(currentStep + 1 < 6);
+        setShowAnimation(currentStep + 1 < 5);
         // console.log(currentStep);
       } else {
         setShowAnimation(false);
@@ -100,6 +100,12 @@ const MultiStepForm = () => {
       }
     }
   };
+  const specializationOptions = [
+    "Option 1",
+    "Option 2",
+    "Option 3",
+    // Add optins
+  ];
 
   const handleSubmit = async () => {
     // Webhook URL
@@ -139,7 +145,7 @@ const MultiStepForm = () => {
   const renderForm = () => {
     const handleKeyPress = (e) => {
       if (e.key === "Enter") {
-        if (currentStep < 6) {
+        if (currentStep < 5) {
           nextStep();
         }else {
           handleSubmit()
@@ -173,14 +179,20 @@ const MultiStepForm = () => {
               interest?
             </h2>
             <p>We want to make sure your journey is tailored just for you.</p>
-            <input
-              type="text"
-              name="specialization"
-              value={formData.specialization}
-              onChange={handleChange}
-              placeholder="Type Here..."
-              onKeyUp={handleKeyPress}
-            />
+            <select
+  name="specialization"
+  value={formData.specialization}
+  onChange={handleChange}
+>
+  <option value="">Select Specialization</option>
+  {specializationOptions.map((option, index) => (
+    <option key={index} value={option}
+    >
+      
+      {option}
+    </option>
+  ))}
+</select>
             {renderError("specialization")}
           </>
         );
@@ -200,24 +212,24 @@ const MultiStepForm = () => {
             {renderError("jobRole")}
           </>
         );
+      // case 4:
+      //   return (
+      //     <>
+      //       <h2>
+      //         We'd love to know your location. Where are you currently based?
+      //       </h2>
+      //       <input
+      //         type="text"
+      //         name="location"
+      //         value={formData.location}
+      //         onChange={handleChange}
+      //         placeholder="Type Here..."
+      //         onKeyUp={handleKeyPress}
+      //       />
+      //       {renderError("location")}
+      //     </>
+      //   );
       case 4:
-        return (
-          <>
-            <h2>
-              We'd love to know your location. Where are you currently based?
-            </h2>
-            <input
-              type="text"
-              name="location"
-              value={formData.location}
-              onChange={handleChange}
-              placeholder="Type Here..."
-              onKeyUp={handleKeyPress}
-            />
-            {renderError("location")}
-          </>
-        );
-      case 5:
         return (
           <>
             <h2>
@@ -235,7 +247,7 @@ const MultiStepForm = () => {
             {renderError("email")}
           </>
         );
-        case 6:
+        case 5:
         return (
           <>
             <h2>
@@ -266,8 +278,8 @@ const MultiStepForm = () => {
       {renderForm()}
       <div className="button-wrapper">
   <button type="button" onClick={nextStep} >
-    {currentStep < 6 ? "CONTINUE" : "Claim Your Free Consultation Now"}
-    {currentStep < 6 && showAnimation && (
+    {currentStep < 5 ? "CONTINUE" : "Claim Your Free Consultation Now"}
+    {currentStep < 5 && showAnimation && (
       <Lottie
         animationData={arrow}
         loop={true}

@@ -107,7 +107,7 @@ function program_Highlights() {
             />
           </svg>
           <h4 className="text-body-light ps-5 ">
-            Globally recognised & accredited
+            Globally Recognised & Accredited
           </h4>
         </div>
         <div className="columns Highlight-columns">
@@ -155,7 +155,7 @@ function program_Highlights() {
             />
           </svg>
           <h4 className="text-body-light ps-5">
-            Easy-to-use LMS accessible anytime, anywhere
+            Easy-to-Use LMS Accessible Anytime, Anywhere
           </h4>
         </div>
         <div className="columns Highlight-columns">
@@ -182,7 +182,7 @@ function program_Highlights() {
             />
           </svg>
           <h4 className="text-body-light ps-5">
-            Affordable fees and monthly payment plans
+            Affordable Fees and Monthly Payment Plans
           </h4>
         </div>
         <div className="columns Highlight-columns2">
@@ -218,7 +218,7 @@ function program_Highlights() {
             />
           </svg>
           <h4 className="text-body-light ps-5">
-            10+ Specializations available
+            10+ Specializations Available
           </h4>
         </div>
         <div className="columns Highlight-columns2">
@@ -236,7 +236,7 @@ function program_Highlights() {
               fill="#0B4149"
             />
           </svg>
-          <h4 className="text-body-light ps-5">SSM Alumni status</h4>
+          <h4 className="text-body-light ps-5">SSM Alumni Status</h4>
         </div>
         <div className="columns Highlight-columns">
           <svg
@@ -269,7 +269,7 @@ function program_Highlights() {
               fill="#0B4149"
             />
           </svg>
-          <h4 className="text-body-light ps-5">Graduation ceremony in Dubai</h4>
+          <h4 className="text-body-light ps-5">Graduation Ceremony in Dubai</h4>
         </div>
         <div className=" columns Highlight-columns2">
           <svg
@@ -287,7 +287,7 @@ function program_Highlights() {
             />
           </svg>
           <h4 className="text-body-light ps-5">
-            Exclusive networking opportunities
+            Exclusive Networking Opportunities
           </h4>
         </div>
         <div className="columns Highlight-columns">
@@ -317,7 +317,7 @@ function program_Highlights() {
               fill="#0B4149"
             />
           </svg>
-          <h4 className="text-body-light ps-5">Student support</h4>
+          <h4 className="text-body-light ps-5">Student Support</h4>
         </div>
         <div className="Highlight-columns2 ">
           <svg

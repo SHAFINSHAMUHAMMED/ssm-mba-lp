@@ -48,7 +48,7 @@ function icf_certification() {
           Certified Career Coach & Get{" "}
           <span className="wavy-underline-green">Scholarships</span>{" "}
           <span className="wavy-underline-green"> Of Upto 30%</span> <br />
-          (Worth AED 9000)
+         
         </h1>
         <img src="images/icf-certification-banner.webp" alt="" />
         <MultiStepForm />

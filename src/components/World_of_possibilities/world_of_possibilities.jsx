@@ -142,7 +142,7 @@ function world_of_possibilities() {
                     stroke-width="2.37735"
                   />
                 </svg>
-                <h3>Globally recognised & accredited</h3>
+                <h3>Globally Recognised & Accredited</h3>
               </div>
               <p>
                 Our programs hold both national and international accreditation,

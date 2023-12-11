@@ -48,7 +48,7 @@ function uae_professionals() {
       Claim Your Free Consultation Now
     </Link>
   </div>
-          <p className="claim-description-2">Claim Your Free Consultation With Our Career Coach & Get Scholarships Of Upto 30% <br /><b>(Worth AED6500)</b></p>
+          <p className="claim-description-2">Claim Your Free Consultation With Our Career Coach & Get Scholarships Of Upto 30% <br /></p>
           
         </div>
         <img

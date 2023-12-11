@@ -6,7 +6,7 @@ import Swiss_school from "./components/why_swiss_school/swiss_school";
 import Program_Highlights from "./components/Program_Highlights/program_Highlights";
 import Acreditions from "./components/Acreditions/acreditions";
 import Unbeatable_reason from "./components/Reason_section/unbeatable_reason";
-import Power_skills from "./components/Power_skills/power_skills";
+// import Power_skills from "./components/Power_skills/power_skills";
 import Uae_professionals from "./components/Uae_professionals/uae_professionals";
 import Alumini_carousel from "./components/AluminiCarousel/AluminiCarousel";
 import World_of_possibilities from "./components/World_of_possibilities/world_of_possibilities";
@@ -55,7 +55,7 @@ function App() {
         <Program_Highlights />
         <Acreditions />
         <Unbeatable_reason />
-        <Power_skills />
+        {/* <Power_skills /> */}
         <Uae_professionals />
         <Alumini_carousel />
         <World_of_possibilities />
