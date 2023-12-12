@@ -53,6 +53,8 @@ function popup({ closePopup }) {
     // Phone validation
     const digits = formData.phone.replace(/\D/g, "");
     if (!formData.phone.trim()) {
+      console.log("errrrr1");
+
       formIsValid = false;
       tempErrors["phone"] = "WhatsApp number is required";
     } else if (digits.length > 15) {
@@ -69,13 +71,19 @@ function popup({ closePopup }) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    const processedValue = name === "phone" ? value.toString() : value;
+    setFormData({ ...formData, [name]: processedValue });
+  };
+
+  useEffect(() => {
     const formComplete =
       formData.name.trim() !== "" &&
+      formData.name.trim().length > 2 &&
       /\S+@\S+\.\S+/.test(formData.email) &&
-      /\d/.test(formData.phone);
-    setIsFormComplete(formComplete);
-  };
+      /^\d{8,}$/.test(formData.phone.replace(/\D/g, ""));
+    console.log(formData.phone);
+    setIsFormComplete(formComplete); // Update isFormComplete state
+  }, [formData.name, formData.email, formData.phone]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

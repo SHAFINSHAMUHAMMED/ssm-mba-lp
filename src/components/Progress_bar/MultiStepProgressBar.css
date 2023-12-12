@@ -25,8 +25,8 @@
   }
   .dot svg {
     fill: #f1f4f2; 
-    width: 80%;
-    height: 80%;
+    width: 60%;
+    height: 60%;
   }
   .line {
     flex-grow: 1;
@@ -53,7 +53,7 @@
 
   @media only screen and (max-width: 640px) {
     .progress-container-main {
-        width: 60%;
+        width: 70%;
       }
       
   }
