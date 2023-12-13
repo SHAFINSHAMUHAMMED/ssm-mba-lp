@@ -12,6 +12,7 @@ function popup({ closePopup }) {
   const [isFormComplete, setIsFormComplete] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isActive, setIsActive] = useState(false);
+  const [downloadStarted, setDownloadStarted] = useState(false);
 
   useEffect(() => {
     // Add delay to active popup animation
@@ -108,7 +109,8 @@ function popup({ closePopup }) {
           downloadPdf("images/SSM MBA.pdf");
           clearTimeout(loaderTimeout);
           setIsLoading(false);
-          closePopup();
+          setDownloadStarted(true);
+          // closePopup();
         } else {
           console.error("Server error");
           clearTimeout(loaderTimeout);
@@ -155,11 +157,11 @@ function popup({ closePopup }) {
             fill-opacity="0.86"
           />
         </svg>
-
+        {!downloadStarted ? (
+      <div>
         <h1>Get Instant Access To The SSM MBA Brochure</h1>
         <p className="popup-main-description">
-          Get an inside look at our prestigious programs, faculty, and the
-          unique benefits that set us a
+          Get an inside look at our prestigious programs, faculty, and the unique benefits that set us apart in the business education landscape.
         </p>
         <div className="popup-sub">
           <form className="popup-form" onSubmit={handleSubmit}>
@@ -241,6 +243,26 @@ function popup({ closePopup }) {
             />
           </div>
         </div>
+        </div>
+          ) : (
+            <CSSTransition
+        in={downloadStarted}
+        timeout={300}
+        classNames="fade"
+        unmountOnExit
+      >
+            <div className="popup-thank-you">
+            <h2><span className="text-[#4FD97A]">Thank You</span> for Requesting Our Brochure!</h2>
+            <p>Your brochure will be sent to your email and WhatsApp inbox within the next 5 minutes. For immediate assistance or any queries, please click the button below to chat with us directly.</p>
+            <a href="https://wa.me/+971504181328" target="_blank" rel="noopener noreferrer">
+            <div className="thank-you-button">
+              <img src="images/svg/WhatsApp_icon.svg" alt="whatsapp_img" />
+              <h6>Chat With Us</h6>
+            </div>
+            </a>
+          </div>
+          </CSSTransition>
+        )}
       </div>
     </CSSTransition>
   );

@@ -22,19 +22,6 @@ function AluminiCarousel() {
             <img className="alumini-carousel-card " src="images/icon9-nestle.webp" alt="" />            
           </div>
         </Marquee>
-        <Marquee direction="left" speed={100}>
-          <div className="alumini-carousel-cards-2">
-            <img className="alumini-carousel-card " src="images/icon2-mashreeq.webp" alt="" />
-            <img className="alumini-carousel-card " src="images/icon4-almarai.webp" alt="" />
-          <img className="alumini-carousel-card " src="images/icon1-loreal.webp" alt="" />
-            <img className="alumini-carousel-card " src="images/icon5-emirates-nbd.webp" alt="" />
-            <img className="alumini-carousel-card " src="images/icon7-emirates.webp" alt="" />
-            <img className="alumini-carousel-card " src="images/icon3-rakbank.webp" alt="" />
-            <img className="alumini-carousel-card " src="images/icon8-unilever.webp" alt="" />
-            <img className="alumini-carousel-card " src="images/icon6-standard-chartered.webp" alt="" />
-            <img className="alumini-carousel-card " src="images/icon9-nestle.webp" alt="" />
-          </div>
-        </Marquee>
       </div>
     </div>
   );

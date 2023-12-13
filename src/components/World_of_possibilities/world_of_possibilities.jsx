@@ -91,7 +91,7 @@ function world_of_possibilities() {
                 />
               </svg>
               <div>
-                <h1>3100+</h1>
+                <h1>4000+</h1>
                 <span>Students</span>
               </div>
             </div>
@@ -113,7 +113,7 @@ function world_of_possibilities() {
                 />
               </svg>
               <div>
-                <h1>50+</h1>
+                <h1>65+</h1>
                 <span>Nationalities</span>
               </div>
             </div>

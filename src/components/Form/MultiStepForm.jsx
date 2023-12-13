@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Claim_description from "../Description/claim_description";
 import 'react-phone-input-2/lib/style.css';
 import PhoneInput from 'react-phone-input-2';
-import { FaWhatsapp } from 'react-icons/fa';
+import { FaPhone } from 'react-icons/fa';
 import Lottie from "lottie-react";
 import arrow from "../../../public/images/arrow.json"
 import MultiStepProgressBar from "../Progress_bar/MultiStepProgressBar";
@@ -101,9 +101,14 @@ const MultiStepForm = () => {
     }
   };
   const specializationOptions = [
-    "Option 1",
-    "Option 2",
-    "Option 3",
+    "MBA in General",
+    "MBA in Finance",
+    "MBA in Global Management & Leadership",
+    "MBA in Health Safety & Environment ",
+    "MBA in Healthcare Management ",
+    "MBA in Human Resources ",
+    "MBA in Marketing ",
+
     // Add optins
   ];
 
@@ -251,9 +256,8 @@ const MultiStepForm = () => {
         return (
           <>
             <h2>
-            And <FaWhatsapp style={{ fontSize: 'inherit', color:'green', marginBottom:'5px', display:'inline' }} />WhatsApp Number?
+            And Phone Number?
             </h2>
-            <p>To easily send you all the details</p>
             <PhoneInput
       country={'ae'}
       value={formData.whatsapp}
