@@ -9,16 +9,17 @@ function successful_graduates() {
       <div className="successful-graduates-sub-1">
         <h1>
           Join{" "}
-          <span className="wavy-underline">Over 3000+</span> <span className="wavy-underline"> Successful</span>{" "}
+          <span className="wavy-underline">Over 4000+</span> <span className="wavy-underline"> Successful</span>{" "}
           <span className="wavy-underline">Graduates</span> & Take Charge Of
           Your Career
         </h1>
         <img className="hidden sm:block" src="images/graduates.webp" alt="" />
         <img className="block sm:hidden" src="images/graduates-mobile.webp" alt="" />
-
       </div>
-      <img className="hidden sm:block" src="images/svg/GraphicPatter5.svg" alt="" />
-      <img className="block sm:hidden" src="images/svg/GraphicPatter5-mob.svg" alt="" />
+      <div className=" successfull-graduate-pattern-1"></div>
+        <div className=" successfull-graduate-pattern-2"></div>
+      {/* <img className="hidden sm:block" src="images/svg/GraphicPatter5.svg" alt="" /> */}
+      {/* <img className="block sm:hidden" src="images/svg/GraphicPatter5-mob.svg" alt="" /> */}
 
       <div className="successful-graduates-carousel">
         <Marquee speed={70} direction="right">
@@ -30,6 +31,8 @@ function successful_graduates() {
             <img className="gradute-image" src="images/graduate-5.webp" alt="" />
             <img className="gradute-image" src="images/graduate-6.webp" alt="" />
             <img className="gradute-image" src="images/graduate-7.webp" alt="" />
+            <img className="gradute-image" src="images/graduate-3.webp" alt="" />
+
         </div>
         </Marquee>
         <Marquee speed={70} direction="left">
@@ -41,6 +44,7 @@ function successful_graduates() {
             <img className="gradute-image" src="images/graduate-6.webp" alt="" />
             <img className="gradute-image" src="images/graduate-3.webp" alt="" />
             <img className="gradute-image" src="images/graduate-5.webp" alt="" />
+            <img className="gradute-image" src="images/graduate-1.webp" alt="" />
         </div>
         </Marquee>
       </div>

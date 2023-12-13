@@ -115,7 +115,7 @@ const MultiStepForm = () => {
   const handleSubmit = async () => {
     // Webhook URL
     const webhookUrl =
-      "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzMzA0M2Q1MjZiNTUzYzUxMzEi_pc";
+      "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTY5MDYzNzA0M2M1MjY0NTUzZDUxMzMi_pc";
 
     try {
       const response = await fetch(webhookUrl, {
@@ -162,9 +162,9 @@ const MultiStepForm = () => {
         return (
           <>
             <h2 className="form-question">
-              Let’s take your career higher. But first, what do we call you?
+              Let’s take your career higher. But first, what's your name?
             </h2>
-            <p>This will only take 20 seconds (or less!)</p>
+            <p>This will only take 10 seconds (or less!)</p>
             <input
               type="text"
               name="name"

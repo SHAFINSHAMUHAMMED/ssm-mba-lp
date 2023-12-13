@@ -94,7 +94,7 @@ function popup({ closePopup }) {
 
       try {
         const response = await fetch(
-          "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzZjA0MzM1MjZhNTUzZDUxMzEi_pc",
+          "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTY5MDYzNzA0M2M1MjY0NTUzZDUxMzci_pc",
           {
             method: "POST",
             headers: {
@@ -106,7 +106,7 @@ function popup({ closePopup }) {
 
         if (response.ok) {
           console.log(response);
-          downloadPdf("images/SSM MBA.pdf");
+          // downloadPdf("images/SSM MBA.pdf");
           clearTimeout(loaderTimeout);
           setIsLoading(false);
           setDownloadStarted(true);
@@ -124,14 +124,14 @@ function popup({ closePopup }) {
     }
   };
 
-  const downloadPdf = (pdfUrl) => {
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.download = "SSM_MBA_Brochure.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  // const downloadPdf = (pdfUrl) => {
+  //   const link = document.createElement("a");
+  //   link.href = pdfUrl;
+  //   link.download = "SSM_MBA_Brochure.pdf";
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   document.body.removeChild(link);
+  // };
 
   return (
     <CSSTransition
@@ -247,8 +247,8 @@ function popup({ closePopup }) {
           ) : (
             <CSSTransition
         in={downloadStarted}
-        timeout={300}
-        classNames="fade"
+        timeout={1000}
+        classNames="fades"
         unmountOnExit
       >
             <div className="popup-thank-you">

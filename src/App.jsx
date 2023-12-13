@@ -16,6 +16,8 @@ import Steps_to_unlock_career from "./components/Steps_to_unlock_career/steps_to
 import Student_support from "./components/Student_support_guarantee/student_support";
 import Icf_certification from "./components/Icf_certification/icf_certification";
 import Footer from "./components/Footer/footer";
+import StickyWhatsAppButton from "./components/WhatsappStickyLogo/StickyWhatsAppButton";
+
 import { PopupProvider, usePopup } from "./components/Hoocks/PopupContext";
 import Popup from "./components/Popup_page/popup";
 import { debounce } from "lodash";
@@ -50,6 +52,7 @@ function App() {
         <GoogleTagManager/>
         <Header />
         <Hero />
+        <StickyWhatsAppButton/>
         <Carousel />
         <Swiss_school />
         <Program_Highlights />
