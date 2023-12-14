@@ -4,6 +4,7 @@ import 'react-phone-input-2/lib/style.css';
 import PhoneInput from 'react-phone-input-2';
 import { FaPhone } from 'react-icons/fa';
 import Lottie from "lottie-react";
+import { ClipLoader } from 'react-spinners';
 import arrow from "../../../public/images/arrow.json"
 import MultiStepProgressBar from "../Progress_bar/MultiStepProgressBar";
 
@@ -12,6 +13,7 @@ import MultiStepProgressBar from "../Progress_bar/MultiStepProgressBar";
 const MultiStepForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [showAnimation, setShowAnimation] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -113,6 +115,7 @@ const MultiStepForm = () => {
   ];
 
   const handleSubmit = async () => {
+    setIsLoading(true);
     // Webhook URL
     const webhookUrl =
       "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTY5MDYzNzA0M2M1MjY0NTUzZDUxMzMi_pc";
@@ -184,20 +187,21 @@ const MultiStepForm = () => {
               interest?
             </h2>
             <p>We want to make sure your journey is tailored just for you.</p>
-            <select
-  name="specialization"
-  value={formData.specialization}
-  onChange={handleChange}
->
-  <option value="">Select Specialization</option>
-  {specializationOptions.map((option, index) => (
-    <option key={index} value={option}
-    >
-      
-      {option}
-    </option>
-  ))}
-</select>
+            <div class="custom-select">
+  <select
+    name="specialization"
+    value={formData.specialization}
+    onChange={handleChange}
+  >
+    <option value="">Select Specialization</option>
+    {specializationOptions.map((option, index) => (
+      <option key={index} value={option}>
+        {option}
+      </option>
+    ))}
+  </select>
+</div>
+
             {renderError("specialization")}
           </>
         );
@@ -282,7 +286,8 @@ const MultiStepForm = () => {
       {renderForm()}
       <div className="button-wrapper">
   <button type="button" onClick={nextStep} >
-    {currentStep < 5 ? "CONTINUE" : "Claim Your Free Consultation Now"}
+  {currentStep < 5 && "CONTINUE"}
+  {currentStep === 5 && !isLoading && "Claim Your Free Consultation Now"}
     {currentStep < 5 && showAnimation && (
       <Lottie
         animationData={arrow}
@@ -290,6 +295,9 @@ const MultiStepForm = () => {
         className="icf-button-lottie"
       />
     )}
+    {currentStep === 5 && isLoading && (
+    <ClipLoader color={"#ffffff"} size={20} />
+  )}
   </button>
 </div>
 

@@ -1,12 +1,12 @@
 import React from 'react'
 
 function footer() {
+  const currentYear = new Date().getFullYear();
   return (
-    // <div className='max-h-[40px] md:max-h-[66px] bg-white text-center'>
     <div className='footer-main'>
       <img src="images/svg/footer-logo.svg" alt="footer-logo" />
-      <p>© 2023 Learners University College  l All Rights Reserved <br/><a href="https://www.learnersuae.com/privacy-policy/" target='_blank'>| Privacy Policy |</a> </p>
-      <h6 className='text-[11px] md:text-[14px] '>Landing Page & Digital Marketing By <a href='https://webqmedia.com/' target='_blank' className='highlight-green'>WebQ Media</a></h6>
+      <p>© {currentYear} Learners University College  l All Rights Reserved <br/><a href="https://www.learnersuae.com/privacy-policy/" target='_blank' rel="noopener noreferrer">| Privacy Policy |</a> </p>
+      <h6 className='text-[11px] md:text-[14px] '>Landing Page & Digital Marketing By <a href='https://webqmedia.com/' target='_blank' rel="noopener noreferrer" className='highlight-green'>WebQ Media</a></h6>
     </div>
   )
 }

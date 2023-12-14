@@ -158,109 +158,124 @@ function popup({ closePopup }) {
           />
         </svg>
         {!downloadStarted ? (
-      <div>
-        <h1>Get Instant Access To The SSM MBA Brochure</h1>
-        <p className="popup-main-description">
-          Get an inside look at our prestigious programs, faculty, and the unique benefits that set us apart in the business education landscape.
-        </p>
-        <div className="popup-sub">
-          <form className="popup-form" onSubmit={handleSubmit}>
-            <h5>Name</h5>
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter your name here"
-              value={formData.name}
-              onChange={handleChange}
-            />
-            {errors.name && (
-              <p
-                className="error"
-                style={{
-                  color: "#8e9abe",
-                  fontSize: "15px",
-                  marginTop: "5px",
-                  lineHeight: "20px",
-                }}
-              >
-                {errors.name}
-              </p>
-            )}
-            <h5>Email</h5>
-            <input
-              type="text"
-              name="email"
-              placeholder="Enter your Email here"
-              value={formData.email}
-              onChange={handleChange}
-            />
-            {errors.email && (
-              <p
-                className="error"
-                style={{ color: "red", fontSize: "15px", marginTop: "5px" }}
-              >
-                {errors.email}
-              </p>
-            )}
-            <h5>Phone</h5>
-            <PhoneInput
-              country={"ae"}
-              value={formData.phone}
-              placeholder={"Enter your Phone Number"}
-              onChange={(phone) => setFormData({ ...formData, phone: phone })}
-            />
-            <button
-              type="submit"
-              disabled={!isFormComplete}
-              style={{
-                backgroundColor: isFormComplete ? "#259D4A" : "#cccccc",
-                color: isFormComplete ? "white" : "grey",
-                cursor: isFormComplete ? "pointer" : "not-allowed",
-                // other styles
-              }}
-            >
-              {isLoading ? (
-                <ClipLoader color={"#ffffff"} size={20} />
-              ) : (
-                "Download My Free Brochure"
-              )}
-            </button>
-            <p>
-              🔒 We respect your privacy & promise never to rent or share your
-              details with anybody without your consent
+          <div>
+            <h1>Get Instant Access To The SSM MBA Brochure</h1>
+            <p className="popup-main-description">
+              Get an inside look at our prestigious programs, faculty, and the
+              unique benefits that set us apart in the business education
+              landscape.
             </p>
-          </form>
-          <div className="popup-img">
-            <img
-              className="popup-img-desktop"
-              src="images/popup-img.webp"
-              alt=""
-            />
-            <img
-              className="popup-img-mob"
-              src="images/popup-img-mob.webp"
-              alt=""
-            />
-          </div>
-        </div>
-        </div>
-          ) : (
-            <CSSTransition
-        in={downloadStarted}
-        timeout={1000}
-        classNames="fades"
-        unmountOnExit
-      >
-            <div className="popup-thank-you">
-            <h2><span className="text-[#4FD97A]">Thank You</span> for Requesting Our Brochure!</h2>
-            <p>Your brochure will be sent to your email and WhatsApp inbox within the next 5 minutes. For immediate assistance or any queries, please click the button below to chat with us directly.</p>
-            <a href="https://wa.me/+971504181328" target="_blank" rel="noopener noreferrer">
-            <div className="thank-you-button">
-              <img src="images/svg/WhatsApp_icon.svg" alt="whatsapp_img" />
-              <h6>Chat With Us</h6>
+            <div className="popup-sub">
+              <form className="popup-form" onSubmit={handleSubmit}>
+                <h5>Name</h5>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Enter your name here"
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+                {errors.name && (
+                  <p
+                    className="error"
+                    style={{
+                      color: "#8e9abe",
+                      fontSize: "15px",
+                      marginTop: "5px",
+                      lineHeight: "20px",
+                    }}
+                  >
+                    {errors.name}
+                  </p>
+                )}
+                <h5>Email</h5>
+                <input
+                  type="text"
+                  name="email"
+                  placeholder="Enter your Email here"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+                {errors.email && (
+                  <p
+                    className="error"
+                    style={{ color: "red", fontSize: "15px", marginTop: "5px" }}
+                  >
+                    {errors.email}
+                  </p>
+                )}
+                <h5>Phone</h5>
+                <PhoneInput
+                  country={"ae"}
+                  value={formData.phone}
+                  placeholder={"Enter your Phone Number"}
+                  onChange={(phone) =>
+                    setFormData({ ...formData, phone: phone })
+                  }
+                />
+                <button
+                  type="submit"
+                  disabled={!isFormComplete}
+                  style={{
+                    backgroundColor: isFormComplete ? "#259D4A" : "#cccccc",
+                    color: isFormComplete ? "white" : "grey",
+                    cursor: isFormComplete ? "pointer" : "not-allowed",
+                    // other styles
+                  }}
+                >
+                  {isLoading ? (
+                    <ClipLoader color={"#ffffff"} size={20} />
+                  ) : (
+                    "Download My Free Brochure"
+                  )}
+                </button>
+                <p>
+                  🔒 We respect your privacy & promise never to rent or share
+                  your details with anybody without your consent
+                </p>
+              </form>
+              <div className="popup-img">
+                <img
+                  className="popup-img-desktop"
+                  src="images/popup-img.webp"
+                  alt=""
+                />
+                <img
+                  className="popup-img-mob"
+                  src="images/popup-img-mob.webp"
+                  alt=""
+                />
+              </div>
             </div>
-            </a>
           </div>
+        ) : (
+          <CSSTransition
+            in={downloadStarted}
+            timeout={1000}
+            classNames="fades"
+            unmountOnExit
+          >
+            <div className="popup-thank-you">
+              <h2>
+                <span className="text-[#4FD97A]">Thank You</span> for Requesting
+                Our Brochure!
+              </h2>
+              <p>
+                Your brochure will be sent to your email and WhatsApp inbox
+                within the next 5 minutes. For immediate assistance or any
+                queries, please click the button below to chat with us directly.
+              </p>
+              <a
+                href="https://wa.me/+971504181328"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="thank-you-button">
+                  <img src="images/svg/WhatsApp_icon.svg" alt="whatsapp_img" />
+                  <h6>Chat With Us</h6>
+                </div>
+              </a>
+            </div>
           </CSSTransition>
         )}
       </div>

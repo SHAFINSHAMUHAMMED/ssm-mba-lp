@@ -189,6 +189,7 @@ button {
   cursor: pointer;
   z-index: 1000;
 }
+
 .sticky-whatsapp-button img {
   width: 125px;
 }
@@ -1366,8 +1367,9 @@ button {
   background-size: contain;
   height: 232px;
 }
+
 .successfull-graduate-pattern-2 {
-display: none;
+  display: none;
 }
 
 .successful-graduates-carousel {
@@ -1758,6 +1760,30 @@ display: none;
   font-size: 25px;
 }
 
+.custom-select {
+  width: 700px;
+  position: relative;
+  display: inline-block;
+
+}
+
+.custom-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.custom-select::after {
+  content: '▼';
+  color: #3e3f3f;
+  position: absolute;
+  right: 05%;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+
 .icf-form input::placeholder {
   font-size: 25px;
   color: #5B5454;
@@ -2097,10 +2123,12 @@ display: none;
   text-align: center;
   padding: 30px 0px 32px 0px;
 }
+
 .footer-main img {
   width: 285px;
   height: 71px;
 }
+
 .footer-main p {
   color: #0B434B;
   padding-bottom: 14px;
@@ -2327,11 +2355,13 @@ display: none;
   .header-section-2-contact div {
     display: none;
   }
+
   .sticky-whatsapp-button {
     position: fixed;
     right: 20px;
     bottom: 20px;
   }
+
   .sticky-whatsapp-button img {
     width: 105px;
   }
@@ -3216,11 +3246,13 @@ display: none;
     margin-bottom: 21px;
     padding: 0px 0px 0px 0px;
   }
+
   .successfull-graduate-pattern-1 {
     height: 132px;
   }
+
   .successfull-graduate-pattern-2 {
-  display: none;
+    display: none;
   }
 
   .successful-graduates-carousel {
@@ -3425,7 +3457,8 @@ display: none;
     font-size: 16px;
   }
 
-  .icf-form input {
+  .icf-form input,
+  .icf-form select {
     width: 100%;
     border-radius: 40px;
     padding: 15px 30px 20px 30px;
@@ -3433,6 +3466,13 @@ display: none;
     margin-top: 16px;
     font-size: 16px;
   }
+  .custom-select {
+    width: 100%;
+  }
+  .custom-select::after {
+    font-size: 10px;
+  }
+
 
   .icf-form input::placeholder {
     font-size: 16px;
@@ -3731,6 +3771,7 @@ display: none;
     bottom: 10px;
     z-index: 1000;
   }
+
   .sticky-whatsapp-button img {
     width: 85px;
   }
@@ -4629,17 +4670,19 @@ display: none;
     margin-bottom: 21px;
     padding: 0px 0px 0px 0px;
   }
+
   .successfull-graduate-pattern-1 {
-  display: none;
-   
+    display: none;
+
   }
+
   .successfull-graduate-pattern-2 {
     display: block;
-  background-image: url("images/svg/GraphicPatter5-mob.svg");
-  /* background-position: top; */
-  background-repeat: repeat-x;
-  background-size: contain;
-  height: 121px;
+    background-image: url("images/svg/GraphicPatter5-mob.svg");
+    /* background-position: top; */
+    background-repeat: repeat-x;
+    background-size: contain;
+    height: 121px;
   }
 
   .successful-graduates-carousel {
@@ -4864,16 +4907,18 @@ display: none;
   }
 
   .icf-form p {
-    font-size: 16px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
   }
 
-  .icf-form input {
-    width: 100%;
-    border-radius: 40px;
-    padding: 15px 30px 20px 30px;
-    margin-bottom: 16px;
-    margin-top: 16px;
-    font-size: 16px;
+  .icf-form input,
+  .icf-form select {
+    border: 0.5px solid rgba(0, 0, 0, 0.47);
+  }
+
+  .custom-select::after {
+    font-size: 8px;
   }
 
   .icf-form input::placeholder {
@@ -5081,10 +5126,12 @@ display: none;
   .footer-main {
     padding: 20px 0px 22px 0px;
   }
+
   .footer-main img {
     width: 204px;
     height: 50px;
   }
+
   .footer-main p {
     padding-top: 7px;
     padding-bottom: 8px;
@@ -5106,13 +5153,16 @@ display: none;
     width: 30px;
     height: 30px;
   }
+
   .sticky-whatsapp-button {
     right: 12px;
     bottom: 5px;
   }
+
   .sticky-whatsapp-button img {
     width: 65px;
   }
+
   .Hero-Headline {
     font-size: 40px;
     line-height: 40px;
