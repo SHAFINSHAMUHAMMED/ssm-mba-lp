@@ -111,6 +111,7 @@ const MultiStepForm = () => {
     "MBA in Healthcare Management ",
     "MBA in Human Resources ",
     "MBA in Marketing ",
+    "MBA in Supply Chain Management"
 
     // Add optins
   ];

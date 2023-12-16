@@ -36,6 +36,11 @@ function Player() {
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
         onEnded={() => setPlaying(false)}
+        config={{
+          youtube: {
+            playerVars: { rel: 0, modestbranding: 1 }
+          }
+        }}
       />
       </Suspense>
       {!playing && (

@@ -1,5 +1,8 @@
 /* Review section */
 
+.review-section-main {
+  margin-top: 80px;
+}
 .review-section-main h1 {
   max-width: 791px;
   margin: auto;
@@ -10,7 +13,7 @@
 
 .review-video-main {
   max-width: 90%;
-  height: 708px;
+  height: 100%;
   margin: auto;
   margin-top: 53px;
   position: relative;
@@ -25,8 +28,15 @@
   border-radius: 50px;
   overflow: hidden;
   height: 100%;
+  width: 100%;
+  position: relative;
+  padding-top: 40.25%;
+  z-index: 0;
 }
-
+.player-container iframe {
+  width: 100%;
+  height: 100%;
+}
 .player-container svg {
   width: 140px;
   height: 140px;
@@ -72,10 +82,12 @@
 
 .custom-prev-button {
   left: -30px;
+  z-index: 5;
 }
 
 .custom-next-button {
   right: -30px;
+  z-index: 5;
 }
 
 .review-video-sub {
@@ -186,8 +198,11 @@
 }
 
 @media only screen and (max-width: 1180px) {
+  .review-section-main {
+    margin-top: 50px;
+  }
   .review-section-main h1 {
-    max-width: 791px;
+    max-width: 90%;
     margin: auto;
     text-align: center;
     padding: 0px 10px 0px 10px;
@@ -310,9 +325,11 @@
 @media only screen and (max-width: 640px) {
 
   /* review-section-main */
-
+  .review-section-main {
+    margin-top: 30px;
+  }
   .review-section-main h1 {
-    max-width: 283px;
+    max-width: 90%;
     padding: 0px 0px 0px 0px;
   }
 
@@ -325,8 +342,9 @@
   .player-container {
     border-radius: 18px;
     height: 100%;
+    padding-top: 56.25%;
   }
-
+ 
   .player-container svg {
     width: 76px;
     height: 76px;

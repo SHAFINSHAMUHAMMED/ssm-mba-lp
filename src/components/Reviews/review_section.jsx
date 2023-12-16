@@ -12,6 +12,7 @@ import { BounceLoader } from "react-spinners";
 import videoThumb1 from "../../assets/videoThumb1.webp";
 import videoThumb2 from "../../assets/videoThumb2.webp";
 import videoThumb3 from "../../assets/videoThumb3.webp";
+import videoThumb4 from "../../assets/videoThumb4.webp";
 import stars_review from "../../assets/svg/stars-review.svg";
 import verified_review from "../../assets/svg/verified-review.svg";
 
@@ -138,16 +139,18 @@ function ReviewSection() {
           </svg>
         </button>
         <div className="player-container">
-          <Suspense fallback={<Loader />}>
-            <ReactPlayer
-              url={currentVideoUrl}
-              playing={playing}
-              width="100%"
-              height="100%"
-              onPlay={() => setPlaying(true)}
-              onPause={() => setPlaying(false)}
-              onEnded={() => setPlaying(false)}
-            />
+  <Suspense fallback={<Loader />}>
+    <ReactPlayer
+      url={currentVideoUrl}
+      playing={playing}
+      controls={true}
+      width="100%"
+      height="100%"
+      style={{ position: "absolute", top: "0", left: "0", backgroundColor:'black' }}
+      onPlay={() => setPlaying(true)}
+      onPause={() => setPlaying(false)}
+      onEnded={() => setPlaying(false)}
+    />
           </Suspense>
           {!playing && (
             <div className="custom-play-button" onClick={handlePlayPause}>
@@ -308,11 +311,11 @@ function ReviewSection() {
               className="review-video-sub-card"
               onClick={() =>
                 handleCardClick(
-                  "https://youtu.be/LJ-LdPUnywM?si=PZr2husnFLlRF4Q4"
+                  "https://vimeo.com/763299013"
                 )
               }
             >
-              <img className=" sm:w-auto" src={videoThumb1} alt="" />
+              <img className=" sm:w-auto" src={videoThumb4} alt="" />
               <svg
                 className="play-button"
                 xmlns="http://www.w3.org/2000/svg"

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import './popup.css'
 import { usePopup } from "../Hoocks/PopupContext";
 import ClipLoader from "react-spinners/ClipLoader";
 import "react-phone-input-2/lib/style.css";

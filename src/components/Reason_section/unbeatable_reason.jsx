@@ -15,7 +15,7 @@ function unbeatable_reason() {
     <div className="unbeatable-main bg-backgrounds-lightGreenBlue">
       <h1 className="text-center">
         <span className="highlight-green"> 5 Unbeatable</span>{" "}
-        <span className="highlight-green">Reasons</span> To Get An MBA In 2023
+        <span className="highlight-green">Reasons</span> To Get An MBA In 2024
       </h1>
       <div className="unbeatable-video-main">
         <div className="unbeatable-video-player">

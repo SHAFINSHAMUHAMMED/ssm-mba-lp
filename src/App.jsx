@@ -97,15 +97,15 @@ function App() {
           <Hero />
           <StickyWhatsAppButton />
           <Carousel />
+          <UnbeatableReason />
+          <AluminiCarousel />
           <SwissSchool />
           <ProgramHighlights />
           <Accreditations />
-          <UnbeatableReason />
           {/* <PowerSkills /> */}
-          <UaeProfessionals />
-          <AluminiCarousel />
-          <WorldOfPossibilities />
           <ReviewSection />
+          <UaeProfessionals />
+          <WorldOfPossibilities />
           <SuccessfulGraduates />
           <StepsToUnlockCareer />
           <StudentSupport />
