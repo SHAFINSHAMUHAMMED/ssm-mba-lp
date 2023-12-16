@@ -6,6 +6,15 @@ import 'aos/dist/aos.css'
 import Popup from "../Popup_page/popup";
 import { usePopup } from "../Hoocks/PopupContext";
 
+import university_icon_large from "../../assets/svg/university-icon-large.svg";
+import up_graph from "../../assets/svg/up-graph-icon.svg";
+import sales_icon from "../../assets/svg/sales-icon.svg";
+import target2 from "../../assets/svg/target-2-icon.svg";
+import scolar from "../../assets/svg/scolar-icon.svg";
+import dotted from "../../assets/svg/dottet-curve-icon.svg";
+import swisMba from "../../assets/swiss-mba.webp";
+import swisMbaTab from "../../assets/swiss-mba-tab.webp";
+
 function world_of_possibilities() {
 
   const { isPopupOpen, togglePopup } = usePopup();
@@ -25,7 +34,7 @@ function world_of_possibilities() {
         <div className="world-of-possibilities-sub-1">
           <img
             className="w-[316px] h-[316px] breathing-image"
-            src="images/svg/university-icon-large.svg"
+            src={university_icon_large}
             alt=""
           />
           <div className="world-of-possibilities-cards ">
@@ -352,33 +361,33 @@ function world_of_possibilities() {
           <div className="world-of-possibilities-icons" >
             <img
               className="world-of-possibilities-icon-1 "
-              src="images/svg/up-graph-icon.svg"
+              src={up_graph}
               alt=""
             />
             <img
               className="world-of-possibilities-icon-2 animated-icon2"
-              src="images/svg/sales-icon.svg"
+              src={sales_icon}
               alt=""
               data-aos="fade-in"
               data-aos-delay="800"
             />
             <img
               className="world-of-possibilities-icon-3 animated-icon2"
-              src="images/svg/target-2-icon.svg"
+              src={target2}
               alt=""
               data-aos="fade-in"
               data-aos-delay="0"
             />
             <img
               className="world-of-possibilities-icon-4 animated-icon2"
-              src="images/svg/scolar-icon.svg"
+              src={scolar}
               alt=""
               data-aos="fade-in"
               data-aos-delay="400"
             />
             <img 
             className="world-of-possibilities-icon-dot" 
-            src="images/svg/dottet-curve-icon.svg" 
+            src={dotted} 
             alt="" 
             />
           </div>
@@ -421,8 +430,8 @@ function world_of_possibilities() {
             </a>
           </div>
         </div>
-        <img className='swiss-img-1' src="images/swiss-mba.webp" alt="" />
-        <img className='swiss-img-2' src="images/swiss-mba-tab.webp" alt="" />
+        <img className='swiss-img-1' src={swisMba} alt="" />
+        <img className='swiss-img-2' src={swisMbaTab} alt="" />
       </div>
       {isPopupOpen && <Popup  />}
     </div>

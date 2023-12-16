@@ -5,7 +5,7 @@ import PhoneInput from 'react-phone-input-2';
 import { FaPhone } from 'react-icons/fa';
 import Lottie from "lottie-react";
 import { ClipLoader } from 'react-spinners';
-import arrow from "../../../public/images/arrow.json"
+import arrow from "../../assets/arrow.json"
 import MultiStepProgressBar from "../Progress_bar/MultiStepProgressBar";
 
 

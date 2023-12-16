@@ -1,6 +1,12 @@
 import React from "react";
 import MultiStepForm from "../Form/MultiStepForm";
 
+import GraphicPattern4 from "../../assets/svg/GraphicPatter4.svg";
+import GraphicPattern_mob from "../../assets/svg/graphicPattern-last-mob.svg";
+import icf_banner from "../../assets/icf-certification-banner.webp";
+import bottom_man from "../../assets/bottom-man.webp";
+import bottom_manMob from "../../assets/bottom-man-mob.webp";
+
 function icf_certification() {
   const currentDate = new Date();
 
@@ -24,12 +30,12 @@ function icf_certification() {
     <div className="icf-certification-main">
       <img
         className="icf-certification-pattern-1"
-        src="images/svg/GraphicPatter4.svg"
+        src={GraphicPattern4}
         alt=""
       />
       <img
         className=" icf-certification-pattern-2"
-        src="images/svg/graphicPattern-last-mob.svg"
+        src={GraphicPattern_mob}
         alt=""
       />
       <div className="icf-certification-sub">
@@ -48,22 +54,13 @@ function icf_certification() {
           Certified Career Coach & Get{" "}
           <span className="wavy-underline-green">Scholarships</span>{" "}
           <span className="wavy-underline-green"> Of Upto 30%</span> <br />
-         
         </h1>
-        <img src="images/icf-certification-banner.webp" alt="" />
+        <img src={icf_banner} alt="" />
         <MultiStepForm />
       </div>
       <div className="bottom-man-image-div">
-        <img
-          className="bottom-man-image-1 "
-          src="images/bottom-man.webp"
-          alt=""
-        />
-        <img
-          className="bottom-man-image-2"
-          src="images/bottom-man-mob.webp"
-          alt=""
-        />
+        <img className="bottom-man-image-1 " src={bottom_man} alt="" />
+        <img className="bottom-man-image-2" src={bottom_manMob} alt="" />
       </div>
     </div>
   );

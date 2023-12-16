@@ -8,6 +8,21 @@ import Claim_description from "../Description/claim_description";
 import { usePopup } from "../Hoocks/PopupContext";
 import { BounceLoader } from "react-spinners";
 
+import videoThumb1 from "../../assets/videoThumb1.webp";
+import videoThumb2 from "../../assets/videoThumb2.webp";
+import videoThumb3 from "../../assets/videoThumb3.webp";
+import stars_review from "../../assets/svg/stars-review.svg";
+import verified_review from "../../assets/svg/verified-review.svg";
+
+import chef from "../../assets/chef.png";
+import albin from "../../assets/albinBaby.png";
+import hisham from "../../assets/hisham.png";
+import rosette from "../../assets/rosette.png";
+import bijuraj from "../../assets/bijuraj.png";
+import gwendolyne from "../../assets/gwendolyne.png";
+import vaishak from "../../assets/vaishak.png";
+import alice from "../../assets/alice.png";
+
 const ReactPlayer = React.lazy(() => import("react-player"));
 
 function Loader() {
@@ -211,7 +226,7 @@ function ReviewSection() {
             >
               <img
                 className=" sm:w-auto"
-                src="images/videoThumb1.webp"
+                src={videoThumb1}
                 alt=""
               />
               <svg
@@ -244,7 +259,7 @@ function ReviewSection() {
             >
               <img
                 className=" sm:w-auto"
-                src="images/videoThumb2.webp"
+                src={videoThumb2}
                 alt=""
               />
               <svg
@@ -277,7 +292,7 @@ function ReviewSection() {
             >
               <img
                 className=" sm:w-auto"
-                src="images/videoThumb3.webp"
+                src={videoThumb3}
                 alt=""
               />
               <svg
@@ -310,7 +325,7 @@ function ReviewSection() {
             >
               <img
                 className=" sm:w-auto"
-                src="images/videoThumb1.webp"
+                src={videoThumb1}
                 alt=""
               />
               <svg
@@ -361,7 +376,7 @@ function ReviewSection() {
                 </svg>
                 <img
                   className="review-star"
-                  src="images/svg/stars-review.svg"
+                  src={stars_review}
                   alt=""
                 />
               </div>
@@ -379,14 +394,14 @@ function ReviewSection() {
                 <div className="flex gap-2 items-center">
                   <img
                     className="review-user-icon"
-                    src="images/chef.png"
+                    src={chef}
                     alt=""
                   />
                   <h5>Chef Jayaweera</h5>
                 </div>
                 <img
                   className="review-verified"
-                  src="images/svg/verified-review.svg"
+                  src={verified_review}
                   alt=""
                 />
               </div>
@@ -412,7 +427,7 @@ function ReviewSection() {
                 </svg>
                 <img
                   className="review-star"
-                  src="images/svg/stars-review.svg"
+                  src={stars_review}
                   alt=""
                 />
               </div>
@@ -429,7 +444,7 @@ function ReviewSection() {
                 <div className="flex gap-2 items-center">
                   <img
                     className="review-user-icon"
-                    src="images/albinBaby.png"
+                    src={albin}
                     alt=""
                   />
 
@@ -437,7 +452,7 @@ function ReviewSection() {
                 </div>
                 <img
                   className="review-verified"
-                  src="images/svg/verified-review.svg"
+                  src={verified_review}
                   alt=""
                 />
               </div>
@@ -463,7 +478,7 @@ function ReviewSection() {
                 </svg>
                 <img
                   className="review-star"
-                  src="images/svg/stars-review.svg"
+                  src={stars_review}
                   alt=""
                 />
               </div>
@@ -481,14 +496,14 @@ function ReviewSection() {
                 <div className="flex gap-2 items-center">
                   <img
                     className="review-user-icon"
-                    src="images/hisham.png"
+                    src={hisham}
                     alt=""
                   />
                   <h5>Hisham</h5>
                 </div>
                 <img
                   className="review-verified"
-                  src="images/svg/verified-review.svg"
+                  src={verified_review}
                   alt=""
                 />
               </div>
@@ -514,7 +529,7 @@ function ReviewSection() {
                 </svg>
                 <img
                   className="review-star"
-                  src="images/svg/stars-review.svg"
+                  src={stars_review}
                   alt=""
                 />
               </div>
@@ -530,14 +545,14 @@ function ReviewSection() {
                 <div className="flex gap-2 items-center">
                   <img
                     className="review-user-icon"
-                    src="images/rosette.png"
+                    src={rosette}
                     alt=""
                   />
                   <h5>Rosette Leano</h5>
                 </div>
                 <img
                   className="review-verified"
-                  src="images/svg/verified-review.svg"
+                  src={verified_review}
                   alt=""
                 />
               </div>
@@ -567,7 +582,7 @@ function ReviewSection() {
                 </svg>
                 <img
                   className="review-star"
-                  src="images/svg/stars-review.svg"
+                  src={stars_review}
                   alt=""
                 />
               </div>
@@ -582,14 +597,14 @@ function ReviewSection() {
                 <div className="flex gap-2 items-center">
                   <img
                     className="review-user-icon"
-                    src="images/bijuraj.png"
+                    src={bijuraj}
                     alt=""
                   />
                   <h5>Bijuraj k</h5>
                 </div>
                 <img
                   className="review-verified"
-                  src="images/svg/verified-review.svg"
+                  src={verified_review}
                   alt=""
                 />
               </div>
@@ -615,7 +630,7 @@ function ReviewSection() {
                 </svg>
                 <img
                   className="review-star"
-                  src="images/svg/stars-review.svg"
+                  src={stars_review}
                   alt=""
                 />
               </div>
@@ -631,14 +646,14 @@ function ReviewSection() {
                 <div className="flex gap-2 items-center">
                   <img
                     className="review-user-icon"
-                    src="images/gwendolyne.png"
+                    src={gwendolyne}
                     alt=""
                   />
                   <h5>Gwendolyne Quinn</h5>
                 </div>
                 <img
                   className="review-verified"
-                  src="images/svg/verified-review.svg"
+                  src={verified_review}
                   alt=""
                 />
               </div>
@@ -664,7 +679,7 @@ function ReviewSection() {
                 </svg>
                 <img
                   className="review-star"
-                  src="images/svg/stars-review.svg"
+                  src={stars_review}
                   alt=""
                 />
               </div>
@@ -682,14 +697,14 @@ function ReviewSection() {
                 <div className="flex gap-2 items-center">
                   <img
                     className="review-user-icon"
-                    src="images/vaishak.png"
+                    src={vaishak}
                     alt=""
                   />
                   <h5>Vaisakh Panezhath</h5>
                 </div>
                 <img
                   className="review-verified"
-                  src="images/svg/verified-review.svg"
+                  src={verified_review}
                   alt=""
                 />
               </div>
@@ -715,7 +730,7 @@ function ReviewSection() {
                 </svg>
                 <img
                   className="review-star"
-                  src="images/svg/stars-review.svg"
+                  src={stars_review}
                   alt=""
                 />
               </div>
@@ -734,14 +749,14 @@ function ReviewSection() {
                 <div className="flex gap-2 items-center">
                   <img
                     className="review-user-icon"
-                    src="images/alice.png"
+                    src={alice}
                     alt=""
                   />
                   <h5>Alice Joanna</h5>
                 </div>
                 <img
                   className="review-verified"
-                  src="images/svg/verified-review.svg"
+                  src={verified_review}
                   alt=""
                 />
               </div>

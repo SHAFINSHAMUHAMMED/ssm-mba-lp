@@ -2,6 +2,18 @@ import React from 'react'
 import ButtonDark from '../Buttons/buttonDark';
 import Marquee from 'react-fast-marquee';
 import Claim_description from '../Description/claim_description';
+
+import iao1 from "../../assets/svg/Accredit-iao-1-icon.svg"
+import iao from "../../assets/svg/Accredit-iao-icon.svg"
+import eduqua from "../../assets/svg/Accredit-eduqua-icon.svg"
+import usrLazio from "../../assets/svg/Accredit-usr-lazio-icon.svg"
+import businet from "../../assets/svg/Accredit-businet-icon.svg"
+import chea from "../../assets/svg/Accredit-chea-icon.svg"
+import xila from "../../assets/svg/Accredit-xila-icon.svg"
+import indian from "../../assets/svg/Accredit-indian-icon.svg"
+
+
+
 function acreditions() {
   return (
     <div class="accredit-main">
@@ -12,32 +24,32 @@ function acreditions() {
     <Marquee speed={200}>
     <div class="accredit-cards">
       <div class="accredit-card">
-        <img src="images/svg/Accredit-iao-1-icon.svg" alt="" />
+        <img src={iao1} alt="" />
       </div>
       <div class="accredit-card">
-        <img src="images/svg/Accredit-iao-icon.svg" alt="" />
+        <img src={iao} alt="" />
       </div>
       <div class="accredit-card">
-        <img src="images/svg/Accredit-eduqua-icon.svg" alt="" />
+        <img src={eduqua} alt="" />
       </div>
       <div class="accredit-card">
-        <img src="images/svg/Accredit-usr-lazio-icon.svg" alt="" />
+        <img src={usrLazio} alt="" />
       </div>
       <div class="accredit-card">
-        <img src="images/svg/Accredit-businet-icon.svg" alt="" />
+        <img src={businet} alt="" />
       </div>
      
       <div class="accredit-card">
-        <img src="images/svg/Accredit-chea-icon.svg" alt="" />
+        <img src={chea} alt="" />
       </div>
       <div class="accredit-card">
-        <img src="images/svg/Accredit-iao-1-icon.svg" alt="" />
+        <img src={iao1} alt="" />
       </div>
       <div class="accredit-card">
-        <img src="images/svg/Accredit-xila-icon.svg" alt="" />
+        <img src={xila} alt="" />
       </div>
       <div class="accredit-card">
-        <img src="images/svg/Accredit-indian-icon.svg" alt="" />
+        <img src={indian} alt="" />
       </div>
     </div>
     </Marquee>
@@ -48,44 +60,44 @@ function acreditions() {
     <Marquee>
     <div class="accredit-cards">
       <div class="accredit-card">
-        <img className='accredit-card-img' src="images/svg/Accredit-iao-1-icon.svg" alt="" />
+        <img className='accredit-card-img' src={iao1} alt="" />
       </div>
       <div class="accredit-card">
-        <img className='accredit-card-img' src="images/svg/Accredit-iao-icon.svg" alt="" />
+        <img className='accredit-card-img' src={iao} alt="" />
       </div>
       <div class="accredit-card">
-        <img className='accredit-card-img' src="images/svg/Accredit-eduqua-icon.svg" alt="" />
+        <img className='accredit-card-img' src={eduqua} alt="" />
       </div>
       <div class="accredit-card">
-        <img className='accredit-card-img' src="images/svg/Accredit-usr-lazio-icon.svg" alt="" />
+        <img className='accredit-card-img' src={usrLazio} alt="" />
       </div>
       <div class="accredit-card">
-        <img className='accredit-card-img' src="images/svg/Accredit-indian-icon.svg" alt="" />
+        <img className='accredit-card-img' src={indian} alt="" />
       </div>
       <div class="accredit-card">
-        <img className='accredit-card-img' src="images/svg/Accredit-businet-icon.svg" alt="" />
+        <img className='accredit-card-img' src={businet} alt="" />
       </div>
     </div>
     </Marquee>
     <Marquee direction='right'>
     <div class="accredit-cards">
     <div class="accredit-card">
-        <img className='accredit-card-img' src="images/svg/Accredit-iao-1-icon.svg" alt="" />
+        <img className='accredit-card-img' src={iao1} alt="" />
       </div>
       <div class="accredit-card">
-        <img className='accredit-card-img' src="images/svg/Accredit-usr-lazio-icon.svg" alt="" />
+        <img className='accredit-card-img' src={usrLazio} alt="" />
       </div>
       <div class="accredit-card">
-        <img className='accredit-card-img' src="images/svg/Accredit-chea-icon.svg" alt="" />
+        <img className='accredit-card-img' src={chea} alt="" />
       </div>
       <div class="accredit-card">
-        <img className='accredit-card-img' src="images/svg/Accredit-xila-icon.svg" alt="" />
+        <img className='accredit-card-img' src={xila} alt="" />
       </div>
       <div class="accredit-card">
-        <img className='accredit-card-img' src="images/svg/Accredit-businet-icon.svg" alt="" />
+        <img className='accredit-card-img' src={businet} alt="" />
       </div>
       <div class="accredit-card">
-        <img className='accredit-card-img' src="images/svg/Accredit-indian-icon.svg" alt="" />
+        <img className='accredit-card-img' src={indian} alt="" />
       </div>
     </div>
     </Marquee>

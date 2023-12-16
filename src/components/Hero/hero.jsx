@@ -4,6 +4,13 @@ import Popup from "../Popup_page/popup";
 import Typed from "typed.js";
 import { usePopup } from "../Hoocks/PopupContext";
 
+import target from '../../assets/svg/target.svg'
+import bagIcon from "../../assets/svg/bag-icon.svg" 
+import graphIcon2 from "../../assets/svg/graph-icon2.svg"
+import rankIcon from "../../assets/svg/rank-icon.svg"
+import graphicPattern from "../../assets/svg/GraphicPattern.svg"
+import graphicPatternMob from "../../assets/svg/GraphicPattern-mob.svg"
+
 function hero() {
   const el = useRef(null);
   const { isPopupOpen, togglePopup } = usePopup();
@@ -33,7 +40,7 @@ function hero() {
               <div className="subheding-icon">
               <img
                 className="w-[36px] h-[36px] md:w-[54px] md:h-[54px]"
-                src="images/svg/target.svg"
+                src={target}
                 alt=""
               />
               </div>
@@ -84,17 +91,17 @@ function hero() {
             <div className="hero-icons-main">
               <img
                 className="bag-icon animated-icon-1"
-                src="images/svg/bag-icon.svg"
+                src={bagIcon}
                 alt=""
               />
               <img
                 className="graph-icon2 animated-icon-2"
-                src="images/svg/graph-icon2.svg"
+                src={graphIcon2}
                 alt=""
               />
               <img
                 className="rank-icon animated-icon-3"
-                src="images/svg/rank-icon.svg"
+                src={rankIcon}
                 alt=""
               />
             </div>
@@ -103,12 +110,12 @@ function hero() {
       </div>
       <img
         className={`graphic-devider hidden sm:block ${isPopupOpen ? 'blur-effect' : ''} `}
-        src="images/svg/GraphicPattern.svg"
+        src={graphicPattern}
         alt=""
       />
       <img
         className={`graphic-devider block sm:hidden  ${isPopupOpen ? 'blur-effect' : ''}`}
-        src="images/svg/GraphicPattern-mob.svg"
+        src={graphicPatternMob}
         alt=""
       />
       {isPopupOpen && <Popup closePopup={togglePopup} />}

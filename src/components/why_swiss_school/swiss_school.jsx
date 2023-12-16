@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Lottie from "lottie-react";
-import graph from "../../../public/images/TopRankedSMSLottie.json";
+import graph from "../../assets/TopRankedSMSLottie.json";
 import { usePopup } from "../Hoocks/PopupContext";
 
 function swiss_school() {

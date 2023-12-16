@@ -1,4 +1,5 @@
 import React from 'react';
+import whatspp_icon from "../../assets/svg/whatsapp-chat.svg";
 
 function StickyWhatsAppButton() {
 
@@ -8,7 +9,7 @@ function StickyWhatsAppButton() {
 
   return (
     <div className="sticky-whatsapp-button" onClick={handleClick}>
-      <img src="images/svg/whatsapp-chat.svg" alt="" />
+      <img src={whatspp_icon} alt="whatsapp" />
     </div>
   );
 }

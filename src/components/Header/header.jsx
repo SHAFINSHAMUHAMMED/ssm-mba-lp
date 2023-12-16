@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { usePopup } from "../Hoocks/PopupContext";
 
+import logo from "../../assets/svg/logo.svg"
+
 function header() {
   const [showStickyDiv, setShowStickyDiv] = useState(false);
   const { isPopupOpen, togglePopup } = usePopup();
@@ -48,7 +50,7 @@ function header() {
           <div className="flex justify-between  sm:ps-0 sm:pe-0 sm:pb-5">
             <img
               className="w-[204px] h-[53px] sm:w-[220px] md:h-[66px]"
-              src="images/svg/logo.svg"
+              src={logo}
               alt=""
             />
             <div className="header-section-contact">
@@ -93,7 +95,7 @@ function header() {
           <div className="header-section-2-sub ">
             <img
               className="header-section-2-logo"
-              src="images/svg/logo.svg"
+              src={logo}
               alt=""
             />
             <div className="header-section-2-contact">

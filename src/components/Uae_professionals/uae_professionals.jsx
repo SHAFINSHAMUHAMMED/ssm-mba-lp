@@ -1,6 +1,10 @@
 import React from "react";
 import { Link, Element } from "react-scroll";
 
+import professionalsMobile from '../../assets/professionals-mobile.webp'
+import professionals2 from '../../assets/professionals.webp'
+
+
 function uae_professionals() {
  
   return (
@@ -14,7 +18,7 @@ function uae_professionals() {
           </h1>
           <img
           className="uae-professionals-img-1"
-          src="images/professionals-mobile.webp"
+          src={professionalsMobile}
           alt=""
         />
           <p className="uae-professional-p">
@@ -53,7 +57,7 @@ function uae_professionals() {
         </div>
         <img
           className=" uae-professionals-img-2"
-          src="images/professionals.webp"
+          src={professionals2}
           alt=""
         />
       </div>

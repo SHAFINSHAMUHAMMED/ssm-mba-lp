@@ -185,7 +185,7 @@ button {
 .sticky-whatsapp-button {
   position: fixed;
   right: 20px;
-  bottom: 20px;
+  bottom: 40%;
   cursor: pointer;
   z-index: 1000;
 }
@@ -198,7 +198,7 @@ button {
 /* hero section */
 
 .hero-section {
-  background-image: url('images/GlobalMap.webp');
+  background-image: url('./assets/GlobalMap.webp');
   background-position: center right;
   background-repeat: no-repeat;
   background-size: contain;
@@ -306,7 +306,7 @@ button {
   left: 0;
   width: 100%;
   height: 20px;
-  background-image: url('images/svg/wawyUnderline.svg');
+  background-image: url('./assets/svg/wawyUnderline.svg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -323,7 +323,7 @@ button {
   left: 0;
   width: 100%;
   height: 20px;
-  background-image: url('images/svg/wawyUnderline-large.svg');
+  background-image: url('./assets/svg/wawyUnderline-large.svg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -334,7 +334,7 @@ button {
   justify-content: center;
   height: 758px;
   width: 645px;
-  background-image: url('images/hero.webp');
+  background-image: url('./assets/hero.webp');
   background-position: center bottom;
   background-size: contain;
   background-repeat: no-repeat;
@@ -437,7 +437,7 @@ button {
   left: 0;
   width: 100%;
   height: 20px;
-  background-image: url('images/svg/wawyUnderlineGreen.svg');
+  background-image: url('./assets/svg/wawyUnderlineGreen.svg');
   background-repeat: no-repeat;
   background-position: bottom;
 }
@@ -454,7 +454,7 @@ button {
   left: 0;
   width: 100%;
   height: 20px;
-  background-image: url('images/svg/wawyUnderlineGreen2.svg');
+  background-image: url('./assets/svg/wawyUnderlineGreen2.svg');
   background-repeat: no-repeat;
   background-position: bottom;
 }
@@ -586,7 +586,7 @@ button {
   justify-content: center;
   align-items: flex-end;
   position: relative;
-  background-image: url('images/earth.webp');
+  background-image: url('./assets/earth.webp');
   background-position: top;
   background-repeat: no-repeat;
   background-size: 903px 528px;
@@ -653,7 +653,7 @@ button {
   position: relative;
   height: 734px;
   margin-top: 40px;
-  background-image: url('images/arch-bg.webp');
+  background-image: url('./assets/arch-bg.webp');
   background-position: center left;
   background-repeat: no-repeat;
   background-size: contain;
@@ -794,7 +794,7 @@ button {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url('images/building-burj.webp');
+  background-image: url('./assets/building-burj.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -904,7 +904,7 @@ button {
   justify-content: flex-end;
   align-items: center;
   max-width: 1183px;
-  background-image: url('images/map-bg.webp');
+  background-image: url('./assets/map-bg.webp');
   background-position: top;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1056,7 +1056,7 @@ button {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-image: url('images/professional2.webp');
+  background-image: url('./assets/professional2.webp');
   background-position: left;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1104,7 +1104,7 @@ button {
 .world-of-possibilities-brochure {
   max-width: 1180px;
   background-color: #0C434B;
-  background-image: url("images/pattern-bg.webp");
+  background-image: url("./assets/pattern-bg.webp");
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
@@ -1235,7 +1235,7 @@ button {
 .review-video-sub {
   height: 19rem;
   width: 100%;
-  background-image: url('images/svg/GraphicPatter3.svg');
+  background-image: url('./assets/svg/GraphicPatter3.svg');
   background-position: bottom center;
   background-repeat: r;
   margin: 70px 0px 50px 0px;
@@ -1361,7 +1361,7 @@ button {
 }
 
 .successfull-graduate-pattern-1 {
-  background-image: url("images/svg/GraphicPatter5.svg");
+  background-image: url("./assets/svg/GraphicPatter5.svg");
   /* background-position: top; */
   background-repeat: repeat-x;
   background-size: contain;
@@ -1429,7 +1429,7 @@ button {
   left: 60px;
   width: 10%;
   height: 980px;
-  background-image: url('images/svg/connecting-dot.svg');
+  background-image: url('./assets/svg/connecting-dot.svg');
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 1;
@@ -1525,7 +1525,7 @@ button {
 /* 100% student support guarantee section */
 
 .student-support-main {
-  background-image: url('images/background-img.webp');
+  background-image: url('./assets/background-img.webp');
   object-fit: contain;
   background-repeat: no-repeat;
   padding: 70px 0px 30px 0px;
@@ -1889,7 +1889,7 @@ button {
   width: 817px;
   border-radius: 52.237px;
   background: #0C434B;
-  background-image: url("images/svg/brochure-bg.svg");
+  background-image: url("./assets/svg/brochure-bg.svg");
   background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
@@ -2359,7 +2359,7 @@ button {
   .sticky-whatsapp-button {
     position: fixed;
     right: 20px;
-    bottom: 20px;
+    bottom: 40%;
   }
 
   .sticky-whatsapp-button img {
@@ -2443,7 +2443,7 @@ button {
     align-items: center;
     width: 374px;
     height: 432px;
-    background-image: url('images/hero-mob.webp');
+    background-image: url('./assets/hero-mob.webp');
     background-position: center bottom;
     background-size: contain;
     background-repeat: no-repeat;
@@ -2725,7 +2725,7 @@ button {
   .unbeatable-video-main {
     height: 380px;
     margin-top: 10px;
-    background-image: url('images/arch-bg-mob.webp');
+    background-image: url('./assets/arch-bg-mob.webp');
     background-position: center left;
     background-repeat: no-repeat;
     background-size: contain;
@@ -2812,7 +2812,7 @@ button {
 
   .uae-professional-main::before {
     border-radius: 38px;
-    background-image: url('images/building-burj-mobile.webp');
+    background-image: url('./assets/building-burj-mobile.webp');
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -2904,7 +2904,7 @@ button {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background-image: url('images/map-bg.webp');
+    background-image: url('./assets/map-bg.webp');
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
@@ -3005,7 +3005,7 @@ button {
   .world-of-possibilities-bottom {
     justify-content: flex-end;
     align-items: center;
-    background-image: url('images/professional2.webp');
+    background-image: url('./assets/professional2.webp');
     background-position: top;
     background-size: cover;
     height: 500px;
@@ -3146,7 +3146,7 @@ button {
   .review-video-sub {
     height: 253px;
     width: 100%;
-    background-image: url('images/GraphicPatter3.webp');
+    background-image: url('./assets/GraphicPatter3.webp');
     background-position: bottom center;
     background-repeat: no-repeat;
     margin: 45px 0px 50px 0px;
@@ -3283,7 +3283,7 @@ button {
     left: 40px;
     width: 10%;
     height: 850px;
-    background-image: url('images/svg/connecting-dot.svg');
+    background-image: url('./assets/svg/connecting-dot.svg');
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 1;
@@ -3549,7 +3549,7 @@ button {
   .popup-main {
     width: 590px;
     border-radius: 37px;
-    background-image: url("images/svg/brochure-bg.svg");
+    background-image: url("./assets/svg/brochure-bg.svg");
     padding: 38px 37px 0px 40px;
   }
 
@@ -3768,7 +3768,7 @@ button {
   .sticky-whatsapp-button {
     position: fixed;
     right: 10px;
-    bottom: 10px;
+    bottom: 40%;
     z-index: 1000;
   }
 
@@ -3777,7 +3777,7 @@ button {
   }
 
   .hero-section {
-    background-image: url('images/earth-mobile.webp');
+    background-image: url('./assets/earth-mobile.webp');
     background-position-y: 80%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -3859,7 +3859,7 @@ button {
     align-items: center;
     width: 100%;
     height: 445px;
-    background-image: url('images/hero-mob.webp');
+    background-image: url('./assets/hero-mob.webp');
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -4256,7 +4256,7 @@ button {
 
   .uae-professional-main::before {
     border-radius: 38px;
-    background-image: url('images/building-burj-mobile.webp');
+    background-image: url('./assets/building-burj-mobile.webp');
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -4349,7 +4349,7 @@ button {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background-image: url('images/map-bg-mob.webp');
+    background-image: url('./assets/map-bg-mob.webp');
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
@@ -4436,7 +4436,7 @@ button {
   .world-of-possibilities-bottom {
     justify-content: flex-end;
     align-items: center;
-    background-image: url('images/professional2.webp');
+    background-image: url('./assets/professional2.webp');
     background-position: center top;
     height: 316px;
     border-bottom-left-radius: 37px;
@@ -4490,7 +4490,7 @@ button {
 
   .world-of-possibilities-brochure {
     width: 90%;
-    background-image: url("images/pattern-bg-mob.webp");
+    background-image: url("./assets/pattern-bg-mob.webp");
     background-position: bottom;
     background-size: 100% 50%;
     background-repeat: no-repeat;
@@ -4571,7 +4571,7 @@ button {
 
   .review-video-sub {
     height: 126px;
-    background-image: url('images/GraphicPatter3-mob.webp');
+    background-image: url('./assets/GraphicPatter3-mob.webp');
     background-size: 100%;
     margin: 40px 0px 24px 0px;
 
@@ -4678,7 +4678,7 @@ button {
 
   .successfull-graduate-pattern-2 {
     display: block;
-    background-image: url("images/svg/GraphicPatter5-mob.svg");
+    background-image: url("./assets/svg/GraphicPatter5-mob.svg");
     /* background-position: top; */
     background-repeat: repeat-x;
     background-size: contain;
@@ -4728,7 +4728,7 @@ button {
     top: 0;
     width: 10%;
     height: 95%;
-    background-image: url('images/svg/connecting-dot-mob.svg');
+    background-image: url('./assets/svg/connecting-dot-mob.svg');
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 1;
@@ -4992,10 +4992,10 @@ button {
   .popup-main {
     width: 355px;
     border-radius: 36px;
-    background-image: url("images/svg/brochure-bg-mob.svg");
+    background-image: url("./assets/svg/brochure-bg-mob.svg");
     background-position: bottom;
     padding: 37px 35px 46px 31px;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -40%);
   }
@@ -5156,7 +5156,7 @@ button {
 
   .sticky-whatsapp-button {
     right: 12px;
-    bottom: 5px;
+    bottom: 40%;
   }
 
   .sticky-whatsapp-button img {

@@ -5,6 +5,11 @@ import "react-phone-input-2/lib/style.css";
 import PhoneInput from "react-phone-input-2";
 import { CSSTransition } from "react-transition-group";
 
+import whatsppIcon from '../../assets/svg/WhatsApp_icon.svg'
+import popImg from '../../assets/popup-img.webp'
+import popImgMob from '../../assets/popup-img-mob.webp'
+
+
 function popup({ closePopup }) {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
   const [errors, setErrors] = useState({});
@@ -237,12 +242,12 @@ function popup({ closePopup }) {
               <div className="popup-img">
                 <img
                   className="popup-img-desktop"
-                  src="images/popup-img.webp"
+                  src={popImg}
                   alt=""
                 />
                 <img
                   className="popup-img-mob"
-                  src="images/popup-img-mob.webp"
+                  src={popImgMob}
                   alt=""
                 />
               </div>
@@ -271,7 +276,7 @@ function popup({ closePopup }) {
                 rel="noopener noreferrer"
               >
                 <div className="thank-you-button">
-                  <img src="images/svg/WhatsApp_icon.svg" alt="whatsapp_img" />
+                  <img src={whatsppIcon} alt="whatsapp_img" />
                   <h6>Chat With Us</h6>
                 </div>
               </a>
