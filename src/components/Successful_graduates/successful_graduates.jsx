@@ -1,4 +1,5 @@
 import React from "react";
+import './successfull_graduates.css'
 import Marquee from "react-fast-marquee";
 import ButtonDark from "../Buttons/buttonDark";
 import Claim_description from "../Description/claim_description";

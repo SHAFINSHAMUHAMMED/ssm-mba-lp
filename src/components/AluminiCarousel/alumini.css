@@ -1,0 +1,84 @@
+/* Alumini carousel section */
+
+.alumini-carousel-main {
+  margin: 50px 0px 50px 0px;
+}
+
+.alumini-carousel-main h1 {
+  width: 923px;
+  margin: auto;
+  text-align: center;
+  line-height: 104%;
+  padding: 0px 20px 0px 20px;
+  margin-bottom: 50px;
+}
+
+.alumini-carousel-cards-1 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.alumini-carousel-card {
+  width: 247px;
+  height: 94px;
+  border: 1px solid rgba(165, 162, 162, 0.208);
+  border-radius: 15px;
+}
+
+.alumini-carousel-cards .alumini-carousel-card:first-child {
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 1180px) {
+  /* Alumini carousel section */
+
+  .alumini-carousel-main {
+    margin: 38px 0px 50px 0px;
+  }
+
+  .alumini-carousel-main h1 {
+    width: 70%;
+    padding: 0px;
+    margin-bottom: 43px;
+  }
+
+  .alumini-carousel-cards-1 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .alumini-carousel-card {
+    width: 148px;
+    height: 64px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  /* Alumini carousel section */
+
+  .alumini-carousel-main {
+    margin: 38px 0px 50px 0px;
+  }
+
+  .alumini-carousel-main h1 {
+    width: 80%;
+    padding: 0px;
+    margin-bottom: 43px;
+  }
+
+  .alumini-carousel-cards-1 {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 5px;
+  }
+
+  .alumini-carousel-card {
+    width: 135px;
+    height: 60px;
+  }
+}

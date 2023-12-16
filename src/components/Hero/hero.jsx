@@ -1,15 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
+import "./hero.css";
 import Button1 from "../Buttons/buttonDark";
 import Popup from "../Popup_page/popup";
 import Typed from "typed.js";
 import { usePopup } from "../Hoocks/PopupContext";
 
-import target from '../../assets/svg/target.svg'
-import bagIcon from "../../assets/svg/bag-icon.svg" 
-import graphIcon2 from "../../assets/svg/graph-icon2.svg"
-import rankIcon from "../../assets/svg/rank-icon.svg"
-import graphicPattern from "../../assets/svg/GraphicPattern.svg"
-import graphicPatternMob from "../../assets/svg/GraphicPattern-mob.svg"
+import target from "../../assets/svg/target.svg";
+import bagIcon from "../../assets/svg/bag-icon.svg";
+import graphIcon2 from "../../assets/svg/graph-icon2.svg";
+import rankIcon from "../../assets/svg/rank-icon.svg";
+import graphicPattern from "../../assets/svg/GraphicPattern.svg";
+import graphicPatternMob from "../../assets/svg/GraphicPattern-mob.svg";
 
 function hero() {
   const el = useRef(null);
@@ -33,16 +34,20 @@ function hero() {
 
   return (
     <>
-      <div className={`hero-section flex justify-center items-center bg-backgrounds-wisdomWhite ${isPopupOpen ? 'blur-effect' : ''}`}>
+      <div
+        className={`hero-section flex justify-center items-center bg-backgrounds-wisdomWhite ${
+          isPopupOpen ? "blur-effect" : ""
+        }`}
+      >
         <div className="hero-sub">
           <div className="hero-left">
             <div className="sub-heading flex items-center  md:pe-8">
               <div className="subheding-icon">
-              <img
-                className="w-[36px] h-[36px] md:w-[54px] md:h-[54px]"
-                src={target}
-                alt=""
-              />
+                <img
+                  className="w-[36px] h-[36px] md:w-[54px] md:h-[54px]"
+                  src={target}
+                  alt=""
+                />
               </div>
               <h4 className="sub-heading-h4 font-bold">
                 Ready to launch the career & life you've always wanted?
@@ -57,16 +62,19 @@ function hero() {
               career consultation today, setting the wheels in motion for the
               extraordinary career and life you’ve always aspired to!
             </p>
-            <Button1 duration={1500} containerStyle={{ justifyContent: "center" }} />
+            <Button1
+              duration={1500}
+              containerStyle={{ justifyContent: "center" }}
+            />
             <div className="flex gap-2 items-center justify-center text-[15px] sm:text-[25px] mt-[15px] md:mt-[20px] mb-0 sm:mb-5">
               <a
-              onClick={togglePopup}
+                onClick={togglePopup}
                 // href="\images\SSM MBA.pdf"
                 // download
                 className="flex gap-2 items-center"
-                style={{cursor:'pointer'}}
+                style={{ cursor: "pointer" }}
               >
-                <h3 className="" >Download Free Brochure</h3>
+                <h3 className="">Download Free Brochure</h3>
                 <svg
                   className="w-[21px] h-[17px] sm:w-[25px] sm:h-[20px] lg:w-[35px] lg:h-[30px]"
                   xmlns="http://www.w3.org/2000/svg"
@@ -89,11 +97,7 @@ function hero() {
           </div>
           <div className="hero-right">
             <div className="hero-icons-main">
-              <img
-                className="bag-icon animated-icon-1"
-                src={bagIcon}
-                alt=""
-              />
+              <img className="bag-icon animated-icon-1" src={bagIcon} alt="" />
               <img
                 className="graph-icon2 animated-icon-2"
                 src={graphIcon2}
@@ -109,12 +113,16 @@ function hero() {
         </div>
       </div>
       <img
-        className={`graphic-devider hidden sm:block ${isPopupOpen ? 'blur-effect' : ''} `}
+        className={`graphic-devider hidden sm:block ${
+          isPopupOpen ? "blur-effect" : ""
+        } `}
         src={graphicPattern}
         alt=""
       />
       <img
-        className={`graphic-devider block sm:hidden  ${isPopupOpen ? 'blur-effect' : ''}`}
+        className={`graphic-devider block sm:hidden  ${
+          isPopupOpen ? "blur-effect" : ""
+        }`}
         src={graphicPatternMob}
         alt=""
       />

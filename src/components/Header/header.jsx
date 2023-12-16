@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
+import "./header.css";
 import { usePopup } from "../Hoocks/PopupContext";
 
-import logo from "../../assets/svg/logo.svg"
+import logo from "../../assets/svg/logo.svg";
 
 function header() {
   const [showStickyDiv, setShowStickyDiv] = useState(false);
   const { isPopupOpen, togglePopup } = usePopup();
-  
+
   function debounce(func, wait) {
     let timeout;
 
@@ -91,13 +92,9 @@ function header() {
         </header>
       )}
       {showStickyDiv && (
-        <header className="header-section-2 bg-white" >
+        <header className="header-section-2 bg-white">
           <div className="header-section-2-sub ">
-            <img
-              className="header-section-2-logo"
-              src={logo}
-              alt=""
-            />
+            <img className="header-section-2-logo" src={logo} alt="" />
             <div className="header-section-2-contact">
               <a href="tel:+971 50 418 1328">
                 <svg

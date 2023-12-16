@@ -1,0 +1,160 @@
+/* Successful graduates section */
+
+.successful-graduates-main {
+  margin-bottom: 45px;
+}
+
+.successful-graduates-sub-1 {
+  background-color: #1C7337;
+  margin: 50px 10px 0px 10px;
+  border-radius: 64px 64px 0px 0px;
+  padding: 60px 10px 60px 10px;
+}
+
+.successful-graduates-sub-1 h1 {
+  max-width: 936px;
+  margin: auto;
+  margin-bottom: 24px;
+  color: #fff;
+  text-align: center;
+  line-height: 100%;
+  padding: 0px 126px 0px 120px;
+}
+
+.successful-graduates-sub-1 img {
+  margin: auto;
+}
+
+.successfull-graduate-pattern-1 {
+  background-image: url("../../assets/svg/GraphicPatter5.svg");
+  /* background-position: top; */
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 232px;
+}
+
+.successfull-graduate-pattern-2 {
+  display: none;
+}
+
+.successful-graduates-carousel {
+  margin-top: -170px;
+  margin-bottom: 45px;
+}
+
+.successful-graduates-carousel-1,
+.successful-graduates-carousel-2 {
+  display: flex;
+  max-height: 388px;
+  overflow: hidden;
+}
+
+.successful-graduates-carousel-1 {
+  align-items: flex-end;
+  margin-bottom: 2px;
+}
+
+.successful-graduates-carousel-2 {
+  align-items: flex-start;
+}
+
+.gradute-image {
+  max-width: 281px;
+  margin-left: 2px;
+  object-fit: cover;
+}
+
+
+@media only screen and (max-width: 1180px) {
+  /* Successful graduates section */
+
+  .successful-graduates-main {
+    margin-bottom: 25px;
+  }
+
+  .successful-graduates-sub-1 {
+    background-color: #1C7337;
+    margin: 50px 10px 0px 10px;
+    border-radius: 38px 38px 0px 0px;
+    padding: 60px 10px 30px 10px;
+  }
+
+  .successful-graduates-sub-1 h1 {
+    max-width: 75%;
+    margin-bottom: 21px;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .successfull-graduate-pattern-1 {
+    height: 132px;
+  }
+
+  .successfull-graduate-pattern-2 {
+    display: none;
+  }
+
+  .successful-graduates-carousel {
+    margin-top: -80px;
+    margin-bottom: 29px;
+  }
+
+  .successful-graduates-carousel-1,
+  .successful-graduates-carousel-2 {
+    max-height: 247px;
+  }
+
+  .gradute-image {
+    max-width: 179px;
+  }
+
+}
+
+@media only screen and (max-width: 640px) {
+  /* Successful graduates section */
+
+  .successful-graduates-main {
+    margin-bottom: 25px;
+  }
+
+  .successful-graduates-sub-1 {
+    background-color: #1C7337;
+    margin: 50px 10px 0px 10px;
+    border-radius: 38px 38px 0px 0px;
+    padding: 60px 10px 30px 10px;
+  }
+
+  .successful-graduates-sub-1 h1 {
+    max-width: 306px;
+    margin-bottom: 21px;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .successfull-graduate-pattern-1 {
+    display: none;
+
+  }
+
+  .successfull-graduate-pattern-2 {
+    display: block;
+    background-image: url("../../assets/svg/GraphicPatter5-mob.svg");
+    /* background-position: top; */
+    background-repeat: repeat-x;
+    background-size: contain;
+    height: 121px;
+  }
+
+  .successful-graduates-carousel {
+    margin-top: -80px;
+    margin-bottom: 29px;
+  }
+
+  .successful-graduates-carousel-1,
+  .successful-graduates-carousel-2 {
+    max-height: 247px;
+  }
+
+  .gradute-image {
+    max-width: 179px;
+  }
+
+}

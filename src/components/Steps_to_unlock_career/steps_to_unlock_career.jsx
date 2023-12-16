@@ -1,4 +1,5 @@
 import React from "react";
+import './steps.css'
 import ButtonDark from "../Buttons/buttonDark";
 import Claim_description from "../Description/claim_description";
 function steps_to_unlock_career() {

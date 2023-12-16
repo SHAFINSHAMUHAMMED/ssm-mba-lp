@@ -1,4 +1,5 @@
 import React from "react";
+import './icf.css'
 import MultiStepForm from "../Form/MultiStepForm";
 
 import GraphicPattern4 from "../../assets/svg/GraphicPatter4.svg";

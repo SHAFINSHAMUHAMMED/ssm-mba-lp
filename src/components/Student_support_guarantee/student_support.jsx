@@ -1,4 +1,5 @@
 import React from "react";
+import './student_support.css'
 import ButtonDark from "../Buttons/buttonDark";
 import { Link, Element } from "react-scroll";
 import Claim_description from "../Description/claim_description";

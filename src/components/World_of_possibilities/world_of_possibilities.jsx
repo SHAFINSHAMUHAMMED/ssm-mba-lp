@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import './possibilities.css'
 import ButtonDark from "../Buttons/buttonDark";
 import Claim_description from "../Description/claim_description";
 import AOS from "aos";

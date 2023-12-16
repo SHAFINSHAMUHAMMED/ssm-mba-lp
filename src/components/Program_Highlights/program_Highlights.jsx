@@ -1,4 +1,5 @@
 import React from "react";
+import "./programHighlights.css";
 import ButtonOrange from "../Buttons/buttoonOrange";
 import Claim_description from "../Description/claim_description";
 function program_Highlights() {
@@ -337,8 +338,8 @@ function program_Highlights() {
           </svg>
         </div>
       </div>
-        <ButtonOrange/>
-        <Claim_description color='rgba(255, 255, 255, 0.82)'/>
+      <ButtonOrange />
+      <Claim_description color="rgba(255, 255, 255, 0.82)" />
     </div>
   );
 }

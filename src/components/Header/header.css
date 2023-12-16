@@ -1,0 +1,139 @@
+/* //header styles */
+.header-section {
+  border-top-left-radius: 64px;
+  border-top-right-radius: 64px;
+  padding: 34px 54px 0px 72px;
+  margin: 10px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+
+}
+
+.header-section-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-section-contact p {
+  line-height: 1;
+}
+
+.header-section-2 {
+  padding: 30px 100px 24px 100px;
+}
+
+.header-section-2-sub {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-section-2-logo {
+  width: 230px;
+  height: 59px;
+}
+
+.header-section-2-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-section-2-contact p {
+  line-height: 1;
+}
+
+.header-section-2 {
+  animation: fadeUp 0.5s ease;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 1180px) {
+  .header-section {
+    padding: 26px 23px 0px 23px;
+    border: none;
+    border-top-left-radius: 34px;
+    border-top-right-radius: 34px;
+  }
+
+  .header-section-contact div {
+    display: none;
+  }
+
+  .header-section-2 {
+    padding: 30px 30px 24px 30px;
+  }
+
+  .header-section-2-sub {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-section-2-logo {
+    width: 190px;
+    height: 52px;
+  }
+
+  .header-section-2-contact div {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 640px) {
+  .header-section {
+    padding: 23px 23px 0px 23px;
+    border: none;
+    border-top-left-radius: 34px;
+    border-top-right-radius: 34px;
+  }
+
+  .header-section-contact div {
+    display: none;
+  }
+
+  .header-section-2 {
+    padding: 20px 20px 18px 20px;
+  }
+
+  .header-section-2-sub {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-section-2-logo {
+    width: 170px;
+    height: 52px;
+  }
+
+  .header-section-2-contact div {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width:325px) {
+  .header-section img {
+    width: 170px;
+  }
+
+  .header-section-contact svg {
+    width: 30px;
+    height: 30px;
+  }
+
+}

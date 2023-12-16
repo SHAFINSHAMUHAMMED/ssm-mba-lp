@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, Suspense } from "react";
+import './review.css'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Marquee from "react-fast-marquee";
@@ -224,11 +225,7 @@ function ReviewSection() {
                 )
               }
             >
-              <img
-                className=" sm:w-auto"
-                src={videoThumb1}
-                alt=""
-              />
+              <img className=" sm:w-auto" src={videoThumb1} alt="" />
               <svg
                 className="play-button"
                 xmlns="http://www.w3.org/2000/svg"
@@ -257,11 +254,7 @@ function ReviewSection() {
                 )
               }
             >
-              <img
-                className=" sm:w-auto"
-                src={videoThumb2}
-                alt=""
-              />
+              <img className=" sm:w-auto" src={videoThumb2} alt="" />
               <svg
                 className="play-button"
                 xmlns="http://www.w3.org/2000/svg"
@@ -290,11 +283,7 @@ function ReviewSection() {
                 )
               }
             >
-              <img
-                className=" sm:w-auto"
-                src={videoThumb3}
-                alt=""
-              />
+              <img className=" sm:w-auto" src={videoThumb3} alt="" />
               <svg
                 className="play-button"
                 xmlns="http://www.w3.org/2000/svg"
@@ -323,11 +312,7 @@ function ReviewSection() {
                 )
               }
             >
-              <img
-                className=" sm:w-auto"
-                src={videoThumb1}
-                alt=""
-              />
+              <img className=" sm:w-auto" src={videoThumb1} alt="" />
               <svg
                 className="play-button"
                 xmlns="http://www.w3.org/2000/svg"
@@ -374,11 +359,7 @@ function ReviewSection() {
                     fill="#0B434B"
                   />
                 </svg>
-                <img
-                  className="review-star"
-                  src={stars_review}
-                  alt=""
-                />
+                <img className="review-star" src={stars_review} alt="" />
               </div>
               <p className="">
                 The flexibility of the programs, its budget friendly & the staff
@@ -392,18 +373,10 @@ function ReviewSection() {
               </p>
               <div className="flex justify-between items-center">
                 <div className="flex gap-2 items-center">
-                  <img
-                    className="review-user-icon"
-                    src={chef}
-                    alt=""
-                  />
+                  <img className="review-user-icon" src={chef} alt="" />
                   <h5>Chef Jayaweera</h5>
                 </div>
-                <img
-                  className="review-verified"
-                  src={verified_review}
-                  alt=""
-                />
+                <img className="review-verified" src={verified_review} alt="" />
               </div>
             </div>
             <div className="user-review-card">
@@ -425,11 +398,7 @@ function ReviewSection() {
                     fill="#0B434B"
                   />
                 </svg>
-                <img
-                  className="review-star"
-                  src={stars_review}
-                  alt=""
-                />
+                <img className="review-star" src={stars_review} alt="" />
               </div>
               <p className="">
                 I always wanted to do an MBA from the Institute which offers
@@ -442,19 +411,11 @@ function ReviewSection() {
               </p>
               <div className="flex justify-between items-center">
                 <div className="flex gap-2 items-center">
-                  <img
-                    className="review-user-icon"
-                    src={albin}
-                    alt=""
-                  />
+                  <img className="review-user-icon" src={albin} alt="" />
 
                   <h5>Albin Baby</h5>
                 </div>
-                <img
-                  className="review-verified"
-                  src={verified_review}
-                  alt=""
-                />
+                <img className="review-verified" src={verified_review} alt="" />
               </div>
             </div>
             <div className="user-review-card">
@@ -476,11 +437,7 @@ function ReviewSection() {
                     fill="#0B434B"
                   />
                 </svg>
-                <img
-                  className="review-star"
-                  src={stars_review}
-                  alt=""
-                />
+                <img className="review-star" src={stars_review} alt="" />
               </div>
               <p className="">
                 Learner's Education provides professional service to it's
@@ -494,18 +451,10 @@ function ReviewSection() {
               </p>
               <div className="flex justify-between items-center">
                 <div className="flex gap-2 items-center">
-                  <img
-                    className="review-user-icon"
-                    src={hisham}
-                    alt=""
-                  />
+                  <img className="review-user-icon" src={hisham} alt="" />
                   <h5>Hisham</h5>
                 </div>
-                <img
-                  className="review-verified"
-                  src={verified_review}
-                  alt=""
-                />
+                <img className="review-verified" src={verified_review} alt="" />
               </div>
             </div>
             <div className="user-review-card">
@@ -527,11 +476,7 @@ function ReviewSection() {
                     fill="#0B434B"
                   />
                 </svg>
-                <img
-                  className="review-star"
-                  src={stars_review}
-                  alt=""
-                />
+                <img className="review-star" src={stars_review} alt="" />
               </div>
               <p className="">
                 Enrolling with Learners Education UAE has been the most
@@ -543,18 +488,10 @@ function ReviewSection() {
               </p>
               <div className="flex justify-between items-center">
                 <div className="flex gap-2 items-center">
-                  <img
-                    className="review-user-icon"
-                    src={rosette}
-                    alt=""
-                  />
+                  <img className="review-user-icon" src={rosette} alt="" />
                   <h5>Rosette Leano</h5>
                 </div>
-                <img
-                  className="review-verified"
-                  src={verified_review}
-                  alt=""
-                />
+                <img className="review-verified" src={verified_review} alt="" />
               </div>
             </div>
           </div>
@@ -580,11 +517,7 @@ function ReviewSection() {
                     fill="#0B434B"
                   />
                 </svg>
-                <img
-                  className="review-star"
-                  src={stars_review}
-                  alt=""
-                />
+                <img className="review-star" src={stars_review} alt="" />
               </div>
               <p className="">
                 Learners is the best higher education platform for working
@@ -595,18 +528,10 @@ function ReviewSection() {
               </p>
               <div className="flex justify-between items-center">
                 <div className="flex gap-2 items-center">
-                  <img
-                    className="review-user-icon"
-                    src={bijuraj}
-                    alt=""
-                  />
+                  <img className="review-user-icon" src={bijuraj} alt="" />
                   <h5>Bijuraj k</h5>
                 </div>
-                <img
-                  className="review-verified"
-                  src={verified_review}
-                  alt=""
-                />
+                <img className="review-verified" src={verified_review} alt="" />
               </div>
             </div>
             <div className="user-review-card">
@@ -628,11 +553,7 @@ function ReviewSection() {
                     fill="#0B434B"
                   />
                 </svg>
-                <img
-                  className="review-star"
-                  src={stars_review}
-                  alt=""
-                />
+                <img className="review-star" src={stars_review} alt="" />
               </div>
               <p className="">
                 The perfect institute which believes and strives for quality.
@@ -644,18 +565,10 @@ function ReviewSection() {
               </p>
               <div className="flex justify-between items-center">
                 <div className="flex gap-2 items-center">
-                  <img
-                    className="review-user-icon"
-                    src={gwendolyne}
-                    alt=""
-                  />
+                  <img className="review-user-icon" src={gwendolyne} alt="" />
                   <h5>Gwendolyne Quinn</h5>
                 </div>
-                <img
-                  className="review-verified"
-                  src={verified_review}
-                  alt=""
-                />
+                <img className="review-verified" src={verified_review} alt="" />
               </div>
             </div>
             <div className="user-review-card">
@@ -677,11 +590,7 @@ function ReviewSection() {
                     fill="#0B434B"
                   />
                 </svg>
-                <img
-                  className="review-star"
-                  src={stars_review}
-                  alt=""
-                />
+                <img className="review-star" src={stars_review} alt="" />
               </div>
               <p className="">
                 I recommend this institution to all those who are looking for
@@ -695,18 +604,10 @@ function ReviewSection() {
               </p>
               <div className="flex justify-between items-center">
                 <div className="flex gap-2 items-center">
-                  <img
-                    className="review-user-icon"
-                    src={vaishak}
-                    alt=""
-                  />
+                  <img className="review-user-icon" src={vaishak} alt="" />
                   <h5>Vaisakh Panezhath</h5>
                 </div>
-                <img
-                  className="review-verified"
-                  src={verified_review}
-                  alt=""
-                />
+                <img className="review-verified" src={verified_review} alt="" />
               </div>
             </div>
             <div className="user-review-card">
@@ -728,11 +629,7 @@ function ReviewSection() {
                     fill="#0B434B"
                   />
                 </svg>
-                <img
-                  className="review-star"
-                  src={stars_review}
-                  alt=""
-                />
+                <img className="review-star" src={stars_review} alt="" />
               </div>
               <p className="">
                 Learners Education is a fantastic learning platform for students
@@ -747,34 +644,27 @@ function ReviewSection() {
               </p>
               <div className="flex justify-between items-center">
                 <div className="flex gap-2 items-center">
-                  <img
-                    className="review-user-icon"
-                    src={alice}
-                    alt=""
-                  />
+                  <img className="review-user-icon" src={alice} alt="" />
                   <h5>Alice Joanna</h5>
                 </div>
-                <img
-                  className="review-verified"
-                  src={verified_review}
-                  alt=""
-                />
+                <img className="review-verified" src={verified_review} alt="" />
               </div>
             </div>
           </div>
         </Marquee>
       </div>
       <div id="NewRootRoot" className="flex justify-center w-full ">
-    <Link
-    to='contactForm'
-    // spy={true}
-   smooth={true}
-     duration={2800}
-     delay={200}
-    className=" light-effect-button button bg-[#0b434b] w-[95%] sm:w-[539px]  rounded-[56px] sm:rounded-[91px] pt-[25px] pb-[25px] text-[15px] md:text-[15px] xl:text-[23px] font-bold cursor-pointer">
-      Start Your Journey Now
-    </Link>
-  </div>
+        <Link
+          to="contactForm"
+          // spy={true}
+          smooth={true}
+          duration={2800}
+          delay={200}
+          className=" light-effect-button button bg-[#0b434b] w-[95%] sm:w-[539px]  rounded-[56px] sm:rounded-[91px] pt-[25px] pb-[25px] text-[15px] md:text-[15px] xl:text-[23px] font-bold cursor-pointer"
+        >
+          Start Your Journey Now
+        </Link>
+      </div>
       <Claim_description color="rgba(11, 67, 75, 0.79)" />
     </div>
   );

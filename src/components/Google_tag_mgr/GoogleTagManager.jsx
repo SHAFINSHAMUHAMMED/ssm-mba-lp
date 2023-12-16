@@ -1,11 +1,14 @@
 // GoogleTagManager.js
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
 function GoogleTagManager() {
   useEffect(() => {
     // Initialize Google Tag Manager
     window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: 'gtm.js', 'gtm.start': new Date().getTime() });
+    window.dataLayer.push({
+      event: "gtm.js",
+      "gtm.start": new Date().getTime(),
+    });
   }, []);
 
   return null;

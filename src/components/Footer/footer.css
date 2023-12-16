@@ -1,0 +1,55 @@
+/* Footer section */
+
+.footer-main {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 0px 32px 0px;
+  }
+  
+  .footer-main img {
+    width: 285px;
+    height: 71px;
+  }
+  
+  .footer-main p {
+    color: #0B434B;
+    padding-bottom: 14px;
+    padding-top: 10px;
+    text-align: center;
+    font-family: 'SK Modernist Regular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 131%;
+  }
+  
+  
+@media only screen and (max-width: 1180px) {
+    .footer-main img {
+        width: 235px;
+        height: 61px;
+      }
+}
+
+@media only screen and (max-width: 640px) {
+    .footer-main {
+        padding: 20px 0px 22px 0px;
+      }
+    
+      .footer-main img {
+        width: 204px;
+        height: 50px;
+      }
+    
+      .footer-main p {
+        padding-top: 7px;
+        padding-bottom: 8px;
+        font-size: 11px;
+        line-height: 111%;
+      }
+}
+

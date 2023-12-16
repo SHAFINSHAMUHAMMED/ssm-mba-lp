@@ -1,0 +1,182 @@
+/* Acreditions part */
+.acredits-marquee-1 {
+  display: block;
+}
+
+.acredits-marquee-2 {
+  display: none;
+}
+
+.accredit-main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  background-image: url('../../assets/earth.webp');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 903px 528px;
+  min-height: 650px;
+  overflow: hidden;
+
+}
+
+.accredit-main h1 {
+  max-width: 552px;
+  margin: auto;
+}
+
+.accredit-cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 23px;
+  padding-bottom: 31px;
+  overflow: hidden;
+
+}
+
+.accredit-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 211px;
+  height: 106px;
+  border-radius: 26.853px;
+  background: #FFF;
+  border: 1px solid rgba(145, 143, 143, 0.249);
+  overflow: hidden;
+
+}
+
+.accredit-cards .accredit-card:first-child {
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 1180px) {
+
+  /* Acreditions part */
+  .acredits-marquee-1 {
+    display: none;
+  }
+
+  .acredits-marquee-2 {
+    display: block;
+  }
+
+  .accredit-main {
+    position: relative;
+    margin-top: 10px;
+    align-items: center;
+    background-position: top;
+    background-size: 400px 228px;
+    min-height: 520px;
+    align-items: flex-end;
+    padding-bottom: 33px;
+
+  }
+
+  .accredit-overlay {
+    background: linear-gradient(358deg, rgba(255, 255, 255, 0.96) 59.89%, rgba(255, 255, 255, 0.00) 80.81%);
+    z-index: 1;
+  }
+
+  .accredit-main h1 {
+    padding: 0px 10px 20px 10px;
+    max-width: 50%;
+    line-height: 105%;
+  }
+
+  .accredit-cards {
+    gap: 4px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
+
+  .accredit-card {
+    width: 185px;
+    height: 90px;
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 14.533px;
+    background: #FFF;
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  .accredit-card-img {
+    width: 100px;
+    height: 70px;
+  }
+
+  .accredit-cards .accredit-card:first-child {
+    margin-left: 8px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+
+  /* Acreditions part */
+  .acredits-marquee-1 {
+    display: none;
+  }
+
+  .acredits-marquee-2 {
+    display: block;
+  }
+
+  .accredit-main {
+    position: relative;
+    margin-top: 10px;
+    align-items: center;
+    background-position: top;
+    background-size: 400px 228px;
+    min-height: 480px;
+    align-items: flex-end;
+
+  }
+
+  .accredit-overlay {
+    background: linear-gradient(358deg, rgba(255, 255, 255, 0.96) 59.89%, rgba(255, 255, 255, 0.00) 80.81%);
+    z-index: 1;
+  }
+
+  .accredit-content {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .accredit-main h1 {
+    padding: 0px 10px 10px 10px;
+    max-width: 287px;
+    line-height: 105%;
+  }
+
+  .accredit-cards {
+    gap: 2px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
+
+  .accredit-card {
+    width: 114px;
+    height: 57px;
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 14.533px;
+    background: #FFF;
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  .accredit-card-img {
+    width: 87px;
+    height: 51px;
+  }
+
+  .accredit-cards .accredit-card:first-child {
+    margin-left: 4px;
+  }
+}

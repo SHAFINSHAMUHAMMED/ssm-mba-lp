@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../Icf_certification/icf.css'
 import Claim_description from "../Description/claim_description";
 import 'react-phone-input-2/lib/style.css';
 import PhoneInput from 'react-phone-input-2';

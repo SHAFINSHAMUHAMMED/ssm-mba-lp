@@ -1,0 +1,186 @@
+/* Uae professional section */
+
+.uae-professional-main {
+  position: relative;
+  margin: 0px 10px;
+  border-radius: 64px;
+}
+
+.uae-professional-main::before {
+  border-radius: 64px;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('../../assets/building-burj.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.uae-professional-inner {
+  max-width: 1180px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+
+.uae-professional-inner-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.uae-professional-inner h1 {
+  line-height: 104%;
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+.uae-professional-p {
+  margin-bottom: 35px;
+  padding: 0px 45px 0px 0px;
+  font-size: 18px;
+  color: #0B434B;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.uae-professionals-img-1 {
+  display: none;
+}
+
+.uae-professionals-img-2 {
+  display: block;
+  width: 487px;
+  max-height: 986px;
+}
+
+@media only screen and (max-width: 1180px) {
+  /* Uae professional section */
+
+  .uae-professional-main {
+    border-radius: 38px;
+    margin: 0px 7px;
+    background-color: #faf7ee;
+
+  }
+
+  .uae-professional-main::before {
+    border-radius: 38px;
+    background-image: url('../../assets/building-burj-mobile.webp');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    filter: none;
+  }
+
+  .uae-professional-inner {
+    flex-direction: column;
+    padding: 36px 10px 30px 10px;
+  }
+
+  .uae-professional-inner-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .uae-professionals-img-1 {
+    display: block;
+    width: 313px;
+    max-height: 641px;
+  }
+
+  .uae-professionals-img-2 {
+    display: none;
+
+  }
+
+  .uae-professional-inner h1 {
+    text-align: center;
+    padding: 0px 20px 33px 20px;
+  }
+
+  .uae-professional-p {
+    width: 70%;
+    margin-bottom: 20px;
+    padding: 20px 20px 0px 20px;
+    font-size: 18px;
+    color: #0B434B;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  /* Uae professional section */
+
+  .uae-professional-main {
+    border-radius: 38px;
+    margin: 0px 7px;
+    background-color: #faf7ee;
+  }
+
+  .uae-professional-main::before {
+    border-radius: 38px;
+    background-image: url('../../assets/building-burj-mobile.webp');
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    filter: none;
+  }
+
+  .uae-professional-inner {
+    flex-direction: column;
+    padding: 36px 0px 30px 0px;
+  }
+
+  .uae-professional-inner-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .uae-professionals-img-1 {
+    display: block;
+    width: 313px;
+    max-height: 641px;
+  }
+
+  .uae-professionals-img-2 {
+    display: none;
+
+  }
+
+  .uae-professional-inner h1 {
+    text-align: center;
+    padding: 0px 25px 33px 28px;
+    width: 100%;
+  }
+
+  .uae-professional-p {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px 20px 0px 20px;
+    font-size: 18px;
+    color: #0B434B;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+  }
+
+}

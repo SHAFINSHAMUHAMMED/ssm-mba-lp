@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import "./swiss_school.css";
 import Lottie from "lottie-react";
 import graph from "../../assets/TopRankedSMSLottie.json";
 import { usePopup } from "../Hoocks/PopupContext";
@@ -6,7 +7,7 @@ import { usePopup } from "../Hoocks/PopupContext";
 function swiss_school() {
   const { isPopupOpen } = usePopup();
   return (
-    <div className={`why-swiss-school ${isPopupOpen ? 'blur-effect' : ''}`}>
+    <div className={`why-swiss-school ${isPopupOpen ? "blur-effect" : ""}`}>
       <h1 className=" swiss-school-h1">
         Elevate Your Career With &nbsp;
         <span className="wavy-underline-green">Swiss School</span> Of
