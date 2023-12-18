@@ -311,7 +311,7 @@ function ReviewSection() {
               className="review-video-sub-card"
               onClick={() =>
                 handleCardClick(
-                  "https://vimeo.com/763299013"
+                  "https://youtu.be/9n9w1LNdXrU?si=WWLgRiyEUa8jpFAz"
                 )
               }
             >
