@@ -97,8 +97,8 @@ function App() {
           <Hero />
           <StickyWhatsAppButton />
           <Carousel />
-          <UnbeatableReason />
           <AluminiCarousel />
+          <UnbeatableReason />
           <SwissSchool />
           <ProgramHighlights />
           <Accreditations />
