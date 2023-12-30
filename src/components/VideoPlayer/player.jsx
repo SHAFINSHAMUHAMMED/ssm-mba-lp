@@ -1,6 +1,8 @@
-import React, { useState, Suspense  } from "react";
-import { BounceLoader } from 'react-spinners';
-const ReactPlayer = React.lazy(()=> import("react-player"))
+
+import React, { useState, Suspense } from "react";
+import { ClipLoader } from "react-spinners";
+
+const ReactPlayer = React.lazy(() => import("react-player"));
 
 function Loader() {
   return (
@@ -11,40 +13,23 @@ function Loader() {
       transform: 'translate(-50%, -50%)',
       textAlign: 'center',
     }}>
-      <BounceLoader color="#0B434B" />
-      <p>Loading video...</p>
+      <ClipLoader color={"#123abc"} size={50} />
     </div>
   );
 }
 
 function Player() {
   const [playing, setPlaying] = useState(false);
+  const [loadVideo, setLoadVideo] = useState(false);
 
-  const handlePlayPause = () => {
-    setPlaying(!playing);
+
+  const handlePlayClick = () => {
+    setPlaying(true);
+    setLoadVideo(true);
   };
-
-  return (
-    <div className="player-wrapper" style={{ position: 'relative', width: '100%', height: '100%' }}>
-      <Suspense fallback={<Loader/>}>
-      <ReactPlayer
-        url="https://youtu.be/E-Z1-X9wSOs?si=B6LoTJ-zhODETI0g"
-        width="100%"
-        height="100%"
-        playing={playing}
-        className="react-player2"
-        onPlay={() => setPlaying(true)}
-        onPause={() => setPlaying(false)}
-        onEnded={() => setPlaying(false)}
-        config={{
-          youtube: {
-            playerVars: { rel: 0, modestbranding: 1 }
-          }
-        }}
-      />
-      </Suspense>
-      {!playing && (
-        <div className="custom-play-button" onClick={handlePlayPause}>
+  const renderPlayButton = () => {
+    return (
+      <div className="custom-play-button" onClick={handlePlayClick} style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
           <svg
             className="play-icon"
             xmlns="http://www.w3.org/2000/svg"
@@ -114,6 +99,35 @@ function Player() {
               </linearGradient>
             </defs>
           </svg>
+      </div>
+    );
+  };
+  return (
+    <div className="player-wrapper" style={{ position: 'relative', width: '100%', height: '100%' }}>
+      {loadVideo ? (
+        <Suspense fallback={<Loader />}>
+          <ReactPlayer
+            url="https://youtu.be/E-Z1-X9wSOs?si=B6LoTJ-zhODETI0g"
+            width="100%"
+            height="100%"
+            playing={playing}
+            className="react-player2"
+            onPlay={() => setPlaying(true)}
+            onPause={() => setPlaying(false)}
+            onEnded={() => setPlaying(false)}
+            config={{
+              youtube: {
+                playerVars: { rel: 0, modestbranding: 1 }
+              }
+            }}
+          />
+          {!playing && renderPlayButton()}
+        </Suspense>
+      ) : (
+        <div
+          className="unbeatable-video-thumb"  
+        >
+            {renderPlayButton()}
         </div>
       )}
     </div>

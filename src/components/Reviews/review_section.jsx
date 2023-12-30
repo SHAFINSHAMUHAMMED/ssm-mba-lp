@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, Suspense } from "react";
-import './review.css'
+import "./review.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Marquee from "react-fast-marquee";
@@ -139,18 +139,23 @@ function ReviewSection() {
           </svg>
         </button>
         <div className="player-container">
-  <Suspense fallback={<Loader />}>
-    <ReactPlayer
-      url={currentVideoUrl}
-      playing={playing}
-      controls={true}
-      width="100%"
-      height="100%"
-      style={{ position: "absolute", top: "0", left: "0", backgroundColor:'black' }}
-      onPlay={() => setPlaying(true)}
-      onPause={() => setPlaying(false)}
-      onEnded={() => setPlaying(false)}
-    />
+          <Suspense fallback={<Loader />}>
+            <ReactPlayer
+              url={currentVideoUrl}
+              playing={playing}
+              controls={true}
+              width="100%"
+              height="100%"
+              style={{
+                position: "absolute",
+                top: "0",
+                left: "0",
+                backgroundColor: "black",
+              }}
+              onPlay={() => setPlaying(true)}
+              onPause={() => setPlaying(false)}
+              onEnded={() => setPlaying(false)}
+            />
           </Suspense>
           {!playing && (
             <div className="custom-play-button" onClick={handlePlayPause}>
