@@ -46,9 +46,6 @@ const Footer = lazy(() => import("./components/Footer/footer"));
 const StickyWhatsAppButton = lazy(() =>
   import("./components/WhatsappStickyLogo/StickyWhatsAppButton")
 );
-const GoogleTagManager = lazy(() =>
-  import("./components/Google_tag_mgr/GoogleTagManager")
-);
 const Popup = lazy(() => import("./components/Popup_page/popup"));
 
 function App() {
@@ -92,7 +89,6 @@ function App() {
         }
       >
         <div className="body">
-          <GoogleTagManager />
           <Header />
           <Hero />
           <StickyWhatsAppButton />
