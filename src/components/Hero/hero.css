@@ -7,6 +7,10 @@
   background-size: contain;
   margin: 0px 10px 0px 10px;
   align-items: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EDE6D8;
 }
 
 .hero-sub {
@@ -30,6 +34,8 @@
 .sub-heading {
   margin-top: 90px;
   margin-bottom: 30px;
+  display: flex;
+  align-items:  center;
 }
 
 .subheding-icon {
@@ -153,14 +159,11 @@
   .hero-section {
     background-position: bottom;
     background-repeat: no-repeat;
-    background-size: contain;
-    margin: 0px 10px 0px 10px;
 
   }
 
   .hero-sub {
     max-width: 100%;
-    align-items: flex-end;
     justify-content: center;
     gap: 0px;
     padding-top: 25px;
@@ -192,7 +195,6 @@
 
   .hero-left p {
     max-width: 90%;
-
     font-size: 17px;
     font-weight: 400;
     font-style: normal;
@@ -219,12 +221,9 @@
 
   .typed-cursor {
     font-size: 35px;
-    color: #259D4A;
   }
 
   .hero-right {
-    display: flex;
-    align-items: center;
     width: 374px;
     height: 432px;
     background-image: url('../../assets/hero-mob.webp');
@@ -234,7 +233,6 @@
   }
 
   .hero-icons-main {
-    position: relative;
     width: 100%;
     height: 60%;
   }
@@ -251,7 +249,6 @@
     height: 61px;
     top: 60px;
     left: 240px;
-    z-index: 1;
   }
 
   .rank-icon {
@@ -259,7 +256,6 @@
     height: 118px;
     top: 180px;
     left: 180px;
-    z-index: 1;
   }
 }
 
@@ -276,8 +272,6 @@
   .hero-sub {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 0px;
     padding-top: 45px;
   }
 
@@ -304,47 +298,29 @@
   }
 
   .hero-left h4 {
-    font-size: 16.436px;
-    font-style: normal;
-    font-weight: 700;
-    margin-left: 10px;
+    font-size: 16px;
   }
 
   .hero-left p {
-    max-width: 90%;
     margin: auto;
-    font-size: 17px;
-    font-weight: 400;
-    font-style: normal;
     line-height: 136%;
     padding: 30px 10px 23px 10px
   }
 
-  .hero-left h3 {
-    font-size: 15px;
-  }
-
   .hero-headline-main {
-    max-width: 90%;
     text-align: center;
     padding-left: 5px;
   }
 
   .Hero-Headline {
-    font-size: 55px;
-    font-weight: 700;
-    line-height: 50px;
     text-align: center;
   }
 
   .typed-cursor {
     font-size: 35px;
-    color: #259D4A;
   }
 
   .hero-right {
-    display: flex;
-    align-items: center;
     width: 100%;
     height: 445px;
     background-image: url('../../assets/hero-mob.webp');
@@ -374,7 +350,6 @@
     height: 58px;
     top: 60px;
     left: 215px;
-    z-index: 1;
   }
 
   .rank-icon {
@@ -383,7 +358,6 @@
     height: 118px;
     top: 150px;
     left: 180px;
-    z-index: 1;
   }
 
 }

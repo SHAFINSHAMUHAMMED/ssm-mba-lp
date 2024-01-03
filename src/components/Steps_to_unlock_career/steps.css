@@ -23,10 +23,10 @@
 .steps-to-unlock-cards-main::after {
   position: absolute;
   content: '';
-  bottom: 150px;
+  bottom: 130px;
   left: 60px;
   width: 10%;
-  height: 980px;
+  height: 1000px;
   background-image: url('../../assets/svg/connecting-dot.svg');
   background-repeat: no-repeat;
   background-size: contain;
@@ -125,22 +125,13 @@
   /* Steps to unlock career section */
   .steps-to-unlock-cards-main {
     width: 600px;
-    margin: auto;
     margin-top: 25px;
-    position: relative;
   }
 
   .steps-to-unlock-cards-main::after {
-    position: absolute;
-    content: '';
     bottom: 100px;
     left: 40px;
-    width: 10%;
     height: 850px;
-    background-image: url('../../assets/svg/connecting-dot.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 1;
   }
 
   .steps-to-unlock-cards {
@@ -158,26 +149,10 @@
   }
 
   .steps-to-unlock-card-content {
-    display: flex;
     gap: 10px;
   }
 
-  .steps-to-unlock-card:hover {
-    background-color: #ffff;
-    border: none;
-  }
-
-  .steps-to-unlock-card h3 {
-    color: #0B434B;
-    font-size: 33.636px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 114.5%;
-    text-transform: uppercase;
-  }
-
   .steps-to-unlock-card h1 {
-    color: #259D4A;
     font-size: 86px;
   }
 
@@ -189,11 +164,6 @@
 
   .steps-to-unlock-card p {
     width: 90%;
-    color: #0B434B;
-    font-size: 18.773px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 136%;
   }
 
   .steps-to-unlock-career-h1 {
@@ -227,18 +197,14 @@
 
   .steps-to-unlock-cards-main {
     width: 90%;
-    margin: auto;
-    position: relative;
   }
 
   .steps-to-unlock-cards-main::after {
-    position: absolute;
-    content: '';
     left: 5%;
-    top: 0;
+    top: 0px;
     width: 10%;
-    height: 95%;
-    background-image: url('../../assets/svg/connecting-dot-mob.svg');
+    height: 90%;
+    background-image: url('../../assets/svg/connecting-dot.svg');
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 1;
@@ -250,9 +216,7 @@
   }
 
   .steps-to-unlock-card-main {
-    display: flex;
     align-items: flex-start;
-    justify-content: center;
     gap: 10px;
     margin-bottom: 33px;
   }

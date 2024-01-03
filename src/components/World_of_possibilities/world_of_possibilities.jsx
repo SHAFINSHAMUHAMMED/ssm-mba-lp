@@ -15,6 +15,8 @@ import scolar from "../../assets/svg/scolar-icon.svg";
 import dotted from "../../assets/svg/dottet-curve-icon.svg";
 import swisMba from "../../assets/swiss-mba.webp";
 import swisMbaTab from "../../assets/swiss-mba-tab.webp";
+import swisMbaMob from "../../assets/swiss-mba-mob.webp";
+
 
 function world_of_possibilities() {
 
@@ -34,7 +36,7 @@ function world_of_possibilities() {
         </h1>
         <div className="world-of-possibilities-sub-1">
           <img
-            className="w-[316px] h-[316px] breathing-image"
+            className="breathing-image"
             src={university_icon_large}
             alt=""
           />
@@ -49,10 +51,10 @@ function world_of_possibilities() {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <circle cx="40.8113" cy="40.8113" r="40.8113" fill="#0C434B" />
-                <g clip-path="url(#clip0_605_498)">
+                <g clipPath="url(#clip0_605_498)">
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M26.7977 23.9022C27.5242 23.1757 28.5095 22.7676 29.5369 22.7676H46.3232C46.6657 22.7676 46.9941 22.9036 47.2363 23.1458L56.2752 32.1846C56.5172 32.4267 56.6533 32.7552 56.6533 33.0977V55.0491C56.6533 56.0764 56.2453 57.0619 55.5188 57.7883C54.7924 58.5148 53.8069 58.9228 52.7795 58.9228H29.5369C28.5095 58.9228 27.5242 58.5148 26.7977 57.7883C26.0712 57.0619 25.6631 56.0764 25.6631 55.0491V26.6414C25.6631 25.614 26.0712 24.6287 26.7977 23.9022ZM40.056 39.743C40.4628 40.1498 41.1582 39.8617 41.1582 39.2865V26.6414H30.8281V39.2865C30.8281 39.8617 31.5236 40.1498 31.9303 39.743L35.0801 36.5932C35.5844 36.089 36.402 36.089 36.9062 36.5932L40.056 39.743Z"
                     fill="white"
                   />
@@ -116,8 +118,8 @@ function world_of_possibilities() {
               >
                 <circle cx="41.7234" cy="41.1707" r="40.8113" fill="#0C434B" />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M44.7985 27.2336C42.1241 24.386 38.8321 21 33.8086 21C30.4389 21 27.8409 22.6584 26.0853 24.4407C25.205 25.3345 24.5133 26.281 24.0128 27.1195C23.5269 27.9335 23.1735 28.7261 23.0358 29.3221C23.012 29.4249 23 29.5301 23 29.6357V37.9042C23.2797 37.6441 23.5771 37.3782 23.8903 37.112C26.0279 35.2957 29.2217 33.1875 32.75 33.1875C37.8355 33.1875 41.7284 36.458 44.8913 39.1804L45.3348 39.5628C46.8152 40.8399 48.1495 41.9909 49.5071 42.8679C50.4663 43.4875 51.3661 43.9212 52.2467 44.1477C52.7155 44.2684 53.179 44.3304 53.6429 44.3304C55.3251 44.3304 57.4376 43.4858 59.2948 42.4794C60.1879 41.9955 60.9587 41.5096 61.5055 41.1447C61.7019 41.0138 61.8682 40.8992 62 40.8068V29.6357C62 29.0219 61.5983 28.4805 61.0108 28.3026C60.4233 28.1247 59.7887 28.3524 59.4483 28.8631C58.6073 30.1245 56.26 32.5886 52.64 32.5886C51.2471 32.5886 50.0042 32.0382 48.7265 31.0634C47.5345 30.1539 46.4159 28.9598 45.171 27.6308L44.7985 27.2336ZM62 44.9469C61.6744 45.1402 61.3236 45.3405 60.9537 45.541C59.0067 46.5959 56.2442 47.8125 53.6429 47.8125C51.3767 47.8125 49.3819 46.9324 47.6177 45.7928C46.0443 44.7765 44.5224 43.4623 43.0816 42.2181L42.6196 41.8196C39.3097 38.9706 36.3572 36.6696 32.75 36.6696C30.5161 36.6696 28.1385 38.0717 26.1452 39.7655C25.1854 40.5811 24.3878 41.4015 23.83 42.0191C23.5521 42.3268 23.3364 42.5811 23.1926 42.7554C23.1207 42.8425 23.067 42.9094 23.0326 42.9527L23 42.9941V54.2614C23 54.9696 23.5314 55.5651 24.235 55.6454C24.9386 55.7256 25.5905 55.2651 25.7499 54.5751C25.7959 54.3762 25.9911 53.8659 26.4048 53.1731C26.8038 52.5045 27.3626 51.7395 28.07 51.0214C29.49 49.5795 31.416 48.4114 33.8086 48.4114C37.4777 48.4114 40.0005 50.8197 42.768 53.7664L43.1564 54.1809C44.3665 55.4743 45.6481 56.8443 47.0368 57.9038C48.6069 59.1019 50.4318 60 52.64 60C57.5872 60 60.6757 56.67 61.766 55.0342C61.9187 54.8052 62 54.5364 62 54.2614V44.9469Z"
                   fill="white"
                 />
@@ -149,7 +151,7 @@ function world_of_possibilities() {
                     cy="19.6991"
                     r="18.5104"
                     stroke="#0C424A"
-                    stroke-width="2.37735"
+                    strokeWidth="2.37735"
                   />
                 </svg>
                 <h3>Globally Recognised & Accredited</h3>
@@ -177,7 +179,7 @@ function world_of_possibilities() {
                     cy="19.6991"
                     r="18.5104"
                     stroke="#0C424A"
-                    stroke-width="2.37735"
+                    strokeWidth="2.37735"
                   />
                 </svg>
                 <h3>Unbeatable Affordability</h3>
@@ -205,7 +207,7 @@ function world_of_possibilities() {
                     cy="19.6991"
                     r="18.5104"
                     stroke="#0C424A"
-                    stroke-width="2.37735"
+                    strokeWidth="2.37735"
                   />
                 </svg>
                 <h3>Flexible Learning Modes</h3>
@@ -233,7 +235,7 @@ function world_of_possibilities() {
                     cy="19.6991"
                     r="18.5104"
                     stroke="#0C424A"
-                    stroke-width="2.37735"
+                    strokeWidth="2.37735"
                   />
                 </svg>
                 <h3>Fast-Track Your Degree</h3>
@@ -261,7 +263,7 @@ function world_of_possibilities() {
                     cy="19.6991"
                     r="18.5104"
                     stroke="#0C424A"
-                    stroke-width="2.37735"
+                    strokeWidth="2.37735"
                   />
                 </svg>
                 <h3>Expert Faculty</h3>
@@ -288,7 +290,7 @@ function world_of_possibilities() {
                     cy="19.6991"
                     r="18.5104"
                     stroke="#0C424A"
-                    stroke-width="2.37735"
+                    strokeWidth="2.37735"
                   />
                 </svg>
                 <h3>Multiple Starting Dates</h3>
@@ -316,7 +318,7 @@ function world_of_possibilities() {
                     cy="19.6991"
                     r="18.5104"
                     stroke="#0C424A"
-                    stroke-width="2.37735"
+                    strokeWidth="2.37735"
                   />
                 </svg>
                 <h3>Career-Focused Programs</h3>
@@ -344,7 +346,7 @@ function world_of_possibilities() {
                     cy="19.6991"
                     r="18.5104"
                     stroke="#0C424A"
-                    stroke-width="2.37735"
+                    strokeWidth="2.37735"
                   />
                 </svg>
                 <h3>Hassle-Free Migration</h3>
@@ -433,6 +435,8 @@ function world_of_possibilities() {
         </div>
         <img className='swiss-img-1' src={swisMba} alt="" />
         <img className='swiss-img-2' src={swisMbaTab} alt="" />
+        <img className='swiss-img-mob' src={swisMbaMob} alt="" />
+
       </div>
       {isPopupOpen && <Popup  />}
     </div>

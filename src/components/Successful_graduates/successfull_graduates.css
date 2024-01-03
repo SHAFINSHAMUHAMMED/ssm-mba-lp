@@ -63,6 +63,9 @@
   margin-left: 2px;
   object-fit: cover;
 }
+.gradute-image-mob {
+  display: none;
+}
 
 
 @media only screen and (max-width: 1180px) {
@@ -73,8 +76,6 @@
   }
 
   .successful-graduates-sub-1 {
-    background-color: #1C7337;
-    margin: 0px 10px 0px 10px;
     border-radius: 38px 38px 0px 0px;
     padding: 60px 10px 30px 10px;
   }
@@ -117,8 +118,6 @@
   }
 
   .successful-graduates-sub-1 {
-    background-color: #1C7337;
-    margin: 0px 10px 0px 10px;
     border-radius: 38px 38px 0px 0px;
     padding: 60px 10px 30px 10px;
   }
@@ -152,9 +151,13 @@
   .successful-graduates-carousel-2 {
     max-height: 247px;
   }
-
-  .gradute-image {
-    max-width: 179px;
-  }
-
+.gradute-image {
+  display: none;
+}
+.gradute-image-mob {
+  display: block;
+  width: 179px;
+  object-fit: contain;
+  margin-left: 2px;
+}
 }

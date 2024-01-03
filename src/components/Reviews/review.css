@@ -41,7 +41,9 @@
   width: 140px;
   height: 140px;
 }
-
+.player-container img {
+  width: 100%;
+}
 .custom-play-button2 {
   position: relative;
   display: inline-block;
@@ -121,7 +123,6 @@
   width: 100%;
   border-radius: 27px;
   position: relative;
-  border: 2px solid white;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -129,13 +130,16 @@
   user-select: none;
 }
 
-.review-video-sub-card img {
+.review-video-thumb-img {
   border-radius: 27px;
   max-height: 100%;
   user-select: none;
   cursor: pointer;
   pointer-events: none;
 }
+/* .review-video-thumb-img-mob {
+  display: none;
+} */
 
 .play-button {
   position: absolute;
@@ -203,27 +207,15 @@
   }
   .review-section-main h1 {
     max-width: 90%;
-    margin: auto;
-    text-align: center;
-    padding: 0px 10px 0px 10px;
-    line-height: 104%;
   }
 
   .review-video-main {
-    max-width: 90%;
     height: 324px;
-    margin: auto;
-    margin-top: 53px;
   }
 
-  .carousel-container {
-    position: relative;
-  }
 
   .player-container {
     border-radius: 38px;
-    overflow: hidden;
-    height: 100%;
   }
 
   .player-container svg {
@@ -242,13 +234,13 @@
     background-image: url('../../assets/GraphicPatter3.webp');
     background-position: bottom center;
     background-repeat: no-repeat;
-    margin: 45px 0px 50px 0px;
+    margin: 40px 0px 50px 0px;
     position: relative;
   }
 
   .review-video-sub .react-multi-carousel-list {
     overflow: hidden;
-    transform: translateY(-20%);
+    transform: translateY(-30%);
   }
 
   .review-video-sub .react-multi-carousel-dot-list {
@@ -260,15 +252,17 @@
   }
 
   .review-video-sub-card {
-    width: 100%;
     border-radius: 10px;
   }
 
-  .review-video-sub-card img {
+  .review-video-thumb-img {
     border-radius: 10px;
     max-height: 100%;
     object-fit: contain;
   }
+  /* .review-video-thumb-img-mob {
+    display: none;
+  } */
 
   .play-button {
     width: 30%;
@@ -276,49 +270,8 @@
   }
 
   .user-reviews {
-    display: flex;
-    flex-direction: column;
     gap: 15px;
     padding: 10px 0px 45px 0px;
-  }
-
-  .user-review-card {
-    max-width: 514px;
-    min-width: 514px;
-    border: 1px solid rgba(18, 104, 44, 0.192);
-    border-radius: 47px;
-    padding: 50px 56px 40px 40px;
-  }
-
-  .user-review-svg {
-    width: 74px;
-    height: 51px;
-  }
-
-  .user-review-card p {
-    color: #24626A;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 144%;
-    margin-bottom: 60px;
-    height: 260px;
-    user-select: none;
-
-  }
-
-  .review-user-icon {
-    width: 48px;
-    height: 48px;
-  }
-
-  .user-review-card h5 {
-    font-family: 'SK Modernist Bold';
-  }
-
-  .review-verified {
-    width: 157px;
-    height: 28px;
   }
 }
 
@@ -365,6 +318,8 @@
 
   .review-video-sub .react-multi-carousel-list {
     overflow: hidden;
+    transform: translateY(-20%);
+
   }
 
   .review-video-sub-cards {
@@ -381,11 +336,15 @@
     border-radius: 10px;
   }
 
-  .review-video-sub-card img {
+  /* .review-video-thumb-img {
+   display: none;
+  } */
+  /* .review-video-thumb-img-mob {
+    display: block;
     border-radius: 10px;
     max-height: 100%;
     object-fit: contain;
-  }
+  } */
 
   .play-button {
     width: 30%;
@@ -399,7 +358,6 @@
   .user-review-card {
     max-width: 384px;
     min-width: 384px;
-    border: 1px solid rgba(18, 104, 44, 0.192);
     border-radius: 35px;
     padding: 38px 40px 30px 30px;
   }
@@ -419,7 +377,6 @@
     margin-bottom: 50px;
     padding: 0px 10px 0px 10px;
     height: 230px;
-    user-select: none;
 
 
   }

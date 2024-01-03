@@ -13,12 +13,6 @@
 
 @media only screen and (max-width: 1180px) {
 
-  .sticky-whatsapp-button {
-    position: fixed;
-    right: 20px;
-    bottom: 40%;
-  }
-
   .sticky-whatsapp-button img {
     width: 105px;
   }
@@ -27,10 +21,7 @@
 
 @media only screen and (max-width: 640px) {
   .sticky-whatsapp-button {
-    position: fixed;
     right: 10px;
-    bottom: 40%;
-    z-index: 1000;
   }
 
   .sticky-whatsapp-button img {

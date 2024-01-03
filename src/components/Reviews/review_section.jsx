@@ -7,12 +7,17 @@ import ButtonDark from "../Buttons/buttonDark";
 import { Link, Element } from "react-scroll";
 import Claim_description from "../Description/claim_description";
 import { usePopup } from "../Hoocks/PopupContext";
-import { BounceLoader } from "react-spinners";
+import { ClipLoader } from "react-spinners";
 
+import reviewVideo from "../../assets/review-video-thumb.webp"
 import videoThumb1 from "../../assets/videoThumb1.webp";
 import videoThumb2 from "../../assets/videoThumb2.webp";
 import videoThumb3 from "../../assets/videoThumb3.webp";
 import videoThumb4 from "../../assets/videoThumb4.webp";
+import videoThumb1Mob from "../../assets/videoThumb1-mob.webp";
+import videoThumb2Mob from "../../assets/videoThumb2-mob.webp";
+import videoThumb3Mob from "../../assets/videoThumb3-mob.webp";
+import videoThumb4Mob from "../../assets/videoThumb4-mob.webp";
 import stars_review from "../../assets/svg/stars-review.svg";
 import verified_review from "../../assets/svg/verified-review.svg";
 
@@ -38,8 +43,7 @@ function Loader() {
         textAlign: "center",
       }}
     >
-      <BounceLoader color="#0B434B" />
-      <p>Loading video...</p>
+       <ClipLoader color={"#0B434B"} size={50} />
     </div>
   );
 }
@@ -47,11 +51,8 @@ function Loader() {
 function ReviewSection() {
   const [currentVideoUrl, setCurrentVideoUrl] = useState("");
   const { isPopupOpen, togglePopup } = usePopup();
-
-  useEffect(() => {
-    const defaultVideoUrl = "https://youtu.be/LJ-LdPUnywM?si=PZr2husnFLlRF4Q4";
-    setCurrentVideoUrl(defaultVideoUrl);
-  }, []);
+  const [showVideo, setShowVideo] = useState(false);
+console.log(showVideo);
 
   const responsive = {
     superLargeDesktop: {
@@ -74,13 +75,25 @@ function ReviewSection() {
   };
   const [playing, setPlaying] = useState(false);
   const carouselRef = useRef(null);
+
   const handlePlayPause = () => {
+    if (!showVideo) {
+      const defaultVideoUrl = "https://youtu.be/9n9w1LNdXrU?si=WWLgRiyEUa8jpFAz";
+      setCurrentVideoUrl(defaultVideoUrl);
+      setShowVideo(true);
+    }
     setPlaying(!playing);
   };
+  
+
   const handleCardClick = (newUrl) => {
+    console.log("handleCardClick called with URL:", newUrl);
     setCurrentVideoUrl(newUrl);
+    setShowVideo(true);
     setPlaying(true);
-  };
+    console.log("showVideo set to true");
+};
+
   const goToNext = () => {
     if (carouselRef.current) {
       carouselRef.current.next();
@@ -138,7 +151,8 @@ function ReviewSection() {
             />
           </svg>
         </button>
-        <div className="player-container">
+        <div className="player-container"  style={{ paddingTop: showVideo ? '40.25%' : '0' }} >
+          {showVideo ? (
           <Suspense fallback={<Loader />}>
             <ReactPlayer
               url={currentVideoUrl}
@@ -157,6 +171,9 @@ function ReviewSection() {
               onEnded={() => setPlaying(false)}
             />
           </Suspense>
+          ):(
+            <img src={reviewVideo} onClick={() => handleCardClick('https://youtu.be/9n9w1LNdXrU?si=WWLgRiyEUa8jpFAz')} alt="" />
+          )}
           {!playing && (
             <div className="custom-play-button" onClick={handlePlayPause}>
               {/* <div className="pulse-circle"></div> */}
@@ -189,9 +206,9 @@ function ReviewSection() {
                     width="156.573"
                     height="156.573"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feGaussianBlur
                       in="BackgroundImageFix"
                       stdDeviation="3.39037"
@@ -233,7 +250,8 @@ function ReviewSection() {
                 )
               }
             >
-              <img className=" sm:w-auto" src={videoThumb1} alt="" />
+              <img className=" sm:w-auto review-video-thumb-img" src={videoThumb1} alt="" />
+
               <svg
                 className="play-button"
                 xmlns="http://www.w3.org/2000/svg"
@@ -245,12 +263,12 @@ function ReviewSection() {
                 <path
                   d="M56.2503 46.1795L33.3996 60.4221C31.8976 61.3582 29.952 60.2783 29.952 58.5085L29.952 30.0234C29.952 28.2536 31.8976 27.1736 33.3996 28.1098L56.2503 42.3524C57.6665 43.2351 57.6665 45.2968 56.2503 46.1795Z"
                   stroke="white"
-                  stroke-width="3"
+                  strokeWidth="3"
                 />
                 <path
                   d="M79.5879 43.5C79.5879 67.0456 61.9247 86 40.2939 86C18.6632 86 1 67.0456 1 43.5C1 19.9544 18.6632 1 40.2939 1C61.9247 1 79.5879 19.9544 79.5879 43.5Z"
                   stroke="white"
-                  stroke-width="3"
+                  strokeWidth="3"
                 />
               </svg>
             </div>
@@ -262,7 +280,7 @@ function ReviewSection() {
                 )
               }
             >
-              <img className=" sm:w-auto" src={videoThumb2} alt="" />
+              <img className=" sm:w-auto review-video-thumb-img" src={videoThumb2} alt="" />
               <svg
                 className="play-button"
                 xmlns="http://www.w3.org/2000/svg"
@@ -274,12 +292,12 @@ function ReviewSection() {
                 <path
                   d="M56.2503 46.1795L33.3996 60.4221C31.8976 61.3582 29.952 60.2783 29.952 58.5085L29.952 30.0234C29.952 28.2536 31.8976 27.1736 33.3996 28.1098L56.2503 42.3524C57.6665 43.2351 57.6665 45.2968 56.2503 46.1795Z"
                   stroke="white"
-                  stroke-width="3"
+                  strokeWidth="3"
                 />
                 <path
                   d="M79.5879 43.5C79.5879 67.0456 61.9247 86 40.2939 86C18.6632 86 1 67.0456 1 43.5C1 19.9544 18.6632 1 40.2939 1C61.9247 1 79.5879 19.9544 79.5879 43.5Z"
                   stroke="white"
-                  stroke-width="3"
+                  strokeWidth="3"
                 />
               </svg>
             </div>
@@ -291,7 +309,7 @@ function ReviewSection() {
                 )
               }
             >
-              <img className=" sm:w-auto" src={videoThumb3} alt="" />
+              <img className=" sm:w-auto review-video-thumb-img" src={videoThumb3} alt="" />
               <svg
                 className="play-button"
                 xmlns="http://www.w3.org/2000/svg"
@@ -303,12 +321,12 @@ function ReviewSection() {
                 <path
                   d="M56.2503 46.1795L33.3996 60.4221C31.8976 61.3582 29.952 60.2783 29.952 58.5085L29.952 30.0234C29.952 28.2536 31.8976 27.1736 33.3996 28.1098L56.2503 42.3524C57.6665 43.2351 57.6665 45.2968 56.2503 46.1795Z"
                   stroke="white"
-                  stroke-width="3"
+                  strokeWidth="3"
                 />
                 <path
                   d="M79.5879 43.5C79.5879 67.0456 61.9247 86 40.2939 86C18.6632 86 1 67.0456 1 43.5C1 19.9544 18.6632 1 40.2939 1C61.9247 1 79.5879 19.9544 79.5879 43.5Z"
                   stroke="white"
-                  stroke-width="3"
+                  strokeWidth="3"
                 />
               </svg>
             </div>
@@ -320,7 +338,7 @@ function ReviewSection() {
                 )
               }
             >
-              <img className=" sm:w-auto" src={videoThumb4} alt="" />
+              <img className=" sm:w-auto review-video-thumb-img" src={videoThumb4} alt="" />
               <svg
                 className="play-button"
                 xmlns="http://www.w3.org/2000/svg"
@@ -332,12 +350,12 @@ function ReviewSection() {
                 <path
                   d="M56.2503 46.1795L33.3996 60.4221C31.8976 61.3582 29.952 60.2783 29.952 58.5085L29.952 30.0234C29.952 28.2536 31.8976 27.1736 33.3996 28.1098L56.2503 42.3524C57.6665 43.2351 57.6665 45.2968 56.2503 46.1795Z"
                   stroke="white"
-                  stroke-width="3"
+                  strokeWidth="3"
                 />
                 <path
                   d="M79.5879 43.5C79.5879 67.0456 61.9247 86 40.2939 86C18.6632 86 1 67.0456 1 43.5C1 19.9544 18.6632 1 40.2939 1C61.9247 1 79.5879 19.9544 79.5879 43.5Z"
                   stroke="white"
-                  stroke-width="3"
+                  strokeWidth="3"
                 />
               </svg>
             </div>

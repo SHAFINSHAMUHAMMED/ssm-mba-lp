@@ -1,5 +1,5 @@
 <svg width="375" height="103" viewBox="0 0 375 103" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1075_91)">
+<g clipPath="url(#clip0_1075_91)">
 <g filter="url(#filter0_d_1075_91)">
 <path d="M459.449 103L356.311 103L356.311 0.0230026L459.449 0.0229981L459.449 103Z" fill="#0B434B"/>
 <path d="M460 103C446.343 103 432.819 100.336 420.201 95.1596C407.583 89.9834 396.118 82.3964 386.461 72.832C376.804 63.2676 369.143 51.9129 363.917 39.4164C358.69 26.9199 356 13.5262 356 0L460 3.31229e-06V103Z" fill="#EDE6D8"/>
@@ -42,8 +42,8 @@
 </g>
 </g>
 <defs>
-<filter id="filter0_d_1075_91" x="-34.0273" y="0" width="498.027" height="111.04" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<filter id="filter0_d_1075_91" x="-34.0273" y="0" width="498.027" height="111.04" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="4"/>
 <feGaussianBlur stdDeviation="2"/>

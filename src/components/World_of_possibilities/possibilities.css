@@ -267,6 +267,9 @@
 .swiss-img-2 {
   display: none;
 }
+.swiss-img-mob {
+  display: none;
+}
 
 .world-of-possibilities-brochure-left {
   padding: 67px 0px 92px 0px
@@ -276,7 +279,6 @@
   /* World of possibilities section */
 
   .world-of-possibilities-main {
-    margin: 0px 10px 0px 10px;
     margin-top: 50px;
     padding-top: 40px;
     border-radius: 38px;
@@ -284,22 +286,10 @@
 
   .world-of-possibilities-main h1 {
     max-width: 90%;
-    margin: auto;
-    text-align: center;
     padding: 0px 0px 0px 0px;
-    line-height: 104%;
   }
 
   .world-of-possibilities-sub-1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    background-image: url('../../assets/map-bg.webp');
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: auto;
     margin-top: 30px;
     border-bottom: none;
     padding-top: 30px;
@@ -318,9 +308,7 @@
   .world-of-possibilities-cards {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    width: 100%;
     margin-top: 50px;
   }
 
@@ -337,7 +325,6 @@
   }
 
   .world-of-possibilities-card:not(:last-child) {
-    justify-content: center;
     width: 280px;
     align-items: center;
     border-right: none;
@@ -356,7 +343,6 @@
 
   .world-of-possibilities-card h1 {
     font-size: 61px;
-    text-align: start;
   }
 
   .world-of-possibilities-card span {
@@ -376,10 +362,8 @@
 
   .world-of-possibilities-2-card {
     width: 90%;
-    justify-content: center;
     gap: 10px;
     padding: 28px 25px 28px 25px;
-    transition: background-color 0.3s, color 0.3s;
     margin-left: auto;
     margin-right: auto;
   }
@@ -394,9 +378,6 @@
   }
 
   .world-of-possibilities-bottom {
-    justify-content: flex-end;
-    align-items: center;
-    background-image: url('../../assets/professional2.webp');
     background-position: top;
     background-size: cover;
     height: 500px;
@@ -405,20 +386,17 @@
   }
 
   .world-of-possibilities-icon-dot {
-    position: absolute;
     width: 250px;
     height: 250px;
     left: 20px;
   }
 
   .world-of-possibilities-icons {
-    position: relative;
     height: 50%;
     width: 50%;
   }
 
   .world-of-possibilities-icon-1 {
-    position: absolute;
     width: 135px;
     height: 115px;
     left: 70px;
@@ -426,7 +404,6 @@
   }
 
   .world-of-possibilities-icon-2 {
-    position: absolute;
     width: 70px;
     height: 70px;
     left: 120px;
@@ -434,7 +411,6 @@
   }
 
   .world-of-possibilities-icon-3 {
-    position: absolute;
     width: 30px;
     height: 30px;
     left: 0px;
@@ -442,7 +418,6 @@
   }
 
   .world-of-possibilities-icon-4 {
-    position: absolute;
     width: 46px;
     height: 46px;
     left: 40px;
@@ -451,12 +426,9 @@
 
   .world-of-possibilities-brochure {
     width: 90%;
-    background-color: #0C434B;
     border-radius: 44px;
     padding: 0px 10px 0px 20px;
-    margin: auto;
     justify-content: center;
-    align-items: flex-end;
     bottom: 80px;
 
   }
@@ -493,6 +465,9 @@
     display: block;
     width: 280px;
   }
+  .swiss-img-mob {
+    display: none;
+  }
 
   .world-of-possibilities-brochure-left {
     width: 60%;
@@ -513,17 +488,11 @@
 
   .world-of-possibilities-main h1 {
     max-width: 90%;
-    margin: auto;
-    text-align: center;
     padding: 0px 0px 0px 0px;
     line-height: 104%;
   }
 
   .world-of-possibilities-sub-1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
     background-image: url('../../assets/map-bg-mob.webp');
     background-position: top;
     background-repeat: no-repeat;
@@ -537,10 +506,9 @@
   }
 
   .breathing-image {
-    position: absolute;
-    top: 10%;
-    width: 172px;
-    height: 172px;
+    top: 0%;
+    width: 142px;
+    height: 142px;
   }
 
   .world-of-possibilities-cards {
@@ -576,19 +544,8 @@
 
   }
 
-  .world-of-possibilities-card h1 {
-    font-size: 61px;
-    text-align: start;
-  }
-
-  .world-of-possibilities-card span {
-    font-size: 29px;
-  }
-
   .world-of-possibilities-cards-2 {
     grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-    padding: 30px 20px 30px 20px;
-    justify-content: center;
   }
 
   .world-of-possibilities-2-card {
@@ -611,7 +568,7 @@
   .world-of-possibilities-bottom {
     justify-content: flex-end;
     align-items: center;
-    background-image: url('../../assets/professional2.webp');
+    background-image: url('../../assets/professional2-mob.webp');
     background-position: center top;
     height: 316px;
     border-bottom-left-radius: 37px;
@@ -619,48 +576,45 @@
   }
 
   .world-of-possibilities-icon-dot {
-    position: absolute;
-    left: -10px;
+    opacity: 0.7;
+    top: 40px;
+    left: -5px;
     width: 166px;
     height: 166px;
   }
 
   .world-of-possibilities-icons {
-    position: relative;
     height: 50%;
     width: 50%;
   }
 
   .world-of-possibilities-icon-1 {
-    position: absolute;
+
     width: 105px;
     height: 96px;
     left: 10px;
-    bottom: 30px;
+    bottom: -15px;
   }
 
   .world-of-possibilities-icon-2 {
-    position: absolute;
     width: 50px;
     height: 50px;
-    left: 80px;
-    bottom: 120px;
+    left: 75px;
+    bottom: 85px;
   }
 
   .world-of-possibilities-icon-3 {
-    position: absolute;
     width: 18px;
     height: 18px;
     left: -10px;
-    bottom: 100px;
+    bottom: 50px;
   }
 
   .world-of-possibilities-icon-4 {
-    position: absolute;
     width: 36px;
     height: 36px;
     left: 20px;
-    bottom: 130px;
+    bottom: 85px;
   }
 
   .world-of-possibilities-brochure {
@@ -671,7 +625,6 @@
     background-repeat: no-repeat;
     border-radius: 44px;
     padding: 0px 10px 0px 20px;
-    margin: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -703,12 +656,16 @@
 
   .swiss-img-1 {
     width: 358px;
-    display: block;
+    display: none;
 
   }
 
   .swiss-img-2 {
     display: none;
+  }
+  .swiss-img-mob {
+    display: block;
+    width: 358px;
   }
 
   .world-of-possibilities-brochure-left {

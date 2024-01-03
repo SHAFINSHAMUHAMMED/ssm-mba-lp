@@ -19,7 +19,6 @@
 
 .carousel h4 {
   font-family: 'SK Modernist Bold';
-  ;
   font-size: 22px;
 }
 
@@ -32,19 +31,13 @@
   .carousel {
     max-width: 90%;
     margin: 0px 20px 0px 20px;
-    margin: auto;
     transform: translateY(-40px);
-    background: white;
     border-radius: 20px;
     font-weight: bold;
     overflow-y: visible;
   }
 
   .carousel-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
     padding: 25px 50px 15px 50px;
     width: 250px;
   }
@@ -60,8 +53,6 @@
   }
 
   .carousel h4 {
-    font-family: 'SK Modernist Bold';
-    ;
     font-size: 17px;
   }
 
@@ -98,22 +89,14 @@
   .carousel {
     max-width: 90%;
     margin: 0px 20px 0px 20px;
-    margin: auto;
     transform: translateY(-75px);
-    background: white;
     border-radius: 20px;
-    font-weight: bold;
     overflow-y: visible;
     margin-bottom: -30px;
   }
 
   .carousel-card {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: flex-start;
-    text-align: center;
     padding: 25px 20px 15px 20px;
     z-index: 10;
   }
@@ -124,8 +107,6 @@
   }
 
   .carousel h4 {
-    font-family: 'SK Modernist Bold';
-    ;
     font-size: 17px;
   }
 

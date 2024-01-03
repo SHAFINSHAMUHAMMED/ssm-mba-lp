@@ -35,13 +35,13 @@ function hero() {
   return (
     <>
       <div
-        className={`hero-section flex justify-center items-center bg-backgrounds-wisdomWhite ${
+        className={`hero-section  ${
           isPopupOpen ? "blur-effect" : ""
         }`}
       >
         <div className="hero-sub">
           <div className="hero-left">
-            <div className="sub-heading flex items-center  md:pe-8">
+            <div className="sub-heading  md:pe-8">
               <div className="subheding-icon">
                 <img
                   className="w-[36px] h-[36px] md:w-[54px] md:h-[54px]"

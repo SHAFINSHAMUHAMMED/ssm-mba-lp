@@ -19,7 +19,6 @@ const Accreditations = lazy(() =>
 const UnbeatableReason = lazy(() =>
   import("./components/Reason_section/unbeatable_reason")
 );
-// const PowerSkills = lazy(() => import("./components/Power_skills/power_skills")); // Commented out as in original code
 const UaeProfessionals = lazy(() =>
   import("./components/Uae_professionals/uae_professionals")
 );
@@ -84,7 +83,7 @@ function App() {
               height: "100vh",
             }}
           >
-            <ClipLoader color={"#123abc"} size={50} />
+            <ClipLoader color={"#0B434B"} size={50} />
           </div>
         }
       >
@@ -98,7 +97,6 @@ function App() {
           <SwissSchool />
           <ProgramHighlights />
           <Accreditations />
-          {/* <PowerSkills /> */}
           <ReviewSection />
           <UaeProfessionals />
           <WorldOfPossibilities />

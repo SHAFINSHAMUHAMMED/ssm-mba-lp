@@ -5,6 +5,7 @@ import MultiStepForm from "../Form/MultiStepForm";
 import GraphicPattern4 from "../../assets/svg/GraphicPatter4.svg";
 import GraphicPattern_mob from "../../assets/svg/graphicPattern-last-mob.svg";
 import icf_banner from "../../assets/icf-certification-banner.webp";
+import icf_bannerMob from "../../assets/icf-certification-banner-mob.webp";
 import bottom_man from "../../assets/bottom-man.webp";
 import bottom_manMob from "../../assets/bottom-man-mob.webp";
 
@@ -56,7 +57,9 @@ function icf_certification() {
           <span className="wavy-underline-green">Scholarships</span>{" "}
           <span className="wavy-underline-green"> Of Upto 30%</span> <br />
         </h1>
-        <img src={icf_banner} alt="" />
+        <img className="icf-banner-img" src={icf_banner} alt="" />
+        <img className="icf-banner-img-Mob" src={icf_bannerMob} alt="" />
+
         <MultiStepForm />
       </div>
       <div className="bottom-man-image-div">

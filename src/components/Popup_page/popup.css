@@ -1,6 +1,6 @@
 .popup-main {
     width: 817px;
-    border-radius: 52.237px;
+    border-radius: 52px;
     background: #0C434B;
     background-image: url("../../assets/svg/brochure-bg.svg");
     background-position: right;
@@ -202,7 +202,6 @@
 .popup-sub .react-tel-input .form-control {
     width: 331.102px;
     height: 54.463px;
-    /* padding-bottom: 3px; */
     padding-left: 70px;
     flex-shrink: 0;
     border-radius: 52.59px;
@@ -247,10 +246,8 @@
 
     .popup-thank-you p {
         width: 70%;
-        text-align: center;
         font-size: 11px;
         line-height: 14px;
-        margin-bottom: 23px;
     }
 
     .thank-you-button {
@@ -268,21 +265,13 @@
         font-size: 14px;
     }
 
-
-    .popup-close-button {
-        position: absolute;
-        right: 7%;
-    }
-
     .popup-main h1 {
         width: 356px;
         margin-bottom: 10px;
         font-size: 31px;
-        line-height: 45px;
     }
 
     .popup-main-description {
-        text-align: center;
         letter-spacing: .3;
         width: 300px;
         font-size: 10px;
@@ -290,7 +279,6 @@
     }
 
     .popup-sub {
-        display: flex;
         align-items: flex-end;
     }
 
@@ -348,7 +336,6 @@
     }
 
     .popup-sub .react-tel-input .flag-dropdown {
-        top: 15%;
         height: 25px;
     }
 

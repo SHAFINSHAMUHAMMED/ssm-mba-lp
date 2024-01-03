@@ -13,6 +13,13 @@ import graduates4 from "../../assets/graduate-4.webp";
 import graduates5 from "../../assets/graduate-5.webp";
 import graduates6 from "../../assets/graduate-6.webp";
 import graduates7 from "../../assets/graduate-7.webp";
+import graduates1Mob from "../../assets/graduate-1-mob.webp";
+import graduates2Mob from "../../assets/graduate-2-mob.webp";
+import graduates3Mob from "../../assets/graduate-3-mob.webp";
+import graduates4Mob from "../../assets/graduate-4-mob.webp";
+import graduates5Mob from "../../assets/graduate-5-mob.webp";
+import graduates6Mob from "../../assets/graduate-6-mob.webp";
+import graduates7Mob from "../../assets/graduate-7-mob.webp";
 
 
 function successful_graduates() {
@@ -43,6 +50,15 @@ function successful_graduates() {
             <img className="gradute-image" src={graduates7} alt="" />
             <img className="gradute-image" src={graduates3} alt="" />
 
+            <img className="gradute-image-mob" src={graduates1Mob} alt="" />
+            <img className="gradute-image-mob" src={graduates2Mob} alt="" />
+            <img className="gradute-image-mob" src={graduates3Mob} alt="" />
+            <img className="gradute-image-mob" src={graduates4Mob} alt="" />
+            <img className="gradute-image-mob" src={graduates5Mob} alt="" />
+            <img className="gradute-image-mob" src={graduates6Mob} alt="" />
+            <img className="gradute-image-mob" src={graduates7Mob} alt="" />
+            <img className="gradute-image-mob" src={graduates3Mob} alt="" />
+
         </div>
         </Marquee>
         <Marquee speed={70} direction="left">
@@ -55,6 +71,15 @@ function successful_graduates() {
             <img className="gradute-image" src={graduates3} alt="" />
             <img className="gradute-image" src={graduates5}alt="" />
             <img className="gradute-image" src={graduates1} alt="" />
+
+            <img className="gradute-image-mob" src={graduates2Mob} alt="" />
+            <img className="gradute-image-mob" src={graduates4Mob} alt="" />
+            <img className="gradute-image-mob" src={graduates1Mob} alt="" />
+            <img className="gradute-image-mob" src={graduates7Mob} alt="" />
+            <img className="gradute-image-mob" src={graduates6Mob} alt="" />
+            <img className="gradute-image-mob" src={graduates3Mob} alt="" />
+            <img className="gradute-image-mob" src={graduates5Mob}alt="" />
+            <img className="gradute-image-mob" src={graduates1Mob} alt="" />
         </div>
         </Marquee>
       </div>

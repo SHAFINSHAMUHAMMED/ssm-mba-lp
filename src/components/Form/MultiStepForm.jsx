@@ -316,16 +316,16 @@ const MultiStepForm = () => {
           <path
             d="M39.2891 1L39.2891 128"
             stroke="#0B434B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M20.9297 110.985L39.2003 129.256L57.4709 110.985"
             stroke="#0B434B"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <circle
             cx="37.7907"
@@ -333,7 +333,7 @@ const MultiStepForm = () => {
             r="36.7907"
             transform="rotate(-90 37.7907 118.209)"
             stroke="#259D4A"
-            stroke-width="2"
+            strokeWidth="2"
           />
         </svg>
       </div>
