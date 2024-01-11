@@ -38,7 +38,7 @@ function hero() {
               Are You Missing Out on Salary Raises?
               </h4>
             </div>
-              <h1 className="Hero-Headline"><span className="highlight-green">70%</span> Of Companies In The <span className="highlight-green">UAE</span> Have <span className="highlight-green  "> <span className="wavy-underline-orange1"> Hiked </span> <span className="wavy-underline-orange2"> Salaries </span> </span>. An <span className="highlight-orange ">MBA </span> Could Be Your Key To Success!</h1>
+              <h1 className="Hero-Headline"><span className="highlight-green">70%</span> Of Companies In The <span className="highlight-green">UAE</span> Have <span className="highlight-green wawy-orange ">  Hiked  Salaries </span>. An <span className="highlight-orange ">MBA </span> Could Be Your Key To Success!</h1>
             <p className="">
             Dive into a world of knowledge and skills that align with market demands, and join the ranks of successful professionals who've elevated their careers with an MBA. Start your journey towards success today!
             </p>

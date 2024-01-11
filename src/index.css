@@ -102,7 +102,6 @@ button {
 
 .highlight-green {
   color: #259D4A;
-  /* white-space: nowrap; */
   box-sizing: border-box;
   word-wrap: break-word;
 }

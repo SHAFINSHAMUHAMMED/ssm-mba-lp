@@ -169,10 +169,10 @@ function ReviewSection() {
             />
           </Suspense>
           ):(
-            <img src={reviewVideo} onClick={() => handleCardClick('https://youtu.be/9n9w1LNdXrU?si=WWLgRiyEUa8jpFAz')} alt="" />
+            <img className="h-[100%] object-contain" src={reviewVideo} onClick={() => handleCardClick('https://youtu.be/9n9w1LNdXrU?si=WWLgRiyEUa8jpFAz')} alt="" />
           )}
           {!playing && (
-            <div className="custom-play-button" onClick={handlePlayPause}>
+            <div className="custom-play-button2" onClick={handlePlayPause}>
               {/* <div className="pulse-circle"></div> */}
 
               <svg

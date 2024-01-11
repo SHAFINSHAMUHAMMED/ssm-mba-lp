@@ -1,5 +1,5 @@
 .power-skill-main {
-  margin: 0px 10px 0px 10px;
+  margin: 80px 10px 0px 10px;
   padding-bottom: 50px;
   overflow: hidden;
 }
@@ -159,6 +159,7 @@
 
   .power-skill-main {
     padding-bottom: 36px;
+    margin-top: 35px;
   }
 
   .power-skill-main h2 {

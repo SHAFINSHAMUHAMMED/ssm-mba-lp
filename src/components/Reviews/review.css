@@ -13,7 +13,7 @@
 
 .review-video-main {
   max-width: 90%;
-  height: 100%;
+  height: 708px;
   margin: auto;
   margin-top: 53px;
   position: relative;
@@ -32,6 +32,7 @@
   position: relative;
   padding-top: 40.25%;
   z-index: 0;
+  background-color: rgb(3, 3, 3);
 }
 .player-container iframe {
   width: 100%;
@@ -45,8 +46,9 @@
   width: 100%;
 }
 .custom-play-button2 {
-  position: relative;
-  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 40%;
   width: 144px;
   height: 144px;
 }
@@ -227,7 +229,10 @@
   .custom-next-button {
     display: none;
   }
-
+  .custom-play-button2 {
+    left: 45%;
+    top: 40%;
+  }
   .review-video-sub {
     height: 253px;
     width: 100%;
@@ -307,7 +312,10 @@
   .custom-next-button {
     display: none;
   }
-
+  .custom-play-button2 {
+    left: 40%;
+    top: 30%;
+  }
   .review-video-sub {
     height: 126px;
     background-image: url('../../assets/GraphicPatter3-mob.webp');

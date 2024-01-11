@@ -161,6 +161,12 @@ position: relative;
   overflow: hidden;
 
 }
+.wawy-orange {
+  background-image: url('../../assets/wawy-orange.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 0px 0px 5px 0px;
+}
 
 
 @media only screen and (max-width: 1180px) {
@@ -267,6 +273,7 @@ display: none;
     top: 180px;
     left: 180px;
   }
+  
 }
 
 @media only screen and (max-width: 640px) {
@@ -415,5 +422,7 @@ line-height: 92%; /* 45.515px */
     left: 165px;
     z-index: 1;
   }
-
+  .wawy-orange {
+    padding: 0px 0px 8px 0px;
+  }
 }
