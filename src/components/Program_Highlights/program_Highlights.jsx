@@ -12,8 +12,8 @@ function program_Highlights() {
         <div className="columns Highlight-columns">
           <svg
             className="svg-icon highlight-svg"
-            width=""
-            height=""
+            width="100"
+            height="100"
             viewBox="0 0 121 118"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -68,8 +68,8 @@ function program_Highlights() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="highlight-svg"
-            width=""
-            height=""
+            width="100"
+            height="100"
             viewBox="0 0 112 112"
             fill="none"
           >

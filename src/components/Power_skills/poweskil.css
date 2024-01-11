@@ -1,0 +1,227 @@
+.power-skill-main {
+  margin: 0px 10px 0px 10px;
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+
+.power-skill-main h2 {
+  margin: auto;
+  width: 621px;
+  font-size:53px ;
+  line-height: 55px;
+  text-align: center;
+}
+
+.power-skill-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 50px 20px 0px 20px;
+  margin: 0 auto;
+  width: 1120px;
+  position: relative;
+  align-items: flex-start;
+}
+
+  .power-skill-card-main {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+.power-skill-star {
+  width: 300px;
+  position: absolute;
+  bottom: 150px;
+  right: -100px;
+  z-index: -1;
+}
+
+.power-skill-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 392px;
+  justify-content: center;
+  padding: 0px 0px 35px 0px;
+}
+
+.power-skill-card h3 {
+  font-family: 'SK Modernist Bold';
+  line-height: 112%;
+  margin-left: 5px;
+}
+
+.power-skill-card-content {
+  margin-top: 10px;
+  padding: 0px 0px 0px 0px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.power-skill-card p {
+  padding: 10px 0px 10px 0px;
+  font-size: 18px;
+  color: #0B434B;
+  line-height: 24px;
+  text-align: left;
+  width: 293px;
+}
+
+.power-skill-card-icon {
+  position: absolute;
+  width: 61px;
+  height: 61px;
+  left: -15px;
+  top: -20px;
+}
+
+.power-skill-card-img {
+  width: 329px;
+  height: auto;
+}
+
+@media only screen and (max-width: 1180px) {
+
+/* 6-power-skills section */
+
+  .power-skill-main {
+    margin-top: 50px;
+    padding-bottom: 40px;
+  }
+
+  .power-skill-main h2 {
+    width: 60%;
+    line-height:48px ;
+    font-size: 40px;
+  }
+
+  .power-skill-cards {
+    margin-top: 30px;
+    gap: 5px;
+    padding: 10px 10px 40px 10px;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+  }
+
+  .power-skill-star {
+    bottom: 40px;
+    right: -100px;
+    z-index: -1;
+  }
+
+  .power-skill-card {
+    max-width: 300px;
+    padding: 20px 0px 20px 0px;
+  }
+
+  .power-skill-card-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+
+  }
+
+  .power-skill-card-content {
+    padding: 0px 0px 0px 0px;
+    text-align: left;
+  }
+
+  .power-skill-card p {
+    padding: 10px 0px 10px 0px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .power-skill-card-icon {
+    width:50px ;
+    height: 50px;
+    position: absolute;
+    left: -15px;
+    top: 0px;
+  }
+
+  .power-skill-card-img {
+    width: 100%;
+  }
+
+}
+
+
+@media only screen and (max-width: 640px) {
+
+/* 6-power-skills section */
+
+  .power-skill-main {
+    padding-bottom: 36px;
+  }
+
+  .power-skill-main h2 {
+    width: 80%;
+    font-size: 37px;
+    line-height: 38px;
+  }
+
+  .power-skill-card-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 95%;
+    margin-top: 20px;
+
+  }
+
+  .power-skill-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    gap: 10px;
+    padding: 10px 10px 40px 10px;
+    position: relative;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+
+  .power-skill-card {
+    max-width: 95%;
+    padding: 40px 0px 20px 0px;
+  }
+
+  .power-skill-card-content {
+    justify-content: flex-start;
+    gap: 5px;
+  }
+  .power-skill-card h3 {
+    line-height: 104%;
+    margin-left: 5px;
+    text-align: left;
+  }
+  .power-skill-card p {
+    padding: 0px 0px 0px 0px;
+    font-size: 17px;
+    line-height: 23px;
+    text-align: left;
+    margin-top: 14px;
+  }
+
+  .power-skill-card-icon {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    left: -10px;
+    top: 20px;
+  }
+
+  .power-skill-card-img {
+    width: 100%;
+  }
+
+}
+

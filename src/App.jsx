@@ -41,6 +41,7 @@ const StudentSupport = lazy(() =>
 const IcfCertification = lazy(() =>
   import("./components/Icf_certification/icf_certification")
 );
+const PowerSkill = lazy (()=> import("./components/Power_skills/power_skills"))
 const Footer = lazy(() => import("./components/Footer/footer"));
 const StickyWhatsAppButton = lazy(() =>
   import("./components/WhatsappStickyLogo/StickyWhatsAppButton")
@@ -94,6 +95,7 @@ function App() {
           <Carousel />
           <AluminiCarousel />
           <UnbeatableReason />
+          <PowerSkill/>
           <SwissSchool />
           <ProgramHighlights />
           <Accreditations />

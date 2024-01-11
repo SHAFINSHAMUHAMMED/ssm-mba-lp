@@ -52,7 +52,6 @@ function ReviewSection() {
   const [currentVideoUrl, setCurrentVideoUrl] = useState("");
   const { isPopupOpen, togglePopup } = usePopup();
   const [showVideo, setShowVideo] = useState(false);
-console.log(showVideo);
 
   const responsive = {
     superLargeDesktop: {
@@ -86,12 +85,10 @@ console.log(showVideo);
   };
   
 
-  const handleCardClick = (newUrl) => {
-    console.log("handleCardClick called with URL:", newUrl);
+  const handleCardClick = (newUrl) => {;
     setCurrentVideoUrl(newUrl);
     setShowVideo(true);
     setPlaying(true);
-    console.log("showVideo set to true");
 };
 
   const goToNext = () => {

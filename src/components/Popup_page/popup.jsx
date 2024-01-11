@@ -60,7 +60,6 @@ function popup({ closePopup }) {
     // Phone validation
     const digits = formData.phone.replace(/\D/g, "");
     if (!formData.phone.trim()) {
-      console.log("errrrr1");
 
       formIsValid = false;
       tempErrors["phone"] = "WhatsApp number is required";
@@ -88,7 +87,6 @@ function popup({ closePopup }) {
       formData.name.trim().length > 2 &&
       /\S+@\S+\.\S+/.test(formData.email) &&
       /^\d{8,}$/.test(formData.phone.replace(/\D/g, ""));
-    console.log(formData.phone);
     setIsFormComplete(formComplete); // Update isFormComplete state
   }, [formData.name, formData.email, formData.phone]);
 
@@ -111,7 +109,6 @@ function popup({ closePopup }) {
         );
 
         if (response.ok) {
-          console.log(response);
           // downloadPdf("images/SSM MBA.pdf");
           clearTimeout(loaderTimeout);
           setIsLoading(false);
@@ -120,7 +117,7 @@ function popup({ closePopup }) {
         } else {
           console.error("Server error");
           clearTimeout(loaderTimeout);
-          setIsLoading(false); // Hide loader
+          setIsLoading(false);
         }
       } catch (error) {
         console.error("Network error:", error);

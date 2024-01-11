@@ -11,14 +11,16 @@
   justify-content: center;
   align-items: center;
   background-color: #EDE6D8;
+overflow: hidden;
+
 }
 
 .hero-sub {
   max-width: 1180px;
   display: flex;
-  gap: 60px;
+  gap: 0px;
   align-items: flex-end;
-
+position: relative;
 }
 
 .hero-left {
@@ -26,11 +28,15 @@
   padding-bottom: 64px;
 }
 
-.hero-headline-main {
-  max-width: 499px;
+.Hero-Headline {
+  font-family: 'SK Modernist Bold';
+  width:601px;
   text-align: left;
+  color: #0B434B;
+  font-size: 61px;
+  line-height: 58px;
+  padding-left: 10px;
 }
-
 .sub-heading {
   margin-top: 90px;
   margin-bottom: 30px;
@@ -91,30 +97,31 @@
   text-decoration-color: #0B434B;
 }
 
-.Hero-Headline {
-  font-family: 'SK Modernist Bold';
-  font-size: 90px;
-  font-weight: 700;
-  line-height: 95px;
-}
 
-.typed-cursor {
-  font-size: 55px;
-  color: #259D4A;
-}
+
 
 .hero-right {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 758px;
-  width: 645px;
-  background-image: url('../../assets/hero.webp');
+  height: 788px;
+  width: 705px;
+  position: relative;
+  /* background-image: url('../../assets/hero.webp');
   background-position: center bottom;
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
-
+.hero-right-img {
+  position: absolute;
+  object-fit: contain;
+  object-position: bottom;
+  right: -50px;
+  bottom: 0;
+  height: 788px;
+  width: 705px;
+  z-index: 2;
+}
 .hero-icons-main {
   position: relative;
   width: 100%;
@@ -125,8 +132,8 @@
   width: 210px;
   height: 189px;
   position: absolute;
-  top: 200px;
-  left: -50px;
+  top: 130px;
+  left: 20px;
   z-index: 1;
 }
 
@@ -136,7 +143,7 @@
   position: absolute;
   top: 200px;
   left: 420px;
-  z-index: 1;
+  z-index: 3;
 }
 
 .rank-icon {
@@ -145,7 +152,7 @@
   position: absolute;
   top: 400px;
   left: 380px;
-  z-index: 1;
+  z-index: 3;
 }
 
 .graphic-devider {
@@ -154,6 +161,7 @@
   overflow: hidden;
 
 }
+
 
 @media only screen and (max-width: 1180px) {
   .hero-section {
@@ -164,13 +172,15 @@
 
   .hero-sub {
     max-width: 100%;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 0px;
     padding-top: 25px;
   }
 
   .hero-left {
-    width: 50%;
+    width: 100%;
     padding-left: 20px;
     padding-bottom: 20px;
 
@@ -194,7 +204,7 @@
   }
 
   .hero-left p {
-    max-width: 90%;
+    max-width: 100%;
     font-size: 17px;
     font-weight: 400;
     font-style: normal;
@@ -213,14 +223,11 @@
   }
 
   .Hero-Headline {
+    width: 100%;
     font-size: 55px;
     font-weight: 700;
     line-height: 50px;
     text-align: left;
-  }
-
-  .typed-cursor {
-    font-size: 35px;
   }
 
   .hero-right {
@@ -230,8 +237,11 @@
     background-position: center bottom;
     background-size: contain;
     background-repeat: no-repeat;
+    transform: translateX();
   }
-
+  .hero-right-img {
+display: none;
+  }
   .hero-icons-main {
     width: 100%;
     height: 60%;
@@ -281,7 +291,7 @@
   }
 
   .sub-heading {
-    width: 80%;
+    width: 90%;
     margin: auto;
     margin-top: 0px;
     margin-bottom: 20px;
@@ -314,19 +324,21 @@
 
   .Hero-Headline {
     text-align: center;
-  }
-
-  .typed-cursor {
-    font-size: 35px;
+font-size: 49.473px;
+font-style: normal;
+font-weight: 700;
+line-height: 92%; /* 45.515px */
+    white-space: normal;
   }
 
   .hero-right {
     width: 100%;
-    height: 445px;
+    height: 432px;
     background-image: url('../../assets/hero-mob.webp');
-    background-position: top;
-    background-size: cover;
+    background-position: bottom;
+    background-size: contain;
     background-repeat: no-repeat;
+    z-index: 5;
   }
 
   .hero-icons-main {
@@ -341,7 +353,8 @@
     width: 110px;
     height: 95px;
     top: 30px;
-    left: -45px;
+    left: -35px;
+    z-index: 1;
   }
 
   .graph-icon2 {

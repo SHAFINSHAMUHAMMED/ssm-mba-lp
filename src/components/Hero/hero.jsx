@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import "./hero.css";
 import Button1 from "../Buttons/buttonDark";
 import Popup from "../Popup_page/popup";
-import Typed from "typed.js";
 import { usePopup } from "../Hoocks/PopupContext";
 
+import heroImg from '../../assets/hero.webp'
 import target from "../../assets/svg/target.svg";
 import bagIcon from "../../assets/svg/bag-icon.svg";
 import graphIcon2 from "../../assets/svg/graph-icon2.svg";
@@ -13,24 +13,9 @@ import graphicPattern from "../../assets/svg/GraphicPattern.svg";
 import graphicPatternMob from "../../assets/svg/GraphicPattern-mob.svg";
 
 function hero() {
-  const el = useRef(null);
   const { isPopupOpen, togglePopup } = usePopup();
-  useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: [
-        '<span class="Hero-Headline highlight-green">Accredited</span> <span style="color: #0B434B; class=" Hero-Headline"></br>MBA</span>',
-        '<span class="Hero-Headline highlight-green">Connected</span> <span style="color: #0B434B; class="Hero-Headline"></br>Alumni</span>',
-        '<span class="Hero-Headline highlight-green">Career</span> <span style="color: #0B434B; class="Hero-Headline"></br>Opportunities</span>',
-      ],
-      typeSpeed: 20,
-      backSpeed: 20,
-      loop: true,
-    });
 
-    return () => {
-      typed.destroy();
-    };
-  }, []);
+
 
   return (
     <>
@@ -50,17 +35,12 @@ function hero() {
                 />
               </div>
               <h4 className="sub-heading-h4 font-bold">
-                Ready to launch the career & life you've always wanted?
+              Are You Missing Out on Salary Raises?
               </h4>
             </div>
-            <div className="hero-headline-main">
-              <h1 className="Hero-Headline">Globally</h1>
-              <span className="Hero-Headline" ref={el}></span>
-            </div>
+              <h1 className="Hero-Headline"><span className="highlight-green">70%</span> Of Companies In The <span className="highlight-green">UAE</span> Have <span className="highlight-green  "> <span className="wavy-underline-orange1"> Hiked </span> <span className="wavy-underline-orange2"> Salaries </span> </span>. An <span className="highlight-orange ">MBA </span> Could Be Your Key To Success!</h1>
             <p className="">
-              Don't just dream of success; make it your reality! Claim your free
-              career consultation today, setting the wheels in motion for the
-              extraordinary career and life you’ve always aspired to!
+            Dive into a world of knowledge and skills that align with market demands, and join the ranks of successful professionals who've elevated their careers with an MBA. Start your journey towards success today!
             </p>
             <Button1
               duration={1500}
@@ -95,6 +75,7 @@ function hero() {
               </a>
             </div>
           </div>
+          <img className="hero-right-img" src={heroImg} alt="" />
           <div className="hero-right">
             <div className="hero-icons-main">
               <img className="bag-icon animated-icon-1" src={bagIcon} alt="" />

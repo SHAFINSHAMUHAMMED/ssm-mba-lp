@@ -9,7 +9,6 @@ export const PopupProvider = ({ children }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const togglePopup = () => {
-    console.log("dfdfdfd");
     setIsPopupOpen(!isPopupOpen);
     document.body.style.overflow = isPopupOpen ? "unset" : "hidden";
   };
