@@ -13,14 +13,16 @@ import prof6 from "../../assets/prof6.webp";
 import prof7 from "../../assets/prof7.webp";
 import prof8 from "../../assets/prof8.webp";
 import prof9 from "../../assets/prof9.webp";
+import prof10 from "../../assets/prof10.webp";
 
-import star_lg from '../../assets/svg/star-large-icon.svg'
+import star_lg from "../../assets/svg/star-large-icon.svg";
 
 function power_skills() {
   return (
     <div className="power-skill-main">
       <h2 className="main-head-h2">
-      <span className="wavy-underline-orange-small">Top</span> <span className="text-[#259D4A]">MBA Specializations</span> at SSM
+        <span className="wavy-underline-orange-small">Top</span>{" "}
+        <span className="text-[#259D4A]">MBA Specializations</span> at SSM
       </h2>
 
       <div className="power-skill-cards">
@@ -45,15 +47,63 @@ function power_skills() {
           <img className="power-skill-card-img" src={prof1} alt="" />
           <div className="power-skill-card-main">
             <div className="power-skill-card-content">
-            <img src={fire_icon} alt="" />
-              <h3>MBA in Educational Leadership</h3>
+              <img src={fire_icon} alt="" />
+              <h3>MBA in Finance</h3>
             </div>
             <p>
-            This specialization is ideal for those aspiring to leadership roles within educational institutions. It covers strategic management, policy formulation, and the challenges unique to the education sector.
-
+              Focuses on financial analysis, investment strategies, and
+              understanding global financial markets for management roles.
             </p>
+            <a href="" target="_blank" className="power-skill-button"
+             onClick={(e) => {
+              e.preventDefault();
+            }}
+            >
+              <span className="font-bold">Read More</span>
+              <svg
+                className="pow-svg-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+              >
+                <circle
+                  className="svg-circle"
+                  cx="15.1176"
+                  cy="15.0219"
+                  r="14.6176"
+                  fill="#259D4A"
+                  fillOpacity="0.2"
+                />
+                <mask
+                  id="mask0_2007_75"
+                  style={{ maskType: "alpha" }}
+                  maskUnits="userSpaceOnUse"
+                  x="3"
+                  y="4"
+                  width="23"
+                  height="23"
+                >
+                  <rect
+                    width="21.9265"
+                    height="21.9265"
+                    transform="matrix(-1 0 0 1 25.5586 4.58105)"
+                    fill="#D9D9D9"
+                  />
+                </mask>
+                <g mask="url(#mask0_2007_75)">
+                  <path
+                    className="svg-path"
+                    d="M18.4094 16.4572L13.9327 20.9338C13.75 21.1166 13.6624 21.3297 13.6701 21.5734C13.6777 21.817 13.7728 22.0302 13.9556 22.2129C14.1383 22.3804 14.3515 22.4679 14.5951 22.4756C14.8387 22.4832 15.0519 22.3956 15.2346 22.2129L21.2644 16.1831C21.3557 16.0918 21.4205 15.9928 21.4585 15.8862C21.4966 15.7796 21.5156 15.6654 21.5156 15.5436C21.5156 15.4218 21.4966 15.3076 21.4585 15.201C21.4205 15.0944 21.3557 14.9954 21.2644 14.9041L15.2346 8.87429C15.0671 8.70679 14.8577 8.62305 14.6065 8.62305C14.3553 8.62305 14.1383 8.70679 13.9556 8.87429C13.7728 9.05701 13.6815 9.27399 13.6815 9.52523C13.6815 9.77647 13.7728 9.99345 13.9556 10.1762L18.4094 14.63H8.19986C7.94101 14.63 7.72403 14.7175 7.54892 14.8926C7.37381 15.0678 7.28626 15.2847 7.28626 15.5436C7.28626 15.8024 7.37381 16.0194 7.54892 16.1945C7.72403 16.3696 7.94101 16.4572 8.19986 16.4572H18.4094Z"
+                    fill="#17444C"
+                  />
+                </g>
+              </svg>
+            </a>
           </div>
         </div>
+
         {/* 2 */}
         <div className="power-skill-card">
           <svg
@@ -74,15 +124,63 @@ function power_skills() {
           <img className="power-skill-card-img" src={prof2} alt="" />
           <div className="power-skill-card-main">
             <div className="power-skill-card-content">
-            <img src={fire_icon} alt="" />
-              <h3>MBA in Cultural Management</h3>
+              <img src={fire_icon} alt="" />
+              <h3>MBA General</h3>
             </div>
             <p>
-            Designed for professionals in the arts, heritage, and cultural sectors, this program focuses on managing cultural organizations, understanding policy and funding landscapes, and developing sustainable cultural initiatives.
-
+              Offers a comprehensive understanding of business management, ideal
+              for versatile roles in business administration.
             </p>
+            <a href="" target="_blank" className="power-skill-button"
+             onClick={(e) => {
+              e.preventDefault();
+            }}
+            >
+              <span className="font-bold">Read More</span>
+              <svg
+                className="pow-svg-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+              >
+                <circle
+                  className="svg-circle"
+                  cx="15.1176"
+                  cy="15.0219"
+                  r="14.6176"
+                  fill="#259D4A"
+                  fillOpacity="0.2"
+                />
+                <mask
+                  id="mask0_2007_75"
+                  style={{ maskType: "alpha" }}
+                  maskUnits="userSpaceOnUse"
+                  x="3"
+                  y="4"
+                  width="23"
+                  height="23"
+                >
+                  <rect
+                    width="21.9265"
+                    height="21.9265"
+                    transform="matrix(-1 0 0 1 25.5586 4.58105)"
+                    fill="#D9D9D9"
+                  />
+                </mask>
+                <g mask="url(#mask0_2007_75)">
+                  <path
+                    className="svg-path"
+                    d="M18.4094 16.4572L13.9327 20.9338C13.75 21.1166 13.6624 21.3297 13.6701 21.5734C13.6777 21.817 13.7728 22.0302 13.9556 22.2129C14.1383 22.3804 14.3515 22.4679 14.5951 22.4756C14.8387 22.4832 15.0519 22.3956 15.2346 22.2129L21.2644 16.1831C21.3557 16.0918 21.4205 15.9928 21.4585 15.8862C21.4966 15.7796 21.5156 15.6654 21.5156 15.5436C21.5156 15.4218 21.4966 15.3076 21.4585 15.201C21.4205 15.0944 21.3557 14.9954 21.2644 14.9041L15.2346 8.87429C15.0671 8.70679 14.8577 8.62305 14.6065 8.62305C14.3553 8.62305 14.1383 8.70679 13.9556 8.87429C13.7728 9.05701 13.6815 9.27399 13.6815 9.52523C13.6815 9.77647 13.7728 9.99345 13.9556 10.1762L18.4094 14.63H8.19986C7.94101 14.63 7.72403 14.7175 7.54892 14.8926C7.37381 15.0678 7.28626 15.2847 7.28626 15.5436C7.28626 15.8024 7.37381 16.0194 7.54892 16.1945C7.72403 16.3696 7.94101 16.4572 8.19986 16.4572H18.4094Z"
+                    fill="#17444C"
+                  />
+                </g>
+              </svg>
+            </a>
           </div>
         </div>
+
         {/* 3 */}
         <div className="power-skill-card">
           <svg
@@ -103,12 +201,60 @@ function power_skills() {
           <img className="power-skill-card-img" src={prof3} alt="" />
           <div className="power-skill-card-main">
             <div className="power-skill-card-content">
-            <img src={fire_icon} alt="" />
-              <h3>MBA in Construction Management</h3>
+              <img src={fire_icon} alt="" />
+              <h3>MBA in Global Management & Leadership</h3>
             </div>
             <p>
-            Aimed at professionals in the construction industry, this specialization addresses project management, sustainable construction practices, and strategic planning in construction businesses.
+              Prepares leaders for international business with a focus on global
+              strategies and leadership skills.
             </p>
+            <a href="" target="_blank" className="power-skill-button"
+             onClick={(e) => {
+              e.preventDefault();
+            }}
+            >
+              <span className="font-bold">Read More</span>
+              <svg
+                className="pow-svg-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+              >
+                <circle
+                  className="svg-circle"
+                  cx="15.1176"
+                  cy="15.0219"
+                  r="14.6176"
+                  fill="#259D4A"
+                  fillOpacity="0.2"
+                />
+                <mask
+                  id="mask0_2007_75"
+                  style={{ maskType: "alpha" }}
+                  maskUnits="userSpaceOnUse"
+                  x="3"
+                  y="4"
+                  width="23"
+                  height="23"
+                >
+                  <rect
+                    width="21.9265"
+                    height="21.9265"
+                    transform="matrix(-1 0 0 1 25.5586 4.58105)"
+                    fill="#D9D9D9"
+                  />
+                </mask>
+                <g mask="url(#mask0_2007_75)">
+                  <path
+                    className="svg-path"
+                    d="M18.4094 16.4572L13.9327 20.9338C13.75 21.1166 13.6624 21.3297 13.6701 21.5734C13.6777 21.817 13.7728 22.0302 13.9556 22.2129C14.1383 22.3804 14.3515 22.4679 14.5951 22.4756C14.8387 22.4832 15.0519 22.3956 15.2346 22.2129L21.2644 16.1831C21.3557 16.0918 21.4205 15.9928 21.4585 15.8862C21.4966 15.7796 21.5156 15.6654 21.5156 15.5436C21.5156 15.4218 21.4966 15.3076 21.4585 15.201C21.4205 15.0944 21.3557 14.9954 21.2644 14.9041L15.2346 8.87429C15.0671 8.70679 14.8577 8.62305 14.6065 8.62305C14.3553 8.62305 14.1383 8.70679 13.9556 8.87429C13.7728 9.05701 13.6815 9.27399 13.6815 9.52523C13.6815 9.77647 13.7728 9.99345 13.9556 10.1762L18.4094 14.63H8.19986C7.94101 14.63 7.72403 14.7175 7.54892 14.8926C7.37381 15.0678 7.28626 15.2847 7.28626 15.5436C7.28626 15.8024 7.37381 16.0194 7.54892 16.1945C7.72403 16.3696 7.94101 16.4572 8.19986 16.4572H18.4094Z"
+                    fill="#17444C"
+                  />
+                </g>
+              </svg>
+            </a>
           </div>
         </div>
         {/* 4 */}
@@ -131,13 +277,60 @@ function power_skills() {
           <img className="power-skill-card-img" src={prof4} alt="" />
           <div className="power-skill-card-main">
             <div className="power-skill-card-content">
-            <img src={fire_icon} alt="" />
-              <h3>MBA General</h3>
+              <img src={fire_icon} alt="" />
+              <h3>MBA in Health Safety & Environment</h3>
             </div>
             <p>
-            A comprehensive program providing a broad understanding of business management, ideal for those seeking versatile roles in business administration and management.
-
+              Centers on safety standards, environmental sustainability, and
+              risk management in various industries.
             </p>
+            <a href="" target="_blank" className="power-skill-button"
+             onClick={(e) => {
+              e.preventDefault();
+            }}
+            >
+              <span className="font-bold">Read More</span>
+              <svg
+                className="pow-svg-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+              >
+                <circle
+                  className="svg-circle"
+                  cx="15.1176"
+                  cy="15.0219"
+                  r="14.6176"
+                  fill="#259D4A"
+                  fillOpacity="0.2"
+                />
+                <mask
+                  id="mask0_2007_75"
+                  style={{ maskType: "alpha" }}
+                  maskUnits="userSpaceOnUse"
+                  x="3"
+                  y="4"
+                  width="23"
+                  height="23"
+                >
+                  <rect
+                    width="21.9265"
+                    height="21.9265"
+                    transform="matrix(-1 0 0 1 25.5586 4.58105)"
+                    fill="#D9D9D9"
+                  />
+                </mask>
+                <g mask="url(#mask0_2007_75)">
+                  <path
+                    className="svg-path"
+                    d="M18.4094 16.4572L13.9327 20.9338C13.75 21.1166 13.6624 21.3297 13.6701 21.5734C13.6777 21.817 13.7728 22.0302 13.9556 22.2129C14.1383 22.3804 14.3515 22.4679 14.5951 22.4756C14.8387 22.4832 15.0519 22.3956 15.2346 22.2129L21.2644 16.1831C21.3557 16.0918 21.4205 15.9928 21.4585 15.8862C21.4966 15.7796 21.5156 15.6654 21.5156 15.5436C21.5156 15.4218 21.4966 15.3076 21.4585 15.201C21.4205 15.0944 21.3557 14.9954 21.2644 14.9041L15.2346 8.87429C15.0671 8.70679 14.8577 8.62305 14.6065 8.62305C14.3553 8.62305 14.1383 8.70679 13.9556 8.87429C13.7728 9.05701 13.6815 9.27399 13.6815 9.52523C13.6815 9.77647 13.7728 9.99345 13.9556 10.1762L18.4094 14.63H8.19986C7.94101 14.63 7.72403 14.7175 7.54892 14.8926C7.37381 15.0678 7.28626 15.2847 7.28626 15.5436C7.28626 15.8024 7.37381 16.0194 7.54892 16.1945C7.72403 16.3696 7.94101 16.4572 8.19986 16.4572H18.4094Z"
+                    fill="#17444C"
+                  />
+                </g>
+              </svg>
+            </a>
           </div>
         </div>
         {/* 5 */}
@@ -160,15 +353,63 @@ function power_skills() {
           <img className="power-skill-card-img" src={prof5} alt="" />
           <div className="power-skill-card-main">
             <div className="power-skill-card-content">
-            <img src={fire_icon} alt="" />
-              <h3>MBA in Finance</h3>
+              <img src={fire_icon} alt="" />
+              <h3>MBA in Healthcare Management</h3>
             </div>
             <p>
-            For those interested in financial management roles, this program covers financial analysis, investment strategies, and global financial markets.
-
+              Tailored for healthcare sector leadership, focusing on healthcare
+              systems, policy, and economics.
             </p>
+            <a href="" target="_blank" className="power-skill-button"
+             onClick={(e) => {
+              e.preventDefault();
+            }}
+            >
+              <span className="font-bold">Read More</span>
+              <svg
+                className="pow-svg-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+              >
+                <circle
+                  className="svg-circle"
+                  cx="15.1176"
+                  cy="15.0219"
+                  r="14.6176"
+                  fill="#259D4A"
+                  fillOpacity="0.2"
+                />
+                <mask
+                  id="mask0_2007_75"
+                  style={{ maskType: "alpha" }}
+                  maskUnits="userSpaceOnUse"
+                  x="3"
+                  y="4"
+                  width="23"
+                  height="23"
+                >
+                  <rect
+                    width="21.9265"
+                    height="21.9265"
+                    transform="matrix(-1 0 0 1 25.5586 4.58105)"
+                    fill="#D9D9D9"
+                  />
+                </mask>
+                <g mask="url(#mask0_2007_75)">
+                  <path
+                    className="svg-path"
+                    d="M18.4094 16.4572L13.9327 20.9338C13.75 21.1166 13.6624 21.3297 13.6701 21.5734C13.6777 21.817 13.7728 22.0302 13.9556 22.2129C14.1383 22.3804 14.3515 22.4679 14.5951 22.4756C14.8387 22.4832 15.0519 22.3956 15.2346 22.2129L21.2644 16.1831C21.3557 16.0918 21.4205 15.9928 21.4585 15.8862C21.4966 15.7796 21.5156 15.6654 21.5156 15.5436C21.5156 15.4218 21.4966 15.3076 21.4585 15.201C21.4205 15.0944 21.3557 14.9954 21.2644 14.9041L15.2346 8.87429C15.0671 8.70679 14.8577 8.62305 14.6065 8.62305C14.3553 8.62305 14.1383 8.70679 13.9556 8.87429C13.7728 9.05701 13.6815 9.27399 13.6815 9.52523C13.6815 9.77647 13.7728 9.99345 13.9556 10.1762L18.4094 14.63H8.19986C7.94101 14.63 7.72403 14.7175 7.54892 14.8926C7.37381 15.0678 7.28626 15.2847 7.28626 15.5436C7.28626 15.8024 7.37381 16.0194 7.54892 16.1945C7.72403 16.3696 7.94101 16.4572 8.19986 16.4572H18.4094Z"
+                    fill="#17444C"
+                  />
+                </g>
+              </svg>
+            </a>
           </div>
         </div>
+
         {/* 6 */}
         <div className="power-skill-card">
           <svg
@@ -189,80 +430,364 @@ function power_skills() {
           <img className="power-skill-card-img" src={prof6} alt="" />
           <div className="power-skill-card-main">
             <div className="power-skill-card-content">
-            <img src={fire_icon} alt="" />
-              <h3>MBA in Health Management</h3>
+              <img src={fire_icon} alt="" />
+              <h3>MBA in Human Resource </h3>
             </div>
             <p>
-            Tailored for professionals in the healthcare sector, this specialization focuses on healthcare systems management, policy, and the economics of healthcare.
+              Specializes in strategic HR management, employee relations, and
+              talent management for HR leadership roles.
             </p>
+            <a href="" target="_blank" className="power-skill-button"
+             onClick={(e) => {
+              e.preventDefault();
+            }}
+            >
+              <span className="font-bold">Read More</span>
+              <svg
+                className="pow-svg-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+              >
+                <circle
+                  className="svg-circle"
+                  cx="15.1176"
+                  cy="15.0219"
+                  r="14.6176"
+                  fill="#259D4A"
+                  fillOpacity="0.2"
+                />
+                <mask
+                  id="mask0_2007_75"
+                  style={{ maskType: "alpha" }}
+                  maskUnits="userSpaceOnUse"
+                  x="3"
+                  y="4"
+                  width="23"
+                  height="23"
+                >
+                  <rect
+                    width="21.9265"
+                    height="21.9265"
+                    transform="matrix(-1 0 0 1 25.5586 4.58105)"
+                    fill="#D9D9D9"
+                  />
+                </mask>
+                <g mask="url(#mask0_2007_75)">
+                  <path
+                    className="svg-path"
+                    d="M18.4094 16.4572L13.9327 20.9338C13.75 21.1166 13.6624 21.3297 13.6701 21.5734C13.6777 21.817 13.7728 22.0302 13.9556 22.2129C14.1383 22.3804 14.3515 22.4679 14.5951 22.4756C14.8387 22.4832 15.0519 22.3956 15.2346 22.2129L21.2644 16.1831C21.3557 16.0918 21.4205 15.9928 21.4585 15.8862C21.4966 15.7796 21.5156 15.6654 21.5156 15.5436C21.5156 15.4218 21.4966 15.3076 21.4585 15.201C21.4205 15.0944 21.3557 14.9954 21.2644 14.9041L15.2346 8.87429C15.0671 8.70679 14.8577 8.62305 14.6065 8.62305C14.3553 8.62305 14.1383 8.70679 13.9556 8.87429C13.7728 9.05701 13.6815 9.27399 13.6815 9.52523C13.6815 9.77647 13.7728 9.99345 13.9556 10.1762L18.4094 14.63H8.19986C7.94101 14.63 7.72403 14.7175 7.54892 14.8926C7.37381 15.0678 7.28626 15.2847 7.28626 15.5436C7.28626 15.8024 7.37381 16.0194 7.54892 16.1945C7.72403 16.3696 7.94101 16.4572 8.19986 16.4572H18.4094Z"
+                    fill="#17444C"
+                  />
+                </g>
+              </svg>
+            </a>
           </div>
         </div>
-         {/* 7 */}
-         <div className="power-skill-card">
-          
-<svg className="power-skill-card-icon" width="85" height="85" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="30.712" cy="30.712" r="30.712" fill="#259D4A"/>
-<path d="M25.6883 42.4404C25.6883 35.9898 28.2316 29.1706 33.687 21.0613H19.9749V17.1541H39.1424V20.5084C32.9867 28.9863 30.1115 36.0267 30.1115 42.4404H25.6883Z" fill="white"/>
-</svg>
 
-
+        {/* 7 */}
+        <div className="power-skill-card">
+          <svg
+            className="power-skill-card-icon"
+            width="85"
+            height="85"
+            viewBox="0 0 62 62"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="30.712" cy="30.712" r="30.712" fill="#259D4A" />
+            <path
+              d="M25.6883 42.4404C25.6883 35.9898 28.2316 29.1706 33.687 21.0613H19.9749V17.1541H39.1424V20.5084C32.9867 28.9863 30.1115 36.0267 30.1115 42.4404H25.6883Z"
+              fill="white"
+            />
+          </svg>
           <img className="power-skill-card-img" src={prof7} alt="" />
           <div className="power-skill-card-main">
             <div className="power-skill-card-content">
-            <img src={fire_icon} alt="" />
-              <h3>MBA in Human Resource Management</h3>
+              <img src={fire_icon} alt="" />
+              <h3>MBA in Luxury Management</h3>
             </div>
             <p>
-            Designed for individuals aiming to lead HR functions, this program covers strategic HR management, employee relations, and talent management.
-
+              Focuses on brand and marketing strategies in the luxury sector,
+              emphasizing unique industry challenges.
             </p>
+            <a href="" target="_blank" className="power-skill-button"
+             onClick={(e) => {
+              e.preventDefault();
+            }}
+            >
+              <span className="font-bold">Read More</span>
+              <svg
+                className="pow-svg-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+              >
+                <circle
+                  className="svg-circle"
+                  cx="15.1176"
+                  cy="15.0219"
+                  r="14.6176"
+                  fill="#259D4A"
+                  fillOpacity="0.2"
+                />
+                <mask
+                  id="mask0_2007_75"
+                  style={{ maskType: "alpha" }}
+                  maskUnits="userSpaceOnUse"
+                  x="3"
+                  y="4"
+                  width="23"
+                  height="23"
+                >
+                  <rect
+                    width="21.9265"
+                    height="21.9265"
+                    transform="matrix(-1 0 0 1 25.5586 4.58105)"
+                    fill="#D9D9D9"
+                  />
+                </mask>
+                <g mask="url(#mask0_2007_75)">
+                  <path
+                    className="svg-path"
+                    d="M18.4094 16.4572L13.9327 20.9338C13.75 21.1166 13.6624 21.3297 13.6701 21.5734C13.6777 21.817 13.7728 22.0302 13.9556 22.2129C14.1383 22.3804 14.3515 22.4679 14.5951 22.4756C14.8387 22.4832 15.0519 22.3956 15.2346 22.2129L21.2644 16.1831C21.3557 16.0918 21.4205 15.9928 21.4585 15.8862C21.4966 15.7796 21.5156 15.6654 21.5156 15.5436C21.5156 15.4218 21.4966 15.3076 21.4585 15.201C21.4205 15.0944 21.3557 14.9954 21.2644 14.9041L15.2346 8.87429C15.0671 8.70679 14.8577 8.62305 14.6065 8.62305C14.3553 8.62305 14.1383 8.70679 13.9556 8.87429C13.7728 9.05701 13.6815 9.27399 13.6815 9.52523C13.6815 9.77647 13.7728 9.99345 13.9556 10.1762L18.4094 14.63H8.19986C7.94101 14.63 7.72403 14.7175 7.54892 14.8926C7.37381 15.0678 7.28626 15.2847 7.28626 15.5436C7.28626 15.8024 7.37381 16.0194 7.54892 16.1945C7.72403 16.3696 7.94101 16.4572 8.19986 16.4572H18.4094Z"
+                    fill="#17444C"
+                  />
+                </g>
+              </svg>
+            </a>
           </div>
         </div>
-         {/* 8 */}
-         <div className="power-skill-card">
-          
-<svg className="power-skill-card-icon" width="85" height="85" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="30.712" cy="30.712" r="30.712" fill="#259D4A"/>
-<path d="M29.5586 42.9565C23.6978 42.9565 19.7906 39.9339 19.7906 35.3632C19.7906 32.8198 21.6336 30.2027 24.3613 28.8757C22.2234 27.6962 20.8227 25.4846 20.8227 23.3098C20.8227 19.292 24.3244 16.638 29.5586 16.638C34.7928 16.638 38.2946 19.292 38.2946 23.3098C38.2946 25.4846 36.8939 27.6962 34.756 28.8757C37.4836 30.2027 39.3267 32.8198 39.3267 35.3632C39.3267 39.9339 35.4195 42.9565 29.5586 42.9565ZM29.5586 26.9221C32.1389 26.9221 33.8713 25.632 33.8713 23.7153C33.8713 21.7985 32.1389 20.5453 29.5586 20.5453C26.9784 20.5453 25.2459 21.7985 25.2459 23.7153C25.2459 25.632 26.9784 26.9221 29.5586 26.9221ZM29.5586 39.0493C32.7655 39.0493 34.9034 37.4274 34.9034 34.9577C34.9034 32.4881 32.7655 30.8294 29.5586 30.8294C26.3518 30.8294 24.2138 32.4881 24.2138 34.9577C24.2138 37.4274 26.3518 39.0493 29.5586 39.0493Z" fill="white"/>
-</svg>
-
+        {/* 8 */}
+        <div className="power-skill-card">
+          <svg
+            className="power-skill-card-icon"
+            width="85"
+            height="85"
+            viewBox="0 0 62 62"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="30.712" cy="30.712" r="30.712" fill="#259D4A" />
+            <path
+              d="M29.5586 42.9565C23.6978 42.9565 19.7906 39.9339 19.7906 35.3632C19.7906 32.8198 21.6336 30.2027 24.3613 28.8757C22.2234 27.6962 20.8227 25.4846 20.8227 23.3098C20.8227 19.292 24.3244 16.638 29.5586 16.638C34.7928 16.638 38.2946 19.292 38.2946 23.3098C38.2946 25.4846 36.8939 27.6962 34.756 28.8757C37.4836 30.2027 39.3267 32.8198 39.3267 35.3632C39.3267 39.9339 35.4195 42.9565 29.5586 42.9565ZM29.5586 26.9221C32.1389 26.9221 33.8713 25.632 33.8713 23.7153C33.8713 21.7985 32.1389 20.5453 29.5586 20.5453C26.9784 20.5453 25.2459 21.7985 25.2459 23.7153C25.2459 25.632 26.9784 26.9221 29.5586 26.9221ZM29.5586 39.0493C32.7655 39.0493 34.9034 37.4274 34.9034 34.9577C34.9034 32.4881 32.7655 30.8294 29.5586 30.8294C26.3518 30.8294 24.2138 32.4881 24.2138 34.9577C24.2138 37.4274 26.3518 39.0493 29.5586 39.0493Z"
+              fill="white"
+            />
+          </svg>
 
           <img className="power-skill-card-img" src={prof8} alt="" />
           <div className="power-skill-card-main">
             <div className="power-skill-card-content">
-            <img src={fire_icon} alt="" />
-              <h3>MBA in Sport Management</h3>
+              <img src={fire_icon} alt="" />
+              <h3>MBA in Marketing</h3>
             </div>
             <p>
-            Ideal for those pursuing careers in the sports industry, this specialization focuses on sports marketing, event management, and the business aspects of sports.
+              Covers strategic marketing, consumer behavior, digital marketing,
+              and brand management for marketing careers.
             </p>
+            <a href="" target="_blank" className="power-skill-button"
+             onClick={(e) => {
+              e.preventDefault();
+            }}
+            >
+              <span className="font-bold">Read More</span>
+              <svg
+                className="pow-svg-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+              >
+                <circle
+                  className="svg-circle"
+                  cx="15.1176"
+                  cy="15.0219"
+                  r="14.6176"
+                  fill="#259D4A"
+                  fillOpacity="0.2"
+                />
+                <mask
+                  id="mask0_2007_75"
+                  style={{ maskType: "alpha" }}
+                  maskUnits="userSpaceOnUse"
+                  x="3"
+                  y="4"
+                  width="23"
+                  height="23"
+                >
+                  <rect
+                    width="21.9265"
+                    height="21.9265"
+                    transform="matrix(-1 0 0 1 25.5586 4.58105)"
+                    fill="#D9D9D9"
+                  />
+                </mask>
+                <g mask="url(#mask0_2007_75)">
+                  <path
+                    className="svg-path"
+                    d="M18.4094 16.4572L13.9327 20.9338C13.75 21.1166 13.6624 21.3297 13.6701 21.5734C13.6777 21.817 13.7728 22.0302 13.9556 22.2129C14.1383 22.3804 14.3515 22.4679 14.5951 22.4756C14.8387 22.4832 15.0519 22.3956 15.2346 22.2129L21.2644 16.1831C21.3557 16.0918 21.4205 15.9928 21.4585 15.8862C21.4966 15.7796 21.5156 15.6654 21.5156 15.5436C21.5156 15.4218 21.4966 15.3076 21.4585 15.201C21.4205 15.0944 21.3557 14.9954 21.2644 14.9041L15.2346 8.87429C15.0671 8.70679 14.8577 8.62305 14.6065 8.62305C14.3553 8.62305 14.1383 8.70679 13.9556 8.87429C13.7728 9.05701 13.6815 9.27399 13.6815 9.52523C13.6815 9.77647 13.7728 9.99345 13.9556 10.1762L18.4094 14.63H8.19986C7.94101 14.63 7.72403 14.7175 7.54892 14.8926C7.37381 15.0678 7.28626 15.2847 7.28626 15.5436C7.28626 15.8024 7.37381 16.0194 7.54892 16.1945C7.72403 16.3696 7.94101 16.4572 8.19986 16.4572H18.4094Z"
+                    fill="#17444C"
+                  />
+                </g>
+              </svg>
+            </a>
           </div>
         </div>
-         {/* 9 */}
-         <div className="power-skill-card">
-          
-<svg className="power-skill-card-icon" width="85" height="85" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="30.712" cy="30.712" r="30.712" fill="#259D4A"/>
-<path d="M31.1163 16.638C37.0877 16.638 41.0687 21.9091 41.0687 29.7973C41.0687 37.6854 37.0877 42.9565 31.0794 42.9565C26.3244 42.9565 22.9701 40.4868 21.7906 36.1373H26.0295C26.693 38.0172 28.4992 39.0493 31.0794 39.0493C34.1389 39.0493 36.3136 36.3584 36.5348 32.3038C35.3184 34.2942 32.8119 35.6212 30.2316 35.6212C24.7763 35.5844 21.164 31.7877 21.164 26.1481C21.164 20.4347 25.1449 16.638 31.1163 16.638ZM30.8583 31.7509C33.9546 31.7509 36.0188 29.5024 36.0188 26.1112C36.0188 22.7569 33.9546 20.5084 30.8951 20.5084C27.7251 20.5084 25.5872 22.7569 25.5872 26.1481C25.5872 29.5024 27.6883 31.7509 30.8583 31.7509Z" fill="white"/>
-</svg>
-
+        {/* 9 */}
+        <div className="power-skill-card">
+          <svg
+            className="power-skill-card-icon"
+            width="85"
+            height="85"
+            viewBox="0 0 62 62"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="30.712" cy="30.712" r="30.712" fill="#259D4A" />
+            <path
+              d="M31.1163 16.638C37.0877 16.638 41.0687 21.9091 41.0687 29.7973C41.0687 37.6854 37.0877 42.9565 31.0794 42.9565C26.3244 42.9565 22.9701 40.4868 21.7906 36.1373H26.0295C26.693 38.0172 28.4992 39.0493 31.0794 39.0493C34.1389 39.0493 36.3136 36.3584 36.5348 32.3038C35.3184 34.2942 32.8119 35.6212 30.2316 35.6212C24.7763 35.5844 21.164 31.7877 21.164 26.1481C21.164 20.4347 25.1449 16.638 31.1163 16.638ZM30.8583 31.7509C33.9546 31.7509 36.0188 29.5024 36.0188 26.1112C36.0188 22.7569 33.9546 20.5084 30.8951 20.5084C27.7251 20.5084 25.5872 22.7569 25.5872 26.1481C25.5872 29.5024 27.6883 31.7509 30.8583 31.7509Z"
+              fill="white"
+            />
+          </svg>
 
           <img className="power-skill-card-img" src={prof9} alt="" />
           <div className="power-skill-card-main">
             <div className="power-skill-card-content">
-            <img src={fire_icon} alt="" />
-              <h3>MBA in Transport Management</h3>
+              <img src={fire_icon} alt="" />
+              <h3>MBA in Project Management</h3>
             </div>
             <p>
-            Focused on the transport and logistics sector, this program covers supply chain management, transport policy, and logistics strategy.
+              Prepares professionals for project management roles with a focus
+              on planning, risk, and budgeting.
             </p>
+            <a href="https://offer.learnersuae.com/ssm-mba-project-management/" target="_blank" className="power-skill-button"
+            >
+              <span className="font-bold">Read More</span>
+              <svg
+                className="pow-svg-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+              >
+                <circle
+                  className="svg-circle"
+                  cx="15.1176"
+                  cy="15.0219"
+                  r="14.6176"
+                  fill="#259D4A"
+                  fillOpacity="0.2"
+                />
+                <mask
+                  id="mask0_2007_75"
+                  style={{ maskType: "alpha" }}
+                  maskUnits="userSpaceOnUse"
+                  x="3"
+                  y="4"
+                  width="23"
+                  height="23"
+                >
+                  <rect
+                    width="21.9265"
+                    height="21.9265"
+                    transform="matrix(-1 0 0 1 25.5586 4.58105)"
+                    fill="#D9D9D9"
+                  />
+                </mask>
+                <g mask="url(#mask0_2007_75)">
+                  <path
+                    className="svg-path"
+                    d="M18.4094 16.4572L13.9327 20.9338C13.75 21.1166 13.6624 21.3297 13.6701 21.5734C13.6777 21.817 13.7728 22.0302 13.9556 22.2129C14.1383 22.3804 14.3515 22.4679 14.5951 22.4756C14.8387 22.4832 15.0519 22.3956 15.2346 22.2129L21.2644 16.1831C21.3557 16.0918 21.4205 15.9928 21.4585 15.8862C21.4966 15.7796 21.5156 15.6654 21.5156 15.5436C21.5156 15.4218 21.4966 15.3076 21.4585 15.201C21.4205 15.0944 21.3557 14.9954 21.2644 14.9041L15.2346 8.87429C15.0671 8.70679 14.8577 8.62305 14.6065 8.62305C14.3553 8.62305 14.1383 8.70679 13.9556 8.87429C13.7728 9.05701 13.6815 9.27399 13.6815 9.52523C13.6815 9.77647 13.7728 9.99345 13.9556 10.1762L18.4094 14.63H8.19986C7.94101 14.63 7.72403 14.7175 7.54892 14.8926C7.37381 15.0678 7.28626 15.2847 7.28626 15.5436C7.28626 15.8024 7.37381 16.0194 7.54892 16.1945C7.72403 16.3696 7.94101 16.4572 8.19986 16.4572H18.4094Z"
+                    fill="#17444C"
+                  />
+                </g>
+              </svg>
+            </a>
           </div>
         </div>
-        <img
-          className="power-skill-star"
-          src={star_lg}
-          alt=""
-        />
+
+        {/* 10 */}
+
+        <div className="power-skill-card">
+          <svg
+            className="power-skill-card-icon"
+            width="85"
+            height="85"
+            viewBox="0 0 62 62"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="30.712" cy="30.712" r="30.712" fill="#259D4A" />
+            <path
+              d="M19.5196 42.4404V22.9781C18.4137 23.7521 16.0915 24.3419 13.6956 24.4156V20.9507C17.0499 20.8401 18.9666 19.6237 19.7039 17.1541H23.9428V42.4404H19.5196ZM37.678 42.9565C31.338 42.9565 27.7625 38.2015 27.7625 29.7973C27.7625 21.393 31.338 16.638 37.678 16.638C44.0549 16.638 47.6303 21.393 47.6303 29.7973C47.6303 38.2015 44.0549 42.9565 37.678 42.9565ZM37.678 39.0493C41.4378 39.0493 43.2071 35.3632 43.2071 29.7973C43.2071 23.4941 40.9954 20.5453 37.678 20.5453C33.9551 20.5453 32.1858 24.2313 32.1858 29.7973C32.1858 36.1004 34.3974 39.0493 37.678 39.0493Z"
+              fill="white"
+            />
+          </svg>
+
+          <img className="power-skill-card-img" src={prof10} alt="" />
+          <div className="power-skill-card-main">
+            <div className="power-skill-card-content">
+              <img src={fire_icon} alt="" />
+              <h3>MBA in Supply Chain Management</h3>
+            </div>
+            <p>
+              Concentrates on supply chain strategy, logistics, and operations
+              management for efficiency improvement
+            </p>
+            <a href="https://offer.learnersuae.com/ssm-mba-supply-chain/" target="_blank" className="power-skill-button"
+            >
+              <span className="font-bold">Read More</span>
+              <svg
+                className="pow-svg-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+              >
+                <circle
+                  className="svg-circle"
+                  cx="15.1176"
+                  cy="15.0219"
+                  r="14.6176"
+                  fill="#259D4A"
+                  fillOpacity="0.2"
+                />
+                <mask
+                  id="mask0_2007_75"
+                  style={{ maskType: "alpha" }}
+                  maskUnits="userSpaceOnUse"
+                  x="3"
+                  y="4"
+                  width="23"
+                  height="23"
+                >
+                  <rect
+                    width="21.9265"
+                    height="21.9265"
+                    transform="matrix(-1 0 0 1 25.5586 4.58105)"
+                    fill="#D9D9D9"
+                  />
+                </mask>
+                <g mask="url(#mask0_2007_75)">
+                  <path
+                    className="svg-path"
+                    d="M18.4094 16.4572L13.9327 20.9338C13.75 21.1166 13.6624 21.3297 13.6701 21.5734C13.6777 21.817 13.7728 22.0302 13.9556 22.2129C14.1383 22.3804 14.3515 22.4679 14.5951 22.4756C14.8387 22.4832 15.0519 22.3956 15.2346 22.2129L21.2644 16.1831C21.3557 16.0918 21.4205 15.9928 21.4585 15.8862C21.4966 15.7796 21.5156 15.6654 21.5156 15.5436C21.5156 15.4218 21.4966 15.3076 21.4585 15.201C21.4205 15.0944 21.3557 14.9954 21.2644 14.9041L15.2346 8.87429C15.0671 8.70679 14.8577 8.62305 14.6065 8.62305C14.3553 8.62305 14.1383 8.70679 13.9556 8.87429C13.7728 9.05701 13.6815 9.27399 13.6815 9.52523C13.6815 9.77647 13.7728 9.99345 13.9556 10.1762L18.4094 14.63H8.19986C7.94101 14.63 7.72403 14.7175 7.54892 14.8926C7.37381 15.0678 7.28626 15.2847 7.28626 15.5436C7.28626 15.8024 7.37381 16.0194 7.54892 16.1945C7.72403 16.3696 7.94101 16.4572 8.19986 16.4572H18.4094Z"
+                    fill="#17444C"
+                  />
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <img className="power-skill-star" src={star_lg} alt="" />
       </div>
       <ButtonDark
         duration={2500}

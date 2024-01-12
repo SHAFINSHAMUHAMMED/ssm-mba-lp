@@ -7,7 +7,7 @@
 .power-skill-main h2 {
   margin: auto;
   width: 621px;
-  font-size:53px ;
+  font-size: 53px;
   line-height: 55px;
   text-align: center;
 }
@@ -23,13 +23,13 @@
   align-items: flex-start;
 }
 
-  .power-skill-card-main {
-    margin-top: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.power-skill-card-main {
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  }
+}
 
 .power-skill-star {
   width: 300px;
@@ -46,6 +46,9 @@
   max-width: 392px;
   justify-content: center;
   padding: 0px 0px 35px 0px;
+}
+.power-skill-cards :nth-child(10) {
+  grid-column-end:  3;
 }
 
 .power-skill-card h3 {
@@ -84,9 +87,39 @@
   height: auto;
 }
 
+.power-skill-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
+  width: 142px;
+  height: 36.544px;
+  padding-right: 5px;
+  flex-shrink: 0;
+  border-radius: 33.412px;
+  border: 1.044px solid #259D4A;
+  cursor: pointer;
+  color: #0B434B;
+  font-family: 'SK Modernist Bold';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 136%;
+}
+
+.power-skill-button:hover .pow-svg-icon .svg-path {
+  fill: #ffff;
+}
+
+.power-skill-button:hover .svg-circle {
+  fill: #EE9B4E;
+  fill-opacity: 1;
+}
+
 @media only screen and (max-width: 1180px) {
 
-/* 6-power-skills section */
+  /* 6-power-skills section */
 
   .power-skill-main {
     margin-top: 50px;
@@ -95,7 +128,7 @@
 
   .power-skill-main h2 {
     width: 60%;
-    line-height:48px ;
+    line-height: 48px;
     font-size: 40px;
   }
 
@@ -139,7 +172,7 @@
   }
 
   .power-skill-card-icon {
-    width:50px ;
+    width: 50px;
     height: 50px;
     position: absolute;
     left: -15px;
@@ -155,7 +188,7 @@
 
 @media only screen and (max-width: 640px) {
 
-/* 6-power-skills section */
+  /* 6-power-skills section */
 
   .power-skill-main {
     padding-bottom: 36px;
@@ -189,21 +222,25 @@
     width: 100%;
   }
 
-
   .power-skill-card {
     max-width: 95%;
     padding: 40px 0px 20px 0px;
-  }
 
+  }
+  .power-skill-cards :nth-child(10) {
+    grid-column-end:  auto;
+  }
   .power-skill-card-content {
     justify-content: flex-start;
     gap: 5px;
   }
+
   .power-skill-card h3 {
     line-height: 104%;
     margin-left: 5px;
     text-align: left;
   }
+
   .power-skill-card p {
     padding: 0px 0px 0px 0px;
     font-size: 17px;
@@ -223,6 +260,8 @@
   .power-skill-card-img {
     width: 100%;
   }
+  .power-skill-star {
+    display: none;
+  }
 
 }
-

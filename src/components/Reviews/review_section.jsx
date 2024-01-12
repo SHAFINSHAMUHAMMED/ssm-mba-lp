@@ -53,6 +53,20 @@ function ReviewSection() {
   const { isPopupOpen, togglePopup } = usePopup();
   const [showVideo, setShowVideo] = useState(false);
 
+  const videoUrls = [
+    "https://youtu.be/9n9w1LNdXrU?si=WWLgRiyEUa8jpFAz",
+    "https://youtu.be/1QPnOvitSbs?si=vJY8fNakE8gpXVsh",
+    "https://youtu.be/wnukPED7Jn0?si=_oVUClOcrRQc2ST0",
+   "https://youtu.be/LJ-LdPUnywM?si=PZr2husnFLlRF4Q4",
+
+
+  ];
+  const updateVideoUrl = (currentIndex) => {
+    const newUrl = videoUrls[currentIndex];
+    setCurrentVideoUrl(newUrl);
+    setShowVideo(true);
+    setPlaying(true);
+  };
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -91,15 +105,19 @@ function ReviewSection() {
     setPlaying(true);
 };
 
-  const goToNext = () => {
-    if (carouselRef.current) {
-      carouselRef.current.next();
-    }
-  };
+const goToNext = () => {
+  if (carouselRef.current) {
+    const nextIndex = (carouselRef.current.state.currentSlide + 1) % videoUrls.length;
+    updateVideoUrl(nextIndex);
+    carouselRef.current.next();
+  }
+};
 
   // Function to move to the previous slide
   const goToPrev = () => {
     if (carouselRef.current) {
+      const prevIndex = (carouselRef.current.state.currentSlide - 1 + videoUrls.length) % videoUrls.length;
+      updateVideoUrl(prevIndex);
       carouselRef.current.previous();
     }
   };
@@ -273,6 +291,35 @@ function ReviewSection() {
               className="review-video-sub-card"
               onClick={() =>
                 handleCardClick(
+                  "https://youtu.be/9n9w1LNdXrU?si=WWLgRiyEUa8jpFAz"
+                )
+              }
+            >
+              <img className=" sm:w-auto review-video-thumb-img" src={videoThumb4} alt="" />
+              <svg
+                className="play-button"
+                xmlns="http://www.w3.org/2000/svg"
+                width="81"
+                height="87"
+                viewBox="0 0 81 87"
+                fill="none"
+              >
+                <path
+                  d="M56.2503 46.1795L33.3996 60.4221C31.8976 61.3582 29.952 60.2783 29.952 58.5085L29.952 30.0234C29.952 28.2536 31.8976 27.1736 33.3996 28.1098L56.2503 42.3524C57.6665 43.2351 57.6665 45.2968 56.2503 46.1795Z"
+                  stroke="white"
+                  strokeWidth="3"
+                />
+                <path
+                  d="M79.5879 43.5C79.5879 67.0456 61.9247 86 40.2939 86C18.6632 86 1 67.0456 1 43.5C1 19.9544 18.6632 1 40.2939 1C61.9247 1 79.5879 19.9544 79.5879 43.5Z"
+                  stroke="white"
+                  strokeWidth="3"
+                />
+              </svg>
+            </div>
+            <div
+              className="review-video-sub-card"
+              onClick={() =>
+                handleCardClick(
                   "https://youtu.be/1QPnOvitSbs?si=vJY8fNakE8gpXVsh"
                 )
               }
@@ -307,35 +354,6 @@ function ReviewSection() {
               }
             >
               <img className=" sm:w-auto review-video-thumb-img" src={videoThumb3} alt="" />
-              <svg
-                className="play-button"
-                xmlns="http://www.w3.org/2000/svg"
-                width="81"
-                height="87"
-                viewBox="0 0 81 87"
-                fill="none"
-              >
-                <path
-                  d="M56.2503 46.1795L33.3996 60.4221C31.8976 61.3582 29.952 60.2783 29.952 58.5085L29.952 30.0234C29.952 28.2536 31.8976 27.1736 33.3996 28.1098L56.2503 42.3524C57.6665 43.2351 57.6665 45.2968 56.2503 46.1795Z"
-                  stroke="white"
-                  strokeWidth="3"
-                />
-                <path
-                  d="M79.5879 43.5C79.5879 67.0456 61.9247 86 40.2939 86C18.6632 86 1 67.0456 1 43.5C1 19.9544 18.6632 1 40.2939 1C61.9247 1 79.5879 19.9544 79.5879 43.5Z"
-                  stroke="white"
-                  strokeWidth="3"
-                />
-              </svg>
-            </div>
-            <div
-              className="review-video-sub-card"
-              onClick={() =>
-                handleCardClick(
-                  "https://youtu.be/9n9w1LNdXrU?si=WWLgRiyEUa8jpFAz"
-                )
-              }
-            >
-              <img className=" sm:w-auto review-video-thumb-img" src={videoThumb4} alt="" />
               <svg
                 className="play-button"
                 xmlns="http://www.w3.org/2000/svg"

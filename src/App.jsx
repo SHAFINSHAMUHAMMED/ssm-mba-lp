@@ -54,7 +54,7 @@
 
     useEffect(() => {
       const handleMouseMove = debounce((e) => {
-        if (e.clientY <= 50 && !isPopupOpen && !exitIntentTriggered) {
+        if (e.clientY <= 10 && !isPopupOpen && !exitIntentTriggered) {
           setExitIntentTriggered(true);
           togglePopup();
         }
