@@ -16,7 +16,7 @@ import indian from "../../assets/svg/Accredit-indian-icon.svg";
 
 function acreditions() {
   return (
-    <div className="accredit-main">
+    <div id="acredition" className="accredit-main">
       <div className="accredit-overlay"></div>
       <div className="accredit-content w-screen z-10">
         <h1 className="accredit-h1 text-center">

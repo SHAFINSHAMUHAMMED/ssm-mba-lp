@@ -4,7 +4,7 @@ import ButtonOrange from "../Buttons/buttoonOrange";
 import Claim_description from "../Description/claim_description";
 function program_Highlights() {
   return (
-    <div className="highlight-main bg-backgrounds-darkGreenBlue ">
+    <div id="programHighlight" className="highlight-main bg-backgrounds-darkGreenBlue ">
       <h2 className=" text-center highlight-h2">
         Program <span className="wavy-underline-green">Key Highlights:</span>
       </h2>

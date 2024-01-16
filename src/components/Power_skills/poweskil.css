@@ -28,6 +28,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: 17px;
 
 }
 
@@ -207,6 +208,7 @@
     justify-content: flex-start;
     width: 95%;
     margin-top: 20px;
+    padding-left: 15px;
 
   }
 

@@ -122,7 +122,7 @@ const goToNext = () => {
     }
   };
   return (
-    <div className={`review-section-main ${isPopupOpen ? "blur-effect" : ""}`}>
+    <div id="review" className={`review-section-main ${isPopupOpen ? "blur-effect" : ""}`}>
       <h1>
         See What Our <span className="highlight-green">Graduates Have</span>{" "}
         <span className="highlight-green"> To Say</span> About Us

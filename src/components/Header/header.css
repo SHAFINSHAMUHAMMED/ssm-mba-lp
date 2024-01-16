@@ -37,6 +37,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  order: 1;
 }
 
 .header-section-2-contact p {
@@ -63,37 +64,87 @@
   }
 }
 
-.full-screen-menu {
-  display: none;
-  position: absolute;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: #259d4a;
-  overflow-y: auto;
-
+.hamburger-menu {
+  display: flex !important;
+  align-items: center;
+  gap: 5px;
 }
 
+.hamburger-text {
+  color: #527F5F;
+  font-family: 'SK Modernist Bold';
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: lowercase;
+  margin-bottom: 5px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: #177333 !important;
+}
+
+/* Hide the scrollbar in webkit-based browsers */
+.full-screen-menu::-webkit-scrollbar {
+  width: 0;
+  background: transparent; /* Optional: You can set a background color if needed */
+}
+
+/* Optional: Style the scrollbar track (the area where the scrollbar moves) */
+.full-screen-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Optional: Style the scrollbar thumb (the draggable part of the scrollbar) */
+.full-screen-menu::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+
+.full-screen-menu {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #259d4a;
+  overflow-y: scroll;
+  padding-bottom: 100px;
+
+}
+.pattern-desktp {
+  object-fit: contain;
+  width: 100%;
+}
+.pattern-mob {
+  display: none;
+}
 .full-screen-menu.show {
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
 }
+
 .full-screen-menu-content {
-  width: 100%; 
-  margin: 0 auto; 
+  width: 100%;
+  margin: 0 auto;
   padding: 36px;
+  position: relative;
 }
 
 .header-list {
   width: 100%;
   list-style-type: none;
   text-align: center;
-  padding: 0; 
-  margin: 0; 
+  padding: 0;
+  margin: 0;
 }
+
 .header-list-action {
   width: 100%;
   display: flex;
@@ -103,37 +154,39 @@
   border: 1px solid #FFF;
   align-items: center;
 }
+
 .header-list-action span {
   color: #FFF;
-  font-family:'SK Modernist Bold';
+  font-family: 'SK Modernist Bold';
   font-size: 31px;
   font-style: normal;
   font-weight: 700;
 }
+
 .header-list-action button {
   width: 400px;
   text-align: center;
   padding: 29px 70px 28px 48px;
   font-family: 'SK Modernist Bold';
-font-size: 20px;
-font-style: normal;
-font-weight: 700;
-border-radius: 81px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  border-radius: 81px;
 }
 
 .header-li {
   color: #FFF;
-font-family: 'SK Modernist Bold';
-font-size: 38px;
-font-style: normal;
-font-weight: 700;
-text-align: center;
-padding-top: 38px;
+  font-family: 'SK Modernist Bold';
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 38px;
 }
 
 .toggler-button span {
   color: #527F5F;
-  font-family:  'SK Modernist Bold';
+  font-family: 'SK Modernist Bold';
   font-size: 22px;
   font-style: normal;
   font-weight: 700;
@@ -150,11 +203,12 @@ padding-top: 38px;
   text-align: center;
   padding: 29px 70px 28px 48px;
   font-family: 'SK Modernist Bold';
-font-size: 20px;
-font-style: normal;
-font-weight: 700;
-border-radius: 81px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  border-radius: 81px;
 }
+
 .cta-main {
   display: flex;
   justify-content: center;
@@ -164,23 +218,34 @@ border-radius: 81px;
   padding-bottom: 86px;
 
 }
+
 .arrow-animation {
-  animation: arrowAnimation 2s infinite; /* Adjust the duration as needed */
+  animation: arrowAnimation 2s infinite;
+  /* Adjust the duration as needed */
 }
+
 .arrow-animation2 {
   display: none;
 }
+
+
+
 @keyframes arrowAnimation {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateX(0);
   }
+
   50% {
-    transform: translateX(50px); /* Adjust the distance the arrow travels */
+    transform: translateX(50px);
+    /* Adjust the distance the arrow travels */
   }
 }
 
 .rotate-icon {
-  transition: transform 0.3s ease-in-out 0.2s; /* Add a 0.2s delay */
+  transition: transform 0.3s ease-in-out 0.2s;
+  /* Add a 0.2s delay */
   transform-origin: center;
 }
 
@@ -205,56 +270,77 @@ border-radius: 81px;
     padding: 30px 30px 24px 30px;
   }
 
-
+.header-section-2-contact {
+  order: 0;
+}
   .header-section-2-logo {
     width: 190px;
     height: 52px;
   }
-
+.header-section-2-contact {
+  order: 0;
+}
   .header-section-2-contact div {
     display: none;
   }
 
+  .hamburger-menu {
+    gap: 5px;
+  }
+
+  .hamburger-text {
+    font-size: 20px;
+    margin-bottom: 2px;
+  }
+
+  .full-screen-menu {
+    top: 100px;
+  }
 
   .full-screen-menu-content {
-    width: 100%; 
-    margin: 0 auto; 
+    width: 100%;
+    margin: 0 auto;
     padding: 26px;
   }
-  
+
   .header-list-action {
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 6px 8px 6px 20px;
   }
+
   .header-list-action span {
     font-size: 25px;
   }
+
   .header-list-action button {
-    width: 50%;
+    width: 100%;
     padding: 25px 40px 25px 28px;
-  font-size: 16px;
+    font-size: 16px;
   }
-  
+
   .header-li {
-  font-size: 28px;;
-  padding-top: 25px;
+    font-size: 28px;
+    ;
+    padding-top: 25px;
   }
-  
+
   .toggler-button span {
     font-size: 20px;
   }
-  
+
   .header-section-toggler {
     padding: 30px 50px 30px 30px;
   }
+
   .ct-button {
-    width: 50%;
+    width: 100%;
     padding: 25px 40px 25px 28px;
-  font-size: 15px;
-  border-radius: 81px;
+    font-size: 15px;
+    border-radius: 81px;
   }
+
   .cta-main {
     display: flex;
     justify-content: center;
@@ -264,9 +350,10 @@ border-radius: 81px;
     padding-bottom: 70px;
 
   }
+
   .arrow-animation {
     width: 100px;
-    height:70px ;
+    height: 70px;
   }
 
 }
@@ -291,51 +378,84 @@ border-radius: 81px;
     height: 52px;
   }
 
+  .hamburger-menu {
+    padding: 10px !important;
+  }
 
-  
+  .hamburger-text {
+    display: none;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    width: 35px !important;
+  }
+
+  .full-screen-menu {
+    top: 90px;
+    height: 100%;
+    background-image: url('../../assets/svg/toglerBottomMob.svg');
+    background-repeat: repeat-x;
+    background-position: bottom center;
+    padding-bottom: 0px;
+  }
+  .pattern-desktp {
+    display: none;
+  }
+  /* .pattern-mob {
+    display: block;
+    object-fit: contain;
+    width: 100%;
+  } */
   .full-screen-menu-content {
-    width: 100%; 
-    margin: 0 auto; 
+    width: 100%;
+    margin: 0 auto;
     padding: 0px;
   }
-  
+
   .header-list {
     text-align: left;
-    padding: 0; 
-    margin: 0; 
-    padding-top:40px ;
+    padding: 0;
+    margin: 0;
+    padding-top: 40px;
   }
+
   .header-list-action {
-   display: none;
+    display: none;
   }
-  
+
   .header-li {
     color: #FFF;
-  font-size: 20px;
-  padding-top: 8px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.58);
-  text-align: left;
-  padding-left: 44px;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.58);
+    text-align: left;
+    padding-left: 44px;
   }
+
   .toggler-button {
     order: 2;
   }
+
   .toggler-button span {
-  display: none;
+    display: none;
   }
-  
+
   .header-section-toggler {
     padding: 20px 26px 20px 20px;
   }
+
   .ct-button {
-    width: 90%;
+    width: 100%;
     padding: 23px 40px 22px 39px;
-  font-size: 15px;
-  border-radius: 64px;
+    font-size: 15px;
+    border-radius: 64px;
   }
+
   .cta-main {
-flex-direction: column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -344,22 +464,29 @@ flex-direction: column;
     padding-top: 10px;
     padding-bottom: 41px;
   }
+
   .arrow-animation {
     display: none;
-    
+
   }
+
   .arrow-animation2 {
     display: block;
     width: 49px;
-    height:38px ;
-    animation: arrowAnimation2 2s infinite; 
+    height: 38px;
+    animation: arrowAnimation2 2s infinite;
   }
+
   @keyframes arrowAnimation2 {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(-10px);
     }
+
     50% {
-      transform: translateY(10px); /* Adjust the distance the arrow travels */
+      transform: translateY(10px);
+      /* Adjust the distance the arrow travels */
     }
   }
 }

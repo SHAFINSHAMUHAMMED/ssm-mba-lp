@@ -72,6 +72,15 @@
       setExitIntentTriggered(false); // Reset the state when closing the popup
     };
 
+    const scrollToSection = (sectionId) => {
+      const section = document.getElementById(sectionId);
+    
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+    
+
     return (
       <PopupProvider>
         <Suspense
@@ -89,12 +98,13 @@
           }
         >
           <div className="body">
-            <Header />
+          <Header scrollToSection={scrollToSection}  />
             <Hero />
             <StickyWhatsAppButton />
             <Carousel />
             <AluminiCarousel />
             <SwissSchool />
+
             <ProgramHighlights />
             <PowerSkill/>
             <Accreditations />

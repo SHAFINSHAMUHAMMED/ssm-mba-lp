@@ -7,7 +7,7 @@ import { usePopup } from "../Hoocks/PopupContext";
 function swiss_school() {
   const { isPopupOpen } = usePopup();
   return (
-    <div className={`why-swiss-school ${isPopupOpen ? "blur-effect" : ""}`}>
+    <div id="swissSchool" className={`why-swiss-school ${isPopupOpen ? "blur-effect" : ""}`}>
       <h1 className=" swiss-school-h1">
         Elevate Your Career With &nbsp;
         <span className="wavy-underline-green">Swiss School</span> Of

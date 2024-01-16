@@ -27,7 +27,7 @@ function world_of_possibilities() {
   }, [])
   
   return (
-    <div className={isPopupOpen ? 'blur-effect' : ''}>
+    <div id="whyLuc" className={isPopupOpen ? 'blur-effect' : ''}>
       <div className="world-of-possibilities-main">
         <h1>
           <span className="wavy-underline-green">A World of</span>{" "}

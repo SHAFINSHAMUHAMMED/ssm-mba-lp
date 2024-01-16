@@ -2,6 +2,9 @@ import React from "react";
 import "./poweskil.css";
 import ButtonDark from "../Buttons/buttonDark";
 import Claim_description from "../Description/claim_description";
+import { Link } from "react-scroll";
+import { usePopup } from "../Hoocks/PopupContext";
+
 
 import fire_icon from "../../assets/svg/powerskill-fire-icon.svg";
 import prof1 from "../../assets/prof1.webp";
@@ -18,8 +21,11 @@ import prof10 from "../../assets/prof10.webp";
 import star_lg from "../../assets/svg/star-large-icon.svg";
 
 function power_skills() {
+
+  const { isPopupOpen, togglePopup } = usePopup();
+
   return (
-    <div className="power-skill-main">
+    <div id="specialisation" className="power-skill-main">
       <h2 className="main-head-h2">
         <span className="wavy-underline-orange-small">Top</span>{" "}
         <span className="text-[#259D4A]">MBA Specializations</span> at SSM
@@ -54,10 +60,10 @@ function power_skills() {
               Focuses on financial analysis, investment strategies, and
               understanding global financial markets for management roles.
             </p>
-            <a href="" target="_blank" className="power-skill-button"
-             onClick={(e) => {
-              e.preventDefault();
-            }}
+            <a  target="" onClick={togglePopup} className="power-skill-button"
+            //  onClick={(e) => {
+            //   e.preventDefault();
+            // }}
             >
               <span className="font-bold">Read More</span>
               <svg
@@ -131,10 +137,10 @@ function power_skills() {
               Offers a comprehensive understanding of business management, ideal
               for versatile roles in business administration.
             </p>
-            <a href="" target="_blank" className="power-skill-button"
-             onClick={(e) => {
-              e.preventDefault();
-            }}
+            <a onClick={togglePopup} className="power-skill-button"
+            //  onClick={(e) => {
+            //   e.preventDefault();
+            // }}
             >
               <span className="font-bold">Read More</span>
               <svg
@@ -208,10 +214,10 @@ function power_skills() {
               Prepares leaders for international business with a focus on global
               strategies and leadership skills.
             </p>
-            <a href="" target="_blank" className="power-skill-button"
-             onClick={(e) => {
-              e.preventDefault();
-            }}
+            <a onClick={togglePopup} className="power-skill-button"
+            //  onClick={(e) => {
+            //   e.preventDefault();
+            // }}
             >
               <span className="font-bold">Read More</span>
               <svg
@@ -284,10 +290,10 @@ function power_skills() {
               Centers on safety standards, environmental sustainability, and
               risk management in various industries.
             </p>
-            <a href="" target="_blank" className="power-skill-button"
-             onClick={(e) => {
-              e.preventDefault();
-            }}
+            <a onClick={togglePopup} className="power-skill-button"
+            //  onClick={(e) => {
+            //   e.preventDefault();
+            // }}
             >
               <span className="font-bold">Read More</span>
               <svg
@@ -360,10 +366,10 @@ function power_skills() {
               Tailored for healthcare sector leadership, focusing on healthcare
               systems, policy, and economics.
             </p>
-            <a href="" target="_blank" className="power-skill-button"
-             onClick={(e) => {
-              e.preventDefault();
-            }}
+            <a onClick={togglePopup} className="power-skill-button"
+            //  onClick={(e) => {
+            //   e.preventDefault();
+            // }}
             >
               <span className="font-bold">Read More</span>
               <svg
@@ -437,10 +443,10 @@ function power_skills() {
               Specializes in strategic HR management, employee relations, and
               talent management for HR leadership roles.
             </p>
-            <a href="" target="_blank" className="power-skill-button"
-             onClick={(e) => {
-              e.preventDefault();
-            }}
+            <a onClick={togglePopup} className="power-skill-button"
+            //  onClick={(e) => {
+            //   e.preventDefault();
+            // }}
             >
               <span className="font-bold">Read More</span>
               <svg
@@ -513,10 +519,10 @@ function power_skills() {
               Focuses on brand and marketing strategies in the luxury sector,
               emphasizing unique industry challenges.
             </p>
-            <a href="" target="_blank" className="power-skill-button"
-             onClick={(e) => {
-              e.preventDefault();
-            }}
+            <a onClick={togglePopup} className="power-skill-button"
+            //  onClick={(e) => {
+            //   e.preventDefault();
+            // }}
             >
               <span className="font-bold">Read More</span>
               <svg
@@ -589,10 +595,10 @@ function power_skills() {
               Covers strategic marketing, consumer behavior, digital marketing,
               and brand management for marketing careers.
             </p>
-            <a href="" target="_blank" className="power-skill-button"
-             onClick={(e) => {
-              e.preventDefault();
-            }}
+            <a onClick={togglePopup} className="power-skill-button"
+            //  onClick={(e) => {
+            //   e.preventDefault();
+            // }}
             >
               <span className="font-bold">Read More</span>
               <svg

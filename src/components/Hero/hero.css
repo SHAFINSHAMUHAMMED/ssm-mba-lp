@@ -331,11 +331,12 @@ display: none;
 
   .Hero-Headline {
     text-align: center;
-font-size: 49.473px;
+font-size: 47px;
 font-style: normal;
 font-weight: 700;
 line-height: 92%; /* 45.515px */
     white-space: normal;
+    padding-right: 10px;
   }
 
   .hero-right {
