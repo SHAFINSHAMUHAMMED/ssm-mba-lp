@@ -176,6 +176,7 @@ function header() {
                         to="contactForm"
                         smooth={true}
                         duration={1000}
+                        offset={-150}
                         onClick={() => setShowList(false)}
                       >
                         <button className="bg-[#0B434B] text-white cursor-pointer">
@@ -189,6 +190,7 @@ function header() {
                         smooth={true}
                         delay={50}
                         duration={1000}
+                        offset={-150}
                         onClick={() => setShowList(false)}
                         className="cursor-pointer"
                       >
@@ -201,6 +203,7 @@ function header() {
                         smooth={true}
                         delay={50}
                         duration={1000}
+                        offset={-120}
                         onClick={() => setShowList(false)}
                         className="cursor-pointer"
                       >
@@ -212,6 +215,8 @@ function header() {
                         to="specialisation"
                         smooth={true}
                         duration={1000}
+                        offset={-120}
+
                         onClick={() => setShowList(false)}
                         className="cursor-pointer"
                       >
@@ -223,6 +228,7 @@ function header() {
                         to="acredition"
                         smooth={true}
                         duration={1000}
+                        offset={-100}
                         onClick={() => setShowList(false)}
                         className="cursor-pointer"
                       >
@@ -234,6 +240,7 @@ function header() {
                         to="review"
                         smooth={true}
                         duration={1000}
+                        offset={-120}
                         onClick={() => setShowList(false)}
                         className="cursor-pointer"
                       >
@@ -245,6 +252,7 @@ function header() {
                         to="whyLuc"
                         smooth={true}
                         duration={1000}
+                        offset={-120}
                         onClick={() => setShowList(false)}
                         className="cursor-pointer"
                       >
@@ -256,6 +264,7 @@ function header() {
                         to="guarantee"
                         smooth={true}
                         duration={1000}
+                        offset={-100}
                         onClick={() => setShowList(false)}
                         className="cursor-pointer"
                       >
@@ -330,6 +339,7 @@ function header() {
                       to="contactForm"
                       smooth={true}
                       duration={1000}
+                      offset={-150}
                       onClick={() => setShowList(false)}
                     >
                       <button className="ct-button bg-[#0B434B] text-white cursor-pointer">

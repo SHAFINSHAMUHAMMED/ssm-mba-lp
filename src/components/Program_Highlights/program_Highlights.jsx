@@ -1,8 +1,11 @@
 import React from "react";
 import "./programHighlights.css";
+import { usePopup } from "../Hoocks/PopupContext";
 import ButtonOrange from "../Buttons/buttoonOrange";
 import Claim_description from "../Description/claim_description";
 function program_Highlights() {
+  const { isPopupOpen, togglePopup } = usePopup();
+
   return (
     <div id="programHighlight" className="highlight-main bg-backgrounds-darkGreenBlue ">
       <h2 className=" text-center highlight-h2">
@@ -338,8 +341,17 @@ function program_Highlights() {
           </svg>
         </div>
       </div>
-      <ButtonOrange />
-      <Claim_description color="rgba(255, 255, 255, 0.82)" />
+      <div
+            id="NewRootRoot"
+            className="flex flex-row justify-center w-full  our-mba-button"
+          >
+            <a
+             onClick={togglePopup}
+              className="light-effect-button button bg-[#EE9B4E] w-[95%] sm:w-[539px]  rounded-[56px] sm:rounded-[91px] pt-[25px] pb-[25px] text-[15px] md:text-[15px] xl:text-[23px] font-bold cursor-pointer"
+            >
+              Download Free Brochure
+            </a>
+          </div>
     </div>
   );
 }
