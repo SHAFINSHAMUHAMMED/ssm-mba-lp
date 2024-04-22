@@ -8,10 +8,12 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "proxy": "http://localhost:5173"
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "axios": "^1.6.8",
     "hamburgers": "^1.2.1",
     "lodash": "^4.17.21",
     "lottie-react": "^2.4.0",

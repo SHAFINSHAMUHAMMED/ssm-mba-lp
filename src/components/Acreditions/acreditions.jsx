@@ -121,7 +121,7 @@ function acreditions() {
              onClick={togglePopup}
               className="light-effect-button button bg-[#0b434b] w-[95%] sm:w-[539px]  rounded-[56px] sm:rounded-[91px] pt-[25px] pb-[25px] text-[15px] md:text-[15px] xl:text-[23px] font-bold cursor-pointer"
             >
-              Download Free Brochure
+              Request a Call
             </a>
           </div>
       </div>

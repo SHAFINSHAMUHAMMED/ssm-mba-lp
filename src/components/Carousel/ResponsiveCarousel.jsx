@@ -72,7 +72,7 @@ function ResponsiveCarousel() {
             className="mb-2 carousel-svg"
           />
           <h4 className="text-sm sm:text-base">
-            Scholarships Available: Save Up to 30%
+            Flexible Monthly Installments
           </h4>
         </div>
       </div>

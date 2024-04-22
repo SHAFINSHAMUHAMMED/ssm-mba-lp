@@ -71,9 +71,9 @@ function world_of_possibilities() {
                 </defs>
               </svg>
 
-              <div>
-                <h1>120+</h1>
-                <span>Courses</span>
+              <div className="wp-card">
+                <h1>95+</h1>
+                <span className="text-left !pl-0">International Companies Represented</span>
               </div>
             </div>
             <div className="world-of-possibilities-card">
@@ -157,7 +157,7 @@ function world_of_possibilities() {
                 <h3>Globally Recognised & Accredited</h3>
               </div>
               <p>
-                Our programs hold both national and international accreditation,
+                Our Online MBA programs hold both national and international accreditation,
                 ensuring your degree has global relevance.
               </p>
             </div>
@@ -213,8 +213,7 @@ function world_of_possibilities() {
                 <h3>Flexible Learning Modes</h3>
               </div>
               <p>
-                Learn from anywhere through our digital libraries and live
-                online classrooms.
+              Learn from anywhere through our digital libraries and live online classrooms, perfect for pursuing a Part-Time MBA.
               </p>
             </div>
             <div className=" world-of-possibilities-2-card">
@@ -324,7 +323,7 @@ function world_of_possibilities() {
                 <h3>Career-Focused Programs</h3>
               </div>
               <p>
-                Our courses are designed to meet the specific needs of working
+                Our  Online MBA in Dubai is designed to meet the specific needs of working
                 professionals.
               </p>
             </div>
@@ -352,8 +351,7 @@ function world_of_possibilities() {
                 <h3>Hassle-Free Migration</h3>
               </div>
               <p>
-                During the course of the program, you can also opt to migrate
-                between multiple campuses on a quarterly basis.
+              During the course of the program, you can also opt to migrate between multiple campuses on a quarterly basis, when pursuing an Online MBA in Dubai.
               </p>
             </div>
           </div>

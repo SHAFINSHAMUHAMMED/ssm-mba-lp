@@ -5,6 +5,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 import "react-phone-input-2/lib/style.css";
 import PhoneInput from "react-phone-input-2";
 import { CSSTransition } from "react-transition-group";
+import axios from 'axios';
 
 import whatsppIcon from '../../assets/svg/WhatsApp_icon.svg'
 import popImg from '../../assets/popup-img.webp'
@@ -12,7 +13,7 @@ import popImgMob from '../../assets/popup-img-mob.webp'
 
 
 function popup({ closePopup }) {
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
+  const [formData, setFormData] = useState({ name: "", email: "",jobRole:"", phone: "",currentUrl: window.location.href });
   const [errors, setErrors] = useState({});
   const { togglePopup } = usePopup();
   const [isFormComplete, setIsFormComplete] = useState(false);
@@ -31,9 +32,11 @@ function popup({ closePopup }) {
       clearTimeout(timeout);
     };
   }, []);
-  useEffect(() => {
-    setCurrentUrl(window.location.href);
-  }, []);
+  
+  // useEffect(() => {
+  //   setCurrentUrl(window.location.href);
+  // }, []);
+
   const handleExit = () => {
     setIsActive(false);
     setTimeout(() => {
@@ -60,6 +63,11 @@ function popup({ closePopup }) {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       formIsValid = false;
       tempErrors["email"] = "Email is not valid";
+    }
+    //Job role validation
+    if (!formData.jobRole) {
+      formIsValid = false;
+      tempErrors["jobRole"] = "Job role is required";
     }
     // Phone validation
     const digits = formData.phone.replace(/\D/g, "");
@@ -88,51 +96,52 @@ function popup({ closePopup }) {
   useEffect(() => {
     const formComplete =
       formData.name.trim() !== "" &&
-      formData.name.trim().length > 2 &&
-      /\S+@\S+\.\S+/.test(formData.email) &&
+      formData.name.trim().length > 2 && formData.jobRole.trim() !== ""
+      &&/\S+@\S+\.\S+/.test(formData.email) &&
       /^\d{8,}$/.test(formData.phone.replace(/\D/g, ""));
     setIsFormComplete(formComplete); // Update isFormComplete state
-  }, [formData.name, formData.email, formData.phone]);
+  }, [formData]);
 
   const handleSubmit = async (e) => {
+    console.log('sending form')
     e.preventDefault();
     if (validate()) {
       setIsLoading(true);
       const loaderTimeout = setTimeout(() => setIsLoading(false), 3000);
 
-      const dataToSend = {
-        ...formData,
-        currentUrl: currentUrl
-      };
+try {
+  
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'Download Brochure',
+    'form_id':'Download Brochure Form',
+    'email': formData.email,
+    eventModel: {
+      form_id: 'Download Brochure Form',
+    },
+  });
+  
 
-      try {
-        const response = await fetch(
-          "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTY5MDYzNzA0M2M1MjY0NTUzZDUxMzci_pc",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(dataToSend),
-          }
-        );
-
-        if (response.ok) {
-          // downloadPdf("images/SSM MBA.pdf");
-          clearTimeout(loaderTimeout);
-          setIsLoading(false);
-          setDownloadStarted(true);
-          // closePopup();
-        } else {
-          console.error("Server error");
-          clearTimeout(loaderTimeout);
-          setIsLoading(false);
-        }
-      } catch (error) {
-        console.error("Network error:", error);
-        clearTimeout(loaderTimeout);
-        setIsLoading(false); // Hide loader
-      }
+  const response = await axios.post(
+    // SSM MBA Landing Page Brochure Download work flow
+     "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTY5MDYzNzA0M2M1MjY0NTUzZDUxMzci_pc",
+    formData,
+    {
+      headers: {
+        "Content-Type": "multipart/form-data"
+    },
+    }
+  );
+  clearTimeout(loaderTimeout);
+  setIsLoading(false);
+  setDownloadStarted(true);
+  // closePopup(); if applicable
+  
+} catch (error) {
+  console.error("Network error:", error);
+  clearTimeout(loaderTimeout);
+  setIsLoading(false); // Hide loader
+}
     }
   };
 
@@ -215,6 +224,17 @@ function popup({ closePopup }) {
                   >
                     {errors.email}
                   </p>
+                )}
+                 <h5>Job Role</h5>
+                <input
+                  type="text"
+                  name="jobRole"
+                  placeholder="Enter your job role"
+                  value={formData.jobRole}
+                  onChange={handleChange}
+                />
+                {errors.jobRole && (
+                  <p className="error">{errors.jobRole}</p>
                 )}
                 <h5>Phone</h5>
                 <PhoneInput

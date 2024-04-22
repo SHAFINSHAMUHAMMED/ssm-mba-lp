@@ -57,8 +57,7 @@ function power_skills() {
               <h3>MBA in Finance</h3>
             </div>
             <p>
-              Focuses on financial analysis, investment strategies, and
-              understanding global financial markets for management roles.
+            MBA in Finance Program  Ideal for those looking for an Online MBA in UAE specializing in finance.
             </p>
             <a  target="" onClick={togglePopup} className="power-skill-button"
             //  onClick={(e) => {
@@ -134,8 +133,7 @@ function power_skills() {
               <h3>MBA General</h3>
             </div>
             <p>
-              Offers a comprehensive understanding of business management, ideal
-              for versatile roles in business administration.
+            Our MBA in Dubai provides the convenience of learning from anywhere, catering to busy professionals seeking broad business acumen.
             </p>
             <a onClick={togglePopup} className="power-skill-button"
             //  onClick={(e) => {
@@ -211,7 +209,7 @@ function power_skills() {
               <h3>MBA in Global Management & Leadership</h3>
             </div>
             <p>
-              Prepares leaders for international business with a focus on global
+            MBA in Global Management & Leadership prepares leaders for international business with a focus on global
               strategies and leadership skills.
             </p>
             <a onClick={togglePopup} className="power-skill-button"
@@ -287,7 +285,7 @@ function power_skills() {
               <h3>MBA in Health Safety & Environment</h3>
             </div>
             <p>
-              Centers on safety standards, environmental sustainability, and
+            MBA in Health Safety & Environment centers on safety standards, environmental sustainability, and
               risk management in various industries.
             </p>
             <a onClick={togglePopup} className="power-skill-button"
@@ -363,7 +361,7 @@ function power_skills() {
               <h3>MBA in Healthcare Management</h3>
             </div>
             <p>
-              Tailored for healthcare sector leadership, focusing on healthcare
+            MBA in Healthcare Management tailored for healthcare sector leadership, focusing on healthcare
               systems, policy, and economics.
             </p>
             <a onClick={togglePopup} className="power-skill-button"
@@ -440,7 +438,7 @@ function power_skills() {
               <h3>MBA in Human Resource </h3>
             </div>
             <p>
-              Specializes in strategic HR management, employee relations, and
+            MBA in Human Resource specializes in strategic HR management, employee relations, and
               talent management for HR leadership roles.
             </p>
             <a onClick={togglePopup} className="power-skill-button"
@@ -516,7 +514,7 @@ function power_skills() {
               <h3>MBA in Luxury Management</h3>
             </div>
             <p>
-              Focuses on brand and marketing strategies in the luxury sector,
+            MBA in Luxury Management focuses on brand and marketing strategies in the luxury sector,
               emphasizing unique industry challenges.
             </p>
             <a onClick={togglePopup} className="power-skill-button"
@@ -592,7 +590,7 @@ function power_skills() {
               <h3>MBA in Marketing</h3>
             </div>
             <p>
-              Covers strategic marketing, consumer behavior, digital marketing,
+            MBA in Marketing covers strategic marketing, consumer behavior, digital marketing,
               and brand management for marketing careers.
             </p>
             <a onClick={togglePopup} className="power-skill-button"
@@ -668,7 +666,7 @@ function power_skills() {
               <h3>MBA in Project Management</h3>
             </div>
             <p>
-              Prepares professionals for project management roles with a focus
+            MBA in Project Management prepares professionals for project management roles with a focus
               on planning, risk, and budgeting.
             </p>
             <a href="https://offer.learnersuae.com/ssm-mba-project-management/" target="_blank" className="power-skill-button"
@@ -743,7 +741,7 @@ function power_skills() {
               <h3>MBA in Supply Chain Management</h3>
             </div>
             <p>
-              Concentrates on supply chain strategy, logistics, and operations
+            MBA in Supply Chain Management concentrates on supply chain strategy, logistics, and operations
               management for efficiency improvement
             </p>
             <a href="https://offer.learnersuae.com/ssm-mba-supply-chain/" target="_blank" className="power-skill-button"

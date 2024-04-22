@@ -68,8 +68,8 @@
 
 .Highlight-star-icon {
   position: absolute;
-  left: 40%;
-  top: 20%;
+  left: 75%;
+  top: 75%;
 }
 
 .highlight-svg {
@@ -148,8 +148,8 @@
   .Highlight-star-icon {
     width: 120px;
     height: 120px;
-    left: 50%;
-    top: 10%;
+    left: 82%;
+    top: 77%;
   }
 
   .highlight-svg {

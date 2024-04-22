@@ -29,9 +29,9 @@
     import("./components/World_of_possibilities/world_of_possibilities")
   );
   const ReviewSection = lazy(() => import("./components/Reviews/review_section"));
-  const SuccessfulGraduates = lazy(() =>
-    import("./components/Successful_graduates/successful_graduates")
-  );
+  // const SuccessfulGraduates = lazy(() =>
+  //   import("./components/Successful_graduates/successful_graduates")
+  // );
   // const StepsToUnlockCareer = lazy(() =>
   //   import("./components/Steps_to_unlock_career/steps_to_unlock_career")
   // );
@@ -47,6 +47,8 @@
     import("./components/WhatsappStickyLogo/StickyWhatsAppButton")
   );
   const Popup = lazy(() => import("./components/Popup_page/popup"));
+const AddressCard = React.lazy(() => import('./components/adressCard/adressCard'))
+
 
   function App() {
     const { isPopupOpen, togglePopup } = usePopup();
@@ -110,9 +112,10 @@
             <Accreditations />
             <ReviewSection />
             <WorldOfPossibilities />
-            <SuccessfulGraduates />
+            {/* <SuccessfulGraduates /> */}
             <StudentSupport />
             <IcfCertification />
+            <AddressCard/>
             <Footer />
             {isPopupOpen && <Popup closePopup={handleClosePopup} />}
           </div>

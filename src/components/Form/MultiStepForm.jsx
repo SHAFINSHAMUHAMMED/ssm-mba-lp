@@ -29,9 +29,11 @@ const MultiStepForm = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
   useEffect(() => {
     setCurrentUrl(window.location.href);
   }, []);
+  
   const validateCurrentStep = () => {
     let errors = {};
     let isValid = true;
@@ -128,11 +130,20 @@ const MultiStepForm = () => {
       "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTY5MDYzNzA0M2M1MjY0NTUzZDUxMzMi_pc";
 
     try {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'ICF-Form Submission',
+    'form_id':'ICF-Form Submission',
+        'email': formData.email,
+        eventModel: {
+          form_id: 'ICF-Form Submission',
+        },
+      });
       const response = await fetch(webhookUrl, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
-        },
+          "Content-Type": "multipart/form-data"
+      },
         body: JSON.stringify(dataToSend),
       });
 

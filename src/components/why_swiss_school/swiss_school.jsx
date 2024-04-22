@@ -12,12 +12,12 @@ function swiss_school() {
         Elevate Your Career With &nbsp;
         <span className="wavy-underline-green">Swiss School</span> Of
         Management‘s <span className="highlight-orange">Top</span>&nbsp;
-        <span className="highlight-orange">Ranked MBA</span> At An Affordable
+        <span className="highlight-orange">Ranked MBA in Dubai</span> At An Affordable
         Fee
       </h1>
       <div className="swiss-school-p-main">
         <p className="p-margine">
-          Searching for a top-tier MBA program that aligns with your career
+          Searching for a top-tier Online MBA program that aligns with your career
           aspirations? Then you are at the right place.
         </p>
         <p className="p-margine">
