@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 
 import loreal from "../../assets/icon1-loreal.webp";
 import mashreeq from "../../assets/icon2-mashreeq.webp";
-import rakbank from "../../assets/icon3-rakbank.webp";
+// import rakbank from "../../assets/icon3-rakbank.webp";
 import almarai from "../../assets/icon4-almarai.webp";
 import emiratesNBD from "../../assets/icon5-emirates-nbd.webp";
 import standard_chartered from "../../assets/icon6-standard-chartered.webp";
@@ -30,11 +30,11 @@ function AluminiCarousel() {
               src={mashreeq}
               alt="mashreeq"
             />
-            <img
+            {/* <img
               className="alumini-carousel-card "
               src={rakbank}
               alt="rakbank"
-            />
+            /> */}
             <img
               className="alumini-carousel-card "
               src={almarai}

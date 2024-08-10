@@ -47,9 +47,9 @@ function acreditions() {
                 <img src={businet} alt="" />
               </div>
 
-              <div className="accredit-card">
+              {/* <div className="accredit-card">
                 <img src={chea} alt="" />
-              </div>
+              </div> */}
               <div className="accredit-card">
                 <img src={un} alt="" />
               </div>
@@ -98,9 +98,9 @@ function acreditions() {
               <div className="accredit-card">
                 <img className="accredit-card-img" src={usrLazio} alt="" />
               </div>
-              <div className="accredit-card">
+              {/* <div className="accredit-card">
                 <img className="accredit-card-img" src={chea} alt="" />
-              </div>
+              </div> */}
               <div className="accredit-card">
                 <img className="accredit-card-img" src={xila} alt="" />
               </div>
