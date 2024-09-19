@@ -8,6 +8,8 @@ import Lottie from "lottie-react";
 import { ClipLoader } from "react-spinners";
 import arrow from "../../assets/arrow.json";
 import MultiStepProgressBar from "../Progress_bar/MultiStepProgressBar";
+import { parsePhoneNumberFromString } from "libphonenumber-js";
+import axios from "axios";
 
 const MultiStepForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -33,6 +35,14 @@ const MultiStepForm = () => {
   useEffect(() => {
     setCurrentUrl(window.location.href);
   }, []);
+
+  const validateWhatsAppNumber = (phone) => {
+    const phoneNumber = parsePhoneNumberFromString(phone, "AE"); // Assume AE (UAE) is default
+    if (!phoneNumber || !phoneNumber.isValid()) {
+      return "Invalid WhatsApp number";
+    }
+    return "";
+  };
   
   const validateCurrentStep = () => {
     let errors = {};
@@ -72,18 +82,12 @@ const MultiStepForm = () => {
           isValid = false;
         }
         break;
-      case 5:
-        const digits = formData.whatsapp.replace(/\D/g, "");
-        if (!formData.whatsapp.trim()) {
-          errors.whatsapp = "WhatsApp number is required";
-          isValid = false;
-        } else if (digits.length > 15) {
-          errors.whatsapp = "Phone number is too long";
-          isValid = false;
-        } else if (digits.length < 8) {
-          errors.whatsapp = "Phone number is too short";
-          isValid = false;
-        }
+        case 5:
+          const phoneError = validateWhatsAppNumber(formData.whatsapp);
+          if (phoneError) {
+            errors.whatsapp = phoneError;
+            isValid = false;
+          }
         break;
       default:
         break;
@@ -117,12 +121,25 @@ const MultiStepForm = () => {
     // Add optins
   ];
 
+  const getIPAddress = async () => {
+    try {
+      const response = await axios.get('https://api.ipify.org?format=json');
+      return response.data.ip;
+    } catch (error) {
+      console.error("Failed to get IP address:", error);
+      return null;
+    }
+  };
+
+
   const handleSubmit = async () => {
     setIsLoading(true);
+    const ipAddress = await getIPAddress();
 
     const dataToSend = {
       ...formData,
-      currentUrl: currentUrl
+      currentUrl: currentUrl,
+      ipAddress
     };
 
     // Webhook URL
@@ -280,6 +297,7 @@ const MultiStepForm = () => {
             <h2>And Phone Number?</h2>
             <PhoneInput
               country={"ae"}
+              excludeCountries={"in,pk"}
               value={formData.whatsapp}
               placeholder={"Type Here..."}
               onKeyDown={handleKeyPress}

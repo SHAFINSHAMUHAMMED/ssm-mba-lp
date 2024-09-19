@@ -46,7 +46,8 @@
   const StickyWhatsAppButton = lazy(() =>
     import("./components/WhatsappStickyLogo/StickyWhatsAppButton")
   );
-  const Popup = lazy(() => import("./components/Popup_page/popup"));
+  // const Popup = lazy(() => import("./components/Popup_page/popup"));
+  const Popup = lazy(() => import("./components/Popup_page/popupTwo"));
 const AddressCard = React.lazy(() => import('./components/adressCard/adressCard'))
 
 
@@ -112,12 +113,12 @@ const AddressCard = React.lazy(() => import('./components/adressCard/adressCard'
             <Accreditations />
             <ReviewSection />
             <WorldOfPossibilities />
-            {/* <SuccessfulGraduates /> */}
             <StudentSupport />
             <IcfCertification />
             <AddressCard/>
             <Footer />
             {isPopupOpen && <Popup closePopup={handleClosePopup} />}
+            {/* {isPopupOpen && <Popup closePopup={handleClosePopup} />} */}
           </div>
         </Suspense>
       </PopupProvider>

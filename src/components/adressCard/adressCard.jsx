@@ -6,20 +6,20 @@ import qatar from "../../assets/qatarFlag.png";
 function adressCard() {
   return (
     <>
-      <h2 class="h2-head">Admission Offices</h2>
+      <h2 className="h2-head">Admission Offices</h2>
       <div className="location-parent">
         <div className="location-main">
-          <div class="location-head">
-            <div class="head flex">
-              <div class="icon">
-                <img class="icon" src={uae} alt="" />
+          <div className="location-head">
+            <div className="head flex">
+              <div className="icon">
+                <img className="icon" src={uae} alt="" />
               </div>
               Sharjah – Al Zahiya
             </div>
-            <div class="box-contact" id="load">
+            <div className="box-contact" id="load">
               <ul>
                 <li>
-                  <div class="iconB">
+                  <div className="iconB">
                     <svg className="w-10 h-10" viewBox="0 0 512 383.5">
                       <path
                         d="M298.8,249.4c-12.7,8.5-27.5,13-42.8,13c-15.3,0-30.1-4.5-42.8-13L3.4,109.6c-1.2-0.8-2.3-1.6-3.4-2.4v229.2
@@ -31,14 +31,14 @@ function adressCard() {
                       ></path>
                     </svg>
                   </div>
-                  <div class="Txt">
+                  <div className="Txt">
                     <a href="mailto:info@learnersuae.com">
                       info@learnersuae.com
                     </a>
                   </div>
                 </li>
                 <li>
-                  <div class="iconB">
+                  <div className="iconB">
                     <svg className="w-10 h-10" viewBox="0 0 448 448">
                       <path
                         d="M438.3,341.8c-14-11.7-96-63.7-109.6-61.3c-6.4,1.1-11.3,6.6-24.4,22.2c-6.1,7.7-12.7,14.9-19.9,21.6
@@ -50,7 +50,7 @@ function adressCard() {
                       <path d="M416,208h32C447.9,93.2,354.8,0.1,240,0v32C337.2,32.1,415.9,110.8,416,208z"></path>
                     </svg>
                   </div>
-                  <div class="Txt">
+                  <div className="Txt">
                     <p>
                       <a href="tel:+971504181328">+971 50 418 1328</a>
                     </p>
@@ -58,7 +58,7 @@ function adressCard() {
                   </div>
                 </li>
                 <li>
-                  <div class="iconB">
+                  <div className="iconB">
                     <svg className="w-10 h-10" viewBox="0 0 384 512">
                       <g id="Pin">
                         <path
@@ -68,7 +68,7 @@ function adressCard() {
                       </g>
                     </svg>
                   </div>
-                  <div class="Txt">
+                  <div className="Txt">
                     <p>
                       H01, Sharjah Publishing City Free Zone, Sharjah, United
                       Arab Emirates.
@@ -88,17 +88,17 @@ function adressCard() {
 
         {/* 2 */}
         <div className="location-main">
-          <div class="location-head">
-            <div class="head flex">
-              <div class="icon">
-                <img class="icon" src={uae} alt="" />
+          <div className="location-head">
+            <div className="head flex">
+              <div className="icon">
+                <img className="icon" src={uae} alt="" />
               </div>
               DUBAI - OUD METHA (ADMIN OFFICE)
             </div>
-            <div class="box-contact" id="load">
+            <div className="box-contact" id="load">
               <ul>
                 <li>
-                  <div class="iconB">
+                  <div className="iconB">
                     <svg className="w-10 h-10" viewBox="0 0 512 383.5">
                       <path
                         d="M298.8,249.4c-12.7,8.5-27.5,13-42.8,13c-15.3,0-30.1-4.5-42.8-13L3.4,109.6c-1.2-0.8-2.3-1.6-3.4-2.4v229.2
@@ -110,14 +110,14 @@ function adressCard() {
                       ></path>
                     </svg>
                   </div>
-                  <div class="Txt">
+                  <div className="Txt">
                     <a href="mailto:info@learnersuae.com">
                       info@learnersuae.com
                     </a>
                   </div>
                 </li>
                 <li>
-                  <div class="iconB">
+                  <div className="iconB">
                     <svg className="w-10 h-10" viewBox="0 0 448 448">
                       <path
                         d="M438.3,341.8c-14-11.7-96-63.7-109.6-61.3c-6.4,1.1-11.3,6.6-24.4,22.2c-6.1,7.7-12.7,14.9-19.9,21.6
@@ -129,7 +129,7 @@ function adressCard() {
                       <path d="M416,208h32C447.9,93.2,354.8,0.1,240,0v32C337.2,32.1,415.9,110.8,416,208z"></path>
                     </svg>
                   </div>
-                  <div class="Txt">
+                  <div className="Txt">
                     <p>
                     <a href="tel:6005272212">Office: 600 527 221 </a>
                     </p>
@@ -137,7 +137,7 @@ function adressCard() {
                   </div>
                 </li>
                 <li>
-                  <div class="iconB">
+                  <div className="iconB">
                     <svg className="w-10 h-10" viewBox="0 0 384 512">
                       <g id="Pin">
                         <path
@@ -147,7 +147,7 @@ function adressCard() {
                       </g>
                     </svg>
                   </div>
-                  <div class="Txt">
+                  <div className="Txt">
                   <p>Al Nasr Plaza – Oud Metha – Dubai</p>
                   </div>
                 </li>
@@ -163,17 +163,17 @@ function adressCard() {
         </div>
         {/* 3 */}
         <div className="location-main">
-          <div class="location-head">
-            <div class="head flex">
-              <div class="icon">
-                <img class="icon" src={uae} alt="" />
+          <div className="location-head">
+            <div className="head flex">
+              <div className="icon">
+                <img className="icon" src={uae} alt="" />
               </div>
               ABU DHABI (INFORMATION CENTER)
             </div>
-            <div class="box-contact" id="load">
+            <div className="box-contact" id="load">
               <ul>
                 <li>
-                  <div class="iconB">
+                  <div className="iconB">
                     <svg className="w-10 h-10" viewBox="0 0 512 383.5">
                       <path
                         d="M298.8,249.4c-12.7,8.5-27.5,13-42.8,13c-15.3,0-30.1-4.5-42.8-13L3.4,109.6c-1.2-0.8-2.3-1.6-3.4-2.4v229.2
@@ -185,14 +185,14 @@ function adressCard() {
                       ></path>
                     </svg>
                   </div>
-                  <div class="Txt">
+                  <div className="Txt">
                     <a href="mailto:info@learnersuae.com">
                       info@learnersuae.com
                     </a>
                   </div>
                 </li>
                 <li>
-                  <div class="iconB">
+                  <div className="iconB">
                     <svg className="w-10 h-10" viewBox="0 0 448 448">
                       <path
                         d="M438.3,341.8c-14-11.7-96-63.7-109.6-61.3c-6.4,1.1-11.3,6.6-24.4,22.2c-6.1,7.7-12.7,14.9-19.9,21.6
@@ -204,7 +204,7 @@ function adressCard() {
                       <path d="M416,208h32C447.9,93.2,354.8,0.1,240,0v32C337.2,32.1,415.9,110.8,416,208z"></path>
                     </svg>
                   </div>
-                  <div class="Txt">
+                  <div className="Txt">
                     <p>
                     <a href="tel:6005272212">Office: 600 527 221 </a>
                     </p>
@@ -212,7 +212,7 @@ function adressCard() {
                   </div>
                 </li>
                 <li>
-                  <div class="iconB">
+                  <div className="iconB">
                     <svg className="w-10 h-10" viewBox="0 0 384 512">
                       <g id="Pin">
                         <path
@@ -222,7 +222,7 @@ function adressCard() {
                       </g>
                     </svg>
                   </div>
-                  <div class="Txt">
+                  <div className="Txt">
                   <p>Office No. 105, 1st Floor, Sama Tower,   Near NMC Hospital, Abu Dhabi, UAE</p>
                   </div>
                 </li>
@@ -238,17 +238,17 @@ function adressCard() {
         </div>
         {/* 4 */}
         <div className="location-main">
-          <div class="location-head">
-            <div class="head flex">
-              <div class="icon">
-                <img class="icon" src={qatar} alt="" />
+          <div className="location-head">
+            <div className="head flex">
+              <div className="icon">
+                <img className="icon" src={qatar} alt="" />
               </div>
               DOHA – QATAR
             </div>
-            <div class="box-contact" id="load">
+            <div className="box-contact" id="load">
               <ul>
                 <li>
-                  <div class="iconB">
+                  <div className="iconB">
                     <svg className="w-10 h-10" viewBox="0 0 512 383.5">
                       <path
                         d="M298.8,249.4c-12.7,8.5-27.5,13-42.8,13c-15.3,0-30.1-4.5-42.8-13L3.4,109.6c-1.2-0.8-2.3-1.6-3.4-2.4v229.2
@@ -260,14 +260,14 @@ function adressCard() {
                       ></path>
                     </svg>
                   </div>
-                  <div class="Txt">
+                  <div className="Txt">
                     <a href="mailto:info@learnersqatar.com">
                     info@learnersqatar.com
                     </a>
                   </div>
                 </li>
                 <li>
-                  <div class="iconB">
+                  <div className="iconB">
                     <svg className="w-10 h-10" viewBox="0 0 448 448">
                       <path
                         d="M438.3,341.8c-14-11.7-96-63.7-109.6-61.3c-6.4,1.1-11.3,6.6-24.4,22.2c-6.1,7.7-12.7,14.9-19.9,21.6
@@ -279,7 +279,7 @@ function adressCard() {
                       <path d="M416,208h32C447.9,93.2,354.8,0.1,240,0v32C337.2,32.1,415.9,110.8,416,208z"></path>
                     </svg>
                   </div>
-                  <div class="Txt">
+                  <div className="Txt">
                     <p>
                       <a href="tel:+97451383777">+974 5138 3777</a>
                     </p>
@@ -287,7 +287,7 @@ function adressCard() {
                   </div>
                 </li>
                 <li>
-                  <div class="iconB">
+                  <div className="iconB">
                     <svg className="w-10 h-10" viewBox="0 0 384 512">
                       <g id="Pin">
                         <path
@@ -297,7 +297,7 @@ function adressCard() {
                       </g>
                     </svg>
                   </div>
-                  <div class="Txt">
+                  <div className="Txt">
                     <p>
                     Office No: 17, Level 2 Block F Mirqab Mall
                     </p>

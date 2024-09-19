@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./hero.css";
 import Button1 from "../Buttons/buttonDark";
-import Popup from "../Popup_page/popup";
+import Popup from "../Popup_page/popupTwo";
 import { usePopup } from "../Hoocks/PopupContext";
 import { Link, Element } from "react-scroll";
 
