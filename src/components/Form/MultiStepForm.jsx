@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "../Icf_certification/icf.css";
 import Claim_description from "../Description/claim_description";
 import "react-phone-input-2/lib/style.css";
@@ -15,7 +15,7 @@ const MultiStepForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [showAnimation, setShowAnimation] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
-  const [currentUrl, setCurrentUrl] = useState('');
+  const [currentUrl, setCurrentUrl] = useState("");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -24,6 +24,7 @@ const MultiStepForm = () => {
     // location: "",
     email: "",
     whatsapp: "",
+    countryCode: "AE",
   });
 
   const [formErrors, setFormErrors] = useState({});
@@ -36,14 +37,12 @@ const MultiStepForm = () => {
     setCurrentUrl(window.location.href);
   }, []);
 
-  const validateWhatsAppNumber = (phone) => {
-    const phoneNumber = parsePhoneNumberFromString(phone, "AE"); // Assume AE (UAE) is default
-    if (!phoneNumber || !phoneNumber.isValid()) {
-      return "Invalid WhatsApp number";
-    }
-    return "";
+  const validateWhatsAppNumber = (phone, countryCode) => {
+    const phoneNumber = parsePhoneNumberFromString(phone, countryCode);
+    console.log(countryCode);
+    return phoneNumber && phoneNumber.isValid();
   };
-  
+
   const validateCurrentStep = () => {
     let errors = {};
     let isValid = true;
@@ -82,12 +81,11 @@ const MultiStepForm = () => {
           isValid = false;
         }
         break;
-        case 5:
-          const phoneError = validateWhatsAppNumber(formData.whatsapp);
-          if (phoneError) {
-            errors.whatsapp = phoneError;
-            isValid = false;
-          }
+      case 5:
+        if (!validateWhatsAppNumber(formData.whatsapp, formData.countryCode)) {
+          errors.whatsapp = "Invalid WhatsApp number";
+          isValid = false;
+        }
         break;
       default:
         break;
@@ -123,14 +121,13 @@ const MultiStepForm = () => {
 
   const getIPAddress = async () => {
     try {
-      const response = await axios.get('https://api.ipify.org?format=json');
+      const response = await axios.get("https://api.ipify.org?format=json");
       return response.data.ip;
     } catch (error) {
       console.error("Failed to get IP address:", error);
       return null;
     }
   };
-
 
   const handleSubmit = async () => {
     setIsLoading(true);
@@ -139,7 +136,7 @@ const MultiStepForm = () => {
     const dataToSend = {
       ...formData,
       currentUrl: currentUrl,
-      ipAddress
+      ipAddress,
     };
 
     // Webhook URL
@@ -149,18 +146,18 @@ const MultiStepForm = () => {
     try {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
-        'event': 'ICF-Form Submission',
-    'form_id':'ICF-Form Submission',
-        'email': formData.email,
+        event: "ICF-Form Submission",
+        form_id: "ICF-Form Submission",
+        email: formData.email,
         eventModel: {
-          form_id: 'ICF-Form Submission',
+          form_id: "ICF-Form Submission",
         },
       });
       const response = await fetch(webhookUrl, {
         method: "POST",
         headers: {
-          "Content-Type": "multipart/form-data"
-      },
+          "Content-Type": "multipart/form-data",
+        },
         body: JSON.stringify(dataToSend),
       });
 
@@ -296,13 +293,17 @@ const MultiStepForm = () => {
           <>
             <h2>And Phone Number?</h2>
             <PhoneInput
-              country={"ae"}
+              country={formData.countryCode.toLowerCase()}
               excludeCountries={"in,pk"}
               value={formData.whatsapp}
               placeholder={"Type Here..."}
               onKeyDown={handleKeyPress}
-              onChange={(phone) =>
-                setFormData({ ...formData, whatsapp: phone })
+              onChange={(phone, country) =>
+                setFormData({
+                  ...formData,
+                  whatsapp: phone,
+                  countryCode: country.countryCode.toUpperCase(),
+                })
               }
             />
             {renderError("whatsapp")}
