@@ -10,6 +10,7 @@ import arrow from "../../assets/arrow.json";
 import MultiStepProgressBar from "../Progress_bar/MultiStepProgressBar";
 import { parsePhoneNumberFromString } from "libphonenumber-js";
 import axios from "axios";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const MultiStepForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -26,6 +27,7 @@ const MultiStepForm = () => {
     whatsapp: "",
     countryCode: "AE",
   });
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   const [formErrors, setFormErrors] = useState({});
 
@@ -128,11 +130,31 @@ const MultiStepForm = () => {
       return null;
     }
   };
-
+  if (!executeRecaptcha) {
+    console.error("reCAPTCHA has not been initialized correctly");
+    return;
+  }
   const handleSubmit = async () => {
     setIsLoading(true);
-    const ipAddress = await getIPAddress();
+    try {
+      const token = await executeRecaptcha("submit");
 
+      if (!token) {
+        alert("Please complete the reCAPTCHA.");
+        setIsLoading(false);
+        return;
+      }
+
+      // Send the token to the server for verification
+      const response = await axios.post(
+        "https://googlerecaptchaserver.onrender.com/verify-recaptcha",
+        {
+          token,
+        }
+      );
+      if (response.data.success) {
+
+    const ipAddress = await getIPAddress();
     const dataToSend = {
       ...formData,
       currentUrl: currentUrl,
@@ -143,7 +165,6 @@ const MultiStepForm = () => {
     const webhookUrl =
       "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTY5MDYzNzA0M2M1MjY0NTUzZDUxMzMi_pc";
 
-    try {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
         event: "ICF-Form Submission",
@@ -153,7 +174,7 @@ const MultiStepForm = () => {
           form_id: "ICF-Form Submission",
         },
       });
-      const response = await fetch(webhookUrl, {
+      const webhookResponse = await fetch(webhookUrl, {
         method: "POST",
         headers: {
           "Content-Type": "multipart/form-data",
@@ -161,7 +182,7 @@ const MultiStepForm = () => {
         body: JSON.stringify(dataToSend),
       });
 
-      if (response.ok) {
+      if (webhookResponse.ok) {
         // Handle success
         console.log("Form data sent successfully");
         window.location.href = "https://offer.learnersuae.com/confirmation/";
@@ -169,6 +190,10 @@ const MultiStepForm = () => {
         console.error("Failed to send form data");
         // Handle error
       }
+    } else {
+      alert("reCAPTCHA verification failed. Please try again.");
+      setIsLoading(false);
+    }
     } catch (error) {
       console.error("Error sending form data:", error);
       // Handle network error

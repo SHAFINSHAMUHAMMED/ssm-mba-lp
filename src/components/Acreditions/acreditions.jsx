@@ -11,11 +11,10 @@ import iao from "../../assets/svg/Accredit-iao-icon.svg";
 import eduqua from "../../assets/svg/Accredit-eduqua-icon.svg";
 import usrLazio from "../../assets/svg/Accredit-usr-lazio-icon.svg";
 import businet from "../../assets/svg/Accredit-businet-icon.svg";
-import chea from "../../assets/svg/Accredit-chea-icon.svg";
 import xila from "../../assets/svg/Accredit-xila-icon.svg";
 import indian from "../../assets/svg/Accredit-indian-icon.svg";
 import iacbe from "../../assets/svg/Accredit-iacbe-icon.svg"
-
+import Deac from "../../assets/svg/Acredit-deac.svg"
 function acreditions() {
 
   const { isPopupOpen, togglePopup } = usePopup();
@@ -47,9 +46,6 @@ function acreditions() {
                 <img src={businet} alt="" />
               </div>
 
-              {/* <div className="accredit-card">
-                <img src={chea} alt="" />
-              </div> */}
               <div className="accredit-card">
                 <img src={un} alt="" />
               </div>
@@ -61,6 +57,9 @@ function acreditions() {
               </div>
               <div className="accredit-card">
                 <img src={iacbe} alt="" />
+              </div>
+              <div className="accredit-card">
+                <img src={Deac} alt="" />
               </div>
             </div>
           </Marquee>
@@ -98,9 +97,7 @@ function acreditions() {
               <div className="accredit-card">
                 <img className="accredit-card-img" src={usrLazio} alt="" />
               </div>
-              {/* <div className="accredit-card">
-                <img className="accredit-card-img" src={chea} alt="" />
-              </div> */}
+
               <div className="accredit-card">
                 <img className="accredit-card-img" src={xila} alt="" />
               </div>
@@ -109,6 +106,9 @@ function acreditions() {
               </div>
               <div className="accredit-card">
                 <img className="accredit-card-img" src={indian} alt="" />
+              </div>
+              <div className="accredit-card">
+                <img className="accredit-card-img" src={Deac} alt="" />
               </div>
             </div>
           </Marquee>

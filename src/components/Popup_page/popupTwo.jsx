@@ -7,6 +7,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 import { usePopup } from "../Hoocks/PopupContext";
 import axios from "axios";
 import { parsePhoneNumberFromString } from "libphonenumber-js";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 import "./popupTwo.css";
 
@@ -24,6 +25,7 @@ function PopupTwo({ closePopup }) {
   });
   const [isActive, setIsActive] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   const { togglePopup } = usePopup();
 
@@ -36,8 +38,19 @@ function PopupTwo({ closePopup }) {
 
   // Validate phone number using libphonenumber-js
   const validatePhone = (phone, countryCode) => {
-    const parsedNumber = parsePhoneNumberFromString(phone, countryCode);
-    return parsedNumber ? parsedNumber.isValid() : false;
+    const isManuallyValid = phone.length > 8;
+
+    if (!isManuallyValid) {
+      return false;
+    }
+
+    try {
+      const parsedNumber = parsePhoneNumberFromString(phone, countryCode);
+      return parsedNumber ? parsedNumber.isValid() : false;
+    } catch (error) {
+      console.error("Phone validation error:", error);
+      return false;
+    }
   };
 
   const validateName = (name) => name.length >= 3;
@@ -119,12 +132,32 @@ function PopupTwo({ closePopup }) {
     }
   };
 
+  if (!executeRecaptcha) {
+    console.error("reCAPTCHA has not been initialized correctly");
+    return;
+  }
   const handleDownload = async (e) => {
     e.preventDefault();
     if (isFormValid()) {
       setIsLoading(true);
 
       try {
+        const token = await executeRecaptcha("submit");
+
+        if (!token) {
+          alert("Please complete the reCAPTCHA.");
+          setIsLoading(false);
+          return;
+        }
+
+        // Send the token to the server for verification
+        const response = await axios.post(
+          "https://googlerecaptchaserver.onrender.com/verify-recaptcha",
+          {
+            token,
+          }
+        );
+        if (response.data.success) {
         const ipAddress = await getIPAddress();
         const dataToSend = { ...formData, ipAddress };
         window.dataLayer = window.dataLayer || [];
@@ -136,7 +169,7 @@ function PopupTwo({ closePopup }) {
             form_id: "Download Brochure Form",
           },
         });
-        const response = await axios.post(
+        const webhookResponse = await axios.post(
           "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTY5MDYzNzA0M2M1MjY0NTUzZDUxMzci_pc",
           dataToSend,
           {
@@ -149,10 +182,18 @@ function PopupTwo({ closePopup }) {
         setIsLoading(false);
         window.location.href =
           "https://offer.learnersuae.com/brochure-thank-you/";
+        } else {
+          alert("reCAPTCHA verification failed. Please try again.");
+          setIsLoading(false);
+        }
       } catch (error) {
         console.error("Error posting form data:", error);
+        alert("reCAPTCHA verification failed. Please try again.");
         setIsLoading(false);
       }
+     } else {
+      alert("Please complete the reCAPTCHA.");
+      setIsLoading(false);
     }
   };
 
