@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./swiss_school.css";
 import Lottie from "lottie-react";
 import graph from "../../assets/TopRankedSMSLottie.json";
+import FeatureImg from '../../assets/FEATUREImg.webp'
 import { usePopup } from "../Hoocks/PopupContext";
 
 function swiss_school() {
@@ -33,7 +34,8 @@ function swiss_school() {
           for those aiming to ascend in their professional journey.
         </p>
       </div>
-      <Lottie animationData={graph} loop={true} />
+      {/* <Lottie animationData={graph} loop={true} /> */}
+      <img src={FeatureImg} alt="" />
     </div>
   );
 }
