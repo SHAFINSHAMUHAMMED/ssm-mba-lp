@@ -50,7 +50,6 @@
   const Popup = lazy(() => import("./components/Popup_page/popupTwo"));
 const AddressCard = React.lazy(() => import('./components/adressCard/adressCard'))
 
-
   function App() {
     const { isPopupOpen, togglePopup } = usePopup();
     const [exitIntentTriggered, setExitIntentTriggered] = useState(false);

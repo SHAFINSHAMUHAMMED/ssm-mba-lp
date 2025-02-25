@@ -10,6 +10,7 @@ import { parsePhoneNumberFromString } from "libphonenumber-js";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 import "./popupTwo.css";
+import { BASE_URL } from "../../config/config";
 
 function PopupTwo({ closePopup }) {
   const [currentStep, setCurrentStep] = useState(1);
@@ -28,6 +29,21 @@ function PopupTwo({ closePopup }) {
   const { executeRecaptcha } = useGoogleReCaptcha();
 
   const { togglePopup } = usePopup();
+  const contactId = localStorage.getItem("contactId");
+  const [utmSource, setUtmSource] = useState("");
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const source = urlParams.get("utm_source");
+    const medium = urlParams.get("utm_medium");
+    if (source) {
+      if (source === "google" && medium === "paidsearch") {
+        setUtmSource('G Ads - Search');
+      } else {
+        setUtmSource(source);
+      }
+    }
+  }, []);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -179,9 +195,17 @@ function PopupTwo({ closePopup }) {
           }
         );
 
+        const contactResponse = await axios.post(`${BASE_URL}/contact`, {
+          phone: formData.phone,
+          name: formData.name,
+          email: formData.email,
+          source: utmSource || "Facebook",
+        });
+        localStorage.setItem("contactId", contactResponse.data);
+
         setIsLoading(false);
         window.location.href =
-          "https://offer.learnersuae.com/brochure-thank-you/";
+          `https://offer.learnersuae.com/brochure-thank-you/?id=${contactId}&name=${formData.name}`;
         } else {
           alert("reCAPTCHA verification failed. Please try again.");
           setIsLoading(false);
