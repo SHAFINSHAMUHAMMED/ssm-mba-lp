@@ -11,13 +11,13 @@ import MultiStepProgressBar from "../Progress_bar/MultiStepProgressBar";
 import { parsePhoneNumberFromString } from "libphonenumber-js";
 import axios from "axios";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { BASE_URL } from "../../config/config";
 
 const MultiStepForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [showAnimation, setShowAnimation] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [currentUrl, setCurrentUrl] = useState("");
-
   const [formData, setFormData] = useState({
     name: "",
     specialization: "",
@@ -27,9 +27,27 @@ const MultiStepForm = () => {
     whatsapp: "",
     countryCode: "AE",
   });
+
   const { executeRecaptcha } = useGoogleReCaptcha();
 
   const [formErrors, setFormErrors] = useState({});
+
+  const contactId = localStorage.getItem("contactId");
+
+  const [utmSource, setUtmSource] = useState("");
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const source = urlParams.get("utm_source");
+    const medium = urlParams.get("utm_medium");
+    if (source) {
+      if (source === "google" && medium === "paidsearch") {
+        setUtmSource('G Ads - Search');
+      } else {
+        setUtmSource(source);
+      }
+    }
+  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -192,10 +210,18 @@ const MultiStepForm = () => {
         body: JSON.stringify(dataToSend),
       });
 
+      const contactResponse = await axios.post(`${BASE_URL}/contact`, {
+        phone: formData.whatsapp,
+        name: formData.name,
+        email: formData.email,
+        source: utmSource || "Facebook",
+      });
+      localStorage.setItem("contactId", contactResponse.data);
+
       if (webhookResponse.ok) {
         // Handle success
         console.log("Form data sent successfully");
-        window.location.href = "https://offer.learnersuae.com/confirmation/";
+        window.location.href = `https://offer.learnersuae.com/confirmation/?id=${contactId}&name=${formData.name}`;
       } else {
         console.error("Failed to send form data");
         // Handle error
