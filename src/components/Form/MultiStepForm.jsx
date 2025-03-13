@@ -31,15 +31,23 @@ const MultiStepForm = () => {
   const { executeRecaptcha } = useGoogleReCaptcha();
 
   const [formErrors, setFormErrors] = useState({});
-
+  
   const contactId = localStorage.getItem("contactId");
-
   const [utmSource, setUtmSource] = useState("");
+  const [campaignName, setCampaignName] = useState("");
+  const [campaignKeyWord, setCampaignKeyWord] = useState("");
+  const [utmMedium, setUtmMedium] = useState("");
+  const [gclid, setGclid] = useState("");
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const source = urlParams.get("utm_source");
     const medium = urlParams.get("utm_medium");
+    const gclid = urlParams.get("gclid");
+    setCampaignName(urlParams.get("utm_campaign"));
+    setCampaignKeyWord(urlParams.get("utm_content"));
+    setUtmMedium(medium);
+    setGclid(gclid);
     if (source) {
       if (source === "google" && medium === "paidsearch") {
         setUtmSource('G Ads - Search');
@@ -210,12 +218,46 @@ const MultiStepForm = () => {
         body: JSON.stringify(dataToSend),
       });
 
-      const contactResponse = await axios.post(`${BASE_URL}/contact`, {
+      const body = {
         phone: formData.whatsapp,
         name: formData.name,
         email: formData.email,
         source: utmSource || "Facebook",
-      });
+        customFields: [
+          {
+            id: "se6FGXxVO1MwbaHsQJJ8",
+            field_value: "MBA",
+          },
+          {
+            id: "VLXPFtiX89yhyza2Tmjw",
+            field_value: "SSM",
+          },
+          {
+            id: "GkmmDmkfWkSHy1uNGjk8",
+            field_value: campaignName,
+          },
+          {
+            id: "qHcBCBNKFwGbmLabQNqW",
+            field_value: campaignKeyWord,
+          },
+          {
+            id: "PUZroTvCFH7EExGtmMAR",
+            field_value: formData.jobRole,
+          },
+          {
+            id: "hsp6nL84TybaKBSA3ZGd",
+            field_value: formData.specialization,
+          },
+        ],
+        attributionSource: {
+          utmMedium: utmMedium,
+          gclid: gclid,
+          utmSource: utmSource,
+          utmContent: campaignKeyWord,
+          campaign: campaignName,
+      }
+      };
+      const contactResponse = await axios.post(`${BASE_URL}/contact`, body);
       localStorage.setItem("contactId", contactResponse.data);
 
       if (webhookResponse.ok) {
@@ -268,6 +310,8 @@ const MultiStepForm = () => {
               onChange={handleChange}
               placeholder="Type Here..."
               onKeyUp={handleKeyPress}
+              autoComplete="off"
+
             />
             {renderError("name")}
           </>
@@ -310,6 +354,8 @@ const MultiStepForm = () => {
               onChange={handleChange}
               placeholder="Type Here..."
               onKeyUp={handleKeyPress}
+              autoComplete="off"
+
             />
             {renderError("jobRole")}
           </>
@@ -345,6 +391,8 @@ const MultiStepForm = () => {
               onChange={handleChange}
               placeholder="Type Here..."
               onKeyUp={handleKeyPress}
+              autoComplete="off"
+
             />
             {renderError("email")}
           </>
