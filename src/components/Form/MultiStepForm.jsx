@@ -36,13 +36,18 @@ const MultiStepForm = () => {
   const [utmSource, setUtmSource] = useState("");
   const [campaignName, setCampaignName] = useState("");
   const [campaignKeyWord, setCampaignKeyWord] = useState("");
+  const [utmMedium, setUtmMedium] = useState("");
+  const [gclid, setGclid] = useState("");
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const source = urlParams.get("utm_source");
     const medium = urlParams.get("utm_medium");
+    const gclid = urlParams.get("gclid");
     setCampaignName(urlParams.get("utm_campaign"));
     setCampaignKeyWord(urlParams.get("utm_content"));
+    setUtmMedium(medium);
+    setGclid(gclid);
     if (source) {
       if (source === "google" && medium === "paidsearch") {
         setUtmSource('G Ads - Search');
@@ -218,7 +223,7 @@ const MultiStepForm = () => {
         name: formData.name,
         email: formData.email,
         source: utmSource || "Facebook",
-        customField: [
+        customFields: [
           {
             id: "se6FGXxVO1MwbaHsQJJ8",
             field_value: "MBA",
@@ -244,6 +249,13 @@ const MultiStepForm = () => {
             field_value: formData.specialization,
           },
         ],
+        attributionSource: {
+          utmMedium: utmMedium,
+          gclid: gclid,
+          utmSource: utmSource,
+          utmContent: campaignKeyWord,
+          campaign: campaignName,
+      }
       };
       const contactResponse = await axios.post(`${BASE_URL}/contact`, body);
       localStorage.setItem("contactId", contactResponse.data);
@@ -298,6 +310,8 @@ const MultiStepForm = () => {
               onChange={handleChange}
               placeholder="Type Here..."
               onKeyUp={handleKeyPress}
+              autoComplete="off"
+
             />
             {renderError("name")}
           </>
@@ -340,6 +354,8 @@ const MultiStepForm = () => {
               onChange={handleChange}
               placeholder="Type Here..."
               onKeyUp={handleKeyPress}
+              autoComplete="off"
+
             />
             {renderError("jobRole")}
           </>
@@ -375,6 +391,8 @@ const MultiStepForm = () => {
               onChange={handleChange}
               placeholder="Type Here..."
               onKeyUp={handleKeyPress}
+              autoComplete="off"
+
             />
             {renderError("email")}
           </>
