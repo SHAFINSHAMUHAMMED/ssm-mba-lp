@@ -249,10 +249,10 @@ function PopupTwo({ closePopup }) {
         };
         const contactResponse = await axios.post(`${BASE_URL}/contact`, body);
         localStorage.setItem("contactId", contactResponse.data);
-
+        const storedContactId = localStorage.getItem("contactId");
         setIsLoading(false);
         window.location.href =
-          `https://offer.learnersuae.com/brochure-thank-you/?id=${contactId}&name=${formData.name}`;
+          `https://offer.learnersuae.com/brochure-thank-you/?id=${storedContactId}&name=${formData.name}`;
         } else {
           alert("reCAPTCHA verification failed. Please try again.");
           setIsLoading(false);
