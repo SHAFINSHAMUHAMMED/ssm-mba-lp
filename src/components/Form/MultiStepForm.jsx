@@ -259,11 +259,11 @@ const MultiStepForm = () => {
       };
       const contactResponse = await axios.post(`${BASE_URL}/contact`, body);
       localStorage.setItem("contactId", contactResponse.data);
-
+       const storedContactId = localStorage.getItem("contactId");
       if (webhookResponse.ok) {
         // Handle success
         console.log("Form data sent successfully");
-        window.location.href = `https://offer.learnersuae.com/confirmation/?id=${contactId}&name=${formData.name}`;
+        window.location.href = `https://offer.learnersuae.com/confirmation/?id=${storedContactId}&name=${formData.name}`;
       } else {
         console.error("Failed to send form data");
         // Handle error
