@@ -47,7 +47,7 @@ function PopupTwo({ closePopup }) {
     setGclid(gclid);
     if (source) {
       if (source === "google" && medium === "paidsearch") {
-        setUtmSource('G Ads - Search');
+        setUtmSource("G Ads - Search");
       } else {
         setUtmSource(source);
       }
@@ -149,7 +149,7 @@ function PopupTwo({ closePopup }) {
 
   const getIPAddress = async () => {
     try {
-      const response = await axios.get('https://api.ipify.org?format=json');
+      const response = await axios.get("https://api.ipify.org?format=json");
       return response.data.ip;
     } catch (error) {
       console.error("Failed to get IP address:", error);
@@ -183,76 +183,76 @@ function PopupTwo({ closePopup }) {
           }
         );
         if (response.data.success) {
-        const ipAddress = await getIPAddress();
-        const dataToSend = { ...formData, ipAddress };
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: "Download Brochure",
-          form_id: "Download Brochure Form",
-          email: formData.email,
-          eventModel: {
+          const ipAddress = await getIPAddress();
+          const dataToSend = { ...formData, ipAddress };
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: "Download Brochure",
             form_id: "Download Brochure Form",
-          },
-        });
-        const webhookResponse = await axios.post(
-          "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTY5MDYzNzA0M2M1MjY0NTUzZDUxMzci_pc",
-          dataToSend,
-          {
-            headers: {
-              "Content-Type": "multipart/form-data",
+            email: formData.email,
+            eventModel: {
+              form_id: "Download Brochure Form",
             },
-          }
-        );
+          });
+          const webhookResponse = await axios.post(
+            "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTY5MDYzNzA0M2M1MjY0NTUzZDUxMzci_pc",
+            dataToSend,
+            {
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+            }
+          );
 
-        const body = {
-          phone: formData.phone,
-          name: formData.name,
-          email: formData.email,
-          source: utmSource || "Facebook",
-          customFields: [
-            {
-              id: "se6FGXxVO1MwbaHsQJJ8",
-              field_value: "MBA",
+          const body = {
+            phone: formData.phone,
+            name: formData.name,
+            email: formData.email,
+            source: utmSource || "Facebook",
+            customFields: [
+              {
+                id: "se6FGXxVO1MwbaHsQJJ8",
+                field_value: "MBA",
+              },
+              {
+                id: "VLXPFtiX89yhyza2Tmjw",
+                field_value: "SSM",
+              },
+              {
+                id: "GkmmDmkfWkSHy1uNGjk8",
+                field_value: campaignName,
+              },
+              {
+                id: "qHcBCBNKFwGbmLabQNqW",
+                field_value: campaignKeyWord,
+              },
+              {
+                id: "PUZroTvCFH7EExGtmMAR",
+                field_value: formData.jobRole,
+              },
+              {
+                id: "SZnVS8H9vr1PzhDJYc6s",
+                field_value: formData.preferredMode,
+              },
+              {
+                id: "7wKRbXGs313HE0huL89l",
+                field_value: formData.motivations,
+              },
+            ],
+            attributionSource: {
+              utmMedium: utmMedium,
+              gclid: gclid,
+              utmSource: utmSource,
+              utmContent: campaignKeyWord,
+              campaign: campaignName,
+              pageUrl: window.location.href,
             },
-            {
-              id: "VLXPFtiX89yhyza2Tmjw",
-              field_value: "SSM",
-            },
-            {
-              id: "GkmmDmkfWkSHy1uNGjk8",
-              field_value: campaignName,
-            },
-            {
-              id: "qHcBCBNKFwGbmLabQNqW",
-              field_value: campaignKeyWord,
-            },
-            {
-              id: "PUZroTvCFH7EExGtmMAR",
-              field_value: formData.jobRole,
-            },
-            {
-              id: "SZnVS8H9vr1PzhDJYc6s",
-              field_value: formData.preferredMode,
-            },
-            {
-              id: "7wKRbXGs313HE0huL89l",
-              field_value: formData.motivations,
-            },
-          ],
-          attributionSource: {
-            utmMedium: utmMedium,
-            gclid: gclid,
-            utmSource: utmSource,
-            utmContent: campaignKeyWord,
-            campaign: campaignName,
-        }
-        };
-        const contactResponse = await axios.post(`${BASE_URL}/contact`, body);
-        localStorage.setItem("contactId", contactResponse.data);
-        const storedContactId = localStorage.getItem("contactId");
-        setIsLoading(false);
-        window.location.href =
-          `https://offer.learnersuae.com/brochure-thank-you/?id=${storedContactId}&name=${formData.name}`;
+          };
+          const contactResponse = await axios.post(`${BASE_URL}/contact`, body);
+          localStorage.setItem("contactId", contactResponse.data);
+          const storedContactId = localStorage.getItem("contactId");
+          setIsLoading(false);
+          window.location.href = `https://offer.learnersuae.com/brochure-thank-you/?id=${storedContactId}&name=${formData.name}`;
         } else {
           alert("reCAPTCHA verification failed. Please try again.");
           setIsLoading(false);
@@ -262,7 +262,7 @@ function PopupTwo({ closePopup }) {
         alert("reCAPTCHA verification failed. Please try again.");
         setIsLoading(false);
       }
-     } else {
+    } else {
       alert("Please complete the reCAPTCHA.");
       setIsLoading(false);
     }
@@ -316,7 +316,6 @@ function PopupTwo({ closePopup }) {
                 value={formData.name}
                 onChange={handleChange}
                 autoComplete="off"
-
               />
               <label htmlFor="Name">Email</label>
               <input
@@ -326,7 +325,6 @@ function PopupTwo({ closePopup }) {
                 value={formData.email}
                 onChange={handleChange}
                 autoComplete="off"
-
               />
             </div>
           )}
@@ -355,7 +353,6 @@ function PopupTwo({ closePopup }) {
                 value={formData.jobRole}
                 onChange={handleChange}
                 autoComplete="off"
-
               />
             </div>
           )}

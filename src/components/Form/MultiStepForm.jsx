@@ -31,7 +31,7 @@ const MultiStepForm = () => {
   const { executeRecaptcha } = useGoogleReCaptcha();
 
   const [formErrors, setFormErrors] = useState({});
-  
+
   const contactId = localStorage.getItem("contactId");
   const [utmSource, setUtmSource] = useState("");
   const [campaignName, setCampaignName] = useState("");
@@ -50,7 +50,7 @@ const MultiStepForm = () => {
     setGclid(gclid);
     if (source) {
       if (source === "google" && medium === "paidsearch") {
-        setUtmSource('G Ads - Search');
+        setUtmSource("G Ads - Search");
       } else {
         setUtmSource(source);
       }
@@ -67,18 +67,18 @@ const MultiStepForm = () => {
 
   const validateWhatsAppNumber = (phone, countryCode) => {
     const isManuallyValid = phone.length > 8;
-    
-        if (!isManuallyValid) {
-          return false;
-        }
-    
-        try {
-          const parsedNumber = parsePhoneNumberFromString(phone, countryCode);
-          return parsedNumber ? parsedNumber.isValid() : false;
-        } catch (error) {
-          console.error("Phone validation error:", error);
-          return false;
-        }
+
+    if (!isManuallyValid) {
+      return false;
+    }
+
+    try {
+      const parsedNumber = parsePhoneNumberFromString(phone, countryCode);
+      return parsedNumber ? parsedNumber.isValid() : false;
+    } catch (error) {
+      console.error("Phone validation error:", error);
+      return false;
+    }
   };
 
   const validateCurrentStep = () => {
@@ -189,89 +189,89 @@ const MultiStepForm = () => {
         }
       );
       if (response.data.success) {
+        const ipAddress = await getIPAddress();
+        const dataToSend = {
+          ...formData,
+          currentUrl: currentUrl,
+          ipAddress,
+        };
 
-    const ipAddress = await getIPAddress();
-    const dataToSend = {
-      ...formData,
-      currentUrl: currentUrl,
-      ipAddress,
-    };
+        // Webhook URL
+        const webhookUrl =
+          "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTY5MDYzNzA0M2M1MjY0NTUzZDUxMzMi_pc";
 
-    // Webhook URL
-    const webhookUrl =
-      "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTY5MDYzNzA0M2M1MjY0NTUzZDUxMzMi_pc";
-
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: "ICF-Form Submission",
-        form_id: "ICF-Form Submission",
-        email: formData.email,
-        eventModel: {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "ICF-Form Submission",
           form_id: "ICF-Form Submission",
-        },
-      });
-      const webhookResponse = await fetch(webhookUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-        body: JSON.stringify(dataToSend),
-      });
+          email: formData.email,
+          eventModel: {
+            form_id: "ICF-Form Submission",
+          },
+        });
+        const webhookResponse = await fetch(webhookUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+          body: JSON.stringify(dataToSend),
+        });
 
-      const body = {
-        phone: formData.whatsapp,
-        name: formData.name,
-        email: formData.email,
-        source: utmSource || "Facebook",
-        customFields: [
-          {
-            id: "se6FGXxVO1MwbaHsQJJ8",
-            field_value: "MBA",
+        const body = {
+          phone: formData.whatsapp,
+          name: formData.name,
+          email: formData.email,
+          source: utmSource || "Facebook",
+          customFields: [
+            {
+              id: "se6FGXxVO1MwbaHsQJJ8",
+              field_value: "MBA",
+            },
+            {
+              id: "VLXPFtiX89yhyza2Tmjw",
+              field_value: "SSM",
+            },
+            {
+              id: "GkmmDmkfWkSHy1uNGjk8",
+              field_value: campaignName,
+            },
+            {
+              id: "qHcBCBNKFwGbmLabQNqW",
+              field_value: campaignKeyWord,
+            },
+            {
+              id: "PUZroTvCFH7EExGtmMAR",
+              field_value: formData.jobRole,
+            },
+            {
+              id: "hsp6nL84TybaKBSA3ZGd",
+              field_value: formData.specialization,
+            },
+          ],
+          attributionSource: {
+            utmMedium: utmMedium,
+            gclid: gclid,
+            utmSource: utmSource,
+            utmContent: campaignKeyWord,
+            campaign: campaignName,
+            pageUrl: window.location.href,
           },
-          {
-            id: "VLXPFtiX89yhyza2Tmjw",
-            field_value: "SSM",
-          },
-          {
-            id: "GkmmDmkfWkSHy1uNGjk8",
-            field_value: campaignName,
-          },
-          {
-            id: "qHcBCBNKFwGbmLabQNqW",
-            field_value: campaignKeyWord,
-          },
-          {
-            id: "PUZroTvCFH7EExGtmMAR",
-            field_value: formData.jobRole,
-          },
-          {
-            id: "hsp6nL84TybaKBSA3ZGd",
-            field_value: formData.specialization,
-          },
-        ],
-        attributionSource: {
-          utmMedium: utmMedium,
-          gclid: gclid,
-          utmSource: utmSource,
-          utmContent: campaignKeyWord,
-          campaign: campaignName,
-      }
-      };
-      const contactResponse = await axios.post(`${BASE_URL}/contact`, body);
-      localStorage.setItem("contactId", contactResponse.data);
-       const storedContactId = localStorage.getItem("contactId");
-      if (webhookResponse.ok) {
-        // Handle success
-        console.log("Form data sent successfully");
-        window.location.href = `https://offer.learnersuae.com/confirmation/?id=${storedContactId}&name=${formData.name}`;
+        };
+        const contactResponse = await axios.post(`${BASE_URL}/contact`, body);
+        localStorage.setItem("contactId", contactResponse.data);
+        const storedContactId = localStorage.getItem("contactId");
+        if (webhookResponse.ok) {
+          // Handle success
+          console.log("Form data sent successfully");
+          window.location.href = `https://offer.learnersuae.com/confirmation/?id=${storedContactId}&name=${formData.name}`;
+        } else {
+          console.error("Failed to send form data");
+          // Handle error
+        }
       } else {
-        console.error("Failed to send form data");
-        // Handle error
+        alert("reCAPTCHA verification failed. Please try again.");
+        setIsLoading(false);
       }
-    } else {
-      alert("reCAPTCHA verification failed. Please try again.");
-      setIsLoading(false);
-    }
     } catch (error) {
       console.error("Error sending form data:", error);
       // Handle network error
@@ -311,7 +311,6 @@ const MultiStepForm = () => {
               placeholder="Type Here..."
               onKeyUp={handleKeyPress}
               autoComplete="off"
-
             />
             {renderError("name")}
           </>
@@ -355,7 +354,6 @@ const MultiStepForm = () => {
               placeholder="Type Here..."
               onKeyUp={handleKeyPress}
               autoComplete="off"
-
             />
             {renderError("jobRole")}
           </>
@@ -392,7 +390,6 @@ const MultiStepForm = () => {
               placeholder="Type Here..."
               onKeyUp={handleKeyPress}
               autoComplete="off"
-
             />
             {renderError("email")}
           </>
